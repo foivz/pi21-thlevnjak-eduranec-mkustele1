@@ -1,35 +1,27 @@
-# Inicijalne upute za prijavu projekta iz Programskog inženjerstva
-
-Poštovane kolegice i kolege, 
-
-čestitamo vam jer ste uspješno prijavili svoj projektni tim na kolegiju Programsko inženjerstvo, te je za vas automatski kreiran repozitorij koji ćete koristiti za verzioniranje vašega koda, ali i za pisanje dokumentacije.
-
-Ovaj dokument (README.md) predstavlja **osobnu iskaznicu vašeg projekta**. Vaš prvi zadatak, ukoliko niste odabrali da želite raditi na projektu sa nastavnicima ili u sklopu WBL-a je **prijaviti vlastiti projektni prijedlog** na način da ćete prijavu vašeg projekta, sukladno uputama danim u ovom tekstu, napisati upravo u ovaj dokument, umjesto ovoga teksta.
-
-Za upute o sintaksi koju možete koristiti u ovom dokumentu i kod pisanje vaše projektne dokumentacije pogledajte [ovaj link](https://guides.github.com/features/mastering-markdown/).
-
-Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra raditi na ovom projektu. A sada, vrijeme je da prijavite vaš projekt. Za prijavu vašeg projektnog prijedloga molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta :) 
-
-# Naziv projekta
-(u redak iznad navedite kratki proizvoljni naziv projekta prikladan akademskoj zajednici, a ovaj tekst obrišite)
+# Find and learn
 
 ## Projektni tim
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
-Ime i prezime | ... | ... | ...
+Ime i prezime | thlevnjak@foi.hr | 0016136509 | thlevnjak
+Ime i prezime | eduranec@foi.hr  | 0013137387 | eduranec
+Ime i prezime | mkustele1@foi.hr | 0016136236 | eduranec
 
 ## Opis domene
-Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
+Aplikacija Find and Learn kao primarnu namjenu ima povezivanje studenata s instruktorima, odnosno ljudima koji žele pružati instrukcije. Aplikacija bi omogućavala izradu profila (instruktora ili studenta) te shodno izrađenom profilu nudila pripadne funkcionalnosti. Primjerice, instruktori mogu objavljivati instrukcije i termine njihovih održavanja, dok studenti mogu te termine rezervirati do konačne potvrde instruktora. Također, studentima bi bilo omogućeno ostavljanje recenzija za održane instrukcije kako bi se buduće studente moglo informirati o instruktoru. Također, unutar aplikacije bi bilo moguće pretraživanje instrukcija po kolegijima i instruktorima. Uz dogovaranje termina instrukcija, studenti će također moći postavljati pitanja na koja će instruktori ili ostali studenti upoznati s temom moći odgovoriti.
 
 ## Specifikacija projekta
-Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda. Pobrojite osnovne funkcionalnosti i za svaku naznačite ime odgovornog člana tima. Opišite buduću arhitekturu programskog proizvoda. Obratite pozornost da bi arhitektura trebala biti višeslojna s odvojenom (dislociranom) bazom podatka. Također uzmite u obzir da bi svaki član tima treba biti odgovorana za otprilike 3 funkcionalnosti, te da bi opterećenje članova tima trebalo biti ujednačeno. Priložite odgovarajuće dijagrame i skice gdje je to prikladno. Funkcionalnosti sustava bobrojite u tablici ispod koristeći predložak koji slijedi:
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Login | Za pristup dnevniku potrebnba je autentikacija korisnika pomoću login funkcionalnosti. Korisnik se logira s podacima koji su mu dodijeljeni prilikom ... | Zlatko Stapić
-F02 | Pregled dnevnika | .... | ...
+F01 | Prijava | Kako bi se aplikacija mogla koristiti potrebno se prijaviti upisivanjem korisničkog imena i lozinke. | Marija Kuštelega
+F02 | Izrada/promjena profila | Odabire se uloga (student/instruktor) i daje se kratki opis o kolegijima za koje se traže/daju instrukcije, odabir načina instrukcija (uživo/online) i pregled vlastitih termina instrukcija. | Marija Kuštelega
+F03 | Dodaj/izbriši instrukciju | Opcija omogućuje dodavanje ili brisanje kreiranih instrukcija pri čemu se kod dodavanja instrukcija otvara forma u kojoj instruktor ispunjava podatke o instrukciji (kolegij, mogući termini instrukcija, način održavanja). | Erik Đuranec
+F04 | Rezervacija termina | Student od ponuđenih termina odabire željeni termin instrukcija ukoliko je on slobodan. Kako bi postupak rezervacije bio potpun instruktor je nužan potvrditi rezervaciju. | Erik Đuranec
+F05 | Recenzije | Student nakon odrađenih instrukcija ima mogućnost davanja instruktoru ocjenu od 1 do 5 i pisanja komentara. Instruktor kod te opcije ima pregled na dobivene recenzije (prosječna ocjena). | Marija Kuštelega
+F06 | Tražilica | Mogućnost pretraživanja po kolegijima i instruktorima. | Tomislav Hlevnjak
+F07 | Pitanja i odgovori | Student ovdje ima mogućnost postavljanja pitanja na koje 0 ili 1 instruktor može odgovoriti. | Tomislav Hlevnjak
 
 ## Tehnologije i oprema
-Umjesto ovih uputa jasno popišite sve tehnologije, alate i opremu koju ćete koristiti pri implementaciji vašeg rješenja. Ne zaboravite planirati korištenje tehnologija u aktivnostima kao što su projektni menadžment ili priprema dokumentacije. Tehnologije koje ćete koristiti bi trebale biti javno dostupne, a ako ih ne budemo obrađivali na vježbama u vašoj dokumentaciji ćete morati navesti način preuzimanja, instaliranja i korištenja onih tehnologija koje su neopbodne kako bi se vaš programski proizvod preveo i pokrenuo. Pazite da svi alati koje ćete koristiti moraju imati odgovarajuću licencu.
+.NET (Visual Studio), GitHub, GitHub Classroom, TeamGant, Word, MySQL, Draw.io, Visual Paradigm
