@@ -4,9 +4,9 @@
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | thlevnjak@foi.hr | 0016136509 | thlevnjak
-Ime i prezime | eduranec@foi.hr  | 0013137387 | eduranec
-Ime i prezime | mkustele1@foi.hr | 0016136236 | mkustele1
+Tomislav Hlevnjak | thlevnjak@foi.hr | 0016136509 | thlevnjak
+Erik Đuranec | eduranec@foi.hr  | 0013137387 | eduranec
+Marija Kuštelega | mkustele1@foi.hr | 0016136236 | mkustele1
 
 ## Opis domene
 Aplikacija Find and Learn kao primarnu namjenu ima povezivanje studenata s instruktorima, odnosno ljudima koji žele pružati instrukcije. Aplikacija bi omogućavala izradu profila (instruktora ili studenta) te shodno izrađenom profilu nudila pripadne funkcionalnosti. Primjerice, instruktori mogu objavljivati instrukcije i termine njihovih održavanja, dok studenti mogu te termine rezervirati do konačne potvrde instruktora. Također, studentima bi bilo omogućeno ostavljanje recenzija za održane instrukcije kako bi se buduće studente moglo informirati o instruktoru. Također, unutar aplikacije bi bilo moguće pretraživanje instrukcija po kolegijima i instruktorima. Uz dogovaranje termina instrukcija, studenti će također moći postavljati pitanja na koja će instruktori ili ostali studenti upoznati s temom moći odgovoriti.
