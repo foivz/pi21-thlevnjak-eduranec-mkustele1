@@ -15,9 +15,9 @@ Aplikacija Find and Learn kao primarnu namjenu ima povezivanje studenata s instr
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Prijava | Kako bi se aplikacija mogla koristiti potrebno se prijaviti upisivanjem korisničkog imena i lozinke. | Marija Kuštelega
+F01 | Prijava | Kako bi se aplikacija mogla koristiti potrebno se prijaviti upisivanjem korisničkog imena i lozinke. Uz to moguće je promijeniti lozinku bez obzira na to radi li se o zaborvaljenoj lozinci ili o jednostavnoj promjeni postojeće lozinke. | Marija Kuštelega
 F02 | Registracija | Ukoliko korisnik nema kreiran račun putem ove opcije može ga kreirati pri čemu korisnik odabire ulogu (student/instruktor), popunjava osobne podatke (ime, prezime, email, mjesto) i nudi mu se opcija da kreira vlastito ili odabere generirano korisničko ime. | Tomislav Hlevnjak
-F03 | Profil | Ovisno o odabranoj ulozi (student/instruktor) daje se kratki opis o kolegijima za koje se traže/daju instrukcije, odabir načina instrukcija (uživo/online) i pregled vlastitih termina instrukcija. | Marija Kuštelega
+F03 | Profil | Ovisno o odabranoj ulozi (student/instruktor) popunjavaju se osobni podaci, može se dodati slika, kratki opis o sebi kao i o kolegijima za koje se daju instrukcije te korisnik ima uvid u vlastite termine instrukcija. | Marija Kuštelega
 F04 | Grupe | Funkcionalnost u kojoj instruktor može kreirati grupu za kolegij iz kojeg drži instrukcije, dodati studente u tu grupu i forum preko kojeg instruktor može stavljati obavijesti vezane uz tu grupu. | Marija Kuštelega
 F05 | Rezervacija termina | Student od ponuđenih termina odabire željeni termin instrukcija ukoliko je on slobodan. Kako bi postupak rezervacije bio potpun instruktor je nužan potvrditi rezervaciju. | Erik Đuranec
 F06 | Dodaj/izbriši instrukciju | Opcija omogućuje dodavanje ili brisanje kreiranih instrukcija pri čemu se kod dodavanja instrukcija otvara forma u kojoj instruktor ispunjava podatke o instrukciji (kolegij, mogući termini instrukcija, način održavanja). | Erik Đuranec
