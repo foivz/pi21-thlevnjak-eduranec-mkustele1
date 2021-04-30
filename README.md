@@ -17,7 +17,7 @@ Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
 F01 | Prijava | Kako bi se aplikacija mogla koristiti potrebno se prijaviti upisivanjem korisničkog imena i lozinke. Uz to moguće je promijeniti postojeću lozinku. | Marija Kuštelega
 F02 | Registracija | Ukoliko korisnik nema kreiran račun putem ove opcije može ga kreirati pri čemu korisnik odabire ulogu (student/instruktor), popunjava osobne podatke (ime, prezime, email, mjesto) i nudi mu se opcija da kreira vlastito ili odabere generirano korisničko ime. | Tomislav Hlevnjak
-F03 | Profil | Ovisno o odabranoj ulozi (student/instruktor) popunjavaju se osobni podaci, može se dodati slika, kratki opis o sebi i kod instruktora nudi se mogućnost prikaza izvještaja za instrukcije koje nudi. | Marija Kuštelega
+F03 | Profil | Ovisno o odabranoj ulozi (student/instruktor) popunjavaju se osobni podaci, može se dodati slika i kratki opis o sebi | Marija Kuštelega
 F04 | Obavijesti| Funkcionalnost koja služi instruktorima i studentima kao centralno sučelje gdje mogu saznati nove informacije vezane uz njihove termine instrukcija ili promjena u terminima, a s ciljem lakšeg pregleda relevantnih novosti unutar aplikacije. | Marija Kuštelega
 F05 | Rezervacija termina | Student od ponuđenih termina odabire željeni termin instrukcija ukoliko je on slobodan. Kako bi postupak rezervacije bio potpun instruktor je nužan potvrditi rezervaciju. | Erik Đuranec
 F06 | Dodaj/izbriši instrukciju | Opcija omogućuje dodavanje ili brisanje kreiranih instrukcija pri čemu se kod dodavanja instrukcija otvara forma u kojoj instruktor ispunjava podatke o instrukciji (kolegij, tip, opis instrukcije, cijena, mogući termini instrukcija). | Erik Đuranec
