@@ -70,11 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Prijava\frmPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Prijava\frmPrijava.Designer.cs">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
     </Compile>
     <Compile Include="Instrukcije.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
@@ -90,6 +90,12 @@
     </Compile>
     <Compile Include="Poruke.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prijava\frmPromjenaLozinke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijava\frmPromjenaLozinke.Designer.cs">
+      <DependentUpon>frmPromjenaLozinke.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +117,12 @@
     <Compile Include="Tip_instrukcija.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prijava\frmPrijava.resx">
+      <DependentUpon>frmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijava\frmPromjenaLozinke.resx">
+      <DependentUpon>frmPromjenaLozinke.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -119,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="FindAndLearnModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -152,9 +165,11 @@
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
       <LastGenOutput>FindAndLearnModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\PrijavaLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
