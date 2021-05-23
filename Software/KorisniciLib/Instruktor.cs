@@ -10,7 +10,7 @@ namespace KorisniciLib
     public class Instruktor : Korisnik
     {
         public string Titula { get; set; }
-        public Image Slika { get; set; }
+        public byte[] Slika { get; set; }
         
         public Instruktor()
         {

@@ -70,6 +70,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Iznimke\UnosException.cs" />
+    <Compile Include="Klase\Autentifikator.cs" />
+    <Compile Include="Klase\RepozitorijKorisnika.cs" />
     <Compile Include="Prijava\frmPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,5 +179,6 @@
       <Name>KorisniciLib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,7 +9,7 @@ namespace KorisniciLib
 {
     public class Student : Korisnik
     {
-        public Image Slika { get; set; }
+        public byte[] Slika { get; set; }
         public Student()
         {
 
