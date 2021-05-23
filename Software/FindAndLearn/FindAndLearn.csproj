@@ -170,6 +170,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\KorisniciLib\KorisniciLib.csproj">
+      <Project>{33df5a5d-dace-42c4-86f0-62161392d2f7}</Project>
+      <Name>KorisniciLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

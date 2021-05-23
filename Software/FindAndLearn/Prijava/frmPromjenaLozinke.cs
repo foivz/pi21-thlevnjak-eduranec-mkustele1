@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KorisniciLib;
 
 namespace FindAndLearn.Prijava
 {
@@ -15,6 +16,11 @@ namespace FindAndLearn.Prijava
         public frmPromjenaLozinke()
         {
             InitializeComponent();
+        }
+
+        private void frmPromjenaLozinke_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void cbPokaziLozinke_CheckedChanged(object sender, EventArgs e)
@@ -32,6 +38,13 @@ namespace FindAndLearn.Prijava
                 txtNovaLozinka.PasswordChar = '*';
                 txtPonovljenaLozinka.PasswordChar = '*';
             }
+        }
+
+        private void btnNatrag_Click(object sender, EventArgs e)
+        {
+            frmPrijava form = new frmPrijava();
+            form.ShowDialog();
+            Hide();
         }
     }
 }
