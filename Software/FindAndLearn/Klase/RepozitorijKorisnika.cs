@@ -66,6 +66,7 @@ namespace FindAndLearn.Klase
 
         public static Korisnik DohvatiKorisnika(string korisnickoIme, string lozinka)
         {
+            PopuniListu();
             Korisnik korisnik = ListaKorisnika.Find(x => (x.KorisnickoIme == korisnickoIme) && (x.Lozinka == lozinka));
             return korisnik;
 
@@ -73,6 +74,7 @@ namespace FindAndLearn.Klase
 
         public static bool PostojiKorisnik(string korisnickoIme)
         {
+            PopuniListu();
             return ListaKorisnika.Exists(x => (x.KorisnickoIme == korisnickoIme));
         }
     }

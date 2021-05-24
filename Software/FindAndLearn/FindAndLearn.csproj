@@ -73,6 +73,18 @@
     <Compile Include="Iznimke\UnosException.cs" />
     <Compile Include="Klase\Autentifikator.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
+    <Compile Include="Prijava\frmPocetnaInstruktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijava\frmPocetnaInstruktor.Designer.cs">
+      <DependentUpon>frmPocetnaInstruktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijava\frmPocetnaStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijava\frmPocetnaStudent.Designer.cs">
+      <DependentUpon>frmPocetnaStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prijava\frmPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,12 @@
     <Compile Include="Tip_instrukcija.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prijava\frmPocetnaInstruktor.resx">
+      <DependentUpon>frmPocetnaInstruktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijava\frmPocetnaStudent.resx">
+      <DependentUpon>frmPocetnaStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prijava\frmPrijava.resx">
       <DependentUpon>frmPrijava.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +186,8 @@
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
       <LastGenOutput>FindAndLearnModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\FindAndLearn.png" />
+    <None Include="Resources\Logo.png" />
     <None Include="Resources\PrijavaLogo.png" />
   </ItemGroup>
   <ItemGroup>

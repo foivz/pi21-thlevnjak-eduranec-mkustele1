@@ -93,6 +93,7 @@ namespace FindAndLearn
             this.btnPrijava.TabIndex = 71;
             this.btnPrijava.Text = "PRIJAVA";
             this.btnPrijava.UseVisualStyleBackColor = false;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // txtLozinka
             // 

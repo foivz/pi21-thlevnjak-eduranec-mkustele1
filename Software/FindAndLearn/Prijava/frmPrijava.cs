@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KorisniciLib;
+using FindAndLearn.Klase;
+using FindAndLearn.Iznimke;
 
 namespace FindAndLearn
 {
@@ -41,6 +43,43 @@ namespace FindAndLearn
             else
             {
                 txtLozinka.PasswordChar = '*';
+            }
+        }
+
+        private void btnPrijava_Click(object sender, EventArgs e)
+        {
+            string korisnickoIme = txtKorisnickoIme.Text;
+            string lozinka = txtLozinka.Text;
+            Korisnik korisnikPrijava = null;
+
+            // Dohvaća se korisnik u slučaju da je prijava ispravna, u suprotnom se korisniku prikazuje poruka greške
+
+            try
+            {
+                korisnikPrijava = Autentifikator.Prijava(korisnickoIme, lozinka);
+
+            }
+            catch (UnosException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+            }
+
+            if (korisnikPrijava != null)
+            {
+                // Usporedbom atributa uloga otvara se odgovarajuća početna stranica (instruktor/student) i prosljeđuju se podaci o korisniku
+
+                if (korisnikPrijava.Uloga == Uloga.Student)
+                {
+                    frmPocetnaStudent form = new frmPocetnaStudent(korisnikPrijava as Student);
+                    form.ShowDialog();
+                    Close();
+                }
+                else if (korisnikPrijava.Uloga == Uloga.Instruktor)
+                {
+                    frmPocetnaInstruktor form = new frmPocetnaInstruktor(korisnikPrijava as Instruktor);
+                    form.ShowDialog();
+                    Close();
+                }
             }
         }
     }
