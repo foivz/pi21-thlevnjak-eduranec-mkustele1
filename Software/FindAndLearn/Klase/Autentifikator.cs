@@ -58,13 +58,21 @@ namespace FindAndLearn.Klase
             }
         }
 
-        public static bool ProvjeriPromjenuLozinke(string novaLozinka, string ponovljenaLozinka)
+        public static bool ProvjeriPromjenuLozinke(string trenutnaLozinka, string novaLozinka, string ponovljenaLozinka)
         {
             bool ispravnaLozinka = true;
 
-            if (novaLozinka != ponovljenaLozinka)
+            if (novaLozinka == "" || ponovljenaLozinka == "")
             {
-                throw new UnosException($"Lozinka i ponovljena lozinka nisu jednake!");
+                throw new UnosException("Neuspješna prijava! Niste popunili polja za lozinke!");
+            }
+            else if (trenutnaLozinka == novaLozinka)
+            {
+                throw new UnosException("Trenutna lozinka i nova lozinka su jednake!");
+            }
+            else if (novaLozinka != ponovljenaLozinka)
+            {
+                throw new UnosException($"Nova lozinka i ponovljena lozinka nisu jednake!");
             }
 
             return ispravnaLozinka;

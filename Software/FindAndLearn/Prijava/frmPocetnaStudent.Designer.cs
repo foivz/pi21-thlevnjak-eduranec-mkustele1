@@ -211,6 +211,7 @@ namespace FindAndLearn.Prijava
             this.btnOdjava.TabIndex = 23;
             this.btnOdjava.Text = "ODJAVA";
             this.btnOdjava.UseVisualStyleBackColor = false;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
             // btnHelp
             // 
@@ -229,7 +230,7 @@ namespace FindAndLearn.Prijava
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.label3.Location = new System.Drawing.Point(416, 513);
+            this.label3.Location = new System.Drawing.Point(416, 499);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(355, 28);
             this.label3.TabIndex = 79;

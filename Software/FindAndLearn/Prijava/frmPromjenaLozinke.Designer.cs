@@ -123,6 +123,7 @@ namespace FindAndLearn.Prijava
             this.btnSpremi.TabIndex = 80;
             this.btnSpremi.Text = "SPREMI";
             this.btnSpremi.UseVisualStyleBackColor = false;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // txtTrenutnaLozinka
             // 
