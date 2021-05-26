@@ -150,6 +150,7 @@ namespace FindAndLearn.Prijava
             this.btnProfil.TabIndex = 25;
             this.btnProfil.Text = "PROFIL";
             this.btnProfil.UseVisualStyleBackColor = false;
+            this.btnProfil.Click += new System.EventHandler(this.btnProfil_Click);
             // 
             // btnInstrukcije
             // 

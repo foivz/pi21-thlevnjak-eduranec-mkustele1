@@ -1,4 +1,5 @@
-﻿using KorisniciLib;
+﻿using FindAndLearn.Profil;
+using KorisniciLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace FindAndLearn.Prijava
 {
@@ -29,6 +31,13 @@ namespace FindAndLearn.Prijava
         private void btnOdjava_Click(object sender, EventArgs e)
         {
             frmPrijava form = new frmPrijava();
+            form.ShowDialog();
+            Close();
+        }
+
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+            frmInstruktorProfil form = new frmInstruktorProfil(postojeciInstruktor);
             form.ShowDialog();
             Close();
         }
