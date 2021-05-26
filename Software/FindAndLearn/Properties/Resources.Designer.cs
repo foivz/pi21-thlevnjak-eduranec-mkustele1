@@ -63,6 +63,16 @@ namespace FindAndLearn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Email {
+            get {
+                object obj = ResourceManager.GetObject("Email", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FindAndLearn {
             get {
                 object obj = ResourceManager.GetObject("FindAndLearn", resourceCulture);
@@ -83,9 +93,29 @@ namespace FindAndLearn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lokacija {
+            get {
+                object obj = ResourceManager.GetObject("Lokacija", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PrijavaLogo {
             get {
                 object obj = ResourceManager.GetObject("PrijavaLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Telefon {
+            get {
+                object obj = ResourceManager.GetObject("Telefon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

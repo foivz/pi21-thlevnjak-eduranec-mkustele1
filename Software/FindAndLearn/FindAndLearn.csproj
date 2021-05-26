@@ -112,6 +112,30 @@
     <Compile Include="Prijava\frmPromjenaLozinke.Designer.cs">
       <DependentUpon>frmPromjenaLozinke.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profil\frmInstruktorProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil\frmInstruktorProfil.Designer.cs">
+      <DependentUpon>frmInstruktorProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\frmOMeniInstruktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil\frmOMeniInstruktor.Designer.cs">
+      <DependentUpon>frmOMeniInstruktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\frmOMeniStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil\frmOMeniStudent.Designer.cs">
+      <DependentUpon>frmOMeniStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\frmStudentProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil\frmStudentProfil.Designer.cs">
+      <DependentUpon>frmStudentProfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recenzije.cs">
@@ -121,9 +145,6 @@
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Studenti.cs">
-      <DependentUpon>FindAndLearnModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Termini.cs">
@@ -143,6 +164,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prijava\frmPromjenaLozinke.resx">
       <DependentUpon>frmPromjenaLozinke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil\frmInstruktorProfil.resx">
+      <DependentUpon>frmInstruktorProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil\frmOMeniInstruktor.resx">
+      <DependentUpon>frmOMeniInstruktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil\frmOMeniStudent.resx">
+      <DependentUpon>frmOMeniStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil\frmStudentProfil.resx">
+      <DependentUpon>frmStudentProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -186,6 +219,9 @@
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
       <LastGenOutput>FindAndLearnModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Lokacija.png" />
+    <None Include="Resources\Telefon.png" />
+    <None Include="Resources\Email.png" />
     <None Include="Resources\FindAndLearn.png" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\PrijavaLogo.png" />

@@ -13,7 +13,6 @@
         <EntityTypeShape EntityType="Model.Recenzije" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Rezervacije" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Studenti" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Termini" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Tip_instrukcija" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
         <AssociationConnector Association="Model.FK_Instrukcijas_Instruktors" ManuallyRouted="false" />

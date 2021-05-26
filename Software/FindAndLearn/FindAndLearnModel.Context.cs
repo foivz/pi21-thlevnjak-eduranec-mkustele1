@@ -33,7 +33,6 @@ namespace FindAndLearn
         public virtual DbSet<Recenzije> Recenzije { get; set; }
         public virtual DbSet<Rezervacije> Rezervacije { get; set; }
         public virtual DbSet<Studenti> Studenti { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Termini> Termini { get; set; }
         public virtual DbSet<Tip_instrukcija> Tip_instrukcija { get; set; }
     }
