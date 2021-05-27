@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +39,7 @@ namespace FindAndLearn.Klase
                         Mjesto = item.mjesto,
                         Ulica = item.ulica,
                         Mobitel = item.mobitel,
-                        Slika = item.slika,
+                        Slika = PretvoriSlikuIzBaze(item.slika),
                         Opis = item.opis,
                         Uloga = Uloga.Student
                     });
@@ -55,7 +58,7 @@ namespace FindAndLearn.Klase
                         Mjesto = item.mjesto,
                         Ulica = item.ulica,
                         Mobitel = item.mobitel,
-                        Slika = item.slika,
+                        Slika = PretvoriSlikuIzBaze(item.slika),
                         Opis = item.opis,
                         Titula = item.titula,
                         Uloga = Uloga.Instruktor
@@ -64,9 +67,26 @@ namespace FindAndLearn.Klase
             }
         }
 
+        // Slika u bazi pohranjena je kao tip byte[], u klasi Instruktor i Student slika je tipa Image
+        // Metoda PretvoriSlikuIzBaze pretvara tip byte[] u Image u svrhu kasnijeg mogućeg prikaza slike korisnika u PictureBox-u
+
+        public static Image PretvoriSlikuIzBaze(byte[] slikaBaza)
+        {
+            if (slikaBaza != null)
+            {
+                MemoryStream ms = new MemoryStream(slikaBaza);
+                return Image.FromStream(ms);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        // Metodom DohvatiKorisnika se prvo metodom PopuniListu dohvaća lista s najnovijim podacima
+
         public static Korisnik DohvatiKorisnika(string korisnickoIme, string lozinka)
         {
-            // Dohvaća se uvijek lista s najnovijim podacima
             PopuniListu(); 
             Korisnik korisnik = ListaKorisnika.Find(x => (x.KorisnickoIme == korisnickoIme) && (x.Lozinka == lozinka));
             return korisnik;
@@ -79,10 +99,11 @@ namespace FindAndLearn.Klase
             return ListaKorisnika.Exists(x => (x.KorisnickoIme == korisnickoIme));
         }
 
+
+        //Metoda AzurirajLozinku ažurira korisnika temeljem korisničkog imena kako u bazi ne postoje dva korisnika s istim korisničkim imenom
+
         public static void AzurirajLozinku(Korisnik korisnik)
         {
-            //Ažuriranje se temelji na dohvaćanju korisničkog imena kako u bazi ne postoje dva korisnika s istim korisničkim imenom
-
             using (var context = new Entities())
             {
                 if(korisnik.Uloga == Uloga.Instruktor)
@@ -104,7 +125,6 @@ namespace FindAndLearn.Klase
         }
         public static void AzurirajInstruktora(Instruktor instruktor)
         {
-
             using (var context = new Entities())
             {
                     Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == instruktor.KorisnickoIme));
@@ -112,14 +132,19 @@ namespace FindAndLearn.Klase
                     instruktorBaza.ime = instruktor.Ime;
                     instruktorBaza.prezime = instruktor.Prezime;
                     instruktorBaza.korisnicko_ime = instruktor.KorisnickoIme;
-                    instruktorBaza.lozinka = instruktor.Lozinka;
                     instruktorBaza.email = instruktor.Email;
                     instruktorBaza.mjesto = instruktor.Mjesto;
                     instruktorBaza.ulica = instruktor.Ulica;
                     instruktorBaza.mobitel = instruktor.Mobitel;
                     instruktorBaza.opis = instruktor.Opis;
                     instruktorBaza.titula = instruktor.Titula;
-                  //  instruktorBaza.slika = instruktor.Slika;
+
+                    if (instruktor.Slika != null)
+                    {
+                        MemoryStream ms = new MemoryStream();
+                        instruktor.Slika.Save(ms, ImageFormat.Png);
+                        instruktorBaza.slika = ms.ToArray();
+                    }
 
                     context.SaveChanges();
             }
@@ -134,13 +159,18 @@ namespace FindAndLearn.Klase
                 studentBaza.ime = student.Ime;
                 studentBaza.prezime = student.Prezime;
                 studentBaza.korisnicko_ime = student.KorisnickoIme;
-                studentBaza.lozinka = student.Lozinka;
                 studentBaza.email = student.Email;
                 studentBaza.mjesto = student.Mjesto;
                 studentBaza.ulica = student.Ulica;
                 studentBaza.mobitel = student.Mobitel;
                 studentBaza.opis = student.Opis;
-              //  studentBaza.slika = student.Slika;
+
+                if (student.Slika != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    student.Slika.Save(ms, ImageFormat.Png);
+                    studentBaza.slika = ms.ToArray();
+                }
 
                 context.SaveChanges();
             }

@@ -1,4 +1,5 @@
-﻿using KorisniciLib;
+﻿using FindAndLearn.Klase;
+using KorisniciLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,10 +33,38 @@ namespace FindAndLearn.Profil
             txtUlica.Text = postojeciInstruktor.Ulica;
             txtOpis.Text = postojeciInstruktor.Opis;
             txtTitula.Text = postojeciInstruktor.Titula;
+            pbSlikaInstruktora.Image = postojeciInstruktor.Slika;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void btnDodajSliku_Click(object sender, EventArgs e)
+        {
+            if (openPictureDialog.ShowDialog() == DialogResult.OK)
+            {
+                Image slika = Image.FromFile(openPictureDialog.FileName);
+                pbSlikaInstruktora.Image = slika;
+            }
+        }
+
+        private void btnSpremi_Click(object sender, EventArgs e)
+        {
+            postojeciInstruktor.KorisnickoIme = txtKorisnickoIme.Text;
+            postojeciInstruktor.Ime = txtIme.Text;
+            postojeciInstruktor.Prezime = txtPrezime.Text;
+            postojeciInstruktor.Email = txtEmail.Text;
+            postojeciInstruktor.Mobitel = txtMobitel.Text;
+            postojeciInstruktor.Mjesto = txtMjesto.Text;
+            postojeciInstruktor.Ulica = txtUlica.Text;
+            postojeciInstruktor.Opis = txtOpis.Text;
+            postojeciInstruktor.Titula = txtTitula.Text;
+            postojeciInstruktor.Slika = pbSlikaInstruktora.Image;
+
+            RepozitorijKorisnika.AzurirajInstruktora(postojeciInstruktor);
+
             Close();
         }
     }

@@ -54,6 +54,7 @@ namespace FindAndLearn.Profil
             this.txtMobitel = new System.Windows.Forms.TextBox();
             this.pbSlikaInstruktora = new System.Windows.Forms.PictureBox();
             this.btnDodajSliku = new System.Windows.Forms.Button();
+            this.openPictureDialog = new System.Windows.Forms.OpenFileDialog();
             this.gbKratkiOpis.SuspendLayout();
             this.gbOsnovo.SuspendLayout();
             this.gbAdresa.SuspendLayout();
@@ -100,6 +101,7 @@ namespace FindAndLearn.Profil
             this.btnSpremi.TabIndex = 51;
             this.btnSpremi.Text = "SPREMI";
             this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // gbOsnovo
             // 
@@ -309,6 +311,11 @@ namespace FindAndLearn.Profil
             this.btnDodajSliku.TabIndex = 88;
             this.btnDodajSliku.Text = "DODAJ SLIKU";
             this.btnDodajSliku.UseVisualStyleBackColor = true;
+            this.btnDodajSliku.Click += new System.EventHandler(this.btnDodajSliku_Click);
+            // 
+            // openPictureDialog
+            // 
+            this.openPictureDialog.Filter = "|*.png";
             // 
             // frmOMeniInstruktor
             // 
@@ -367,5 +374,6 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.TextBox txtMobitel;
         private System.Windows.Forms.PictureBox pbSlikaInstruktora;
         private System.Windows.Forms.Button btnDodajSliku;
+        public System.Windows.Forms.OpenFileDialog openPictureDialog;
     }
 }

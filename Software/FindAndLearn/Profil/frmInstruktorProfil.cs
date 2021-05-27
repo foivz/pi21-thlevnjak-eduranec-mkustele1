@@ -33,7 +33,7 @@ namespace FindAndLearn.Profil
                 lblUlica.Text = postojeciInstruktor.Ulica;
                 lblTitula.Text = postojeciInstruktor.Titula;
                 txtOpis.Text = postojeciInstruktor.Opis;
-               // pbSlikaInstruktora.Image = postojeciInstruktor.Slika;
+                pbSlikaInstruktora.Image = postojeciInstruktor.Slika;
             }
         }
 

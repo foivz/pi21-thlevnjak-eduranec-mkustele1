@@ -32,7 +32,7 @@ namespace FindAndLearn.Profil
                 lblMjesto.Text = postojeciStudent.Mjesto;
                 lblUlica.Text = postojeciStudent.Ulica;
                 txtOpis.Text = postojeciStudent.Opis;
-               // pbSlikaStudenta.Image = postojeciStudent.Slika; 
+                pbSlikaStudenta.Image = postojeciStudent.Slika; 
             }
         }
 
@@ -45,7 +45,7 @@ namespace FindAndLearn.Profil
         {
             frmOMeniStudent form = new frmOMeniStudent(postojeciStudent);
             form.ShowDialog();
-            
+            OsvjeziProfil();
         }
     }
 }
