@@ -123,11 +123,11 @@ namespace FindAndLearn.Klase
                 }
             }
         }
-        public static void AzurirajInstruktora(Instruktor instruktor)
+        public static void AzurirajInstruktora(Instruktor instruktor, string korisnickoIme)
         {
             using (var context = new Entities())
             {
-                    Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == instruktor.KorisnickoIme));
+                    Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
 
                     instruktorBaza.ime = instruktor.Ime;
                     instruktorBaza.prezime = instruktor.Prezime;
@@ -150,11 +150,11 @@ namespace FindAndLearn.Klase
             }
         }
 
-        public static void AzurirajStudenta(Student student)
+        public static void AzurirajStudenta(Student student, string korisnickoIme)
         {
             using (var context = new Entities())
             {
-                Studenti studentBaza = context.Studenti.FirstOrDefault(x => (x.korisnicko_ime == student.KorisnickoIme));
+                Studenti studentBaza = context.Studenti.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
 
                 studentBaza.ime = student.Ime;
                 studentBaza.prezime = student.Prezime;

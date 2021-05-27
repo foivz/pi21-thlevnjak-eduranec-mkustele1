@@ -1,4 +1,5 @@
-﻿using FindAndLearn.Klase;
+﻿using FindAndLearn.Iznimke;
+using FindAndLearn.Klase;
 using KorisniciLib;
 using System;
 using System.Collections.Generic;
@@ -52,7 +53,32 @@ namespace FindAndLearn.Profil
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            postojeciInstruktor.KorisnickoIme = txtKorisnickoIme.Text;
+            // Samo u slučaju mijenjanja korisničkog imena potrebno je provjeriti je li izmijenjeno korisničko ime zauzeto.
+
+            string staroKorisnickoIme = postojeciInstruktor.KorisnickoIme;
+            bool postojiKorisnik;
+
+            try
+            {
+                postojiKorisnik = false;
+
+                if (postojeciInstruktor.KorisnickoIme != txtKorisnickoIme.Text)
+                {
+                    Autentifikator.ProvjeriKorisnickoIme(txtKorisnickoIme.Text);
+                }
+                Close();
+            }
+            catch (UnosException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+                postojiKorisnik = true;
+            }
+
+            if(postojiKorisnik == false)
+            {
+                postojeciInstruktor.KorisnickoIme = txtKorisnickoIme.Text;
+            }
+
             postojeciInstruktor.Ime = txtIme.Text;
             postojeciInstruktor.Prezime = txtPrezime.Text;
             postojeciInstruktor.Email = txtEmail.Text;
@@ -63,9 +89,8 @@ namespace FindAndLearn.Profil
             postojeciInstruktor.Titula = txtTitula.Text;
             postojeciInstruktor.Slika = pbSlikaInstruktora.Image;
 
-            RepozitorijKorisnika.AzurirajInstruktora(postojeciInstruktor);
+            RepozitorijKorisnika.AzurirajInstruktora(postojeciInstruktor, staroKorisnickoIme);
 
-            Close();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using FindAndLearn.Klase;
+﻿using FindAndLearn.Iznimke;
+using FindAndLearn.Klase;
 using KorisniciLib;
 using System;
 using System.Collections.Generic;
@@ -50,7 +51,30 @@ namespace FindAndLearn.Profil
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            postojeciStudent.KorisnickoIme = txtKorisnickoIme.Text;
+            string staroKorisnickoIme = postojeciStudent.KorisnickoIme;
+            bool postojiKorisnik;
+
+            try
+            {
+                postojiKorisnik = false;
+
+                if (postojeciStudent.KorisnickoIme != txtKorisnickoIme.Text)
+                {
+                    Autentifikator.ProvjeriKorisnickoIme(txtKorisnickoIme.Text);
+                }
+                Close();
+            }
+            catch (UnosException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+                postojiKorisnik = true;
+            }
+
+            if(postojiKorisnik == false)
+            {
+                postojeciStudent.KorisnickoIme = txtKorisnickoIme.Text;
+            }
+
             postojeciStudent.Ime = txtIme.Text;
             postojeciStudent.Prezime = txtPrezime.Text;
             postojeciStudent.Email = txtEmail.Text;
@@ -60,9 +84,7 @@ namespace FindAndLearn.Profil
             postojeciStudent.Opis = txtOpis.Text;
             postojeciStudent.Slika = pbSlikaStudenta.Image;
 
-            RepozitorijKorisnika.AzurirajStudenta(postojeciStudent);
-
-            Close();
+            RepozitorijKorisnika.AzurirajStudenta(postojeciStudent, staroKorisnickoIme);
         }
     }
 }

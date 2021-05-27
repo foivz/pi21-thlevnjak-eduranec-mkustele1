@@ -44,6 +44,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +74,7 @@
     <Compile Include="Iznimke\UnosException.cs" />
     <Compile Include="Klase\Autentifikator.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
+    <Compile Include="Kolegiji.code.cs" />
     <Compile Include="Prijava\frmPocetnaInstruktor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +152,7 @@
     <Compile Include="Termini.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tip_instrukcija.code.cs" />
     <Compile Include="Tip_instrukcija.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>

@@ -86,6 +86,7 @@ namespace FindAndLearn.Klase
             {
                 throw new UnosException($"Već postoji korisnik s korisničkim imenom {korisnickoIme}!");
             }
+
         }
     }
 }
