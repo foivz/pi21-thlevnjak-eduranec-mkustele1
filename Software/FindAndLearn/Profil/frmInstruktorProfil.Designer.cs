@@ -45,7 +45,6 @@ namespace FindAndLearn.Profil
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnIzmijeniPodatke = new System.Windows.Forms.Button();
             this.lblTitula = new System.Windows.Forms.Label();
-            this.btnDodajSliku = new System.Windows.Forms.Button();
             this.lblImePrezime = new System.Windows.Forms.Label();
             this.gbKratkiOpis = new System.Windows.Forms.GroupBox();
             this.txtOpis = new System.Windows.Forms.TextBox();
@@ -244,7 +243,7 @@ namespace FindAndLearn.Profil
             // btnIzmijeniPodatke
             // 
             this.btnIzmijeniPodatke.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnIzmijeniPodatke.Location = new System.Drawing.Point(508, 453);
+            this.btnIzmijeniPodatke.Location = new System.Drawing.Point(509, 428);
             this.btnIzmijeniPodatke.Name = "btnIzmijeniPodatke";
             this.btnIzmijeniPodatke.Size = new System.Drawing.Size(156, 32);
             this.btnIzmijeniPodatke.TabIndex = 89;
@@ -262,16 +261,6 @@ namespace FindAndLearn.Profil
             this.lblTitula.TabIndex = 88;
             this.lblTitula.Text = "Titula";
             // 
-            // btnDodajSliku
-            // 
-            this.btnDodajSliku.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodajSliku.Location = new System.Drawing.Point(230, 274);
-            this.btnDodajSliku.Name = "btnDodajSliku";
-            this.btnDodajSliku.Size = new System.Drawing.Size(156, 29);
-            this.btnDodajSliku.TabIndex = 87;
-            this.btnDodajSliku.Text = "DODAJ SLIKU";
-            this.btnDodajSliku.UseVisualStyleBackColor = true;
-            // 
             // lblImePrezime
             // 
             this.lblImePrezime.AutoSize = true;
@@ -286,9 +275,9 @@ namespace FindAndLearn.Profil
             // 
             this.gbKratkiOpis.Controls.Add(this.txtOpis);
             this.gbKratkiOpis.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbKratkiOpis.Location = new System.Drawing.Point(230, 319);
+            this.gbKratkiOpis.Location = new System.Drawing.Point(230, 293);
             this.gbKratkiOpis.Name = "gbKratkiOpis";
-            this.gbKratkiOpis.Size = new System.Drawing.Size(435, 125);
+            this.gbKratkiOpis.Size = new System.Drawing.Size(435, 129);
             this.gbKratkiOpis.TabIndex = 85;
             this.gbKratkiOpis.TabStop = false;
             this.gbKratkiOpis.Text = "Kratki opis";
@@ -300,7 +289,7 @@ namespace FindAndLearn.Profil
             this.txtOpis.Multiline = true;
             this.txtOpis.Name = "txtOpis";
             this.txtOpis.ReadOnly = true;
-            this.txtOpis.Size = new System.Drawing.Size(410, 84);
+            this.txtOpis.Size = new System.Drawing.Size(410, 97);
             this.txtOpis.TabIndex = 39;
             // 
             // gbKontakt
@@ -400,7 +389,6 @@ namespace FindAndLearn.Profil
             this.Controls.Add(this.pbSlikaInstruktora);
             this.Controls.Add(this.btnIzmijeniPodatke);
             this.Controls.Add(this.lblTitula);
-            this.Controls.Add(this.btnDodajSliku);
             this.Controls.Add(this.lblImePrezime);
             this.Controls.Add(this.gbKratkiOpis);
             this.Controls.Add(this.gbKontakt);
@@ -448,7 +436,6 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.PictureBox pbSlikaInstruktora;
         private System.Windows.Forms.Button btnIzmijeniPodatke;
         private System.Windows.Forms.Label lblTitula;
-        private System.Windows.Forms.Button btnDodajSliku;
         private System.Windows.Forms.Label lblImePrezime;
         private System.Windows.Forms.GroupBox gbKratkiOpis;
         private System.Windows.Forms.TextBox txtOpis;

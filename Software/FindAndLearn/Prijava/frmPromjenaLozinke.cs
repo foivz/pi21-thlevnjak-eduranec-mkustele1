@@ -73,7 +73,7 @@ namespace FindAndLearn.Prijava
             if (korisnikPrijava != null && ispravnaLozinka == true)
             {
                 korisnikPrijava.Lozinka = novaLozinka;
-                RepozitorijKorisnika.AzurirajKorisnika(korisnikPrijava);
+                RepozitorijKorisnika.AzurirajLozinku(korisnikPrijava);
                 MessageBox.Show("Lozinka je uspješno promijenjena!");
             }
         }

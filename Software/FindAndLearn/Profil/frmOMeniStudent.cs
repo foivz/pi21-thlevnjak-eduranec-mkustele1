@@ -31,5 +31,10 @@ namespace FindAndLearn.Profil
             txtUlica.Text = postojeciStudent.Ulica;
             txtOpis.Text = postojeciStudent.Opis;
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

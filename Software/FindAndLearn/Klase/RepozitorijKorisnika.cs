@@ -79,7 +79,7 @@ namespace FindAndLearn.Klase
             return ListaKorisnika.Exists(x => (x.KorisnickoIme == korisnickoIme));
         }
 
-        public static void AzurirajKorisnika(Korisnik korisnik)
+        public static void AzurirajLozinku(Korisnik korisnik)
         {
             //Ažuriranje se temelji na dohvaćanju korisničkog imena kako u bazi ne postoje dva korisnika s istim korisničkim imenom
 
@@ -87,44 +87,62 @@ namespace FindAndLearn.Klase
             {
                 if(korisnik.Uloga == Uloga.Instruktor)
                 {
-                   Instruktor instruktor = korisnik as Instruktor;
-
                    Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
-
-                   instruktorBaza.ime = instruktor.Ime;
-                   instruktorBaza.prezime = instruktor.Prezime;
-                   instruktorBaza.korisnicko_ime = instruktor.KorisnickoIme;
-                   instruktorBaza.lozinka = instruktor.Lozinka;
-                   instruktorBaza.email = instruktor.Email;
-                   instruktorBaza.mjesto = instruktor.Mjesto;
-                   instruktorBaza.ulica = instruktor.Ulica;
-                   instruktorBaza.mobitel = instruktor.Mobitel;
-                   instruktorBaza.opis = instruktor.Opis;
-                   instruktorBaza.titula = instruktor.Titula;
-                   instruktorBaza.slika = instruktor.Slika;
+                   instruktorBaza.lozinka = korisnik.Lozinka;
 
                    context.SaveChanges();
 
                 }
                 else if(korisnik.Uloga == Uloga.Student)
                 {
-                    Student student = korisnik as Student;
-
                     Studenti studentBaza = context.Studenti.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
-
-                    studentBaza.ime = student.Ime;
-                    studentBaza.prezime = student.Prezime;
-                    studentBaza.korisnicko_ime = student.KorisnickoIme;
-                    studentBaza.lozinka = student.Lozinka;
-                    studentBaza.email = student.Email;
-                    studentBaza.mjesto = student.Mjesto;
-                    studentBaza.ulica = student.Ulica;
-                    studentBaza.mobitel = student.Mobitel;
-                    studentBaza.opis = student.Opis;
-                    studentBaza.slika = student.Slika;
+                    studentBaza.lozinka = korisnik.Lozinka;
 
                     context.SaveChanges();
                 }
+            }
+        }
+        public static void AzurirajInstruktora(Instruktor instruktor)
+        {
+
+            using (var context = new Entities())
+            {
+                    Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == instruktor.KorisnickoIme));
+
+                    instruktorBaza.ime = instruktor.Ime;
+                    instruktorBaza.prezime = instruktor.Prezime;
+                    instruktorBaza.korisnicko_ime = instruktor.KorisnickoIme;
+                    instruktorBaza.lozinka = instruktor.Lozinka;
+                    instruktorBaza.email = instruktor.Email;
+                    instruktorBaza.mjesto = instruktor.Mjesto;
+                    instruktorBaza.ulica = instruktor.Ulica;
+                    instruktorBaza.mobitel = instruktor.Mobitel;
+                    instruktorBaza.opis = instruktor.Opis;
+                    instruktorBaza.titula = instruktor.Titula;
+                  //  instruktorBaza.slika = instruktor.Slika;
+
+                    context.SaveChanges();
+            }
+        }
+
+        public static void AzurirajStudenta(Student student)
+        {
+            using (var context = new Entities())
+            {
+                Studenti studentBaza = context.Studenti.FirstOrDefault(x => (x.korisnicko_ime == student.KorisnickoIme));
+
+                studentBaza.ime = student.Ime;
+                studentBaza.prezime = student.Prezime;
+                studentBaza.korisnicko_ime = student.KorisnickoIme;
+                studentBaza.lozinka = student.Lozinka;
+                studentBaza.email = student.Email;
+                studentBaza.mjesto = student.Mjesto;
+                studentBaza.ulica = student.Ulica;
+                studentBaza.mobitel = student.Mobitel;
+                studentBaza.opis = student.Opis;
+              //  studentBaza.slika = student.Slika;
+
+                context.SaveChanges();
             }
         }
     }

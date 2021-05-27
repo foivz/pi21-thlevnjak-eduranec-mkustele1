@@ -52,19 +52,22 @@ namespace FindAndLearn.Profil
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblMobitel = new System.Windows.Forms.Label();
             this.txtMobitel = new System.Windows.Forms.TextBox();
+            this.pbSlikaInstruktora = new System.Windows.Forms.PictureBox();
+            this.btnDodajSliku = new System.Windows.Forms.Button();
             this.gbKratkiOpis.SuspendLayout();
             this.gbOsnovo.SuspendLayout();
             this.gbAdresa.SuspendLayout();
             this.gbKontakt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).BeginInit();
             this.SuspendLayout();
             // 
             // gbKratkiOpis
             // 
             this.gbKratkiOpis.Controls.Add(this.txtOpis);
             this.gbKratkiOpis.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbKratkiOpis.Location = new System.Drawing.Point(28, 393);
+            this.gbKratkiOpis.Location = new System.Drawing.Point(45, 403);
             this.gbKratkiOpis.Name = "gbKratkiOpis";
-            this.gbKratkiOpis.Size = new System.Drawing.Size(541, 117);
+            this.gbKratkiOpis.Size = new System.Drawing.Size(569, 117);
             this.gbKratkiOpis.TabIndex = 53;
             this.gbKratkiOpis.TabStop = false;
             this.gbKratkiOpis.Text = "Kratki opis";
@@ -74,23 +77,24 @@ namespace FindAndLearn.Profil
             this.txtOpis.Location = new System.Drawing.Point(17, 28);
             this.txtOpis.Multiline = true;
             this.txtOpis.Name = "txtOpis";
-            this.txtOpis.Size = new System.Drawing.Size(511, 71);
+            this.txtOpis.Size = new System.Drawing.Size(537, 71);
             this.txtOpis.TabIndex = 39;
             // 
             // btnOdustani
             // 
             this.btnOdustani.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdustani.Location = new System.Drawing.Point(45, 529);
+            this.btnOdustani.Location = new System.Drawing.Point(45, 539);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(105, 32);
             this.btnOdustani.TabIndex = 52;
             this.btnOdustani.Text = "ODUSTANI";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnSpremi
             // 
             this.btnSpremi.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnSpremi.Location = new System.Drawing.Point(450, 529);
+            this.btnSpremi.Location = new System.Drawing.Point(495, 539);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(106, 32);
             this.btnSpremi.TabIndex = 51;
@@ -108,9 +112,9 @@ namespace FindAndLearn.Profil
             this.gbOsnovo.Controls.Add(this.lblPrezime);
             this.gbOsnovo.Controls.Add(this.lblIme);
             this.gbOsnovo.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbOsnovo.Location = new System.Drawing.Point(28, 30);
+            this.gbOsnovo.Location = new System.Drawing.Point(211, 35);
             this.gbOsnovo.Name = "gbOsnovo";
-            this.gbOsnovo.Size = new System.Drawing.Size(541, 201);
+            this.gbOsnovo.Size = new System.Drawing.Size(403, 193);
             this.gbOsnovo.TabIndex = 50;
             this.gbOsnovo.TabStop = false;
             this.gbOsnovo.Text = "Osnovno";
@@ -120,7 +124,7 @@ namespace FindAndLearn.Profil
             this.txtKorisnickoIme.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtKorisnickoIme.Location = new System.Drawing.Point(19, 44);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
-            this.txtKorisnickoIme.Size = new System.Drawing.Size(212, 22);
+            this.txtKorisnickoIme.Size = new System.Drawing.Size(160, 22);
             this.txtKorisnickoIme.TabIndex = 26;
             // 
             // lblKorisnickoIme
@@ -136,16 +140,16 @@ namespace FindAndLearn.Profil
             // txtTitula
             // 
             this.txtTitula.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtTitula.Location = new System.Drawing.Point(21, 154);
+            this.txtTitula.Location = new System.Drawing.Point(21, 152);
             this.txtTitula.Name = "txtTitula";
-            this.txtTitula.Size = new System.Drawing.Size(507, 22);
+            this.txtTitula.Size = new System.Drawing.Size(367, 22);
             this.txtTitula.TabIndex = 24;
             // 
             // lblTitula
             // 
             this.lblTitula.AutoSize = true;
             this.lblTitula.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTitula.Location = new System.Drawing.Point(17, 132);
+            this.lblTitula.Location = new System.Drawing.Point(17, 130);
             this.lblTitula.Name = "lblTitula";
             this.lblTitula.Size = new System.Drawing.Size(42, 17);
             this.lblTitula.TabIndex = 23;
@@ -154,9 +158,9 @@ namespace FindAndLearn.Profil
             // txtPrezime
             // 
             this.txtPrezime.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPrezime.Location = new System.Drawing.Point(264, 98);
+            this.txtPrezime.Location = new System.Drawing.Point(188, 98);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(264, 22);
+            this.txtPrezime.Size = new System.Drawing.Size(200, 22);
             this.txtPrezime.TabIndex = 22;
             // 
             // txtIme
@@ -164,14 +168,14 @@ namespace FindAndLearn.Profil
             this.txtIme.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtIme.Location = new System.Drawing.Point(20, 98);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(212, 22);
+            this.txtIme.Size = new System.Drawing.Size(159, 22);
             this.txtIme.TabIndex = 21;
             // 
             // lblPrezime
             // 
             this.lblPrezime.AutoSize = true;
             this.lblPrezime.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblPrezime.Location = new System.Drawing.Point(262, 78);
+            this.lblPrezime.Location = new System.Drawing.Point(186, 78);
             this.lblPrezime.Name = "lblPrezime";
             this.lblPrezime.Size = new System.Drawing.Size(64, 17);
             this.lblPrezime.TabIndex = 20;
@@ -194,9 +198,9 @@ namespace FindAndLearn.Profil
             this.gbAdresa.Controls.Add(this.txtUlica);
             this.gbAdresa.Controls.Add(this.lblUlica);
             this.gbAdresa.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbAdresa.Location = new System.Drawing.Point(278, 237);
+            this.gbAdresa.Location = new System.Drawing.Point(295, 247);
             this.gbAdresa.Name = "gbAdresa";
-            this.gbAdresa.Size = new System.Drawing.Size(291, 150);
+            this.gbAdresa.Size = new System.Drawing.Size(319, 150);
             this.gbAdresa.TabIndex = 49;
             this.gbAdresa.TabStop = false;
             this.gbAdresa.Text = "Adresa";
@@ -206,7 +210,7 @@ namespace FindAndLearn.Profil
             this.txtMjesto.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtMjesto.Location = new System.Drawing.Point(14, 51);
             this.txtMjesto.Name = "txtMjesto";
-            this.txtMjesto.Size = new System.Drawing.Size(264, 22);
+            this.txtMjesto.Size = new System.Drawing.Size(290, 22);
             this.txtMjesto.TabIndex = 26;
             // 
             // lblMjesto
@@ -224,7 +228,7 @@ namespace FindAndLearn.Profil
             this.txtUlica.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtUlica.Location = new System.Drawing.Point(14, 102);
             this.txtUlica.Name = "txtUlica";
-            this.txtUlica.Size = new System.Drawing.Size(264, 22);
+            this.txtUlica.Size = new System.Drawing.Size(290, 22);
             this.txtUlica.TabIndex = 27;
             // 
             // lblUlica
@@ -245,7 +249,7 @@ namespace FindAndLearn.Profil
             this.gbKontakt.Controls.Add(this.txtMobitel);
             this.gbKontakt.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gbKontakt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.gbKontakt.Location = new System.Drawing.Point(28, 237);
+            this.gbKontakt.Location = new System.Drawing.Point(45, 247);
             this.gbKontakt.Name = "gbKontakt";
             this.gbKontakt.Size = new System.Drawing.Size(244, 150);
             this.gbKontakt.TabIndex = 48;
@@ -288,12 +292,32 @@ namespace FindAndLearn.Profil
             this.txtMobitel.Size = new System.Drawing.Size(210, 22);
             this.txtMobitel.TabIndex = 24;
             // 
+            // pbSlikaInstruktora
+            // 
+            this.pbSlikaInstruktora.Location = new System.Drawing.Point(46, 44);
+            this.pbSlikaInstruktora.Name = "pbSlikaInstruktora";
+            this.pbSlikaInstruktora.Size = new System.Drawing.Size(156, 148);
+            this.pbSlikaInstruktora.TabIndex = 54;
+            this.pbSlikaInstruktora.TabStop = false;
+            // 
+            // btnDodajSliku
+            // 
+            this.btnDodajSliku.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDodajSliku.Location = new System.Drawing.Point(46, 199);
+            this.btnDodajSliku.Name = "btnDodajSliku";
+            this.btnDodajSliku.Size = new System.Drawing.Size(159, 29);
+            this.btnDodajSliku.TabIndex = 88;
+            this.btnDodajSliku.Text = "DODAJ SLIKU";
+            this.btnDodajSliku.UseVisualStyleBackColor = true;
+            // 
             // frmOMeniInstruktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(606, 604);
+            this.ClientSize = new System.Drawing.Size(667, 603);
+            this.Controls.Add(this.btnDodajSliku);
+            this.Controls.Add(this.pbSlikaInstruktora);
             this.Controls.Add(this.gbKratkiOpis);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
@@ -311,6 +335,7 @@ namespace FindAndLearn.Profil
             this.gbAdresa.PerformLayout();
             this.gbKontakt.ResumeLayout(false);
             this.gbKontakt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +365,7 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblMobitel;
         private System.Windows.Forms.TextBox txtMobitel;
+        private System.Windows.Forms.PictureBox pbSlikaInstruktora;
+        private System.Windows.Forms.Button btnDodajSliku;
     }
 }

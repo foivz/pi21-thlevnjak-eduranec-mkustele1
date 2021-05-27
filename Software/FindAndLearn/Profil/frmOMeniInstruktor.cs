@@ -33,5 +33,10 @@ namespace FindAndLearn.Profil
             txtOpis.Text = postojeciInstruktor.Opis;
             txtTitula.Text = postojeciInstruktor.Titula;
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
