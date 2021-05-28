@@ -288,6 +288,7 @@ namespace FindAndLearn.Profil
             this.pbSlikaStudenta.Location = new System.Drawing.Point(35, 36);
             this.pbSlikaStudenta.Name = "pbSlikaStudenta";
             this.pbSlikaStudenta.Size = new System.Drawing.Size(156, 148);
+            this.pbSlikaStudenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSlikaStudenta.TabIndex = 89;
             this.pbSlikaStudenta.TabStop = false;
             // 

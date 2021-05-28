@@ -114,5 +114,12 @@ namespace FindAndLearn.Profil
                 }
             }
         }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            frmPrijava form = new frmPrijava();
+            form.ShowDialog();
+            Close();
+        }
     }
 }

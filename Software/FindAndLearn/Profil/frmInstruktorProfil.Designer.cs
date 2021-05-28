@@ -29,9 +29,9 @@ namespace FindAndLearn.Profil
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnIzmijeniPodatke = new System.Windows.Forms.Button();
             this.lblTitula = new System.Windows.Forms.Label();
             this.lblImePrezime = new System.Windows.Forms.Label();
@@ -231,6 +231,7 @@ namespace FindAndLearn.Profil
             this.pbSlikaInstruktora.Location = new System.Drawing.Point(230, 108);
             this.pbSlikaInstruktora.Name = "pbSlikaInstruktora";
             this.pbSlikaInstruktora.Size = new System.Drawing.Size(156, 157);
+            this.pbSlikaInstruktora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSlikaInstruktora.TabIndex = 90;
             this.pbSlikaInstruktora.TabStop = false;
             // 
@@ -283,17 +284,17 @@ namespace FindAndLearn.Profil
             // 
             this.grafikonInstrukcija.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.grafikonInstrukcija.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            chartArea3.Name = "ChartArea1";
-            this.grafikonInstrukcija.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.grafikonInstrukcija.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.grafikonInstrukcija.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.grafikonInstrukcija.Legends.Add(legend2);
             this.grafikonInstrukcija.Location = new System.Drawing.Point(1, 69);
             this.grafikonInstrukcija.Name = "grafikonInstrukcija";
-            series3.ChartArea = "ChartArea1";
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            series3.Legend = "Legend1";
-            series3.Name = "Cijena (kn/h)";
-            this.grafikonInstrukcija.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            series2.Legend = "Legend1";
+            series2.Name = "Cijena (kn/h)";
+            this.grafikonInstrukcija.Series.Add(series2);
             this.grafikonInstrukcija.Size = new System.Drawing.Size(631, 221);
             this.grafikonInstrukcija.TabIndex = 93;
             // 
@@ -587,6 +588,7 @@ namespace FindAndLearn.Profil
             this.btnOdjava.TabIndex = 29;
             this.btnOdjava.Text = "ODJAVA";
             this.btnOdjava.UseVisualStyleBackColor = false;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
             // btnHelp
             // 

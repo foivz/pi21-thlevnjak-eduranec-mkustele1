@@ -41,7 +41,7 @@ namespace FindAndLearn.Profil
             this.btnRecenzije = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
-            this.btnPocetna = new System.Windows.Forms.Button();
+            this.btnOdjava = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnIzmijeniPodatke = new System.Windows.Forms.Button();
             this.gbKratkiOpis = new System.Windows.Forms.GroupBox();
@@ -57,6 +57,16 @@ namespace FindAndLearn.Profil
             this.lblMobitel = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.pbSlikaStudenta = new System.Windows.Forms.PictureBox();
+            this.gbMojiKolegiji = new System.Windows.Forms.GroupBox();
+            this.pbSlikaInstruktora = new System.Windows.Forms.PictureBox();
+            this.lblEmailInstruktor = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblKolegiji = new System.Windows.Forms.Label();
+            this.pbEmailInstruktora = new System.Windows.Forms.PictureBox();
+            this.comboKolegiji = new System.Windows.Forms.ComboBox();
+            this.pbTelefonInstruktora = new System.Windows.Forms.PictureBox();
+            this.lblMobitelInstruktora = new System.Windows.Forms.Label();
+            this.lblImeInstruktora = new System.Windows.Forms.Label();
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbIzbornik.SuspendLayout();
@@ -67,6 +77,10 @@ namespace FindAndLearn.Profil
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaStudenta)).BeginInit();
+            this.gbMojiKolegiji.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmailInstruktora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTelefonInstruktora)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -207,33 +221,34 @@ namespace FindAndLearn.Profil
             // 
             this.gbInstruktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbInstruktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gbInstruktor.Controls.Add(this.btnPocetna);
+            this.gbInstruktor.Controls.Add(this.btnOdjava);
             this.gbInstruktor.Controls.Add(this.btnHelp);
             this.gbInstruktor.Controls.Add(this.lblInstruktor);
             this.gbInstruktor.Location = new System.Drawing.Point(175, -9);
             this.gbInstruktor.Name = "gbInstruktor";
-            this.gbInstruktor.Size = new System.Drawing.Size(907, 49);
+            this.gbInstruktor.Size = new System.Drawing.Size(1144, 49);
             this.gbInstruktor.TabIndex = 80;
             this.gbInstruktor.TabStop = false;
             // 
-            // btnPocetna
+            // btnOdjava
             // 
-            this.btnPocetna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnPocetna.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPocetna.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPocetna.Location = new System.Drawing.Point(529, 15);
-            this.btnPocetna.Name = "btnPocetna";
-            this.btnPocetna.Size = new System.Drawing.Size(90, 25);
-            this.btnPocetna.TabIndex = 23;
-            this.btnPocetna.Text = "POČETNA";
-            this.btnPocetna.UseVisualStyleBackColor = false;
+            this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOdjava.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdjava.Location = new System.Drawing.Point(634, 15);
+            this.btnOdjava.Name = "btnOdjava";
+            this.btnOdjava.Size = new System.Drawing.Size(90, 25);
+            this.btnOdjava.TabIndex = 23;
+            this.btnOdjava.Text = "ODJAVA";
+            this.btnOdjava.UseVisualStyleBackColor = false;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
             // btnHelp
             // 
             this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHelp.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnHelp.Location = new System.Drawing.Point(628, 14);
+            this.btnHelp.Location = new System.Drawing.Point(733, 14);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(90, 25);
             this.btnHelp.TabIndex = 22;
@@ -373,18 +388,120 @@ namespace FindAndLearn.Profil
             // 
             // pbSlikaStudenta
             // 
-            this.pbSlikaStudenta.Location = new System.Drawing.Point(236, 90);
+            this.pbSlikaStudenta.Location = new System.Drawing.Point(235, 90);
             this.pbSlikaStudenta.Name = "pbSlikaStudenta";
             this.pbSlikaStudenta.Size = new System.Drawing.Size(154, 149);
+            this.pbSlikaStudenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSlikaStudenta.TabIndex = 84;
             this.pbSlikaStudenta.TabStop = false;
+            // 
+            // gbMojiKolegiji
+            // 
+            this.gbMojiKolegiji.Controls.Add(this.lblImeInstruktora);
+            this.gbMojiKolegiji.Controls.Add(this.pbSlikaInstruktora);
+            this.gbMojiKolegiji.Controls.Add(this.lblEmailInstruktor);
+            this.gbMojiKolegiji.Controls.Add(this.label1);
+            this.gbMojiKolegiji.Controls.Add(this.lblKolegiji);
+            this.gbMojiKolegiji.Controls.Add(this.pbEmailInstruktora);
+            this.gbMojiKolegiji.Controls.Add(this.comboKolegiji);
+            this.gbMojiKolegiji.Controls.Add(this.pbTelefonInstruktora);
+            this.gbMojiKolegiji.Controls.Add(this.lblMobitelInstruktora);
+            this.gbMojiKolegiji.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbMojiKolegiji.Location = new System.Drawing.Point(688, 90);
+            this.gbMojiKolegiji.Name = "gbMojiKolegiji";
+            this.gbMojiKolegiji.Size = new System.Drawing.Size(315, 213);
+            this.gbMojiKolegiji.TabIndex = 88;
+            this.gbMojiKolegiji.TabStop = false;
+            this.gbMojiKolegiji.Text = "Moje instrukcije";
+            // 
+            // pbSlikaInstruktora
+            // 
+            this.pbSlikaInstruktora.Location = new System.Drawing.Point(8, 98);
+            this.pbSlikaInstruktora.Name = "pbSlikaInstruktora";
+            this.pbSlikaInstruktora.Size = new System.Drawing.Size(97, 82);
+            this.pbSlikaInstruktora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSlikaInstruktora.TabIndex = 72;
+            this.pbSlikaInstruktora.TabStop = false;
+            // 
+            // lblEmailInstruktor
+            // 
+            this.lblEmailInstruktor.AutoSize = true;
+            this.lblEmailInstruktor.Location = new System.Drawing.Point(145, 130);
+            this.lblEmailInstruktor.Name = "lblEmailInstruktor";
+            this.lblEmailInstruktor.Size = new System.Drawing.Size(114, 15);
+            this.lblEmailInstruktor.TabIndex = 20;
+            this.lblEmailInstruktor.Text = "ime.prezime@....com";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 15);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "Instruktor";
+            // 
+            // lblKolegiji
+            // 
+            this.lblKolegiji.AutoSize = true;
+            this.lblKolegiji.Location = new System.Drawing.Point(10, 32);
+            this.lblKolegiji.Name = "lblKolegiji";
+            this.lblKolegiji.Size = new System.Drawing.Size(45, 15);
+            this.lblKolegiji.TabIndex = 0;
+            this.lblKolegiji.Text = "Kolegij:";
+            // 
+            // pbEmailInstruktora
+            // 
+            this.pbEmailInstruktora.BackgroundImage = global::FindAndLearn.Properties.Resources.Email;
+            this.pbEmailInstruktora.Location = new System.Drawing.Point(115, 125);
+            this.pbEmailInstruktora.Name = "pbEmailInstruktora";
+            this.pbEmailInstruktora.Size = new System.Drawing.Size(24, 26);
+            this.pbEmailInstruktora.TabIndex = 20;
+            this.pbEmailInstruktora.TabStop = false;
+            // 
+            // comboKolegiji
+            // 
+            this.comboKolegiji.FormattingEnabled = true;
+            this.comboKolegiji.Location = new System.Drawing.Point(69, 29);
+            this.comboKolegiji.Name = "comboKolegiji";
+            this.comboKolegiji.Size = new System.Drawing.Size(198, 23);
+            this.comboKolegiji.TabIndex = 75;
+            // 
+            // pbTelefonInstruktora
+            // 
+            this.pbTelefonInstruktora.BackgroundImage = global::FindAndLearn.Properties.Resources.Telefon;
+            this.pbTelefonInstruktora.Location = new System.Drawing.Point(115, 157);
+            this.pbTelefonInstruktora.Name = "pbTelefonInstruktora";
+            this.pbTelefonInstruktora.Size = new System.Drawing.Size(24, 23);
+            this.pbTelefonInstruktora.TabIndex = 20;
+            this.pbTelefonInstruktora.TabStop = false;
+            // 
+            // lblMobitelInstruktora
+            // 
+            this.lblMobitelInstruktora.AutoSize = true;
+            this.lblMobitelInstruktora.Location = new System.Drawing.Point(145, 161);
+            this.lblMobitelInstruktora.Name = "lblMobitelInstruktora";
+            this.lblMobitelInstruktora.Size = new System.Drawing.Size(73, 15);
+            this.lblMobitelInstruktora.TabIndex = 20;
+            this.lblMobitelInstruktora.Text = "xxx xxx xxxx";
+            // 
+            // lblImeInstruktora
+            // 
+            this.lblImeInstruktora.AutoSize = true;
+            this.lblImeInstruktora.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblImeInstruktora.Location = new System.Drawing.Point(113, 98);
+            this.lblImeInstruktora.Name = "lblImeInstruktora";
+            this.lblImeInstruktora.Size = new System.Drawing.Size(74, 15);
+            this.lblImeInstruktora.TabIndex = 77;
+            this.lblImeInstruktora.Text = "Ime Prezime";
             // 
             // frmStudentProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(924, 627);
+            this.ClientSize = new System.Drawing.Size(1036, 582);
+            this.Controls.Add(this.gbMojiKolegiji);
             this.Controls.Add(this.btnIzmijeniPodatke);
             this.Controls.Add(this.gbKratkiOpis);
             this.Controls.Add(this.pbSlikaStudenta);
@@ -410,6 +527,11 @@ namespace FindAndLearn.Profil
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaStudenta)).EndInit();
+            this.gbMojiKolegiji.ResumeLayout(false);
+            this.gbMojiKolegiji.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmailInstruktora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTelefonInstruktora)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,7 +551,7 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.Button btnRecenzije;
         private System.Windows.Forms.Label lblInstruktor;
         private System.Windows.Forms.GroupBox gbInstruktor;
-        private System.Windows.Forms.Button btnPocetna;
+        private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnIzmijeniPodatke;
         private System.Windows.Forms.GroupBox gbKratkiOpis;
@@ -445,5 +567,15 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.Label lblMjesto;
         private System.Windows.Forms.Label lblMobitel;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.GroupBox gbMojiKolegiji;
+        private System.Windows.Forms.PictureBox pbSlikaInstruktora;
+        private System.Windows.Forms.Label lblEmailInstruktor;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblKolegiji;
+        private System.Windows.Forms.PictureBox pbEmailInstruktora;
+        private System.Windows.Forms.ComboBox comboKolegiji;
+        private System.Windows.Forms.PictureBox pbTelefonInstruktora;
+        private System.Windows.Forms.Label lblMobitelInstruktora;
+        private System.Windows.Forms.Label lblImeInstruktora;
     }
 }
