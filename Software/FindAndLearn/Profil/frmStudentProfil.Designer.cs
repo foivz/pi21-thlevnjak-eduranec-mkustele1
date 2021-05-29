@@ -58,6 +58,7 @@ namespace FindAndLearn.Profil
             this.lblEmail = new System.Windows.Forms.Label();
             this.pbSlikaStudenta = new System.Windows.Forms.PictureBox();
             this.gbMojiKolegiji = new System.Windows.Forms.GroupBox();
+            this.lblImeInstruktora = new System.Windows.Forms.Label();
             this.pbSlikaInstruktora = new System.Windows.Forms.PictureBox();
             this.lblEmailInstruktor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,7 +67,17 @@ namespace FindAndLearn.Profil
             this.comboKolegiji = new System.Windows.Forms.ComboBox();
             this.pbTelefonInstruktora = new System.Windows.Forms.PictureBox();
             this.lblMobitelInstruktora = new System.Windows.Forms.Label();
-            this.lblImeInstruktora = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblNazivTermina = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblDan = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lblMjesec = new System.Windows.Forms.Label();
+            this.lblMjestoOdrzavanja = new System.Windows.Forms.Label();
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbIzbornik.SuspendLayout();
@@ -81,6 +92,9 @@ namespace FindAndLearn.Profil
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmailInstruktora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefonInstruktora)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -258,7 +272,7 @@ namespace FindAndLearn.Profil
             // btnIzmijeniPodatke
             // 
             this.btnIzmijeniPodatke.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnIzmijeniPodatke.Location = new System.Drawing.Point(511, 416);
+            this.btnIzmijeniPodatke.Location = new System.Drawing.Point(511, 420);
             this.btnIzmijeniPodatke.Name = "btnIzmijeniPodatke";
             this.btnIzmijeniPodatke.Size = new System.Drawing.Size(156, 26);
             this.btnIzmijeniPodatke.TabIndex = 87;
@@ -270,7 +284,7 @@ namespace FindAndLearn.Profil
             // 
             this.gbKratkiOpis.Controls.Add(this.txtOpis);
             this.gbKratkiOpis.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbKratkiOpis.Location = new System.Drawing.Point(232, 268);
+            this.gbKratkiOpis.Location = new System.Drawing.Point(232, 272);
             this.gbKratkiOpis.Name = "gbKratkiOpis";
             this.gbKratkiOpis.Size = new System.Drawing.Size(435, 142);
             this.gbKratkiOpis.TabIndex = 86;
@@ -308,7 +322,7 @@ namespace FindAndLearn.Profil
             this.gbKontakt.Controls.Add(this.lblMobitel);
             this.gbKontakt.Controls.Add(this.lblEmail);
             this.gbKontakt.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbKontakt.Location = new System.Drawing.Point(396, 81);
+            this.gbKontakt.Location = new System.Drawing.Point(396, 90);
             this.gbKontakt.Name = "gbKontakt";
             this.gbKontakt.Size = new System.Drawing.Size(271, 158);
             this.gbKontakt.TabIndex = 82;
@@ -388,7 +402,7 @@ namespace FindAndLearn.Profil
             // 
             // pbSlikaStudenta
             // 
-            this.pbSlikaStudenta.Location = new System.Drawing.Point(235, 90);
+            this.pbSlikaStudenta.Location = new System.Drawing.Point(235, 99);
             this.pbSlikaStudenta.Name = "pbSlikaStudenta";
             this.pbSlikaStudenta.Size = new System.Drawing.Size(154, 149);
             this.pbSlikaStudenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -406,13 +420,23 @@ namespace FindAndLearn.Profil
             this.gbMojiKolegiji.Controls.Add(this.comboKolegiji);
             this.gbMojiKolegiji.Controls.Add(this.pbTelefonInstruktora);
             this.gbMojiKolegiji.Controls.Add(this.lblMobitelInstruktora);
-            this.gbMojiKolegiji.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbMojiKolegiji.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gbMojiKolegiji.Location = new System.Drawing.Point(688, 90);
             this.gbMojiKolegiji.Name = "gbMojiKolegiji";
-            this.gbMojiKolegiji.Size = new System.Drawing.Size(315, 213);
+            this.gbMojiKolegiji.Size = new System.Drawing.Size(315, 190);
             this.gbMojiKolegiji.TabIndex = 88;
             this.gbMojiKolegiji.TabStop = false;
             this.gbMojiKolegiji.Text = "Moje instrukcije";
+            // 
+            // lblImeInstruktora
+            // 
+            this.lblImeInstruktora.AutoSize = true;
+            this.lblImeInstruktora.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblImeInstruktora.Location = new System.Drawing.Point(113, 98);
+            this.lblImeInstruktora.Name = "lblImeInstruktora";
+            this.lblImeInstruktora.Size = new System.Drawing.Size(83, 17);
+            this.lblImeInstruktora.TabIndex = 77;
+            this.lblImeInstruktora.Text = "Ime Prezime";
             // 
             // pbSlikaInstruktora
             // 
@@ -426,9 +450,10 @@ namespace FindAndLearn.Profil
             // lblEmailInstruktor
             // 
             this.lblEmailInstruktor.AutoSize = true;
-            this.lblEmailInstruktor.Location = new System.Drawing.Point(145, 130);
+            this.lblEmailInstruktor.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblEmailInstruktor.Location = new System.Drawing.Point(145, 123);
             this.lblEmailInstruktor.Name = "lblEmailInstruktor";
-            this.lblEmailInstruktor.Size = new System.Drawing.Size(114, 15);
+            this.lblEmailInstruktor.Size = new System.Drawing.Size(125, 17);
             this.lblEmailInstruktor.TabIndex = 20;
             this.lblEmailInstruktor.Text = "ime.prezime@....com";
             // 
@@ -437,7 +462,7 @@ namespace FindAndLearn.Profil
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 15);
+            this.label1.Size = new System.Drawing.Size(62, 17);
             this.label1.TabIndex = 76;
             this.label1.Text = "Instruktor";
             // 
@@ -446,14 +471,14 @@ namespace FindAndLearn.Profil
             this.lblKolegiji.AutoSize = true;
             this.lblKolegiji.Location = new System.Drawing.Point(10, 32);
             this.lblKolegiji.Name = "lblKolegiji";
-            this.lblKolegiji.Size = new System.Drawing.Size(45, 15);
+            this.lblKolegiji.Size = new System.Drawing.Size(48, 17);
             this.lblKolegiji.TabIndex = 0;
             this.lblKolegiji.Text = "Kolegij:";
             // 
             // pbEmailInstruktora
             // 
             this.pbEmailInstruktora.BackgroundImage = global::FindAndLearn.Properties.Resources.Email;
-            this.pbEmailInstruktora.Location = new System.Drawing.Point(115, 125);
+            this.pbEmailInstruktora.Location = new System.Drawing.Point(115, 120);
             this.pbEmailInstruktora.Name = "pbEmailInstruktora";
             this.pbEmailInstruktora.Size = new System.Drawing.Size(24, 26);
             this.pbEmailInstruktora.TabIndex = 20;
@@ -464,13 +489,13 @@ namespace FindAndLearn.Profil
             this.comboKolegiji.FormattingEnabled = true;
             this.comboKolegiji.Location = new System.Drawing.Point(69, 29);
             this.comboKolegiji.Name = "comboKolegiji";
-            this.comboKolegiji.Size = new System.Drawing.Size(198, 23);
+            this.comboKolegiji.Size = new System.Drawing.Size(198, 25);
             this.comboKolegiji.TabIndex = 75;
             // 
             // pbTelefonInstruktora
             // 
             this.pbTelefonInstruktora.BackgroundImage = global::FindAndLearn.Properties.Resources.Telefon;
-            this.pbTelefonInstruktora.Location = new System.Drawing.Point(115, 157);
+            this.pbTelefonInstruktora.Location = new System.Drawing.Point(115, 152);
             this.pbTelefonInstruktora.Name = "pbTelefonInstruktora";
             this.pbTelefonInstruktora.Size = new System.Drawing.Size(24, 23);
             this.pbTelefonInstruktora.TabIndex = 20;
@@ -479,21 +504,129 @@ namespace FindAndLearn.Profil
             // lblMobitelInstruktora
             // 
             this.lblMobitelInstruktora.AutoSize = true;
-            this.lblMobitelInstruktora.Location = new System.Drawing.Point(145, 161);
+            this.lblMobitelInstruktora.Location = new System.Drawing.Point(145, 156);
             this.lblMobitelInstruktora.Name = "lblMobitelInstruktora";
-            this.lblMobitelInstruktora.Size = new System.Drawing.Size(73, 15);
+            this.lblMobitelInstruktora.Size = new System.Drawing.Size(74, 17);
             this.lblMobitelInstruktora.TabIndex = 20;
             this.lblMobitelInstruktora.Text = "xxx xxx xxxx";
             // 
-            // lblImeInstruktora
+            // groupBox7
             // 
-            this.lblImeInstruktora.AutoSize = true;
-            this.lblImeInstruktora.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblImeInstruktora.Location = new System.Drawing.Point(113, 98);
-            this.lblImeInstruktora.Name = "lblImeInstruktora";
-            this.lblImeInstruktora.Size = new System.Drawing.Size(74, 15);
-            this.lblImeInstruktora.TabIndex = 77;
-            this.lblImeInstruktora.Text = "Ime Prezime";
+            this.groupBox7.Controls.Add(this.groupBox2);
+            this.groupBox7.Controls.Add(this.groupBox3);
+            this.groupBox7.Controls.Add(this.groupBox4);
+            this.groupBox7.Controls.Add(this.lblNazivTermina);
+            this.groupBox7.Controls.Add(this.groupBox5);
+            this.groupBox7.Controls.Add(this.groupBox1);
+            this.groupBox7.Controls.Add(this.groupBox6);
+            this.groupBox7.Controls.Add(this.lblMjestoOdrzavanja);
+            this.groupBox7.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox7.Location = new System.Drawing.Point(688, 290);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(315, 122);
+            this.groupBox7.TabIndex = 89;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Temin";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.groupBox2.Location = new System.Drawing.Point(120, 34);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(16, 10);
+            this.groupBox2.TabIndex = 87;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.groupBox3.Location = new System.Drawing.Point(20, 34);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(16, 10);
+            this.groupBox3.TabIndex = 83;
+            this.groupBox3.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.groupBox4.Location = new System.Drawing.Point(51, 34);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(16, 10);
+            this.groupBox4.TabIndex = 84;
+            this.groupBox4.TabStop = false;
+            // 
+            // lblNazivTermina
+            // 
+            this.lblNazivTermina.AutoSize = true;
+            this.lblNazivTermina.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblNazivTermina.Location = new System.Drawing.Point(150, 38);
+            this.lblNazivTermina.Name = "lblNazivTermina";
+            this.lblNazivTermina.Size = new System.Drawing.Size(93, 17);
+            this.lblNazivTermina.TabIndex = 78;
+            this.lblNazivTermina.Text = "Naziv termina";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.groupBox5.Location = new System.Drawing.Point(89, 34);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(16, 10);
+            this.groupBox5.TabIndex = 86;
+            this.groupBox5.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.groupBox1.Controls.Add(this.lblDan);
+            this.groupBox1.Location = new System.Drawing.Point(13, 40);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(62, 54);
+            this.groupBox1.TabIndex = 82;
+            this.groupBox1.TabStop = false;
+            // 
+            // lblDan
+            // 
+            this.lblDan.AutoSize = true;
+            this.lblDan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.lblDan.Font = new System.Drawing.Font("Open Sans", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.lblDan.Location = new System.Drawing.Point(11, 10);
+            this.lblDan.Name = "lblDan";
+            this.lblDan.Size = new System.Drawing.Size(37, 38);
+            this.lblDan.TabIndex = 79;
+            this.lblDan.Text = "D";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.groupBox6.Controls.Add(this.lblMjesec);
+            this.groupBox6.Location = new System.Drawing.Point(82, 40);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(62, 54);
+            this.groupBox6.TabIndex = 85;
+            this.groupBox6.TabStop = false;
+            // 
+            // lblMjesec
+            // 
+            this.lblMjesec.AutoSize = true;
+            this.lblMjesec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.lblMjesec.Font = new System.Drawing.Font("Open Sans", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblMjesec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.lblMjesec.Location = new System.Drawing.Point(13, 10);
+            this.lblMjesec.Name = "lblMjesec";
+            this.lblMjesec.Size = new System.Drawing.Size(42, 38);
+            this.lblMjesec.TabIndex = 79;
+            this.lblMjesec.Text = "M";
+            // 
+            // lblMjestoOdrzavanja
+            // 
+            this.lblMjestoOdrzavanja.AutoSize = true;
+            this.lblMjestoOdrzavanja.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblMjestoOdrzavanja.Location = new System.Drawing.Point(151, 57);
+            this.lblMjestoOdrzavanja.Name = "lblMjestoOdrzavanja";
+            this.lblMjestoOdrzavanja.Size = new System.Drawing.Size(46, 17);
+            this.lblMjestoOdrzavanja.TabIndex = 84;
+            this.lblMjestoOdrzavanja.Text = "Mjesto";
             // 
             // frmStudentProfil
             // 
@@ -501,6 +634,7 @@ namespace FindAndLearn.Profil
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1036, 582);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.gbMojiKolegiji);
             this.Controls.Add(this.btnIzmijeniPodatke);
             this.Controls.Add(this.gbKratkiOpis);
@@ -532,6 +666,12 @@ namespace FindAndLearn.Profil
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmailInstruktora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefonInstruktora)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -577,5 +717,16 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.PictureBox pbTelefonInstruktora;
         private System.Windows.Forms.Label lblMobitelInstruktora;
         private System.Windows.Forms.Label lblImeInstruktora;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label lblNazivTermina;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblDan;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label lblMjesec;
+        private System.Windows.Forms.Label lblMjestoOdrzavanja;
     }
 }

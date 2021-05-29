@@ -22,6 +22,7 @@ namespace FindAndLearn.Profil
         {
             InitializeComponent();
             postojeciStudent = student;
+            comboKolegiji.SelectedIndexChanged += ComboKolegiji_SelectedIndexChanged;
             UcitajInstrukcije();
             OsvjeziProfil();
         }
@@ -42,10 +43,10 @@ namespace FindAndLearn.Profil
 
         private void frmStudentProfil_Load(object sender, EventArgs e)
         {
-            comboKolegiji.SelectedIndexChanged += ComboKolegiji_SelectedIndexChanged;
+
         }
 
-        // Ovisno o odabranom kolegiju prikazuju se kontakt podaci o instruktoru radi lakšeg kontaktiranja instruktora
+        // Ovisno o odabranom kolegiju prikazuju se kontakt podaci o instruktoru radi lakšeg kontaktiranja instruktora i podaci o terminu
 
         private void ComboKolegiji_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -55,8 +56,10 @@ namespace FindAndLearn.Profil
             {
                 using (var context = new Entities())
                 {
+                    Kolegiji kolegijBaza = comboKolegiji.SelectedItem as Kolegiji;
+
                     var upitInstruktor = from ins in context.Instruktori
-                                where ins.ID_instruktora == instrukcije.instruktor_id
+                                where ins.ID_instruktora == instrukcije.instruktor_id && instrukcije.kolegij_id == kolegijBaza.ID_kolegija
                                 select ins;
 
                     instruktorBaza = upitInstruktor.Single();
@@ -71,7 +74,27 @@ namespace FindAndLearn.Profil
                     lblImeInstruktora.Text = instruktor.Ime + " " + instruktor.Prezime;
                     lblEmailInstruktor.Text = instruktor.Email;
                     lblMobitelInstruktora.Text = instruktor.Mobitel;
+
+                    // Dohvaćanje podataka o terminu instrukcija vezanih uz odabrani kolegij
+
+                    using (var context = new Entities())
+                    {
+                        var upitTermin = from t in context.Termini
+                                         where t.instrukcija_id == instrukcije.ID_instrukcije
+                                         select t;
+
+                        Termini terminBaza = upitTermin.Single();
+
+                        string[] datum = terminBaza.vrijeme_termina.ToString().Split('.');
+
+                        lblDan.Text = datum[0];
+                        lblMjesec.Text = datum[1];
+                        lblNazivTermina.Text = terminBaza.naziv_termina;
+                        lblMjestoOdrzavanja.Text = terminBaza.mjesto_odrzavanja;
+                    }
                 }
+
+
             }
         }
 
