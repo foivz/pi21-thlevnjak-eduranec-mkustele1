@@ -22,8 +22,8 @@ namespace FindAndLearn.Profil
         {
             InitializeComponent();
             postojeciStudent = student;
-            comboKolegiji.SelectedIndexChanged += ComboKolegiji_SelectedIndexChanged;
             UcitajInstrukcije();
+            comboKolegiji.SelectedIndexChanged += ComboKolegiji_SelectedIndexChanged;
             OsvjeziProfil();
         }
 
@@ -54,19 +54,11 @@ namespace FindAndLearn.Profil
 
             foreach (var instrukcije in instrukcijeStudenta)
             {
-                using (var context = new Entities())
-                {
-                    Kolegiji kolegijBaza = comboKolegiji.SelectedItem as Kolegiji;
-
-                    var upitInstruktor = from ins in context.Instruktori
-                                where ins.ID_instruktora == instrukcije.instruktor_id && instrukcije.kolegij_id == kolegijBaza.ID_kolegija
-                                select ins;
-
-                    instruktorBaza = upitInstruktor.Single();
-                }
+                instruktorBaza = DohvatiInstruktoraZaKolegij(instrukcije);
 
                 if (instruktorBaza != null)
                 {
+                    // Dohvaćanje entitetne klase Instuktor kako bi se mogla prikazati slika tipa Image i ostali podaci o instruktoru
 
                     Instruktor instruktor = RepozitorijKorisnika.DohvatiKorisnika(instruktorBaza.korisnicko_ime, instruktorBaza.lozinka) as Instruktor;
 
@@ -75,68 +67,107 @@ namespace FindAndLearn.Profil
                     lblEmailInstruktor.Text = instruktor.Email;
                     lblMobitelInstruktora.Text = instruktor.Mobitel;
 
-                    // Dohvaćanje podataka o terminu instrukcija vezanih uz odabrani kolegij
+                    // Dohvaćanje podataka o terminu instrukcija vezanih uz odabrani kolegij i pretvorba prikaza datuma po danu i mjesecu
 
-                    using (var context = new Entities())
-                    {
-                        var upitTermin = from t in context.Termini
-                                         where t.instrukcija_id == instrukcije.ID_instrukcije
-                                         select t;
+                    Termini terminBaza = DohvatiTerminInstrukcija(instrukcije);
 
-                        Termini terminBaza = upitTermin.Single();
+                    string[] datum = terminBaza.vrijeme_termina.ToString().Split('.');
 
-                        string[] datum = terminBaza.vrijeme_termina.ToString().Split('.');
-
-                        lblDan.Text = datum[0];
-                        lblMjesec.Text = datum[1];
-                        lblNazivTermina.Text = terminBaza.naziv_termina;
-                        lblMjestoOdrzavanja.Text = terminBaza.mjesto_odrzavanja;
-                    }
+                    lblDan.Text = datum[0];
+                    lblMjesec.Text = datum[1];
+                    lblNazivTermina.Text = terminBaza.naziv_termina;
+                    lblMjestoOdrzavanja.Text = terminBaza.mjesto_odrzavanja;
                 }
-
-
             }
         }
 
 
+
+      private Instruktori DohvatiInstruktoraZaKolegij(Instrukcije instrukcije)
+      {
+           using (var context = new Entities())
+           {
+                Kolegiji kolegijBaza = comboKolegiji.SelectedItem as Kolegiji;
+
+                var upitInstruktor = from ins in context.Instruktori
+                                       where ins.ID_instruktora == instrukcije.instruktor_id && instrukcije.kolegij_id == kolegijBaza.ID_kolegija
+                                      select ins;
+
+                  return upitInstruktor.Single();
+           }
+       }
+
+       public Termini DohvatiTerminInstrukcija(Instrukcije instrukcije)
+       {
+            using (var context = new Entities())
+            {
+                var upitTermin = from t in context.Termini
+                                 where t.instrukcija_id == instrukcije.ID_instrukcije
+                                select t;
+
+                return upitTermin.Single();
+            }
+       }
+
+
         private void UcitajInstrukcije()
+        {
+             rezervacijeStudenta = DohvatiRezervacijeStudenta();
+
+             instrukcijeStudenta = new List<Instrukcije>();
+
+             foreach (var item in rezervacijeStudenta)
+             {
+                 instrukcijeStudenta.Add(DohvatiInstrukcijuStudenta(item));
+             }
+
+             // Putem dohvaćenih studentovih instrukcija dolazi se do kolegija
+
+             foreach (var instrukcije in instrukcijeStudenta)
+             {
+                  comboKolegiji.Items.Add(DohvatiKolegijStudenta(instrukcije));
+             }
+        }
+
+        public List<Rezervacije> DohvatiRezervacijeStudenta()
         {
             using (var context = new Entities())
             {
                 Studenti studentBaza = context.Studenti.FirstOrDefault(k => k.korisnicko_ime == postojeciStudent.KorisnickoIme);
 
-               // 1. Dohvaćanja svih potvrđenih rezervacija studenata
-
                 var upitRezervacije = from r in context.Rezervacije
-                           where r.student_ID == studentBaza.ID_studenta && r.potvrdjena == true
-                           select r;
+                                      where r.student_ID == studentBaza.ID_studenta && r.potvrdjena == true
+                                      select r;
 
-                rezervacijeStudenta = upitRezervacije.ToList();
-
-                foreach (var item in rezervacijeStudenta)
-                {
-
-               // 2. Rezervirani termin se odnosi na samo 1 instrukciju tako se dohvaćanjem termina studenta dolazi do studentovih instrukcija
-
-                    var upitInstrukcije = from t in context.Termini
-                                where t.ID_termina == item.termin_ID
-                                select t.Instrukcije;
-
-                    instrukcijeStudenta = upitInstrukcije.ToList();
-
-
-               // 3. Putem dohvaćenih studentovih instrukcija dolazi se do kolegija
-
-                    foreach (var instrukcije in instrukcijeStudenta)
-                    {
-                        var upitKolegiji = from k in context.Kolegiji
-                                    where k.ID_kolegija == instrukcije.kolegij_id
-                                    select k;
-
-                        comboKolegiji.DataSource = upitKolegiji.ToList();
-                    }
-                }
+                return upitRezervacije.ToList();
             }
+        }
+
+       // Rezervirani termin se odnosi na samo 1 instrukciju tako se dohvaćanjem termina studenta dolazi do studentovih instrukcija
+
+        public Instrukcije DohvatiInstrukcijuStudenta(Rezervacije rezervacija)
+        {
+
+            using (var context = new Entities())
+            {
+                var upitInstrukcije = from t in context.Termini
+                                      where t.ID_termina == rezervacija.termin_ID
+                                      select t.Instrukcije;
+
+                return upitInstrukcije.Single();
+            }
+        }
+
+        public Kolegiji DohvatiKolegijStudenta (Instrukcije instrukcija)
+        {
+           using (var context = new Entities())
+           {
+              var upitKolegiji = from k in context.Kolegiji
+                                 where k.ID_kolegija == instrukcija.kolegij_id
+                                 select k;
+
+             return upitKolegiji.Single();
+           }
         }
 
         private void btnIzmijeniPodatke_Click(object sender, EventArgs e)

@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FindAndLearn.Obavijesti
+namespace FindAndLearn.MojeObavijesti
 {
-    public partial class frmObavijestiInstruktor : Form
+    public partial class frmProcitajObavijesti : Form
     {
-        public frmObavijestiInstruktor()
+        public frmProcitajObavijesti()
         {
             InitializeComponent();
         }
 
-        private void frmObavijestiInstruktor_Load(object sender, EventArgs e)
+        private void frmProcitajObavijesti_Load(object sender, EventArgs e)
         {
 
         }

@@ -38,7 +38,7 @@ namespace FindAndLearn.Profil
                                   select ins.tip_instrukcije_id).Distinct().Count();
 
                 var brojKolegija = (from ins in instruktorBaza.Instrukcije
-                             select ins.kolegij_id).Distinct().Count();
+                                    select ins.kolegij_id).Distinct().Count();
 
                 var brojInstrukcija = (from ins in instruktorBaza.Instrukcije
                                        select ins).Count();

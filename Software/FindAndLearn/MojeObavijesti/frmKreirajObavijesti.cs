@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FindAndLearn.Obavijesti
+namespace FindAndLearn.MojeObavijesti
 {
     public partial class frmKreirajObavijesti : Form
     {
@@ -20,11 +20,6 @@ namespace FindAndLearn.Obavijesti
         private void frmKreirajObavijesti_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnOdustani_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

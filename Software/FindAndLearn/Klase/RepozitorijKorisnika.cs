@@ -24,6 +24,7 @@ namespace FindAndLearn.Klase
             {
                 List<Studenti> studenti = context.Studenti.ToList();
                 List<Instruktori> instruktori = context.Instruktori.ToList();
+
                 ListaKorisnika = new List<Korisnik>();
 
                 foreach (var item in studenti)
@@ -31,16 +32,8 @@ namespace FindAndLearn.Klase
                     ListaKorisnika.Add(
                     new Student
                     {
-                        Ime = item.ime,
-                        Prezime = item.prezime,
-                        KorisnickoIme = item.korisnicko_ime,
-                        Lozinka = item.lozinka,
-                        Email = item.email,
-                        Mjesto = item.mjesto,
-                        Ulica = item.ulica,
-                        Mobitel = item.mobitel,
-                        Slika = PretvoriSlikuIzBaze(item.slika),
-                        Opis = item.opis,
+                        Ime = item.ime, Prezime = item.prezime, KorisnickoIme = item.korisnicko_ime, Lozinka = item.lozinka, Email = item.email,
+                        Mjesto = item.mjesto, Ulica = item.ulica, Mobitel = item.mobitel, Slika = PretvoriSlikuIzBaze(item.slika), Opis = item.opis,
                         Uloga = Uloga.Student
                     });
                 }
@@ -50,18 +43,9 @@ namespace FindAndLearn.Klase
                     ListaKorisnika.Add(
                     new Instruktor
                     {
-                        Ime = item.ime,
-                        Prezime = item.prezime,
-                        KorisnickoIme = item.korisnicko_ime,
-                        Lozinka = item.lozinka,
-                        Email = item.email,
-                        Mjesto = item.mjesto,
-                        Ulica = item.ulica,
-                        Mobitel = item.mobitel,
-                        Slika = PretvoriSlikuIzBaze(item.slika),
-                        Opis = item.opis,
-                        Titula = item.titula,
-                        Uloga = Uloga.Instruktor
+                        Ime = item.ime, Prezime = item.prezime, KorisnickoIme = item.korisnicko_ime, Lozinka = item.lozinka, Email = item.email,
+                        Mjesto = item.mjesto, Ulica = item.ulica, Mobitel = item.mobitel, Slika = PretvoriSlikuIzBaze(item.slika), Opis = item.opis,
+                        Titula = item.titula, Uloga = Uloga.Instruktor
                     });
                 }
             }

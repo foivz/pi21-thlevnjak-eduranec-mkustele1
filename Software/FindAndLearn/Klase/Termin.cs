@@ -21,5 +21,6 @@ namespace FindAndLearn.Klase
             VrijemeTermina = vrijeme;
             Instrukcije = instrukcije;
         } */
+
     }
 }

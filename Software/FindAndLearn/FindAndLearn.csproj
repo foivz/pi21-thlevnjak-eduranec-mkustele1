@@ -75,30 +75,31 @@
     <Compile Include="Klase\Autentifikator.cs" />
     <Compile Include="Klase\Obavijest.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
+    <Compile Include="Klase\RepozitorijTermina.cs" />
     <Compile Include="Klase\Termin.cs" />
     <Compile Include="Kolegiji.code.cs" />
-    <Compile Include="Obavijesti\frmKreirajObavijesti.cs">
+    <Compile Include="MojeObavijesti\frmKreirajObavijesti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Obavijesti\frmKreirajObavijesti.Designer.cs">
+    <Compile Include="MojeObavijesti\frmKreirajObavijesti.Designer.cs">
       <DependentUpon>frmKreirajObavijesti.cs</DependentUpon>
     </Compile>
-    <Compile Include="Obavijesti\frmObavijestiInstruktor.cs">
+    <Compile Include="MojeObavijesti\frmObavijestiInstruktor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Obavijesti\frmObavijestiInstruktor.Designer.cs">
+    <Compile Include="MojeObavijesti\frmObavijestiInstruktor.Designer.cs">
       <DependentUpon>frmObavijestiInstruktor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Obavijesti\frmObavijestiStudent.cs">
+    <Compile Include="MojeObavijesti\frmObavijestiStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Obavijesti\frmObavijestiStudent.Designer.cs">
+    <Compile Include="MojeObavijesti\frmObavijestiStudent.Designer.cs">
       <DependentUpon>frmObavijestiStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Obavijesti\frmProcitajObavijesti.cs">
+    <Compile Include="MojeObavijesti\frmProcitajObavijesti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Obavijesti\frmProcitajObavijesti.Designer.cs">
+    <Compile Include="MojeObavijesti\frmProcitajObavijesti.Designer.cs">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
     </Compile>
     <Compile Include="Prijava\frmPocetnaInstruktor.cs">
@@ -182,16 +183,16 @@
     <Compile Include="Tip_instrukcija.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Obavijesti\frmKreirajObavijesti.resx">
+    <EmbeddedResource Include="MojeObavijesti\frmKreirajObavijesti.resx">
       <DependentUpon>frmKreirajObavijesti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Obavijesti\frmObavijestiInstruktor.resx">
+    <EmbeddedResource Include="MojeObavijesti\frmObavijestiInstruktor.resx">
       <DependentUpon>frmObavijestiInstruktor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Obavijesti\frmObavijestiStudent.resx">
+    <EmbeddedResource Include="MojeObavijesti\frmObavijestiStudent.resx">
       <DependentUpon>frmObavijestiStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Obavijesti\frmProcitajObavijesti.resx">
+    <EmbeddedResource Include="MojeObavijesti\frmProcitajObavijesti.resx">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prijava\frmPocetnaInstruktor.resx">
