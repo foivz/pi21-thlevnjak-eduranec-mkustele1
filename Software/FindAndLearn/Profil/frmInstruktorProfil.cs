@@ -121,5 +121,10 @@ namespace FindAndLearn.Profil
             form.ShowDialog();
             Close();
         }
+
+        private void btnInstrukcije_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

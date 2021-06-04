@@ -73,10 +73,13 @@
     </Compile>
     <Compile Include="Iznimke\UnosException.cs" />
     <Compile Include="Klase\Autentifikator.cs" />
+    <Compile Include="Klase\Instrukcija.cs" />
+    <Compile Include="Klase\Kolegij.cs" />
     <Compile Include="Klase\Obavijest.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
     <Compile Include="Klase\RepozitorijTermina.cs" />
     <Compile Include="Klase\Termin.cs" />
+    <Compile Include="Klase\TipInstrukcije.cs" />
     <Compile Include="Kolegiji.code.cs" />
     <Compile Include="MojeObavijesti\frmKreirajObavijesti.cs">
       <SubType>Form</SubType>
