@@ -32,8 +32,16 @@ namespace FindAndLearn.Klase
                     ListaKorisnika.Add(
                     new Student
                     {
-                        Ime = item.ime, Prezime = item.prezime, KorisnickoIme = item.korisnicko_ime, Lozinka = item.lozinka, Email = item.email,
-                        Mjesto = item.mjesto, Ulica = item.ulica, Mobitel = item.mobitel, Slika = PretvoriSlikuIzBaze(item.slika), Opis = item.opis,
+                        Ime = item.ime,
+                        Prezime = item.prezime,
+                        KorisnickoIme = item.korisnicko_ime,
+                        Lozinka = item.lozinka,
+                        Email = item.email,
+                        Mjesto = item.mjesto,
+                        Ulica = item.ulica,
+                        Mobitel = item.mobitel,
+                        Slika = PretvoriSlikuIzBaze(item.slika),
+                        Opis = item.opis,
                         Uloga = Uloga.Student
                     });
                 }
@@ -43,10 +51,20 @@ namespace FindAndLearn.Klase
                     ListaKorisnika.Add(
                     new Instruktor
                     {
-                        Ime = item.ime, Prezime = item.prezime, KorisnickoIme = item.korisnicko_ime, Lozinka = item.lozinka, Email = item.email,
-                        Mjesto = item.mjesto, Ulica = item.ulica, Mobitel = item.mobitel, Slika = PretvoriSlikuIzBaze(item.slika), Opis = item.opis,
-                        Titula = item.titula, Uloga = Uloga.Instruktor
-                    });
+                        ID_instruktora=item.ID_instruktora,
+                        Ime = item.ime,
+                        Prezime = item.prezime,
+                        KorisnickoIme = item.korisnicko_ime,
+                        Lozinka = item.lozinka,
+                        Email = item.email,
+                        Mjesto = item.mjesto,
+                        Ulica = item.ulica,
+                        Mobitel = item.mobitel,
+                        Slika = PretvoriSlikuIzBaze(item.slika),
+                        Opis = item.opis,
+                        Titula = item.titula,
+                        Uloga = Uloga.Instruktor
+                    }) ;
                 }
             }
         }
@@ -71,7 +89,7 @@ namespace FindAndLearn.Klase
 
         public static Korisnik DohvatiKorisnika(string korisnickoIme, string lozinka)
         {
-            PopuniListu(); 
+            PopuniListu();
             Korisnik korisnik = ListaKorisnika.Find(x => (x.KorisnickoIme == korisnickoIme) && (x.Lozinka == lozinka));
             return korisnik;
 
@@ -90,15 +108,15 @@ namespace FindAndLearn.Klase
         {
             using (var context = new Entities())
             {
-                if(korisnik.Uloga == Uloga.Instruktor)
+                if (korisnik.Uloga == Uloga.Instruktor)
                 {
-                   Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
-                   instruktorBaza.lozinka = korisnik.Lozinka;
+                    Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
+                    instruktorBaza.lozinka = korisnik.Lozinka;
 
-                   context.SaveChanges();
+                    context.SaveChanges();
 
                 }
-                else if(korisnik.Uloga == Uloga.Student)
+                else if (korisnik.Uloga == Uloga.Student)
                 {
                     Studenti studentBaza = context.Studenti.FirstOrDefault(x => (x.korisnicko_ime == korisnik.KorisnickoIme));
                     studentBaza.lozinka = korisnik.Lozinka;
@@ -111,26 +129,26 @@ namespace FindAndLearn.Klase
         {
             using (var context = new Entities())
             {
-                    Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
+                Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(x => (x.korisnicko_ime == korisnickoIme));
 
-                    instruktorBaza.ime = instruktor.Ime;
-                    instruktorBaza.prezime = instruktor.Prezime;
-                    instruktorBaza.korisnicko_ime = instruktor.KorisnickoIme;
-                    instruktorBaza.email = instruktor.Email;
-                    instruktorBaza.mjesto = instruktor.Mjesto;
-                    instruktorBaza.ulica = instruktor.Ulica;
-                    instruktorBaza.mobitel = instruktor.Mobitel;
-                    instruktorBaza.opis = instruktor.Opis;
-                    instruktorBaza.titula = instruktor.Titula;
+                instruktorBaza.ime = instruktor.Ime;
+                instruktorBaza.prezime = instruktor.Prezime;
+                instruktorBaza.korisnicko_ime = instruktor.KorisnickoIme;
+                instruktorBaza.email = instruktor.Email;
+                instruktorBaza.mjesto = instruktor.Mjesto;
+                instruktorBaza.ulica = instruktor.Ulica;
+                instruktorBaza.mobitel = instruktor.Mobitel;
+                instruktorBaza.opis = instruktor.Opis;
+                instruktorBaza.titula = instruktor.Titula;
 
-                    if (instruktor.Slika != null)
-                    {
-                        MemoryStream ms = new MemoryStream();
-                        instruktor.Slika.Save(ms, ImageFormat.Png);
-                        instruktorBaza.slika = ms.ToArray();
-                    }
+                if (instruktor.Slika != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    instruktor.Slika.Save(ms, ImageFormat.Png);
+                    instruktorBaza.slika = ms.ToArray();
+                }
 
-                    context.SaveChanges();
+                context.SaveChanges();
             }
         }
 
@@ -159,5 +177,7 @@ namespace FindAndLearn.Klase
                 context.SaveChanges();
             }
         }
+
+        
     }
 }

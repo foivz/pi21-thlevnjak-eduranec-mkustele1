@@ -11,7 +11,9 @@ namespace KorisniciLib
     {
         public string Titula { get; set; }
         public Image  Slika { get; set; }
-        
+
+        public int ID_instruktora { get; set; }
+
         public Instruktor()
         {
 

@@ -12,11 +12,14 @@ namespace FindAndLearn.Klase
 
         //jedinstveni repozitorij koji iz baze povlaci sve kolegije i prikazuje korisniknu na odabir moguće kolegije
         
-        public static void DohvatiKolegije()
+        public static List<Kolegij> DohvatiKolegije()
         {
-            using(var entities = new Entities())
+          
+            using (var entities = new Entities())
             {
+
                 List<Kolegiji> kolegiji = entities.Kolegiji.ToList();
+                
 
                 foreach (var item in kolegiji)
                 {
@@ -27,7 +30,9 @@ namespace FindAndLearn.Klase
                             GodinaKolegija = item.godina_kolegija
                         }) ;
                 }
+               
             }
+            return ListaKolegija;
         }
 
 

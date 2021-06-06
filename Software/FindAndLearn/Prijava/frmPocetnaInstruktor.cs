@@ -45,7 +45,7 @@ namespace FindAndLearn.Prijava
 
         private void btnInstrukcije_Click(object sender, EventArgs e)
         {
-            frmDodajInstrukciju frmDodajInstrukciju = new frmDodajInstrukciju();
+            frmDodajInstrukciju frmDodajInstrukciju = new frmDodajInstrukciju(postojeciInstruktor);
             frmDodajInstrukciju.Show(); //šaljem postojećeg instruktora u formu instrukcije gdje ga spremam u konstruktor i dodajem u instrukciju
         }
     }
