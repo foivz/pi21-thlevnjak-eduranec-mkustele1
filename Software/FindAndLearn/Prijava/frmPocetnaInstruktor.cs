@@ -1,4 +1,5 @@
-﻿using FindAndLearn.Profil;
+﻿using FindAndLearn.MojeInstrukcije;
+using FindAndLearn.Profil;
 using KorisniciLib;
 using System;
 using System.Collections.Generic;
@@ -40,6 +41,12 @@ namespace FindAndLearn.Prijava
             frmInstruktorProfil form = new frmInstruktorProfil(postojeciInstruktor);
             form.ShowDialog();
             Close();
+        }
+
+        private void btnInstrukcije_Click(object sender, EventArgs e)
+        {
+            frmDodajInstrukciju frmDodajInstrukciju = new frmDodajInstrukciju();
+            frmDodajInstrukciju.Show(); //šaljem postojećeg instruktora u formu instrukcije gdje ga spremam u konstruktor i dodajem u instrukciju
         }
     }
 }

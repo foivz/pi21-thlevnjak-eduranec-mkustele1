@@ -10,6 +10,14 @@ namespace FindAndLearn.Klase
     {
         public string NazivKolegija { get; set; }
         public int GodinaKolegija { get; set; }
+
+        public Kolegij()
+        {
+
+
+        }
+
+
         public Kolegij(string nazivKolegija, int godinaKolegija)
         {
             NazivKolegija = nazivKolegija;

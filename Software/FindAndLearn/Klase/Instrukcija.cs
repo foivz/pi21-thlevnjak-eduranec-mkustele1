@@ -17,6 +17,12 @@ namespace FindAndLearn.Klase
 
         public Instruktor Instruktor { get; set; }
 
+
+        public Instrukcija()
+        {
+
+        }
+
         public Instrukcija(Instruktor instruktor, TipInstrukcije tipInstrukcije, Kolegij kolegij, string opisInstrukcije, double cijenaInstrukcije)
         {
             TipInstrukcije = tipInstrukcije;

@@ -76,11 +76,19 @@
     <Compile Include="Klase\Instrukcija.cs" />
     <Compile Include="Klase\Kolegij.cs" />
     <Compile Include="Klase\Obavijest.cs" />
+    <Compile Include="Klase\RepozitorijInstrukcija.cs" />
+    <Compile Include="Klase\RepozitorijKolegija.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
     <Compile Include="Klase\RepozitorijTermina.cs" />
     <Compile Include="Klase\Termin.cs" />
     <Compile Include="Klase\TipInstrukcije.cs" />
     <Compile Include="Kolegiji.code.cs" />
+    <Compile Include="MojeInstrukcije\frmDodajInstrukciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojeInstrukcije\frmDodajInstrukciju.Designer.cs">
+      <DependentUpon>frmDodajInstrukciju.cs</DependentUpon>
+    </Compile>
     <Compile Include="MojeObavijesti\frmKreirajObavijesti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +194,9 @@
     <Compile Include="Tip_instrukcija.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MojeInstrukcije\frmDodajInstrukciju.resx">
+      <DependentUpon>frmDodajInstrukciju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MojeObavijesti\frmKreirajObavijesti.resx">
       <DependentUpon>frmKreirajObavijesti.cs</DependentUpon>
     </EmbeddedResource>
