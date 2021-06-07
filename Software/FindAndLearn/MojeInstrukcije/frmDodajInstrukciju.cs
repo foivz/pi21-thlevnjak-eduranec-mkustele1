@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace FindAndLearn.MojeInstrukcije
     public partial class frmDodajInstrukciju : Form
     {
         Instruktor TrenutniInstruktor;
+       
         public frmDodajInstrukciju()
         {
             InitializeComponent();
@@ -27,20 +29,20 @@ namespace FindAndLearn.MojeInstrukcije
         }
         private void frmDodajInstrukciju_Load(object sender, EventArgs e)
         {
-            
-            using(Entities entities = new Entities())
+            using(var entities=new Entities())
             {
-                comboVrstaKolegija.DataSource = entities.Kolegiji.ToList();
                 comboTipInstrukcija.DataSource = entities.Tip_instrukcija.ToList();
-                dataGridView1.DataSource = entities.Instrukcije.Where(x => x.instruktor_id == TrenutniInstruktor.ID_instruktora).ToList();
-                dataGridView1.Columns["Instruktori"].Visible = false;
-                dataGridView1.Columns["Kolegiji"].Visible = false;
-                dataGridView1.Columns["Tip_Instrukcija"].Visible = false;
-                dataGridView1.Columns["Termini"].Visible = false;
-
+                comboVrstaKolegija.DataSource = entities.Kolegiji.ToList();
             }
+            OsvjeziMojeInstrukcije();
         }
 
+        private void OsvjeziMojeInstrukcije()
+        {
+            Entities entities = new Entities();
+            entities.Instrukcije.Load();
+            instrukcijeBindingSource.DataSource = entities.Instrukcije.Local;
+        }
         private void btnOdjava_Click(object sender, EventArgs e)
         {
             frmPrijava form = new frmPrijava();
@@ -55,9 +57,40 @@ namespace FindAndLearn.MojeInstrukcije
             novaInstrukcija.TipInstrukcije = (comboTipInstrukcija.SelectedItem as Tip_instrukcija).ID_tip_instrukcije;
             novaInstrukcija.Kolegij = (comboVrstaKolegija.SelectedItem as Kolegiji).ID_kolegija;
             novaInstrukcija.OpisInstrukcije = txtOpisInstrukcije.Text;
-            novaInstrukcija.CijenaInstrukcije = double.Parse(textCijenaInstrukcije.Text);
+            if (textCijenaInstrukcije.Text != "")
+            {
+                novaInstrukcija.CijenaInstrukcije = double.Parse(textCijenaInstrukcije.Text);
+            }
+            else
+            {
+                novaInstrukcija.CijenaInstrukcije = 0;
+            }
             RepozitorijInstrukcija.DodajInstrukciju(novaInstrukcija);
+            OsvjeziMojeInstrukcije();
+            OsvjeziObrazac();
+        }
+
+        private void OsvjeziObrazac()
+        {
+            txtOpisInstrukcije.Clear();
+            textCijenaInstrukcije.Clear();
             
+        }
+
+        private void btnObrisiInstrukciju_Click(object sender, EventArgs e)
+        {
+            
+            Instrukcije instrukcijaBrisanje = instrukcijeBindingSource.Current as Instrukcije;
+            int idBrisanje = instrukcijaBrisanje.ID_instrukcije;
+            if(instrukcijaBrisanje != null)
+            {
+                if(MessageBox.Show("Želite li obrisati odabranu instrukciju?", "Brisanje",MessageBoxButtons.YesNo)==System.Windows.Forms.DialogResult.Yes)
+                {
+                    RepozitorijInstrukcija.ObrisiInstrukciju(idBrisanje);
+                }
+            }
+            OsvjeziMojeInstrukcije();
+
         }
     }
 }

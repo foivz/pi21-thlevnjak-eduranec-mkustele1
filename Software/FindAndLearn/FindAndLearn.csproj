@@ -77,11 +77,9 @@
     <Compile Include="Klase\Kolegij.cs" />
     <Compile Include="Klase\Obavijest.cs" />
     <Compile Include="Klase\RepozitorijInstrukcija.cs" />
-    <Compile Include="Klase\RepozitorijKolegija.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
     <Compile Include="Klase\RepozitorijTermina.cs" />
     <Compile Include="Klase\Termin.cs" />
-    <Compile Include="Klase\TipInstrukcije.cs" />
     <Compile Include="Kolegiji.code.cs" />
     <Compile Include="MojeInstrukcije\frmDodajInstrukciju.cs">
       <SubType>Form</SubType>
@@ -251,6 +249,9 @@
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Instrukcije.datasource" />
+    <None Include="Properties\DataSources\Kolegiji.datasource" />
+    <None Include="Properties\DataSources\Tip_instrukcija.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

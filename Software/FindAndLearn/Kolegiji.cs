@@ -26,5 +26,7 @@ namespace FindAndLearn
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Instrukcije> Instrukcije { get; set; }
+
+        
     }
 }

@@ -29,12 +29,14 @@ namespace FindAndLearn.MojeInstrukcije
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.gbProfil = new System.Windows.Forms.GroupBox();
             this.btnInstrukcije = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
@@ -45,17 +47,25 @@ namespace FindAndLearn.MojeInstrukcije
             this.comboTipInstrukcija = new System.Windows.Forms.ComboBox();
             this.comboVrstaKolegija = new System.Windows.Forms.ComboBox();
             this.txtOpisInstrukcije = new System.Windows.Forms.RichTextBox();
-            this.btnOdustani = new System.Windows.Forms.Button();
             this.btnDodajInstrukciju = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMojeInstrukcije = new System.Windows.Forms.DataGridView();
             this.lblMojeInstrukcije = new System.Windows.Forms.Label();
             this.btnDodajTermin = new System.Windows.Forms.Button();
             this.textCijenaInstrukcije = new System.Windows.Forms.TextBox();
+            this.btnObrisiInstrukciju = new System.Windows.Forms.Button();
+            this.lblKn = new System.Windows.Forms.Label();
+            this.iDinstrukcijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipinstrukcijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolegijiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisinstrukcijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cijenainstrukcijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instrukcijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbProfil.SuspendLayout();
             this.gbIzbornik.SuspendLayout();
             this.gbInstruktor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMojeInstrukcije)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.instrukcijeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pbLogo
@@ -133,6 +143,19 @@ namespace FindAndLearn.MojeInstrukcije
             this.gbIzbornik.TabIndex = 106;
             this.gbIzbornik.TabStop = false;
             // 
+            // btnOdustani
+            // 
+            this.btnOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdustani.Location = new System.Drawing.Point(24, 496);
+            this.btnOdustani.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(245, 38);
+            this.btnOdustani.TabIndex = 25;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = false;
+            // 
             // gbInstruktor
             // 
             this.gbInstruktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
@@ -204,7 +227,7 @@ namespace FindAndLearn.MojeInstrukcije
             this.lblOpisInstrukcije.Location = new System.Drawing.Point(308, 203);
             this.lblOpisInstrukcije.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOpisInstrukcije.Name = "lblOpisInstrukcije";
-            this.lblOpisInstrukcije.Size = new System.Drawing.Size(68, 25);
+            this.lblOpisInstrukcije.Size = new System.Drawing.Size(54, 20);
             this.lblOpisInstrukcije.TabIndex = 110;
             this.lblOpisInstrukcije.Text = "Opis:";
             // 
@@ -243,42 +266,37 @@ namespace FindAndLearn.MojeInstrukcije
             this.txtOpisInstrukcije.TabIndex = 115;
             this.txtOpisInstrukcije.Text = "";
             // 
-            // btnOdustani
-            // 
-            this.btnOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdustani.Location = new System.Drawing.Point(24, 496);
-            this.btnOdustani.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(245, 38);
-            this.btnOdustani.TabIndex = 25;
-            this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = false;
-            // 
             // btnDodajInstrukciju
             // 
             this.btnDodajInstrukciju.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnDodajInstrukciju.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDodajInstrukciju.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodajInstrukciju.Location = new System.Drawing.Point(724, 534);
+            this.btnDodajInstrukciju.Location = new System.Drawing.Point(678, 540);
             this.btnDodajInstrukciju.Margin = new System.Windows.Forms.Padding(4);
             this.btnDodajInstrukciju.Name = "btnDodajInstrukciju";
-            this.btnDodajInstrukciju.Size = new System.Drawing.Size(157, 31);
+            this.btnDodajInstrukciju.Size = new System.Drawing.Size(203, 31);
             this.btnDodajInstrukciju.TabIndex = 30;
             this.btnDodajInstrukciju.Text = "Dodaj instrukciju";
             this.btnDodajInstrukciju.UseVisualStyleBackColor = false;
             this.btnDodajInstrukciju.Click += new System.EventHandler(this.btnDodajInstrukciju_Click);
             // 
-            // dataGridView1
+            // dgvMojeInstrukcije
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(992, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(591, 499);
-            this.dataGridView1.TabIndex = 117;
+            this.dgvMojeInstrukcije.AutoGenerateColumns = false;
+            this.dgvMojeInstrukcije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMojeInstrukcije.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDinstrukcijeDataGridViewTextBoxColumn,
+            this.tipinstrukcijaDataGridViewTextBoxColumn,
+            this.kolegijiDataGridViewTextBoxColumn,
+            this.opisinstrukcijeDataGridViewTextBoxColumn,
+            this.cijenainstrukcijeDataGridViewTextBoxColumn});
+            this.dgvMojeInstrukcije.DataSource = this.instrukcijeBindingSource;
+            this.dgvMojeInstrukcije.Location = new System.Drawing.Point(992, 110);
+            this.dgvMojeInstrukcije.Name = "dgvMojeInstrukcije";
+            this.dgvMojeInstrukcije.RowHeadersWidth = 51;
+            this.dgvMojeInstrukcije.RowTemplate.Height = 24;
+            this.dgvMojeInstrukcije.Size = new System.Drawing.Size(764, 339);
+            this.dgvMojeInstrukcije.TabIndex = 117;
             // 
             // lblMojeInstrukcije
             // 
@@ -287,7 +305,7 @@ namespace FindAndLearn.MojeInstrukcije
             this.lblMojeInstrukcije.Location = new System.Drawing.Point(988, 76);
             this.lblMojeInstrukcije.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMojeInstrukcije.Name = "lblMojeInstrukcije";
-            this.lblMojeInstrukcije.Size = new System.Drawing.Size(185, 25);
+            this.lblMojeInstrukcije.Size = new System.Drawing.Size(148, 20);
             this.lblMojeInstrukcije.TabIndex = 118;
             this.lblMojeInstrukcije.Text = "Moje instrukcije:";
             // 
@@ -296,7 +314,7 @@ namespace FindAndLearn.MojeInstrukcije
             this.btnDodajTermin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnDodajTermin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDodajTermin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodajTermin.Location = new System.Drawing.Point(1628, 110);
+            this.btnDodajTermin.Location = new System.Drawing.Point(1599, 503);
             this.btnDodajTermin.Margin = new System.Windows.Forms.Padding(4);
             this.btnDodajTermin.Name = "btnDodajTermin";
             this.btnDodajTermin.Size = new System.Drawing.Size(157, 31);
@@ -306,20 +324,89 @@ namespace FindAndLearn.MojeInstrukcije
             // 
             // textCijenaInstrukcije
             // 
-            this.textCijenaInstrukcije.Location = new System.Drawing.Point(476, 543);
+            this.textCijenaInstrukcije.Location = new System.Drawing.Point(496, 545);
             this.textCijenaInstrukcije.Name = "textCijenaInstrukcije";
-            this.textCijenaInstrukcije.Size = new System.Drawing.Size(161, 22);
+            this.textCijenaInstrukcije.Size = new System.Drawing.Size(88, 22);
             this.textCijenaInstrukcije.TabIndex = 120;
+            // 
+            // btnObrisiInstrukciju
+            // 
+            this.btnObrisiInstrukciju.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnObrisiInstrukciju.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnObrisiInstrukciju.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnObrisiInstrukciju.Location = new System.Drawing.Point(992, 503);
+            this.btnObrisiInstrukciju.Margin = new System.Windows.Forms.Padding(4);
+            this.btnObrisiInstrukciju.Name = "btnObrisiInstrukciju";
+            this.btnObrisiInstrukciju.Size = new System.Drawing.Size(217, 31);
+            this.btnObrisiInstrukciju.TabIndex = 121;
+            this.btnObrisiInstrukciju.Text = "Obriši instrukciju";
+            this.btnObrisiInstrukciju.UseVisualStyleBackColor = false;
+            this.btnObrisiInstrukciju.Click += new System.EventHandler(this.btnObrisiInstrukciju_Click);
+            // 
+            // lblKn
+            // 
+            this.lblKn.AutoSize = true;
+            this.lblKn.Location = new System.Drawing.Point(590, 548);
+            this.lblKn.Name = "lblKn";
+            this.lblKn.Size = new System.Drawing.Size(25, 17);
+            this.lblKn.TabIndex = 122;
+            this.lblKn.Text = "Kn";
+            // 
+            // iDinstrukcijeDataGridViewTextBoxColumn
+            // 
+            this.iDinstrukcijeDataGridViewTextBoxColumn.DataPropertyName = "ID_instrukcije";
+            this.iDinstrukcijeDataGridViewTextBoxColumn.HeaderText = "ID_instrukcije";
+            this.iDinstrukcijeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDinstrukcijeDataGridViewTextBoxColumn.Name = "iDinstrukcijeDataGridViewTextBoxColumn";
+            this.iDinstrukcijeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tipinstrukcijaDataGridViewTextBoxColumn
+            // 
+            this.tipinstrukcijaDataGridViewTextBoxColumn.DataPropertyName = "Tip_instrukcija";
+            this.tipinstrukcijaDataGridViewTextBoxColumn.HeaderText = "Tip_instrukcija";
+            this.tipinstrukcijaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tipinstrukcijaDataGridViewTextBoxColumn.Name = "tipinstrukcijaDataGridViewTextBoxColumn";
+            this.tipinstrukcijaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // kolegijiDataGridViewTextBoxColumn
+            // 
+            this.kolegijiDataGridViewTextBoxColumn.DataPropertyName = "Kolegiji";
+            this.kolegijiDataGridViewTextBoxColumn.HeaderText = "Kolegiji";
+            this.kolegijiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kolegijiDataGridViewTextBoxColumn.Name = "kolegijiDataGridViewTextBoxColumn";
+            this.kolegijiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // opisinstrukcijeDataGridViewTextBoxColumn
+            // 
+            this.opisinstrukcijeDataGridViewTextBoxColumn.DataPropertyName = "opis_instrukcije";
+            this.opisinstrukcijeDataGridViewTextBoxColumn.HeaderText = "opis_instrukcije";
+            this.opisinstrukcijeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.opisinstrukcijeDataGridViewTextBoxColumn.Name = "opisinstrukcijeDataGridViewTextBoxColumn";
+            this.opisinstrukcijeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cijenainstrukcijeDataGridViewTextBoxColumn
+            // 
+            this.cijenainstrukcijeDataGridViewTextBoxColumn.DataPropertyName = "cijena_instrukcije";
+            this.cijenainstrukcijeDataGridViewTextBoxColumn.HeaderText = "cijena_instrukcije";
+            this.cijenainstrukcijeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cijenainstrukcijeDataGridViewTextBoxColumn.Name = "cijenainstrukcijeDataGridViewTextBoxColumn";
+            this.cijenainstrukcijeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // instrukcijeBindingSource
+            // 
+            this.instrukcijeBindingSource.DataSource = typeof(FindAndLearn.Instrukcije);
             // 
             // frmDodajInstrukciju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1838, 658);
+            this.Controls.Add(this.lblKn);
+            this.Controls.Add(this.btnObrisiInstrukciju);
             this.Controls.Add(this.textCijenaInstrukcije);
             this.Controls.Add(this.btnDodajTermin);
             this.Controls.Add(this.lblMojeInstrukcije);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMojeInstrukcije);
             this.Controls.Add(this.btnDodajInstrukciju);
             this.Controls.Add(this.txtOpisInstrukcije);
             this.Controls.Add(this.comboVrstaKolegija);
@@ -340,7 +427,8 @@ namespace FindAndLearn.MojeInstrukcije
             this.gbIzbornik.ResumeLayout(false);
             this.gbInstruktor.ResumeLayout(false);
             this.gbInstruktor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMojeInstrukcije)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.instrukcijeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,9 +453,17 @@ namespace FindAndLearn.MojeInstrukcije
         private System.Windows.Forms.ComboBox comboVrstaKolegija;
         private System.Windows.Forms.RichTextBox txtOpisInstrukcije;
         private System.Windows.Forms.Button btnDodajInstrukciju;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMojeInstrukcije;
         private System.Windows.Forms.Label lblMojeInstrukcije;
         private System.Windows.Forms.Button btnDodajTermin;
         private System.Windows.Forms.TextBox textCijenaInstrukcije;
+        private System.Windows.Forms.BindingSource instrukcijeBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDinstrukcijeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipinstrukcijaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolegijiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisinstrukcijeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cijenainstrukcijeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnObrisiInstrukciju;
+        private System.Windows.Forms.Label lblKn;
     }
 }
