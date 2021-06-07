@@ -36,7 +36,7 @@ namespace FindAndLearn.MojeInstrukcije
             this.btnInstrukcije = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
-            this.btnOdustani = new System.Windows.Forms.Button();
+            this.btnZatvori = new System.Windows.Forms.Button();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
@@ -133,7 +133,7 @@ namespace FindAndLearn.MojeInstrukcije
             // 
             this.gbIzbornik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbIzbornik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gbIzbornik.Controls.Add(this.btnOdustani);
+            this.gbIzbornik.Controls.Add(this.btnZatvori);
             this.gbIzbornik.Controls.Add(this.btnInstrukcije);
             this.gbIzbornik.Location = new System.Drawing.Point(-11, 49);
             this.gbIzbornik.Margin = new System.Windows.Forms.Padding(4);
@@ -143,18 +143,19 @@ namespace FindAndLearn.MojeInstrukcije
             this.gbIzbornik.TabIndex = 106;
             this.gbIzbornik.TabStop = false;
             // 
-            // btnOdustani
+            // btnZatvori
             // 
-            this.btnOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdustani.Location = new System.Drawing.Point(24, 496);
-            this.btnOdustani.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(245, 38);
-            this.btnOdustani.TabIndex = 25;
-            this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = false;
+            this.btnZatvori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnZatvori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnZatvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZatvori.Location = new System.Drawing.Point(24, 496);
+            this.btnZatvori.Margin = new System.Windows.Forms.Padding(4);
+            this.btnZatvori.Name = "btnZatvori";
+            this.btnZatvori.Size = new System.Drawing.Size(245, 38);
+            this.btnZatvori.TabIndex = 25;
+            this.btnZatvori.Text = "Zatvori";
+            this.btnZatvori.UseVisualStyleBackColor = false;
+            this.btnZatvori.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // gbInstruktor
             // 
@@ -447,7 +448,7 @@ namespace FindAndLearn.MojeInstrukcije
         private System.Windows.Forms.Label lblTipInstrukcija;
         private System.Windows.Forms.Label lblVrstaKolegija;
         private System.Windows.Forms.Label lblOpisInstrukcije;
-        private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Button btnZatvori;
         private System.Windows.Forms.Label lblCijenaInstrukcije;
         private System.Windows.Forms.ComboBox comboTipInstrukcija;
         private System.Windows.Forms.ComboBox comboVrstaKolegija;

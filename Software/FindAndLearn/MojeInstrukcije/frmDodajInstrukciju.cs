@@ -47,7 +47,7 @@ namespace FindAndLearn.MojeInstrukcije
         {
             frmPrijava form = new frmPrijava();
             form.ShowDialog();
-            Close();
+            this.Close();
         }
 
         private void btnDodajInstrukciju_Click(object sender, EventArgs e)
@@ -91,6 +91,11 @@ namespace FindAndLearn.MojeInstrukcije
             }
             OsvjeziMojeInstrukcije();
 
+        }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
