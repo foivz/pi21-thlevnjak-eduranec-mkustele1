@@ -80,6 +80,7 @@
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
     <Compile Include="Klase\RepozitorijTermina.cs" />
     <Compile Include="Klase\Termin.cs" />
+    <Compile Include="Klase\TipInstrukcije.cs" />
     <Compile Include="Kolegiji.code.cs" />
     <Compile Include="MojeInstrukcije\frmDodajInstrukciju.cs">
       <SubType>Form</SubType>

@@ -33,7 +33,7 @@ namespace FindAndLearn.Profil
             this.txtOpis = new System.Windows.Forms.TextBox();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.btnSpremi = new System.Windows.Forms.Button();
-            this.gbOsnovo = new System.Windows.Forms.GroupBox();
+            this.gbOsnovno = new System.Windows.Forms.GroupBox();
             this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
             this.lblKorisnickoIme = new System.Windows.Forms.Label();
             this.txtPrezime = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@ namespace FindAndLearn.Profil
             this.pbSlikaStudenta = new System.Windows.Forms.PictureBox();
             this.openPictureDialog = new System.Windows.Forms.OpenFileDialog();
             this.gbKratkiOpis.SuspendLayout();
-            this.gbOsnovo.SuspendLayout();
+            this.gbOsnovno.SuspendLayout();
             this.gbAdresa.SuspendLayout();
             this.gbKontakt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaStudenta)).BeginInit();
@@ -101,21 +101,21 @@ namespace FindAndLearn.Profil
             this.btnSpremi.UseVisualStyleBackColor = true;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
-            // gbOsnovo
+            // gbOsnovno
             // 
-            this.gbOsnovo.Controls.Add(this.txtKorisnickoIme);
-            this.gbOsnovo.Controls.Add(this.lblKorisnickoIme);
-            this.gbOsnovo.Controls.Add(this.txtPrezime);
-            this.gbOsnovo.Controls.Add(this.txtIme);
-            this.gbOsnovo.Controls.Add(this.lblPrezime);
-            this.gbOsnovo.Controls.Add(this.lblIme);
-            this.gbOsnovo.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbOsnovo.Location = new System.Drawing.Point(200, 33);
-            this.gbOsnovo.Name = "gbOsnovo";
-            this.gbOsnovo.Size = new System.Drawing.Size(401, 151);
-            this.gbOsnovo.TabIndex = 44;
-            this.gbOsnovo.TabStop = false;
-            this.gbOsnovo.Text = "Osnovno";
+            this.gbOsnovno.Controls.Add(this.txtKorisnickoIme);
+            this.gbOsnovno.Controls.Add(this.lblKorisnickoIme);
+            this.gbOsnovno.Controls.Add(this.txtPrezime);
+            this.gbOsnovno.Controls.Add(this.txtIme);
+            this.gbOsnovno.Controls.Add(this.lblPrezime);
+            this.gbOsnovno.Controls.Add(this.lblIme);
+            this.gbOsnovno.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbOsnovno.Location = new System.Drawing.Point(200, 33);
+            this.gbOsnovno.Name = "gbOsnovno";
+            this.gbOsnovno.Size = new System.Drawing.Size(401, 151);
+            this.gbOsnovno.TabIndex = 44;
+            this.gbOsnovno.TabStop = false;
+            this.gbOsnovno.Text = "Osnovno";
             // 
             // txtKorisnickoIme
             // 
@@ -307,7 +307,7 @@ namespace FindAndLearn.Profil
             this.Controls.Add(this.gbKratkiOpis);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
-            this.Controls.Add(this.gbOsnovo);
+            this.Controls.Add(this.gbOsnovno);
             this.Controls.Add(this.gbAdresa);
             this.Controls.Add(this.gbKontakt);
             this.Name = "frmOMeniStudent";
@@ -315,8 +315,8 @@ namespace FindAndLearn.Profil
             this.Load += new System.EventHandler(this.frmOMeniStudent_Load);
             this.gbKratkiOpis.ResumeLayout(false);
             this.gbKratkiOpis.PerformLayout();
-            this.gbOsnovo.ResumeLayout(false);
-            this.gbOsnovo.PerformLayout();
+            this.gbOsnovno.ResumeLayout(false);
+            this.gbOsnovno.PerformLayout();
             this.gbAdresa.ResumeLayout(false);
             this.gbAdresa.PerformLayout();
             this.gbKontakt.ResumeLayout(false);
@@ -332,7 +332,7 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.TextBox txtOpis;
         private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Button btnSpremi;
-        private System.Windows.Forms.GroupBox gbOsnovo;
+        private System.Windows.Forms.GroupBox gbOsnovno;
         private System.Windows.Forms.TextBox txtKorisnickoIme;
         private System.Windows.Forms.Label lblKorisnickoIme;
         private System.Windows.Forms.TextBox txtPrezime;

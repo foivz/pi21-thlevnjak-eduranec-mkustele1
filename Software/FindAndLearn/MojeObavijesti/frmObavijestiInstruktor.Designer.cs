@@ -246,6 +246,7 @@ namespace FindAndLearn.MojeObavijesti
             this.btnKreiraj.TabIndex = 120;
             this.btnKreiraj.Text = "KREIRAJ OBAVIJEST";
             this.btnKreiraj.UseVisualStyleBackColor = true;
+            this.btnKreiraj.Click += new System.EventHandler(this.btnKreiraj_Click);
             // 
             // lblNazivTermina
             // 
@@ -401,7 +402,7 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.gbInstruktor);
             this.Controls.Add(this.gbIzbornik);
             this.Name = "frmObavijestiInstruktor";
-            this.Text = "frmObavijestiInstruktor";
+            this.Text = "Obavijesti";
             this.Load += new System.EventHandler(this.frmObavijestiInstruktor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.gbProfil.ResumeLayout(false);

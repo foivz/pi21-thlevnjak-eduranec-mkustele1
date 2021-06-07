@@ -17,9 +17,14 @@ namespace FindAndLearn.MojeObavijesti
         Instruktor postojeciInstruktor = null;
         List<Obavijest> dohvaceneObavijesti;
 
-        public frmObavijestiInstruktor()
+        List<Termin> listaTermina = RepozitorijTermina.PopuniListuTermina();
+        List<Instrukcija> listaInstrukcija = RepozitorijInstrukcija.PopuniPopisInstrukcija();
+
+        public frmObavijestiInstruktor(Instruktor instruktor)
         {
             InitializeComponent();
+            postojeciInstruktor = instruktor;
+            PopuniTermineInstruktora();
         }
 
         private void frmObavijestiInstruktor_Load(object sender, EventArgs e)
@@ -31,6 +36,17 @@ namespace FindAndLearn.MojeObavijesti
         {
             string[] datum = datumVrijeme.ToShortDateString().Split('.');
             return datum;
+        }
+
+
+        public void PopuniTermineInstruktora()
+        {
+            foreach (var instrukcija in listaInstrukcija)
+            {
+               // termini.Add (new listaTermina.Find(x => x.Instrukcija.Id == instrukcija.Id && instrukcija.Instruktor.ID_instruktora == postojeciInstruktor.ID_instruktora));
+
+                comboPopisTermina.DataSource = listaTermina.ToList();
+            }
         }
 
         public Termin DohvatiTermin()
@@ -126,6 +142,13 @@ namespace FindAndLearn.MojeObavijesti
                 }
             }
             return datumURasponu;
+        }
+
+        private void btnKreiraj_Click(object sender, EventArgs e)
+        {
+            frmKreirajObavijesti form = new frmKreirajObavijesti(postojeciInstruktor);
+            form.ShowDialog();
+            Close();
         }
     }
 }

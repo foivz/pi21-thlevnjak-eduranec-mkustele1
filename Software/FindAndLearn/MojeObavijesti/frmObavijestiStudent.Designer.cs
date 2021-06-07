@@ -389,7 +389,7 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.lblTermin);
             this.Controls.Add(this.btnPretrazi);
             this.Name = "frmObavijestiStudent";
-            this.Text = "frmObavijestiStudent";
+            this.Text = "Obavijesti";
             this.Load += new System.EventHandler(this.frmObavijestiStudent_Load);
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();

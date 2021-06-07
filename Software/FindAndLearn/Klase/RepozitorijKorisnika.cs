@@ -12,26 +12,24 @@ namespace FindAndLearn.Klase
 {
     public static class RepozitorijKorisnika
     {
-        public static List<Korisnik> ListaKorisnika { get; set; }
-
-
         // Metodom PopuniListu stvara se kopija liste korisnika iz baze podataka 
         // Svrha: Svesti rad s bazom na minimum i stvoriti jedinstven popis svih korisnika (instruktora i studenata)
 
-        public static void PopuniListu()
+        public static List<Korisnik> PopuniListu()
         {
             using (var context = new Entities())
             {
                 List<Studenti> studenti = context.Studenti.ToList();
                 List<Instruktori> instruktori = context.Instruktori.ToList();
 
-                ListaKorisnika = new List<Korisnik>();
+                List<Korisnik> ListaKorisnika = new List<Korisnik>();
 
                 foreach (var item in studenti)
                 {
                     ListaKorisnika.Add(
                     new Student
                     {
+                        ID_studenta = item.ID_studenta,
                         Ime = item.ime,
                         Prezime = item.prezime,
                         KorisnickoIme = item.korisnicko_ime,
@@ -51,7 +49,7 @@ namespace FindAndLearn.Klase
                     ListaKorisnika.Add(
                     new Instruktor
                     {
-                        ID_instruktora=item.ID_instruktora,
+                        ID_instruktora = item.ID_instruktora,
                         Ime = item.ime,
                         Prezime = item.prezime,
                         KorisnickoIme = item.korisnicko_ime,
@@ -66,6 +64,8 @@ namespace FindAndLearn.Klase
                         Uloga = Uloga.Instruktor
                     }) ;
                 }
+
+                return ListaKorisnika;
             }
         }
 
@@ -89,22 +89,22 @@ namespace FindAndLearn.Klase
 
         public static Korisnik DohvatiKorisnika(string korisnickoIme, string lozinka)
         {
-            PopuniListu();
-            Korisnik korisnik = ListaKorisnika.Find(x => (x.KorisnickoIme == korisnickoIme) && (x.Lozinka == lozinka));
+            List<Korisnik> listaKorisnika = PopuniListu();
+            Korisnik korisnik = listaKorisnika.Find(x => (x.KorisnickoIme == korisnickoIme) && (x.Lozinka == lozinka));
             return korisnik;
 
         }
 
         public static bool PostojiKorisnik(string korisnickoIme)
         {
-            PopuniListu();
-            return ListaKorisnika.Exists(x => (x.KorisnickoIme == korisnickoIme));
+            List<Korisnik> listaKorisnika = PopuniListu();
+            return listaKorisnika.Exists(x => (x.KorisnickoIme == korisnickoIme));
         }
 
 
         //Metoda AzurirajLozinku ažurira korisnika temeljem korisničkog imena kako u bazi ne postoje dva korisnika s istim korisničkim imenom
 
-        public static void AzurirajLozinku(Korisnik korisnik)
+        public static void AzurirajLozinku (Korisnik korisnik)
         {
             using (var context = new Entities())
             {
@@ -125,7 +125,7 @@ namespace FindAndLearn.Klase
                 }
             }
         }
-        public static void AzurirajInstruktora(Instruktor instruktor, string korisnickoIme)
+        public static void AzurirajInstruktora (Instruktor instruktor, string korisnickoIme)
         {
             using (var context = new Entities())
             {

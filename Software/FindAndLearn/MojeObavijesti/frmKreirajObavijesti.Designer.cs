@@ -29,7 +29,7 @@ namespace FindAndLearn.MojeObavijesti
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbPopisTermina = new System.Windows.Forms.ComboBox();
+            this.comboPopisTermina = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnKreiraj = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
@@ -39,13 +39,13 @@ namespace FindAndLearn.MojeObavijesti
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // cbPopisTermina
+            // comboPopisTermina
             // 
-            this.cbPopisTermina.FormattingEnabled = true;
-            this.cbPopisTermina.Location = new System.Drawing.Point(72, 30);
-            this.cbPopisTermina.Name = "cbPopisTermina";
-            this.cbPopisTermina.Size = new System.Drawing.Size(160, 21);
-            this.cbPopisTermina.TabIndex = 119;
+            this.comboPopisTermina.FormattingEnabled = true;
+            this.comboPopisTermina.Location = new System.Drawing.Point(72, 30);
+            this.comboPopisTermina.Name = "comboPopisTermina";
+            this.comboPopisTermina.Size = new System.Drawing.Size(160, 21);
+            this.comboPopisTermina.TabIndex = 119;
             // 
             // label7
             // 
@@ -120,7 +120,7 @@ namespace FindAndLearn.MojeObavijesti
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(611, 359);
-            this.Controls.Add(this.cbPopisTermina);
+            this.Controls.Add(this.comboPopisTermina);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnKreiraj);
             this.Controls.Add(this.btnOdustani);
@@ -129,7 +129,7 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmKreirajObavijesti";
-            this.Text = "frmKreirajObavijesti";
+            this.Text = "Kreiraj obavijesti";
             this.Load += new System.EventHandler(this.frmKreirajObavijesti_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,7 +138,7 @@ namespace FindAndLearn.MojeObavijesti
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbPopisTermina;
+        private System.Windows.Forms.ComboBox comboPopisTermina;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnKreiraj;
         private System.Windows.Forms.Button btnOdustani;

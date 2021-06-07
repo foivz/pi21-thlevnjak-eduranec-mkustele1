@@ -31,8 +31,8 @@ namespace FindAndLearn.MojeInstrukcije
         {
             using(var entities=new Entities())
             {
-                comboTipInstrukcija.DataSource = entities.Tip_instrukcija.ToList();
-                comboVrstaKolegija.DataSource = entities.Kolegiji.ToList();
+                comboTipInstrukcija.DataSource = RepozitorijInstrukcija.PopuniPopisTipovaInstrukcija();
+                comboVrstaKolegija.DataSource = RepozitorijInstrukcija.PopuniPopisKolegija();
             }
             OsvjeziMojeInstrukcije();
         }
@@ -53,9 +53,9 @@ namespace FindAndLearn.MojeInstrukcije
         private void btnDodajInstrukciju_Click(object sender, EventArgs e)
         {
             Instrukcija novaInstrukcija = RepozitorijInstrukcija.KreirajInstrukciju();
-            novaInstrukcija.Instruktor = TrenutniInstruktor.ID_instruktora;
-            novaInstrukcija.TipInstrukcije = (comboTipInstrukcija.SelectedItem as Tip_instrukcija).ID_tip_instrukcije;
-            novaInstrukcija.Kolegij = (comboVrstaKolegija.SelectedItem as Kolegiji).ID_kolegija;
+            novaInstrukcija.Instruktor = TrenutniInstruktor;
+            novaInstrukcija.TipInstrukcije = comboTipInstrukcija.SelectedItem as TipInstrukcije;
+            novaInstrukcija.Kolegij = comboVrstaKolegija.SelectedItem as Kolegij;
             novaInstrukcija.OpisInstrukcije = txtOpisInstrukcije.Text;
             if (textCijenaInstrukcije.Text != "")
             {

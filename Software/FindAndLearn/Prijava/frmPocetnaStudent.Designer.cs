@@ -35,7 +35,7 @@ namespace FindAndLearn.Prijava
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
             this.btnPoruke = new System.Windows.Forms.Button();
             this.btnTrazilica = new System.Windows.Forms.Button();
-            this.btnGrupe = new System.Windows.Forms.Button();
+            this.btnObavijesti = new System.Windows.Forms.Button();
             this.btnProfil = new System.Windows.Forms.Button();
             this.btnRezervacijaTermina = new System.Windows.Forms.Button();
             this.btnRecenzije = new System.Windows.Forms.Button();
@@ -43,8 +43,8 @@ namespace FindAndLearn.Prijava
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDobrodoslica = new System.Windows.Forms.Label();
+            this.lblFindAndLearn = new System.Windows.Forms.Label();
             this.pbLogoNaslovna = new System.Windows.Forms.PictureBox();
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -91,7 +91,7 @@ namespace FindAndLearn.Prijava
             this.gbIzbornik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbIzbornik.Controls.Add(this.btnPoruke);
             this.gbIzbornik.Controls.Add(this.btnTrazilica);
-            this.gbIzbornik.Controls.Add(this.btnGrupe);
+            this.gbIzbornik.Controls.Add(this.btnObavijesti);
             this.gbIzbornik.Controls.Add(this.btnProfil);
             this.gbIzbornik.Controls.Add(this.btnRezervacijaTermina);
             this.gbIzbornik.Controls.Add(this.btnRecenzije);
@@ -126,17 +126,17 @@ namespace FindAndLearn.Prijava
             this.btnTrazilica.Text = "TRAŽILICA";
             this.btnTrazilica.UseVisualStyleBackColor = false;
             // 
-            // btnGrupe
+            // btnObavijesti
             // 
-            this.btnGrupe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnGrupe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGrupe.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnGrupe.Location = new System.Drawing.Point(17, 207);
-            this.btnGrupe.Name = "btnGrupe";
-            this.btnGrupe.Size = new System.Drawing.Size(184, 31);
-            this.btnGrupe.TabIndex = 28;
-            this.btnGrupe.Text = "OBAVIJESTI";
-            this.btnGrupe.UseVisualStyleBackColor = false;
+            this.btnObavijesti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnObavijesti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnObavijesti.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnObavijesti.Location = new System.Drawing.Point(17, 207);
+            this.btnObavijesti.Name = "btnObavijesti";
+            this.btnObavijesti.Size = new System.Drawing.Size(184, 31);
+            this.btnObavijesti.TabIndex = 28;
+            this.btnObavijesti.Text = "OBAVIJESTI";
+            this.btnObavijesti.UseVisualStyleBackColor = false;
             // 
             // btnProfil
             // 
@@ -226,27 +226,27 @@ namespace FindAndLearn.Prijava
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // lblDobrodoslica
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.label3.Location = new System.Drawing.Point(416, 499);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(355, 28);
-            this.label3.TabIndex = 79;
-            this.label3.Text = "Želimo ti dobrodošlicu u svijet znanja!";
+            this.lblDobrodoslica.AutoSize = true;
+            this.lblDobrodoslica.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDobrodoslica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.lblDobrodoslica.Location = new System.Drawing.Point(416, 499);
+            this.lblDobrodoslica.Name = "lblDobrodoslica";
+            this.lblDobrodoslica.Size = new System.Drawing.Size(355, 28);
+            this.lblDobrodoslica.TabIndex = 79;
+            this.lblDobrodoslica.Text = "Želimo ti dobrodošlicu u svijet znanja!";
             // 
-            // label1
+            // lblFindAndLearn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(489, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 39);
-            this.label1.TabIndex = 75;
-            this.label1.Text = "Find and learn";
+            this.lblFindAndLearn.AutoSize = true;
+            this.lblFindAndLearn.Font = new System.Drawing.Font("Open Sans", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFindAndLearn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.lblFindAndLearn.Location = new System.Drawing.Point(489, 147);
+            this.lblFindAndLearn.Name = "lblFindAndLearn";
+            this.lblFindAndLearn.Size = new System.Drawing.Size(203, 39);
+            this.lblFindAndLearn.TabIndex = 75;
+            this.lblFindAndLearn.Text = "Find and learn";
             // 
             // pbLogoNaslovna
             // 
@@ -267,10 +267,10 @@ namespace FindAndLearn.Prijava
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbIzbornik);
             this.Controls.Add(this.gbInstruktor);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDobrodoslica);
+            this.Controls.Add(this.lblFindAndLearn);
             this.Name = "frmPocetnaStudent";
-            this.Text = "frmPocetnaStudent";
+            this.Text = "Početna student";
             this.Load += new System.EventHandler(this.frmPocetnaStudent_Load);
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();
@@ -291,7 +291,7 @@ namespace FindAndLearn.Prijava
         private System.Windows.Forms.GroupBox gbIzbornik;
         private System.Windows.Forms.Button btnPoruke;
         private System.Windows.Forms.Button btnTrazilica;
-        private System.Windows.Forms.Button btnGrupe;
+        private System.Windows.Forms.Button btnObavijesti;
         private System.Windows.Forms.Button btnProfil;
         private System.Windows.Forms.Button btnRezervacijaTermina;
         private System.Windows.Forms.Button btnRecenzije;
@@ -299,8 +299,8 @@ namespace FindAndLearn.Prijava
         private System.Windows.Forms.GroupBox gbInstruktor;
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDobrodoslica;
+        private System.Windows.Forms.Label lblFindAndLearn;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.PictureBox pbLogoNaslovna;
     }

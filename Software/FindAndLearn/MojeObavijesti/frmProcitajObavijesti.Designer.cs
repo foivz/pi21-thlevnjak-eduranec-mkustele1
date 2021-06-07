@@ -98,7 +98,7 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.lblNaslov);
             this.Controls.Add(this.lblDatum);
             this.Name = "frmProcitajObavijesti";
-            this.Text = "frmProcitajObavijesti";
+            this.Text = "Pročitaj obavijesti";
             this.Load += new System.EventHandler(this.frmProcitajObavijesti_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

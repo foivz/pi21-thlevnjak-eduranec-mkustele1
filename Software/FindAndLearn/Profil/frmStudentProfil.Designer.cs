@@ -40,7 +40,7 @@ namespace FindAndLearn.Profil
             this.btnRezervacijaTermina = new System.Windows.Forms.Button();
             this.btnRecenzije = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
-            this.gbInstruktor = new System.Windows.Forms.GroupBox();
+            this.gbStudent = new System.Windows.Forms.GroupBox();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnIzmijeniPodatke = new System.Windows.Forms.Button();
@@ -57,17 +57,17 @@ namespace FindAndLearn.Profil
             this.lblMobitel = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.pbSlikaStudenta = new System.Windows.Forms.PictureBox();
-            this.gbMojiKolegiji = new System.Windows.Forms.GroupBox();
+            this.gbMojeInstrukcije = new System.Windows.Forms.GroupBox();
             this.lblImeInstruktora = new System.Windows.Forms.Label();
             this.pbSlikaInstruktora = new System.Windows.Forms.PictureBox();
             this.lblEmailInstruktor = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblInstruktora = new System.Windows.Forms.Label();
             this.lblKolegiji = new System.Windows.Forms.Label();
             this.pbEmailInstruktora = new System.Windows.Forms.PictureBox();
             this.comboKolegiji = new System.Windows.Forms.ComboBox();
             this.pbTelefonInstruktora = new System.Windows.Forms.PictureBox();
             this.lblMobitelInstruktora = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.gbTermin = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -81,18 +81,18 @@ namespace FindAndLearn.Profil
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbIzbornik.SuspendLayout();
-            this.gbInstruktor.SuspendLayout();
+            this.gbStudent.SuspendLayout();
             this.gbKratkiOpis.SuspendLayout();
             this.gbKontakt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMjesto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaStudenta)).BeginInit();
-            this.gbMojiKolegiji.SuspendLayout();
+            this.gbMojeInstrukcije.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmailInstruktora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefonInstruktora)).BeginInit();
-            this.groupBox7.SuspendLayout();
+            this.gbTermin.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
@@ -231,18 +231,18 @@ namespace FindAndLearn.Profil
             this.lblInstruktor.TabIndex = 3;
             this.lblInstruktor.Text = "Student ";
             // 
-            // gbInstruktor
+            // gbStudent
             // 
-            this.gbInstruktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.gbInstruktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gbInstruktor.Controls.Add(this.btnOdjava);
-            this.gbInstruktor.Controls.Add(this.btnHelp);
-            this.gbInstruktor.Controls.Add(this.lblInstruktor);
-            this.gbInstruktor.Location = new System.Drawing.Point(175, -9);
-            this.gbInstruktor.Name = "gbInstruktor";
-            this.gbInstruktor.Size = new System.Drawing.Size(1144, 49);
-            this.gbInstruktor.TabIndex = 80;
-            this.gbInstruktor.TabStop = false;
+            this.gbStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
+            this.gbStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gbStudent.Controls.Add(this.btnOdjava);
+            this.gbStudent.Controls.Add(this.btnHelp);
+            this.gbStudent.Controls.Add(this.lblInstruktor);
+            this.gbStudent.Location = new System.Drawing.Point(175, -9);
+            this.gbStudent.Name = "gbStudent";
+            this.gbStudent.Size = new System.Drawing.Size(1144, 49);
+            this.gbStudent.TabIndex = 80;
+            this.gbStudent.TabStop = false;
             // 
             // btnOdjava
             // 
@@ -409,24 +409,24 @@ namespace FindAndLearn.Profil
             this.pbSlikaStudenta.TabIndex = 84;
             this.pbSlikaStudenta.TabStop = false;
             // 
-            // gbMojiKolegiji
+            // gbMojeInstrukcije
             // 
-            this.gbMojiKolegiji.Controls.Add(this.lblImeInstruktora);
-            this.gbMojiKolegiji.Controls.Add(this.pbSlikaInstruktora);
-            this.gbMojiKolegiji.Controls.Add(this.lblEmailInstruktor);
-            this.gbMojiKolegiji.Controls.Add(this.label1);
-            this.gbMojiKolegiji.Controls.Add(this.lblKolegiji);
-            this.gbMojiKolegiji.Controls.Add(this.pbEmailInstruktora);
-            this.gbMojiKolegiji.Controls.Add(this.comboKolegiji);
-            this.gbMojiKolegiji.Controls.Add(this.pbTelefonInstruktora);
-            this.gbMojiKolegiji.Controls.Add(this.lblMobitelInstruktora);
-            this.gbMojiKolegiji.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gbMojiKolegiji.Location = new System.Drawing.Point(688, 90);
-            this.gbMojiKolegiji.Name = "gbMojiKolegiji";
-            this.gbMojiKolegiji.Size = new System.Drawing.Size(315, 190);
-            this.gbMojiKolegiji.TabIndex = 88;
-            this.gbMojiKolegiji.TabStop = false;
-            this.gbMojiKolegiji.Text = "Moje instrukcije";
+            this.gbMojeInstrukcije.Controls.Add(this.lblImeInstruktora);
+            this.gbMojeInstrukcije.Controls.Add(this.pbSlikaInstruktora);
+            this.gbMojeInstrukcije.Controls.Add(this.lblEmailInstruktor);
+            this.gbMojeInstrukcije.Controls.Add(this.lblInstruktora);
+            this.gbMojeInstrukcije.Controls.Add(this.lblKolegiji);
+            this.gbMojeInstrukcije.Controls.Add(this.pbEmailInstruktora);
+            this.gbMojeInstrukcije.Controls.Add(this.comboKolegiji);
+            this.gbMojeInstrukcije.Controls.Add(this.pbTelefonInstruktora);
+            this.gbMojeInstrukcije.Controls.Add(this.lblMobitelInstruktora);
+            this.gbMojeInstrukcije.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbMojeInstrukcije.Location = new System.Drawing.Point(688, 90);
+            this.gbMojeInstrukcije.Name = "gbMojeInstrukcije";
+            this.gbMojeInstrukcije.Size = new System.Drawing.Size(315, 190);
+            this.gbMojeInstrukcije.TabIndex = 88;
+            this.gbMojeInstrukcije.TabStop = false;
+            this.gbMojeInstrukcije.Text = "Moje instrukcije";
             // 
             // lblImeInstruktora
             // 
@@ -457,14 +457,14 @@ namespace FindAndLearn.Profil
             this.lblEmailInstruktor.TabIndex = 20;
             this.lblEmailInstruktor.Text = "ime.prezime@....com";
             // 
-            // label1
+            // lblInstruktora
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
-            this.label1.TabIndex = 76;
-            this.label1.Text = "Instruktor";
+            this.lblInstruktora.AutoSize = true;
+            this.lblInstruktora.Location = new System.Drawing.Point(10, 70);
+            this.lblInstruktora.Name = "lblInstruktora";
+            this.lblInstruktora.Size = new System.Drawing.Size(62, 17);
+            this.lblInstruktora.TabIndex = 76;
+            this.lblInstruktora.Text = "Instruktor";
             // 
             // lblKolegiji
             // 
@@ -510,23 +510,23 @@ namespace FindAndLearn.Profil
             this.lblMobitelInstruktora.TabIndex = 20;
             this.lblMobitelInstruktora.Text = "xxx xxx xxxx";
             // 
-            // groupBox7
+            // gbTermin
             // 
-            this.groupBox7.Controls.Add(this.groupBox2);
-            this.groupBox7.Controls.Add(this.groupBox3);
-            this.groupBox7.Controls.Add(this.groupBox4);
-            this.groupBox7.Controls.Add(this.lblNazivTermina);
-            this.groupBox7.Controls.Add(this.groupBox5);
-            this.groupBox7.Controls.Add(this.groupBox1);
-            this.groupBox7.Controls.Add(this.groupBox6);
-            this.groupBox7.Controls.Add(this.lblMjestoOdrzavanja);
-            this.groupBox7.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox7.Location = new System.Drawing.Point(688, 290);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(315, 122);
-            this.groupBox7.TabIndex = 89;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Temin";
+            this.gbTermin.Controls.Add(this.groupBox2);
+            this.gbTermin.Controls.Add(this.groupBox3);
+            this.gbTermin.Controls.Add(this.groupBox4);
+            this.gbTermin.Controls.Add(this.lblNazivTermina);
+            this.gbTermin.Controls.Add(this.groupBox5);
+            this.gbTermin.Controls.Add(this.groupBox1);
+            this.gbTermin.Controls.Add(this.groupBox6);
+            this.gbTermin.Controls.Add(this.lblMjestoOdrzavanja);
+            this.gbTermin.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbTermin.Location = new System.Drawing.Point(688, 290);
+            this.gbTermin.Name = "gbTermin";
+            this.gbTermin.Size = new System.Drawing.Size(315, 122);
+            this.gbTermin.TabIndex = 89;
+            this.gbTermin.TabStop = false;
+            this.gbTermin.Text = "Temin";
             // 
             // groupBox2
             // 
@@ -634,8 +634,8 @@ namespace FindAndLearn.Profil
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1036, 582);
-            this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.gbMojiKolegiji);
+            this.Controls.Add(this.gbTermin);
+            this.Controls.Add(this.gbMojeInstrukcije);
             this.Controls.Add(this.btnIzmijeniPodatke);
             this.Controls.Add(this.gbKratkiOpis);
             this.Controls.Add(this.pbSlikaStudenta);
@@ -643,16 +643,16 @@ namespace FindAndLearn.Profil
             this.Controls.Add(this.gbKontakt);
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbIzbornik);
-            this.Controls.Add(this.gbInstruktor);
+            this.Controls.Add(this.gbStudent);
             this.Name = "frmStudentProfil";
-            this.Text = "frmStudentProfil";
+            this.Text = "Profil";
             this.Load += new System.EventHandler(this.frmStudentProfil_Load);
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.gbIzbornik.ResumeLayout(false);
-            this.gbInstruktor.ResumeLayout(false);
-            this.gbInstruktor.PerformLayout();
+            this.gbStudent.ResumeLayout(false);
+            this.gbStudent.PerformLayout();
             this.gbKratkiOpis.ResumeLayout(false);
             this.gbKratkiOpis.PerformLayout();
             this.gbKontakt.ResumeLayout(false);
@@ -661,13 +661,13 @@ namespace FindAndLearn.Profil
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaStudenta)).EndInit();
-            this.gbMojiKolegiji.ResumeLayout(false);
-            this.gbMojiKolegiji.PerformLayout();
+            this.gbMojeInstrukcije.ResumeLayout(false);
+            this.gbMojeInstrukcije.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmailInstruktora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTelefonInstruktora)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
+            this.gbTermin.ResumeLayout(false);
+            this.gbTermin.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -690,7 +690,7 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.Button btnRezervacijaTermina;
         private System.Windows.Forms.Button btnRecenzije;
         private System.Windows.Forms.Label lblInstruktor;
-        private System.Windows.Forms.GroupBox gbInstruktor;
+        private System.Windows.Forms.GroupBox gbStudent;
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnIzmijeniPodatke;
@@ -707,17 +707,17 @@ namespace FindAndLearn.Profil
         private System.Windows.Forms.Label lblMjesto;
         private System.Windows.Forms.Label lblMobitel;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.GroupBox gbMojiKolegiji;
+        private System.Windows.Forms.GroupBox gbMojeInstrukcije;
         private System.Windows.Forms.PictureBox pbSlikaInstruktora;
         private System.Windows.Forms.Label lblEmailInstruktor;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblInstruktora;
         private System.Windows.Forms.Label lblKolegiji;
         private System.Windows.Forms.PictureBox pbEmailInstruktora;
         private System.Windows.Forms.ComboBox comboKolegiji;
         private System.Windows.Forms.PictureBox pbTelefonInstruktora;
         private System.Windows.Forms.Label lblMobitelInstruktora;
         private System.Windows.Forms.Label lblImeInstruktora;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox gbTermin;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;

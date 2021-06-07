@@ -8,7 +8,8 @@ namespace FindAndLearn.Klase
 {
     public class Termin
     {
-        //public Instrukcije Instrukcije { get; set; }
+        public int Id { get; set; }
+        public Instrukcija Instrukcija { get; set; }
         public string NazivTermina { get; set; }
         public DateTime VrijemeTermina { get; set; }
         public int Trajanje { get; set; }
@@ -16,11 +17,21 @@ namespace FindAndLearn.Klase
         public int KapacitetTermina { get; set; }
 
 
-      /*  public Termin(Instrukcije instrukcije, DateTime vrijeme)
+        public Termin (int id, Instrukcija instrukcija, string naziv, DateTime vrijeme, int trajanje, string mjesto, int kapacitet)
         {
+            Id = id;
+            Instrukcija = instrukcija;
+            NazivTermina = naziv;
             VrijemeTermina = vrijeme;
-            Instrukcije = instrukcije;
-        } */
+            Trajanje = trajanje;
+            MjestoOdrzavanja = mjesto;
+            KapacitetTermina = kapacitet;
+        }
+
+        public override string ToString()
+        {
+            return NazivTermina;
+        }
 
     }
 }

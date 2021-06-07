@@ -10,12 +10,13 @@ namespace FindAndLearn.Klase
    
     public class Instrukcija
     {
-        public int TipInstrukcije { get; set; }
-        public int Kolegij { get; set; }
+        public int Id { get; set; }
+        public TipInstrukcije TipInstrukcije { get; set; }
+        public Kolegij Kolegij { get; set; }
         public string OpisInstrukcije { get; set; }
         public double CijenaInstrukcije { get; set; }
 
-        public int Instruktor { get; set; }
+        public Instruktor Instruktor { get; set; }
 
 
         public Instrukcija()
@@ -23,8 +24,9 @@ namespace FindAndLearn.Klase
 
         }
 
-        public Instrukcija(int instruktor, int tipInstrukcije, int kolegij, string opisInstrukcije, double cijenaInstrukcije)
+        public Instrukcija(int id, Instruktor instruktor, TipInstrukcije tipInstrukcije, Kolegij kolegij, string opisInstrukcije, double cijenaInstrukcije)
         {
+            Id = id;
             TipInstrukcije = tipInstrukcije;
             Instruktor = instruktor;
             Kolegij = kolegij;

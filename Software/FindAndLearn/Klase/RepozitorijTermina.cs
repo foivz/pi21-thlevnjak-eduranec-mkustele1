@@ -8,21 +8,30 @@ namespace FindAndLearn.Klase
 {
     public static class RepozitorijTermina
     {
-        public static List<Termin> ListaTermina { get; set; }
-
-        public static void PopuniListuTermina()
+        public static List<Termin> PopuniListuTermina()
         {
-            ListaTermina = new List<Termin>();
+            List<Termin> listaTermina = new List<Termin>();
+            List<Termini> terminiBaza = null;
 
             using (var context = new Entities())
             {
-                List<Termini> terminiBaza = context.Termini.ToList();
+                terminiBaza = context.Termini.ToList();
 
-                foreach (var termin in terminiBaza)
-                {
-                    // ListaTermina.Add (new Termin(...
-                }
+                var upit = from t in context.Termini
+                           select t.Instrukcije;
             }
+
+
+            foreach (var termin in terminiBaza)
+            {
+                List<Instrukcija> listaInstrukcija = RepozitorijInstrukcija.PopuniPopisInstrukcija();
+                Instrukcija instrukcija = listaInstrukcija.Find(ins => ins.Id == termin.instrukcija_id);
+
+                listaTermina.Add(new Termin (termin.ID_termina, instrukcija, termin.naziv_termina, termin.vrijeme_termina, termin.trajanje,
+                                            termin.mjesto_odrzavanja, termin.kapacitet_termina));
+            }
+
+            return listaTermina;
         }
     }
 }

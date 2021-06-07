@@ -192,7 +192,7 @@ namespace FindAndLearn.Prijava
             this.Controls.Add(this.lblTrenutnaLozinka);
             this.Controls.Add(this.lblKorisnickoIme);
             this.Name = "frmPromjenaLozinke";
-            this.Text = "frmPromjenaLozinke";
+            this.Text = "Promjena lozinke";
             this.Load += new System.EventHandler(this.frmPromjenaLozinke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);

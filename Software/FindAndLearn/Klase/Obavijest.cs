@@ -8,6 +8,7 @@ namespace FindAndLearn.Klase
 {
     public class Obavijest
     {
+        public int Id { get; set; }
         public Termin Termin { get; set; }
         public string NazivObavijesti { get; set; }
         public string OpisObavijesti { get; set; }
@@ -18,8 +19,9 @@ namespace FindAndLearn.Klase
 
         }
 
-        public Obavijest(Termin termin, string naziv, string opis, DateTime datumObavijesti)
+        public Obavijest(int id, Termin termin, string naziv, string opis, DateTime datumObavijesti)
         {
+            Id = id;
             Termin = termin;
             NazivObavijesti = naziv;
             OpisObavijesti = opis;

@@ -1,4 +1,5 @@
 ﻿using FindAndLearn.MojeInstrukcije;
+using FindAndLearn.MojeObavijesti;
 using FindAndLearn.Profil;
 using KorisniciLib;
 using System;
@@ -47,6 +48,13 @@ namespace FindAndLearn.Prijava
         {
             frmDodajInstrukciju frmDodajInstrukciju = new frmDodajInstrukciju(postojeciInstruktor);
             frmDodajInstrukciju.ShowDialog(); //šaljem postojećeg instruktora u formu instrukcije gdje ga spremam u konstruktor i dodajem u instrukciju
+        }
+
+        private void btnObavijesti_Click(object sender, EventArgs e)
+        {
+            frmObavijestiInstruktor form = new frmObavijestiInstruktor(postojeciInstruktor);
+            form.ShowDialog();
+            Close();
         }
     }
 }

@@ -19,9 +19,9 @@ namespace KorisniciLib
 
         }
 
-        public Instruktor(string ime, string prezime, string korisnickoIme, string lozinka, string email) : base(ime, prezime, korisnickoIme, lozinka, email, Uloga.Instruktor)
+        public Instruktor(int id, string ime, string prezime, string korisnickoIme, string lozinka, string email) : base(ime, prezime, korisnickoIme, lozinka, email, Uloga.Instruktor)
         {
-
+            ID_instruktora = id;
         }
     }
 }

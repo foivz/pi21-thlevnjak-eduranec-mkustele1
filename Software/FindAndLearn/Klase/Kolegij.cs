@@ -8,6 +8,7 @@ namespace FindAndLearn.Klase
 {
     public class Kolegij
     {
+        public int Id { get; set; }
         public string NazivKolegija { get; set; }
         public int GodinaKolegija { get; set; }
 
@@ -18,10 +19,16 @@ namespace FindAndLearn.Klase
         }
 
 
-        public Kolegij(string nazivKolegija, int godinaKolegija)
+        public Kolegij(int id, string nazivKolegija, int godinaKolegija)
         {
+            Id = id;
             NazivKolegija = nazivKolegija;
             GodinaKolegija = godinaKolegija;
+        }
+
+        public override string ToString()
+        {
+            return NazivKolegija;
         }
     }
 }
