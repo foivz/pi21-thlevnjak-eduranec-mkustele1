@@ -59,29 +59,33 @@ namespace FindAndLearn.Prijava
             this.gbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbProfil.Controls.Add(this.pbLogo);
             this.gbProfil.Controls.Add(this.label2);
-            this.gbProfil.Location = new System.Drawing.Point(-1, -10);
+            this.gbProfil.Location = new System.Drawing.Point(-1, -12);
+            this.gbProfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbProfil.Name = "gbProfil";
-            this.gbProfil.Size = new System.Drawing.Size(211, 75);
+            this.gbProfil.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbProfil.Size = new System.Drawing.Size(281, 92);
             this.gbProfil.TabIndex = 78;
             this.gbProfil.TabStop = false;
             // 
             // pbLogo
             // 
             this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(-1, 11);
+            this.pbLogo.Location = new System.Drawing.Point(-1, 14);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(79, 59);
+            this.pbLogo.Size = new System.Drawing.Size(105, 73);
             this.pbLogo.TabIndex = 70;
             this.pbLogo.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.label2.Location = new System.Drawing.Point(77, 28);
+            this.label2.Location = new System.Drawing.Point(103, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 22);
+            this.label2.Size = new System.Drawing.Size(136, 25);
             this.label2.TabIndex = 68;
             this.label2.Text = "Find and learn";
             // 
@@ -95,9 +99,11 @@ namespace FindAndLearn.Prijava
             this.gbIzbornik.Controls.Add(this.btnProfil);
             this.gbIzbornik.Controls.Add(this.btnRezervacijaTermina);
             this.gbIzbornik.Controls.Add(this.btnRecenzije);
-            this.gbIzbornik.Location = new System.Drawing.Point(-6, 33);
+            this.gbIzbornik.Location = new System.Drawing.Point(-8, 41);
+            this.gbIzbornik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbIzbornik.Name = "gbIzbornik";
-            this.gbIzbornik.Size = new System.Drawing.Size(217, 657);
+            this.gbIzbornik.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbIzbornik.Size = new System.Drawing.Size(289, 809);
             this.gbIzbornik.TabIndex = 76;
             this.gbIzbornik.TabStop = false;
             // 
@@ -105,11 +111,12 @@ namespace FindAndLearn.Prijava
             // 
             this.btnPoruke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnPoruke.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPoruke.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPoruke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPoruke.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPoruke.Location = new System.Drawing.Point(18, 249);
+            this.btnPoruke.Location = new System.Drawing.Point(24, 306);
+            this.btnPoruke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPoruke.Name = "btnPoruke";
-            this.btnPoruke.Size = new System.Drawing.Size(184, 31);
+            this.btnPoruke.Size = new System.Drawing.Size(245, 38);
             this.btnPoruke.TabIndex = 30;
             this.btnPoruke.Text = "PORUKE";
             this.btnPoruke.UseVisualStyleBackColor = false;
@@ -118,10 +125,11 @@ namespace FindAndLearn.Prijava
             // 
             this.btnTrazilica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnTrazilica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTrazilica.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnTrazilica.Location = new System.Drawing.Point(17, 87);
+            this.btnTrazilica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnTrazilica.Location = new System.Drawing.Point(23, 107);
+            this.btnTrazilica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTrazilica.Name = "btnTrazilica";
-            this.btnTrazilica.Size = new System.Drawing.Size(184, 31);
+            this.btnTrazilica.Size = new System.Drawing.Size(245, 38);
             this.btnTrazilica.TabIndex = 29;
             this.btnTrazilica.Text = "TRAŽILICA";
             this.btnTrazilica.UseVisualStyleBackColor = false;
@@ -130,10 +138,11 @@ namespace FindAndLearn.Prijava
             // 
             this.btnObavijesti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnObavijesti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnObavijesti.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnObavijesti.Location = new System.Drawing.Point(17, 207);
+            this.btnObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnObavijesti.Location = new System.Drawing.Point(23, 255);
+            this.btnObavijesti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnObavijesti.Name = "btnObavijesti";
-            this.btnObavijesti.Size = new System.Drawing.Size(184, 31);
+            this.btnObavijesti.Size = new System.Drawing.Size(245, 38);
             this.btnObavijesti.TabIndex = 28;
             this.btnObavijesti.Text = "OBAVIJESTI";
             this.btnObavijesti.UseVisualStyleBackColor = false;
@@ -143,11 +152,12 @@ namespace FindAndLearn.Prijava
             // 
             this.btnProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProfil.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProfil.Location = new System.Drawing.Point(17, 48);
+            this.btnProfil.Location = new System.Drawing.Point(23, 59);
+            this.btnProfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProfil.Name = "btnProfil";
-            this.btnProfil.Size = new System.Drawing.Size(184, 31);
+            this.btnProfil.Size = new System.Drawing.Size(245, 38);
             this.btnProfil.TabIndex = 25;
             this.btnProfil.Text = "PROFIL";
             this.btnProfil.UseVisualStyleBackColor = false;
@@ -157,23 +167,26 @@ namespace FindAndLearn.Prijava
             // 
             this.btnRezervacijaTermina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnRezervacijaTermina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRezervacijaTermina.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRezervacijaTermina.Location = new System.Drawing.Point(16, 126);
+            this.btnRezervacijaTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRezervacijaTermina.Location = new System.Drawing.Point(21, 155);
+            this.btnRezervacijaTermina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRezervacijaTermina.Name = "btnRezervacijaTermina";
-            this.btnRezervacijaTermina.Size = new System.Drawing.Size(184, 31);
+            this.btnRezervacijaTermina.Size = new System.Drawing.Size(245, 38);
             this.btnRezervacijaTermina.TabIndex = 24;
             this.btnRezervacijaTermina.Text = "ZATRAŽI REZERVACIJU ";
             this.btnRezervacijaTermina.UseVisualStyleBackColor = false;
+            this.btnRezervacijaTermina.Click += new System.EventHandler(this.btnRezervacijaTermina_Click);
             // 
             // btnRecenzije
             // 
             this.btnRecenzije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnRecenzije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRecenzije.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRecenzije.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRecenzije.Location = new System.Drawing.Point(17, 165);
+            this.btnRecenzije.Location = new System.Drawing.Point(23, 203);
+            this.btnRecenzije.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRecenzije.Name = "btnRecenzije";
-            this.btnRecenzije.Size = new System.Drawing.Size(184, 31);
+            this.btnRecenzije.Size = new System.Drawing.Size(245, 38);
             this.btnRecenzije.TabIndex = 20;
             this.btnRecenzije.Text = "RECENZIJE";
             this.btnRecenzije.UseVisualStyleBackColor = false;
@@ -181,11 +194,12 @@ namespace FindAndLearn.Prijava
             // lblInstruktor
             // 
             this.lblInstruktor.AutoSize = true;
-            this.lblInstruktor.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblInstruktor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblInstruktor.Location = new System.Drawing.Point(58, 17);
+            this.lblInstruktor.Location = new System.Drawing.Point(77, 21);
+            this.lblInstruktor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstruktor.Name = "lblInstruktor";
-            this.lblInstruktor.Size = new System.Drawing.Size(122, 18);
+            this.lblInstruktor.Size = new System.Drawing.Size(157, 20);
             this.lblInstruktor.TabIndex = 3;
             this.lblInstruktor.Text = "Početna stranica ";
             // 
@@ -196,9 +210,11 @@ namespace FindAndLearn.Prijava
             this.gbInstruktor.Controls.Add(this.btnOdjava);
             this.gbInstruktor.Controls.Add(this.btnHelp);
             this.gbInstruktor.Controls.Add(this.lblInstruktor);
-            this.gbInstruktor.Location = new System.Drawing.Point(174, -9);
+            this.gbInstruktor.Location = new System.Drawing.Point(232, -11);
+            this.gbInstruktor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbInstruktor.Name = "gbInstruktor";
-            this.gbInstruktor.Size = new System.Drawing.Size(907, 49);
+            this.gbInstruktor.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbInstruktor.Size = new System.Drawing.Size(1209, 60);
             this.gbInstruktor.TabIndex = 77;
             this.gbInstruktor.TabStop = false;
             // 
@@ -206,10 +222,11 @@ namespace FindAndLearn.Prijava
             // 
             this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOdjava.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdjava.Location = new System.Drawing.Point(582, 15);
+            this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdjava.Location = new System.Drawing.Point(776, 18);
+            this.btnOdjava.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOdjava.Name = "btnOdjava";
-            this.btnOdjava.Size = new System.Drawing.Size(90, 25);
+            this.btnOdjava.Size = new System.Drawing.Size(120, 31);
             this.btnOdjava.TabIndex = 23;
             this.btnOdjava.Text = "ODJAVA";
             this.btnOdjava.UseVisualStyleBackColor = false;
@@ -219,10 +236,11 @@ namespace FindAndLearn.Prijava
             // 
             this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHelp.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnHelp.Location = new System.Drawing.Point(678, 15);
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnHelp.Location = new System.Drawing.Point(904, 18);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(90, 25);
+            this.btnHelp.Size = new System.Drawing.Size(120, 31);
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
@@ -230,46 +248,50 @@ namespace FindAndLearn.Prijava
             // lblDobrodoslica
             // 
             this.lblDobrodoslica.AutoSize = true;
-            this.lblDobrodoslica.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDobrodoslica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblDobrodoslica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.lblDobrodoslica.Location = new System.Drawing.Point(416, 499);
+            this.lblDobrodoslica.Location = new System.Drawing.Point(555, 614);
+            this.lblDobrodoslica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDobrodoslica.Name = "lblDobrodoslica";
-            this.lblDobrodoslica.Size = new System.Drawing.Size(355, 28);
+            this.lblDobrodoslica.Size = new System.Drawing.Size(464, 31);
             this.lblDobrodoslica.TabIndex = 79;
             this.lblDobrodoslica.Text = "Želimo ti dobrodošlicu u svijet znanja!";
             // 
             // lblFindAndLearn
             // 
             this.lblFindAndLearn.AutoSize = true;
-            this.lblFindAndLearn.Font = new System.Drawing.Font("Open Sans", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFindAndLearn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblFindAndLearn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.lblFindAndLearn.Location = new System.Drawing.Point(489, 147);
+            this.lblFindAndLearn.Location = new System.Drawing.Point(652, 181);
+            this.lblFindAndLearn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFindAndLearn.Name = "lblFindAndLearn";
-            this.lblFindAndLearn.Size = new System.Drawing.Size(203, 39);
+            this.lblFindAndLearn.Size = new System.Drawing.Size(257, 42);
             this.lblFindAndLearn.TabIndex = 75;
             this.lblFindAndLearn.Text = "Find and learn";
             // 
             // pbLogoNaslovna
             // 
             this.pbLogoNaslovna.BackgroundImage = global::FindAndLearn.Properties.Resources.FindAndLearn;
-            this.pbLogoNaslovna.Location = new System.Drawing.Point(380, 210);
+            this.pbLogoNaslovna.Location = new System.Drawing.Point(507, 258);
+            this.pbLogoNaslovna.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLogoNaslovna.Name = "pbLogoNaslovna";
-            this.pbLogoNaslovna.Size = new System.Drawing.Size(407, 267);
+            this.pbLogoNaslovna.Size = new System.Drawing.Size(543, 329);
             this.pbLogoNaslovna.TabIndex = 84;
             this.pbLogoNaslovna.TabStop = false;
             // 
             // frmPocetnaStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(962, 612);
+            this.ClientSize = new System.Drawing.Size(1283, 753);
             this.Controls.Add(this.pbLogoNaslovna);
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbIzbornik);
             this.Controls.Add(this.gbInstruktor);
             this.Controls.Add(this.lblDobrodoslica);
             this.Controls.Add(this.lblFindAndLearn);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPocetnaStudent";
             this.Text = "Početna student";
             this.Load += new System.EventHandler(this.frmPocetnaStudent_Load);

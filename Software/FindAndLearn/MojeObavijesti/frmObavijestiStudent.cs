@@ -68,7 +68,7 @@ namespace FindAndLearn.MojeObavijesti
 
                 foreach (var item in terminiBaza)
                 {
-                    Termin termin = listaTermina.Find(x => x.Id == item.ID_termina);
+                    Termin termin = listaTermina.Find(x => x.IdTermina == item.ID_termina);
                     terminiStudenta.Add(termin);
                 }
             }

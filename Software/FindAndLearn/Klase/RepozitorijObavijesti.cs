@@ -17,7 +17,7 @@ namespace FindAndLearn.Klase
             using (var context = new Entities())
             {
                 var upitObavijesti = from o in context.Obavijesti
-                           where o.termin_id == termin.Id
+                           where o.termin_id == termin.IdTermina
                            select o;
 
                 obavijestiBaza = upitObavijesti.ToList();
@@ -37,7 +37,7 @@ namespace FindAndLearn.Klase
             {
                 Obavijesti novaObavijest = new Obavijesti()
                 {
-                    termin_id = obavijest.Termin.Id,
+                    termin_id = obavijest.Termin.IdTermina,
                     naziv_obavijesti = obavijest.NazivObavijesti,
                     opis_obavijesti = obavijest.OpisObavijesti,
                     datum_obavijesti = obavijest.DatumObavijesti

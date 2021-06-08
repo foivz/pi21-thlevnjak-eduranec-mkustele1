@@ -1,4 +1,5 @@
 ﻿using FindAndLearn.Klase;
+using FindAndLearn.MojeRezervacije;
 using KorisniciLib;
 using System;
 using System.Collections.Generic;
@@ -217,6 +218,11 @@ namespace FindAndLearn.Profil
             frmPrijava form = new frmPrijava();
             form.ShowDialog();
             Close();
+        }
+
+        private void btnRezervacijaTermina_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
