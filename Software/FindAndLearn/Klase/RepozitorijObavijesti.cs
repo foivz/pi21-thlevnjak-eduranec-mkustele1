@@ -52,18 +52,27 @@ namespace FindAndLearn.Klase
         {
             using (var context = new Entities())
             {
-                var upit = from o in context.Obavijesti
-                           where o.ID_obavijesti == obavijest.Id
-                           select o;
+               List<Obavijesti> obavijesti = context.Obavijesti.ToList();
+               Obavijesti obavijestBaza = obavijesti.FirstOrDefault(x => x.ID_obavijesti == obavijest.Id);
 
-                Obavijesti obavijestBaza = upit.Single();
+               obavijestBaza.naziv_obavijesti = obavijest.NazivObavijesti;
+               obavijestBaza.opis_obavijesti = obavijest.OpisObavijesti;
+               obavijestBaza.datum_obavijesti = obavijest.DatumObavijesti;
 
-                obavijestBaza.naziv_obavijesti = obavijest.NazivObavijesti;
-                obavijestBaza.opis_obavijesti = obavijest.OpisObavijesti;
-                obavijestBaza.datum_obavijesti = obavijest.DatumObavijesti;
-
-                context.SaveChanges();
+               context.SaveChanges();
             }
+        }
+
+        public static string ProvjeraDatuma(DateTime odDatuma, DateTime doDatuma)
+        {
+            string poruka = "";
+
+            if(odDatuma.Date > doDatuma.Date)
+            {
+                poruka = "Zadan nepostojeći raspon (od - do)! Datum 'Od' ne može biti kasniji od datuma 'Do'.";
+            }
+
+            return poruka;
         }
     }
 }

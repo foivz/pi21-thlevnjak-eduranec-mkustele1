@@ -137,6 +137,7 @@ namespace FindAndLearn.Prijava
             this.btnObavijesti.TabIndex = 28;
             this.btnObavijesti.Text = "OBAVIJESTI";
             this.btnObavijesti.UseVisualStyleBackColor = false;
+            this.btnObavijesti.Click += new System.EventHandler(this.btnObavijesti_Click);
             // 
             // btnProfil
             // 

@@ -57,6 +57,7 @@ namespace FindAndLearn.MojeObavijesti
             this.lblTermin = new System.Windows.Forms.Label();
             this.btnProcitaj = new System.Windows.Forms.Button();
             this.dgvPopisObavijesti = new System.Windows.Forms.DataGridView();
+            this.btnPrikaziSveObavijesti = new System.Windows.Forms.Button();
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbInstruktor.SuspendLayout();
@@ -121,6 +122,7 @@ namespace FindAndLearn.MojeObavijesti
             this.btnOdjava.TabIndex = 23;
             this.btnOdjava.Text = "ODJAVA";
             this.btnOdjava.UseVisualStyleBackColor = false;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
             // btnHelp
             // 
@@ -285,6 +287,7 @@ namespace FindAndLearn.MojeObavijesti
             this.btnFiltiraj.TabIndex = 100;
             this.btnFiltiraj.Text = "FILTRIRAJ";
             this.btnFiltiraj.UseVisualStyleBackColor = true;
+            this.btnFiltiraj.Click += new System.EventHandler(this.btnFiltiraj_Click);
             // 
             // lblOdDatuma
             // 
@@ -319,7 +322,7 @@ namespace FindAndLearn.MojeObavijesti
             this.txtNaslov.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtNaslov.Location = new System.Drawing.Point(347, 127);
             this.txtNaslov.Name = "txtNaslov";
-            this.txtNaslov.Size = new System.Drawing.Size(358, 22);
+            this.txtNaslov.Size = new System.Drawing.Size(237, 22);
             this.txtNaslov.TabIndex = 127;
             // 
             // lblPretrazivanje
@@ -335,12 +338,13 @@ namespace FindAndLearn.MojeObavijesti
             // btnPretrazi
             // 
             this.btnPretrazi.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPretrazi.Location = new System.Drawing.Point(712, 126);
+            this.btnPretrazi.Location = new System.Drawing.Point(590, 126);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(105, 23);
             this.btnPretrazi.TabIndex = 125;
             this.btnPretrazi.Text = "PRETRAŽI";
             this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // lblTermin
             // 
@@ -355,12 +359,13 @@ namespace FindAndLearn.MojeObavijesti
             // btnProcitaj
             // 
             this.btnProcitaj.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnProcitaj.Location = new System.Drawing.Point(711, 432);
+            this.btnProcitaj.Location = new System.Drawing.Point(671, 432);
             this.btnProcitaj.Name = "btnProcitaj";
-            this.btnProcitaj.Size = new System.Drawing.Size(105, 23);
+            this.btnProcitaj.Size = new System.Drawing.Size(145, 23);
             this.btnProcitaj.TabIndex = 124;
-            this.btnProcitaj.Text = "PROČITAJ";
+            this.btnProcitaj.Text = "PROČITAJ OBAVIJESTI";
             this.btnProcitaj.UseVisualStyleBackColor = true;
+            this.btnProcitaj.Click += new System.EventHandler(this.btnProcitaj_Click);
             // 
             // dgvPopisObavijesti
             // 
@@ -370,12 +375,24 @@ namespace FindAndLearn.MojeObavijesti
             this.dgvPopisObavijesti.Size = new System.Drawing.Size(582, 252);
             this.dgvPopisObavijesti.TabIndex = 123;
             // 
+            // btnPrikaziSveObavijesti
+            // 
+            this.btnPrikaziSveObavijesti.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPrikaziSveObavijesti.Location = new System.Drawing.Point(701, 126);
+            this.btnPrikaziSveObavijesti.Name = "btnPrikaziSveObavijesti";
+            this.btnPrikaziSveObavijesti.Size = new System.Drawing.Size(115, 23);
+            this.btnPrikaziSveObavijesti.TabIndex = 133;
+            this.btnPrikaziSveObavijesti.Text = "PRIKAŽI SVE ";
+            this.btnPrikaziSveObavijesti.UseVisualStyleBackColor = true;
+            this.btnPrikaziSveObavijesti.Click += new System.EventHandler(this.btnPrikaziSveObavijesti_Click);
+            // 
             // frmObavijestiStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1079, 543);
+            this.Controls.Add(this.btnPrikaziSveObavijesti);
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.lblNazivTermina);
             this.Controls.Add(this.gbInstruktor);
@@ -435,5 +452,6 @@ namespace FindAndLearn.MojeObavijesti
         private System.Windows.Forms.Label lblTermin;
         private System.Windows.Forms.Button btnProcitaj;
         private System.Windows.Forms.DataGridView dgvPopisObavijesti;
+        private System.Windows.Forms.Button btnPrikaziSveObavijesti;
     }
 }

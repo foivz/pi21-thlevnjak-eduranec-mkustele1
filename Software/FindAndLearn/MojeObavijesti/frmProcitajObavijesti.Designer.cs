@@ -34,6 +34,7 @@ namespace FindAndLearn.MojeObavijesti
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.lblDatum = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnNatrag
@@ -45,6 +46,7 @@ namespace FindAndLearn.MojeObavijesti
             this.btnNatrag.TabIndex = 35;
             this.btnNatrag.Text = "NATRAG";
             this.btnNatrag.UseVisualStyleBackColor = true;
+            this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
             // 
             // txtPoruka
             // 
@@ -62,9 +64,9 @@ namespace FindAndLearn.MojeObavijesti
             this.lblInstruktor.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblInstruktor.Location = new System.Drawing.Point(17, 39);
             this.lblInstruktor.Name = "lblInstruktor";
-            this.lblInstruktor.Size = new System.Drawing.Size(100, 17);
+            this.lblInstruktor.Size = new System.Drawing.Size(87, 17);
             this.lblInstruktor.TabIndex = 33;
-            this.lblInstruktor.Text = "Matija Horvat  | ";
+            this.lblInstruktor.Text = "Matija Horvat ";
             // 
             // lblNaslov
             // 
@@ -80,11 +82,21 @@ namespace FindAndLearn.MojeObavijesti
             // 
             this.lblDatum.AutoSize = true;
             this.lblDatum.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblDatum.Location = new System.Drawing.Point(122, 39);
+            this.lblDatum.Location = new System.Drawing.Point(134, 40);
             this.lblDatum.Name = "lblDatum";
             this.lblDatum.Size = new System.Drawing.Size(75, 17);
             this.lblDatum.TabIndex = 31;
             this.lblDatum.Text = "26.4. 2021.  ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(110, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 17);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "| ";
             // 
             // frmProcitajObavijesti
             // 
@@ -92,11 +104,13 @@ namespace FindAndLearn.MojeObavijesti
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(424, 251);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.txtPoruka);
             this.Controls.Add(this.lblInstruktor);
             this.Controls.Add(this.lblNaslov);
             this.Controls.Add(this.lblDatum);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmProcitajObavijesti";
             this.Text = "Pročitaj obavijesti";
             this.Load += new System.EventHandler(this.frmProcitajObavijesti_Load);
@@ -112,5 +126,6 @@ namespace FindAndLearn.MojeObavijesti
         private System.Windows.Forms.Label lblInstruktor;
         private System.Windows.Forms.Label lblNaslov;
         private System.Windows.Forms.Label lblDatum;
+        private System.Windows.Forms.Label label1;
     }
 }

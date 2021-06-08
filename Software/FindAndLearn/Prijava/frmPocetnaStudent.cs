@@ -1,4 +1,5 @@
 ﻿using FindAndLearn.Klase;
+using FindAndLearn.MojeObavijesti;
 using FindAndLearn.Profil;
 using KorisniciLib;
 using System;
@@ -37,6 +38,13 @@ namespace FindAndLearn.Prijava
         private void btnProfil_Click(object sender, EventArgs e)
         {
             frmStudentProfil form = new frmStudentProfil(postojeciStudent);
+            form.ShowDialog();
+            Close();
+        }
+
+        private void btnObavijesti_Click(object sender, EventArgs e)
+        {
+            frmObavijestiStudent form = new frmObavijestiStudent(postojeciStudent);
             form.ShowDialog();
             Close();
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FindAndLearn.Klase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,25 @@ namespace FindAndLearn.MojeObavijesti
 {
     public partial class frmProcitajObavijesti : Form
     {
-        public frmProcitajObavijesti()
+        Obavijest obavijest = null;
+
+        public frmProcitajObavijesti(Obavijest selektiranaObavijest)
         {
             InitializeComponent();
+            obavijest = selektiranaObavijest;
         }
 
         private void frmProcitajObavijesti_Load(object sender, EventArgs e)
         {
+            lblDatum.Text = obavijest.DatumObavijesti.ToString();
+            lblNaslov.Text = obavijest.NazivObavijesti.ToString();
+            txtPoruka.Text = obavijest.OpisObavijesti.ToString();
+            lblInstruktor.Text = obavijest.Termin.Instrukcija.Instruktor.Ime.ToString() + " " + obavijest.Termin.Instrukcija.Instruktor.Prezime.ToString();
+        }
 
+        private void btnNatrag_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

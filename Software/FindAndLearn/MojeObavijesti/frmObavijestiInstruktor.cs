@@ -16,9 +16,8 @@ namespace FindAndLearn.MojeObavijesti
     {
         Instruktor postojeciInstruktor = null;
         List<Termin> listaTermina = RepozitorijTermina.PopuniListuTermina();
-        List<Instrukcija> listaInstrukcija = RepozitorijInstrukcija.PopuniPopisInstrukcija();
-        List<Obavijest> dohvaceneObavijesti;
 
+        List<Instrukcija> listaInstrukcija = RepozitorijInstrukcija.PopuniPopisInstrukcija();
         List<Termin> terminiInstruktora;
 
 
@@ -35,11 +34,16 @@ namespace FindAndLearn.MojeObavijesti
 
         private void ComboPopisTermina_SelectedIndexChanged(object sender, EventArgs e)
         {
+             OsvjeziObavijesti();
+        }
+
+        public void OsvjeziObavijesti()
+        {
             Termin termin = DohvatiTermin();
-            dgvPopisObavijesti.DataSource = null;
 
             if (termin != null)
             {
+                dgvPopisObavijesti.DataSource = null;
                 dgvPopisObavijesti.DataSource = RepozitorijObavijesti.PopuniListuObavijesti(termin);
                 dgvPopisObavijesti.Columns["Id"].Visible = false;
                 dgvPopisObavijesti.Columns["OpisObavijesti"].Visible = false;
@@ -78,13 +82,6 @@ namespace FindAndLearn.MojeObavijesti
         {
 
         }
-
-        public string[] PretvoriDatumUPolje(DateTime datumVrijeme)
-        {
-            string[] datum = datumVrijeme.ToShortDateString().Split('.');
-            return datum;
-        }
-
 
         public List<Termin> PopuniTermineInstruktora()
         {
@@ -129,76 +126,57 @@ namespace FindAndLearn.MojeObavijesti
         public List<Obavijest> FiltrirajObavijestiPoDatumu(DateTime odDatuma, DateTime doDatuma)
         {
             List<Obavijest> filtriraneObavijesti = new List<Obavijest>();
+            List<Obavijest> dohvaceneObavijesti = DohvatiSveObavijesti();
 
-            foreach (var item in dohvaceneObavijesti)
+            if(dohvaceneObavijesti != null)
             {
-                string[] datumObavijesti = PretvoriDatumUPolje(item.DatumObavijesti);
-                string[] datumOd = PretvoriDatumUPolje(odDatuma);
-                string[] datumDo = PretvoriDatumUPolje(doDatuma);
-
-                bool datumOdURasponu = UsporediDatume(datumObavijesti, datumOd);
-                bool datumDoURasponu = UsporediDatume(datumDo, datumObavijesti);
-
-                if (datumOdURasponu == true && datumDoURasponu == true)
+                foreach (var item in dohvaceneObavijesti)
                 {
-                    filtriraneObavijesti.Add(item);
+                    if (item.DatumObavijesti.Date >= odDatuma.Date && item.DatumObavijesti.Date <= doDatuma.Date)
+                    {
+                        filtriraneObavijesti.Add(item);
+                    }
                 }
             }
+
             return filtriraneObavijesti;
+        }
+
+        public List<Obavijest> DohvatiSveObavijesti()
+        {
+            Termin termin = DohvatiTermin();
+            List<Obavijest> dohvaceneObavijesti = new List<Obavijest>();
+
+            if (termin != null)
+            {
+                dohvaceneObavijesti = RepozitorijObavijesti.PopuniListuObavijesti(termin);
+            }
+
+            return dohvaceneObavijesti;
         }
 
         public List<Obavijest> PretraziObavijestiPoNaslovu(string naslov)
         {
             List<Obavijest> pronadjeneObavijesti = new List<Obavijest>();
-            string pretraga = naslov;
-            string[] pretvorbaPretrage = pretraga.Split(' ');
-            foreach (var rijec in pretvorbaPretrage)
+            List<Obavijest> dohvaceneObavijesti = DohvatiSveObavijesti();
+
+            if(dohvaceneObavijesti != null)
             {
-                foreach (var obavijest in dohvaceneObavijesti)
+                string pretraga = naslov;
+                string[] pretvorbaPretrage = pretraga.Split(' ');
+
+                foreach (var rijec in pretvorbaPretrage)
                 {
-                    if (obavijest.NazivObavijesti.Contains(rijec))
+                    foreach (var obavijest in dohvaceneObavijesti)
                     {
-                        pronadjeneObavijesti.Add(obavijest);
+                        if (obavijest.NazivObavijesti.ToLower().Contains(rijec.ToLower()))
+                        {
+                            pronadjeneObavijesti.Add(obavijest);
+                        }
                     }
                 }
             }
             return pronadjeneObavijesti;
-        }
-
-        private bool UsporediDatume(string[] veciDatum, string[] manjiDatum)
-        {
-
-            bool datumURasponu = false;
-
-            int danVeci = int.Parse(veciDatum[0]);
-            int mjesecVeci = int.Parse(veciDatum[1]);
-            int godinaVeca = int.Parse(veciDatum[2]);
-
-            int danManji = int.Parse(manjiDatum[0]);
-            int mjesecManji = int.Parse(manjiDatum[1]);
-            int godinaManja = int.Parse(manjiDatum[2]);
-
-            if ((godinaVeca > godinaManja))
-            {
-                datumURasponu = true;
-            }
-
-            else if (godinaVeca == godinaManja)
-            {
-                if (mjesecVeci > mjesecManji)
-                {
-                    datumURasponu = true;
-                }
-
-                else if (mjesecVeci == mjesecManji)
-                {
-                    if (danVeci >= danManji)
-                    {
-                        datumURasponu = true;
-                    }
-                }
-            }
-            return datumURasponu;
         }
 
 
@@ -206,6 +184,7 @@ namespace FindAndLearn.MojeObavijesti
         {
             frmKreirajObavijesti form = new frmKreirajObavijesti(terminiInstruktora);
             form.ShowDialog();
+            OsvjeziObavijesti();
         }
 
         private void btnAzurirajObavijest_Click(object sender, EventArgs e)
@@ -217,6 +196,66 @@ namespace FindAndLearn.MojeObavijesti
                 frmAzurirajObavijesti form = new frmAzurirajObavijesti(obavijest);
                 form.ShowDialog();
             }
+
+            OsvjeziObavijesti();
+        }
+
+        private void btnProcitaj_Click(object sender, EventArgs e)
+        {
+            Obavijest obavijest = DohvatiObavijest();
+
+            if (obavijest != null)
+            {
+                frmProcitajObavijesti form = new frmProcitajObavijesti(obavijest);
+                form.ShowDialog();
+            }
+
+            OsvjeziObavijesti();
+        }
+
+        private void btnPretrazi_Click(object sender, EventArgs e)
+        {
+            dgvPopisObavijesti.DataSource = null;
+            dgvPopisObavijesti.DataSource = PretraziObavijestiPoNaslovu(txtNaslov.Text);
+            dgvPopisObavijesti.Columns["Id"].Visible = false;
+            dgvPopisObavijesti.Columns["OpisObavijesti"].Visible = false;
+            dgvPopisObavijesti.Columns[1].Width = 138;
+            dgvPopisObavijesti.Columns[2].Width = 250;
+            dgvPopisObavijesti.Columns[4].Width = 150;
+        }
+
+        private void btnPrikaziSveObavijesti_Click(object sender, EventArgs e)
+        {
+            OsvjeziObavijesti();
+        }
+
+        private void btnFiltiraj_Click(object sender, EventArgs e)
+        {
+            DateTime odDatuma = dtpOd.Value;
+            DateTime doDatuma = dtpDo.Value;
+            string porukaProvjere = RepozitorijObavijesti.ProvjeraDatuma(odDatuma, doDatuma);
+
+            if(porukaProvjere == "")
+            {
+                dgvPopisObavijesti.DataSource = null;
+                dgvPopisObavijesti.DataSource = FiltrirajObavijestiPoDatumu(odDatuma, doDatuma);
+                dgvPopisObavijesti.Columns["Id"].Visible = false;
+                dgvPopisObavijesti.Columns["OpisObavijesti"].Visible = false;
+                dgvPopisObavijesti.Columns[1].Width = 138;
+                dgvPopisObavijesti.Columns[2].Width = 250;
+                dgvPopisObavijesti.Columns[4].Width = 150;
+            }
+            else
+            {
+                MessageBox.Show(porukaProvjere);
+            }
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            frmPrijava form = new frmPrijava();
+            form.ShowDialog();
+            Close();
         }
     }
 }
