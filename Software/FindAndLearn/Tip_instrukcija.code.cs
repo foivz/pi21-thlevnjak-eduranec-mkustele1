@@ -10,7 +10,7 @@ namespace FindAndLearn
     {
         public override string ToString()
         {
-            return naziv_tipa;
+            return naziv_tipa + " (" + naziv_tipa.Substring(0, 3).ToUpper() + ")";
         }
     }
 }

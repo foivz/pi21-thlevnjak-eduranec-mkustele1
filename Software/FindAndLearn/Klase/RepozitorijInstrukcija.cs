@@ -86,8 +86,6 @@ namespace FindAndLearn.Klase
             {
                 using (var entities = new Entities())
                 {
-
-
                     Instrukcije novaInstrukcija = new Instrukcije
                     {
                         instruktor_id = instrukcija.Instruktor.ID_instruktora,

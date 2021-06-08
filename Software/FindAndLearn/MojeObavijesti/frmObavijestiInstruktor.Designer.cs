@@ -58,6 +58,7 @@ namespace FindAndLearn.MojeObavijesti
             this.lblTermin = new System.Windows.Forms.Label();
             this.btnProcitaj = new System.Windows.Forms.Button();
             this.dgvPopisObavijesti = new System.Windows.Forms.DataGridView();
+            this.btnAzurirajObavijest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbProfil.SuspendLayout();
             this.gbInstruktor.SuspendLayout();
@@ -382,12 +383,24 @@ namespace FindAndLearn.MojeObavijesti
             this.dgvPopisObavijesti.Size = new System.Drawing.Size(582, 252);
             this.dgvPopisObavijesti.TabIndex = 113;
             // 
+            // btnAzurirajObavijest
+            // 
+            this.btnAzurirajObavijest.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAzurirajObavijest.Location = new System.Drawing.Point(448, 435);
+            this.btnAzurirajObavijest.Name = "btnAzurirajObavijest";
+            this.btnAzurirajObavijest.Size = new System.Drawing.Size(125, 23);
+            this.btnAzurirajObavijest.TabIndex = 123;
+            this.btnAzurirajObavijest.Text = "AŽURIRAJ OBAVIJEST";
+            this.btnAzurirajObavijest.UseVisualStyleBackColor = true;
+            this.btnAzurirajObavijest.Click += new System.EventHandler(this.btnAzurirajObavijest_Click);
+            // 
             // frmObavijestiInstruktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1059, 541);
+            this.Controls.Add(this.btnAzurirajObavijest);
             this.Controls.Add(this.btnKreiraj);
             this.Controls.Add(this.lblNazivTermina);
             this.Controls.Add(this.gbDatumObavijesti);
@@ -449,5 +462,6 @@ namespace FindAndLearn.MojeObavijesti
         private System.Windows.Forms.Label lblTermin;
         private System.Windows.Forms.Button btnProcitaj;
         private System.Windows.Forms.DataGridView dgvPopisObavijesti;
+        private System.Windows.Forms.Button btnAzurirajObavijest;
     }
 }

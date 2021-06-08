@@ -78,6 +78,7 @@
     <Compile Include="Klase\Obavijest.cs" />
     <Compile Include="Klase\RepozitorijInstrukcija.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
+    <Compile Include="Klase\RepozitorijObavijesti.cs" />
     <Compile Include="Klase\RepozitorijTermina.cs" />
     <Compile Include="Klase\Termin.cs" />
     <Compile Include="Klase\TipInstrukcije.cs" />
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="MojeInstrukcije\frmDodajInstrukciju.Designer.cs">
       <DependentUpon>frmDodajInstrukciju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MojeObavijesti\frmAzurirajObavijesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojeObavijesti\frmAzurirajObavijesti.Designer.cs">
+      <DependentUpon>frmAzurirajObavijesti.cs</DependentUpon>
     </Compile>
     <Compile Include="MojeObavijesti\frmKreirajObavijesti.cs">
       <SubType>Form</SubType>
@@ -195,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="MojeInstrukcije\frmDodajInstrukciju.resx">
       <DependentUpon>frmDodajInstrukciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MojeObavijesti\frmAzurirajObavijesti.resx">
+      <DependentUpon>frmAzurirajObavijesti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MojeObavijesti\frmKreirajObavijesti.resx">
       <DependentUpon>frmKreirajObavijesti.cs</DependentUpon>

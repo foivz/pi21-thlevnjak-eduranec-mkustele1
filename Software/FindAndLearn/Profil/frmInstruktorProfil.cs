@@ -20,6 +20,7 @@ namespace FindAndLearn.Profil
         {
             InitializeComponent();
             postojeciInstruktor = instruktor;
+            lblPorukaGrafikona.Text = "";
             OsvjeziProfil();
             UcitajPodatkeZaPregled();
         }
@@ -79,7 +80,7 @@ namespace FindAndLearn.Profil
         private void btnUcitajGrafikon_Click(object sender, EventArgs e)
         {
             grafikonInstrukcija.Series["Cijena (kn/h)"].Points.Clear();
-            lblPorukaGrafikon.Text = "";
+            lblPorukaGrafikona.Text = "";
 
             using (var context = new Entities())
             {
@@ -101,7 +102,7 @@ namespace FindAndLearn.Profil
 
                 if (selektiraneInstrukcije.Count == 0)
                 {
-                    lblPorukaGrafikon.Text = "Nema kolegija za odabrani tip instrukcije";
+                    lblPorukaGrafikona.Text = "Nema kolegija za odabrani tip instrukcije";
                 }
                 else
                 {
@@ -124,6 +125,35 @@ namespace FindAndLearn.Profil
 
         private void btnInstrukcije_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnPrikaziSveInstrukcije_Click(object sender, EventArgs e)
+        {
+            using (var context = new Entities())
+            {
+                grafikonInstrukcija.Series["Cijena (kn/h)"].Points.Clear();
+
+                var upitSveInstrukcije = from ins in context.Instrukcije
+                                         select ins;
+
+                List<Instrukcije> popisInstrukcija = upitSveInstrukcije.ToList();
+
+                if (popisInstrukcija.Count == 0)
+                {
+                     lblPorukaGrafikona.Text = "Nema instrukcija";
+                }
+
+                else
+                {
+                    foreach (Instrukcije item in popisInstrukcija)
+                    {
+                        Kolegiji kolegij = context.Kolegiji.FirstOrDefault(k => k.ID_kolegija == item.kolegij_id);
+
+                        grafikonInstrukcija.Series["Cijena (kn/h)"].Points.AddXY(item.Tip_instrukcija.naziv_tipa.Substring(0, 3).ToUpper() + " - " + item.Kolegiji.naziv_kolegija, item.cijena_instrukcije);
+                    }
+                }
+            }
 
         }
     }

@@ -56,11 +56,11 @@ namespace FindAndLearn.Prijava
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.label2.Location = new System.Drawing.Point(77, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 20);
+            this.label2.Size = new System.Drawing.Size(111, 22);
             this.label2.TabIndex = 68;
             this.label2.Text = "Find and learn";
             // 
@@ -105,7 +105,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnRezervacije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnRezervacije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRezervacije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRezervacije.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRezervacije.Location = new System.Drawing.Point(20, 162);
             this.btnRezervacije.Name = "btnRezervacije";
             this.btnRezervacije.Size = new System.Drawing.Size(184, 31);
@@ -117,7 +117,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnObavijesti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnObavijesti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnObavijesti.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnObavijesti.Location = new System.Drawing.Point(20, 125);
             this.btnObavijesti.Name = "btnObavijesti";
             this.btnObavijesti.Size = new System.Drawing.Size(184, 31);
@@ -130,7 +130,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnPoruke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnPoruke.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPoruke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPoruke.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPoruke.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPoruke.Location = new System.Drawing.Point(20, 237);
             this.btnPoruke.Name = "btnPoruke";
@@ -143,7 +143,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnProfil.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnProfil.Location = new System.Drawing.Point(20, 48);
             this.btnProfil.Name = "btnProfil";
@@ -157,7 +157,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnInstrukcije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnInstrukcije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInstrukcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnInstrukcije.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnInstrukcije.Location = new System.Drawing.Point(20, 87);
             this.btnInstrukcije.Name = "btnInstrukcije";
             this.btnInstrukcije.Size = new System.Drawing.Size(184, 31);
@@ -170,7 +170,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnRecenzije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnRecenzije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRecenzije.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRecenzije.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRecenzije.Location = new System.Drawing.Point(20, 200);
             this.btnRecenzije.Name = "btnRecenzije";
@@ -183,7 +183,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdjava.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnOdjava.Location = new System.Drawing.Point(581, 15);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(90, 25);
@@ -196,7 +196,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnHelp.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnHelp.Location = new System.Drawing.Point(678, 15);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(90, 25);
@@ -207,33 +207,33 @@ namespace FindAndLearn.Prijava
             // lblInstruktor
             // 
             this.lblInstruktor.AutoSize = true;
-            this.lblInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblInstruktor.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblInstruktor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.lblInstruktor.Location = new System.Drawing.Point(58, 17);
             this.lblInstruktor.Name = "lblInstruktor";
-            this.lblInstruktor.Size = new System.Drawing.Size(128, 16);
+            this.lblInstruktor.Size = new System.Drawing.Size(122, 18);
             this.lblInstruktor.TabIndex = 3;
             this.lblInstruktor.Text = "Početna stranica ";
             // 
             // lblDobrodoslica
             // 
             this.lblDobrodoslica.AutoSize = true;
-            this.lblDobrodoslica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDobrodoslica.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblDobrodoslica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.lblDobrodoslica.Location = new System.Drawing.Point(408, 481);
             this.lblDobrodoslica.Name = "lblDobrodoslica";
-            this.lblDobrodoslica.Size = new System.Drawing.Size(372, 25);
+            this.lblDobrodoslica.Size = new System.Drawing.Size(355, 28);
             this.lblDobrodoslica.TabIndex = 82;
             this.lblDobrodoslica.Text = "Želimo ti dobrodošlicu u svijet znanja!";
             // 
             // lblFindAndLearn
             // 
             this.lblFindAndLearn.AutoSize = true;
-            this.lblFindAndLearn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblFindAndLearn.Font = new System.Drawing.Font("Open Sans", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblFindAndLearn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.lblFindAndLearn.Location = new System.Drawing.Point(472, 134);
             this.lblFindAndLearn.Name = "lblFindAndLearn";
-            this.lblFindAndLearn.Size = new System.Drawing.Size(201, 33);
+            this.lblFindAndLearn.Size = new System.Drawing.Size(203, 39);
             this.lblFindAndLearn.TabIndex = 81;
             this.lblFindAndLearn.Text = "Find and learn";
             // 

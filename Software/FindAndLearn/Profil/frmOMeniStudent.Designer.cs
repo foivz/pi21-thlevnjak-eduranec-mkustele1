@@ -199,9 +199,9 @@ namespace FindAndLearn.Profil
             this.lblMjesto.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblMjesto.Location = new System.Drawing.Point(12, 31);
             this.lblMjesto.Name = "lblMjesto";
-            this.lblMjesto.Size = new System.Drawing.Size(56, 17);
+            this.lblMjesto.Size = new System.Drawing.Size(49, 17);
             this.lblMjesto.TabIndex = 19;
-            this.lblMjesto.Text = "*Mjesto:";
+            this.lblMjesto.Text = "Mjesto:";
             // 
             // txtUlica
             // 

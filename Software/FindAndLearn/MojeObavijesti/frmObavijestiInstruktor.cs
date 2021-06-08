@@ -15,16 +15,63 @@ namespace FindAndLearn.MojeObavijesti
     public partial class frmObavijestiInstruktor : Form
     {
         Instruktor postojeciInstruktor = null;
-        List<Obavijest> dohvaceneObavijesti;
-
         List<Termin> listaTermina = RepozitorijTermina.PopuniListuTermina();
         List<Instrukcija> listaInstrukcija = RepozitorijInstrukcija.PopuniPopisInstrukcija();
+        List<Obavijest> dohvaceneObavijesti;
+
+        List<Termin> terminiInstruktora;
+
 
         public frmObavijestiInstruktor(Instruktor instruktor)
         {
             InitializeComponent();
             postojeciInstruktor = instruktor;
-            PopuniTermineInstruktora();
+            terminiInstruktora = PopuniTermineInstruktora();
+            comboPopisTermina.SelectedIndexChanged += ComboPopisTermina_SelectedIndexChanged;
+
+            comboPopisTermina.DataSource = null;
+            comboPopisTermina.DataSource=terminiInstruktora;
+        }
+
+        private void ComboPopisTermina_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Termin termin = DohvatiTermin();
+            dgvPopisObavijesti.DataSource = null;
+
+            if (termin != null)
+            {
+                dgvPopisObavijesti.DataSource = RepozitorijObavijesti.PopuniListuObavijesti(termin);
+                dgvPopisObavijesti.Columns["Id"].Visible = false;
+                dgvPopisObavijesti.Columns["OpisObavijesti"].Visible = false;
+                dgvPopisObavijesti.Columns[1].Width = 138;
+                dgvPopisObavijesti.Columns[2].Width = 250;
+                dgvPopisObavijesti.Columns[4].Width = 150;
+                dgvPopisObavijesti.SelectionChanged += DgvPopisObavijesti_SelectionChanged;
+            }
+        }
+
+        private void DgvPopisObavijesti_SelectionChanged(object sender, EventArgs e)
+        {
+            Obavijest obavijest = DohvatiObavijest();
+  
+            btnAzurirajObavijest.Enabled = false;
+
+            if (obavijest != null)
+            {
+                // Obavijest se može mijenjati samo pola sata nakon njezina kreiranja
+
+                DateTime vrijemeObjave = obavijest.DatumObavijesti.AddMinutes(30);
+
+                if (vrijemeObjave >= DateTime.Now)
+                {
+                    btnAzurirajObavijest.Enabled = true;
+                }
+                else
+                {
+                    btnAzurirajObavijest.Enabled = false;
+                }
+            }
+
         }
 
         private void frmObavijestiInstruktor_Load(object sender, EventArgs e)
@@ -39,14 +86,24 @@ namespace FindAndLearn.MojeObavijesti
         }
 
 
-        public void PopuniTermineInstruktora()
+        public List<Termin> PopuniTermineInstruktora()
         {
+            terminiInstruktora = new List<Termin>();
+
             foreach (var instrukcija in listaInstrukcija)
             {
-               // termini.Add (new listaTermina.Find(x => x.Instrukcija.Id == instrukcija.Id && instrukcija.Instruktor.ID_instruktora == postojeciInstruktor.ID_instruktora));
+                if (instrukcija.Instruktor.ID_instruktora == postojeciInstruktor.ID_instruktora)
+                {
+                    Termin termin = listaTermina.Find(x => x.Instrukcija.Id == instrukcija.Id);
 
-                comboPopisTermina.DataSource = listaTermina.ToList();
+                    if(termin != null)
+                    {
+                        terminiInstruktora.Add(termin);
+                    }
+                }
             }
+
+            return terminiInstruktora;
         }
 
         public Termin DohvatiTermin()
@@ -144,11 +201,22 @@ namespace FindAndLearn.MojeObavijesti
             return datumURasponu;
         }
 
+
         private void btnKreiraj_Click(object sender, EventArgs e)
         {
-            frmKreirajObavijesti form = new frmKreirajObavijesti(postojeciInstruktor);
+            frmKreirajObavijesti form = new frmKreirajObavijesti(terminiInstruktora);
             form.ShowDialog();
-            Close();
+        }
+
+        private void btnAzurirajObavijest_Click(object sender, EventArgs e)
+        {
+            Obavijest obavijest = DohvatiObavijest();
+
+            if(obavijest != null)
+            {
+                frmAzurirajObavijesti form = new frmAzurirajObavijesti(obavijest);
+                form.ShowDialog();
+            }
         }
     }
 }

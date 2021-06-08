@@ -56,16 +56,20 @@ namespace FindAndLearn.Profil
             // Samo u slučaju mijenjanja korisničkog imena potrebno je provjeriti je li izmijenjeno korisničko ime zauzeto.
 
             string staroKorisnickoIme = postojeciInstruktor.KorisnickoIme;
-            bool postojiKorisnik;
+            bool postojiKorisnik = true;
+            bool ispravanUnos = false;
 
             try
             {
                 postojiKorisnik = false;
 
-                if (postojeciInstruktor.KorisnickoIme != txtKorisnickoIme.Text)
+                ispravanUnos = Autentifikator.ProvjeriObavezanUnos(txtIme.Text, txtPrezime.Text, txtKorisnickoIme.Text, txtEmail.Text);
+
+                if (ispravanUnos == true && postojeciInstruktor.KorisnickoIme != txtKorisnickoIme.Text)
                 {
-                    Autentifikator.ProvjeriKorisnickoIme(txtKorisnickoIme.Text);
+                    postojiKorisnik = Autentifikator.ProvjeriKorisnickoIme(txtKorisnickoIme.Text);
                 }
+
                 Close();
             }
             catch (UnosException ex)
@@ -74,23 +78,21 @@ namespace FindAndLearn.Profil
                 postojiKorisnik = true;
             }
 
-            if(postojiKorisnik == false)
+            if (postojiKorisnik == false)
             {
+                postojeciInstruktor.Ime = txtIme.Text;
+                postojeciInstruktor.Prezime = txtPrezime.Text;
                 postojeciInstruktor.KorisnickoIme = txtKorisnickoIme.Text;
+                postojeciInstruktor.Email = txtEmail.Text;
+                postojeciInstruktor.Mobitel = txtMobitel.Text;
+                postojeciInstruktor.Mjesto = txtMjesto.Text;
+                postojeciInstruktor.Ulica = txtUlica.Text;
+                postojeciInstruktor.Opis = txtOpis.Text;
+                postojeciInstruktor.Titula = txtTitula.Text;
+                postojeciInstruktor.Slika = pbSlikaInstruktora.Image;
+
+                RepozitorijKorisnika.AzurirajInstruktora(postojeciInstruktor, staroKorisnickoIme);
             }
-
-            postojeciInstruktor.Ime = txtIme.Text;
-            postojeciInstruktor.Prezime = txtPrezime.Text;
-            postojeciInstruktor.Email = txtEmail.Text;
-            postojeciInstruktor.Mobitel = txtMobitel.Text;
-            postojeciInstruktor.Mjesto = txtMjesto.Text;
-            postojeciInstruktor.Ulica = txtUlica.Text;
-            postojeciInstruktor.Opis = txtOpis.Text;
-            postojeciInstruktor.Titula = txtTitula.Text;
-            postojeciInstruktor.Slika = pbSlikaInstruktora.Image;
-
-            RepozitorijKorisnika.AzurirajInstruktora(postojeciInstruktor, staroKorisnickoIme);
-
         }
     }
 }

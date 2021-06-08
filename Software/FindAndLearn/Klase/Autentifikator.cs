@@ -78,7 +78,7 @@ namespace FindAndLearn.Klase
             return ispravnaLozinka;
         }
 
-        public static void ProvjeriKorisnickoIme(string korisnickoIme)
+        public static bool ProvjeriKorisnickoIme(string korisnickoIme)
         {
             bool postojiKorisnik = RepozitorijKorisnika.PostojiKorisnik(korisnickoIme);
 
@@ -86,7 +86,20 @@ namespace FindAndLearn.Klase
             {
                 throw new UnosException($"Već postoji korisnik s korisničkim imenom {korisnickoIme}!");
             }
-
+            return postojiKorisnik;
         }
+
+        public static bool ProvjeriObavezanUnos(string ime, string prezime, string korisnickoIme, string email)
+        {
+            bool ispravanUnos = true;
+
+            if (korisnickoIme == "" || prezime == "" || ime == "" || email == "")
+            {
+                throw new UnosException("Nisu uneseni svi obavezni podaci označeni s *");
+            }
+
+            return ispravanUnos;
+        }
+
     }
 }

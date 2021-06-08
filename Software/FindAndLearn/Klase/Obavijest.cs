@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,13 @@ namespace FindAndLearn.Klase
     {
         public int Id { get; set; }
         public Termin Termin { get; set; }
+
+        [DisplayName("Naslov")]
         public string NazivObavijesti { get; set; }
+
         public string OpisObavijesti { get; set; }
+
+        [DisplayName("Datum obavijesti")]
         public DateTime DatumObavijesti { get; set; }
 
         public Obavijest()

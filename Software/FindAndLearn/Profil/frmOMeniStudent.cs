@@ -52,16 +52,20 @@ namespace FindAndLearn.Profil
         private void btnSpremi_Click(object sender, EventArgs e)
         {
             string staroKorisnickoIme = postojeciStudent.KorisnickoIme;
-            bool postojiKorisnik;
+            bool postojiKorisnik = true;
+            bool ispravanUnos = false;
 
             try
             {
                 postojiKorisnik = false;
 
-                if (postojeciStudent.KorisnickoIme != txtKorisnickoIme.Text)
+                ispravanUnos = Autentifikator.ProvjeriObavezanUnos(txtIme.Text, txtPrezime.Text, txtKorisnickoIme.Text, txtEmail.Text);
+
+                if (ispravanUnos == true && postojeciStudent.KorisnickoIme != txtKorisnickoIme.Text)
                 {
-                    Autentifikator.ProvjeriKorisnickoIme(txtKorisnickoIme.Text);
+                    postojiKorisnik = Autentifikator.ProvjeriKorisnickoIme(txtKorisnickoIme.Text);
                 }
+
                 Close();
             }
             catch (UnosException ex)
@@ -70,21 +74,21 @@ namespace FindAndLearn.Profil
                 postojiKorisnik = true;
             }
 
-            if(postojiKorisnik == false)
+            if (postojiKorisnik == false)
             {
+                postojeciStudent.Ime = txtIme.Text;
+                postojeciStudent.Prezime = txtPrezime.Text;
                 postojeciStudent.KorisnickoIme = txtKorisnickoIme.Text;
+                postojeciStudent.Email = txtEmail.Text;
+                postojeciStudent.Mobitel = txtMobitel.Text;
+                postojeciStudent.Mjesto = txtMjesto.Text;
+                postojeciStudent.Ulica = txtUlica.Text;
+                postojeciStudent.Opis = txtOpis.Text;
+                postojeciStudent.Slika = pbSlikaStudenta.Image;
+
+                RepozitorijKorisnika.AzurirajStudenta(postojeciStudent, staroKorisnickoIme);
             }
 
-            postojeciStudent.Ime = txtIme.Text;
-            postojeciStudent.Prezime = txtPrezime.Text;
-            postojeciStudent.Email = txtEmail.Text;
-            postojeciStudent.Mobitel = txtMobitel.Text;
-            postojeciStudent.Mjesto = txtMjesto.Text;
-            postojeciStudent.Ulica = txtUlica.Text;
-            postojeciStudent.Opis = txtOpis.Text;
-            postojeciStudent.Slika = pbSlikaStudenta.Image;
-
-            RepozitorijKorisnika.AzurirajStudenta(postojeciStudent, staroKorisnickoIme);
         }
     }
 }
