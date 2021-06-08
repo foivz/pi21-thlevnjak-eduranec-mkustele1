@@ -1,4 +1,5 @@
 ﻿using FindAndLearn.Klase;
+using FindAndLearn.MojiTermini;
 using KorisniciLib;
 using System;
 using System.Collections.Generic;
@@ -96,6 +97,20 @@ namespace FindAndLearn.MojeInstrukcije
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDodajTermin_Click(object sender, EventArgs e)
+        {
+            Instrukcije instrukcijaBaza = instrukcijeBindingSource.Current as Instrukcije;
+            List<Instrukcija> listaInstrukcija = RepozitorijInstrukcija.PopuniPopisInstrukcija();
+
+            Instrukcija odabranaInstrukcija = (from ins in listaInstrukcija
+                                               where ins.Id == instrukcijaBaza.ID_instrukcije
+                                               select ins).Single();
+
+            frmDodajTermin formTermin = new frmDodajTermin(odabranaInstrukcija);
+            
+            formTermin.ShowDialog();
         }
     }
 }

@@ -72,6 +72,7 @@
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Iznimke\UnosException.cs" />
+    <Compile Include="Iznimke\UnosTerminaException.cs" />
     <Compile Include="Klase\Autentifikator.cs" />
     <Compile Include="Klase\Instrukcija.cs" />
     <Compile Include="Klase\Kolegij.cs" />
@@ -118,6 +119,12 @@
     </Compile>
     <Compile Include="MojeObavijesti\frmProcitajObavijesti.Designer.cs">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MojiTermini\frmDodajTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojiTermini\frmDodajTermin.Designer.cs">
+      <DependentUpon>frmDodajTermin.cs</DependentUpon>
     </Compile>
     <Compile Include="Prijava\frmPocetnaInstruktor.cs">
       <SubType>Form</SubType>
@@ -218,6 +225,9 @@
     <EmbeddedResource Include="MojeObavijesti\frmProcitajObavijesti.resx">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MojiTermini\frmDodajTermin.resx">
+      <DependentUpon>frmDodajTermin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prijava\frmPocetnaInstruktor.resx">
       <DependentUpon>frmPocetnaInstruktor.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +272,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Instrukcije.datasource" />
     <None Include="Properties\DataSources\Kolegiji.datasource" />
+    <None Include="Properties\DataSources\Termini.datasource" />
     <None Include="Properties\DataSources\Tip_instrukcija.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -303,8 +314,6 @@
       <Name>KorisniciLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Termin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

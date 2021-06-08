@@ -28,6 +28,11 @@ namespace FindAndLearn.Klase
             KapacitetTermina = kapacitet;
         }
 
+        public Termin()
+        {
+        }
+
+
         public override string ToString()
         {
             return NazivTermina;
