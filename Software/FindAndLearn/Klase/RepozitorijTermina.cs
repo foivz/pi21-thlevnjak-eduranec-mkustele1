@@ -93,13 +93,26 @@ namespace FindAndLearn.Klase
             return listaTermina;
         }
 
-        public static bool ProvjeraKapaciteta(Termini odabraniTermin)
+        /// <summary>
+        /// Ova metoda provjerava dostupnost slobodnih mjesta unutar odabranog termina prema IdTermina.
+        /// </summary>
+        /// <param name="odabraniTerminId"></param>
+        /// <returns>True ako postoji slobodnih mjesta ili false ako slobodnih mjesta nema.</returns>
+        public static bool ProvjeraKapaciteta(int odabraniTerminId)
         {
-            if (odabraniTermin.kapacitet_termina < 1)
+            using (var entities = new Entities())
             {
-                return false;
+                var termin = (from ter in entities.Termini
+                              where ter.ID_termina == odabraniTerminId
+                              select ter).Single();
+
+                if (termin.kapacitet_termina < 1)
+                {
+                    return false;
+                }
+
+                else return true;
             }
-            else return true;
         }
 
         public static void DopuniKapacitet(Termini odabraniTermin)
@@ -112,6 +125,15 @@ namespace FindAndLearn.Klase
             {
                 MessageBox.Show("Kapacitet ovog termina je popunjen");
             }
+        }
+
+        public static Termin DohvatiTermin(int idTermina)
+        {
+            List<Termin> listaTermina = PopuniListuTermina();
+            Termin odabraniTermin = (from ter in listaTermina
+                                    where ter.IdTermina==idTermina
+                                    select ter).Single();
+            return odabraniTermin;
         }
     }
 }

@@ -44,29 +44,29 @@ namespace FindAndLearn.MojeRezervacije
             this.lblInstrukcije = new System.Windows.Forms.Label();
             this.lblTerminiZaOdabranu = new System.Windows.Forms.Label();
             this.dgvInstrukcije = new System.Windows.Forms.DataGridView();
-            this.dgvtTermini = new System.Windows.Forms.DataGridView();
-            this.dgvOdobreneRezervacije = new System.Windows.Forms.DataGridView();
-            this.terminiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.instruktoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolegijiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipinstrukcijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisinstrukcijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenainstrukcijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instrukcijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvtTermini = new System.Windows.Forms.DataGridView();
             this.nazivterminaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeterminaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trajanjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mjestoodrzavanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kapacitetterminaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.terminiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvOdobreneRezervacije = new System.Windows.Forms.DataGridView();
             this.gbInstruktor.SuspendLayout();
             this.gbIzbornik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstrukcije)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvtTermini)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOdobreneRezervacije)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.instrukcijeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtTermini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOdobreneRezervacije)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInstruktor
@@ -135,6 +135,7 @@ namespace FindAndLearn.MojeRezervacije
             this.btnZatraziRezervaciju.TabIndex = 151;
             this.btnZatraziRezervaciju.Text = "Zatraži rezervaciju";
             this.btnZatraziRezervaciju.UseVisualStyleBackColor = false;
+            this.btnZatraziRezervaciju.Click += new System.EventHandler(this.btnZatraziRezervaciju_Click);
             // 
             // btnTermin
             // 
@@ -253,38 +254,6 @@ namespace FindAndLearn.MojeRezervacije
             this.dgvInstrukcije.Size = new System.Drawing.Size(579, 330);
             this.dgvInstrukcije.TabIndex = 157;
             // 
-            // dgvtTermini
-            // 
-            this.dgvtTermini.AutoGenerateColumns = false;
-            this.dgvtTermini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvtTermini.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nazivterminaDataGridViewTextBoxColumn,
-            this.vrijemeterminaDataGridViewTextBoxColumn,
-            this.trajanjeDataGridViewTextBoxColumn,
-            this.mjestoodrzavanjaDataGridViewTextBoxColumn,
-            this.kapacitetterminaDataGridViewTextBoxColumn});
-            this.dgvtTermini.DataSource = this.terminiBindingSource;
-            this.dgvtTermini.Location = new System.Drawing.Point(978, 155);
-            this.dgvtTermini.Name = "dgvtTermini";
-            this.dgvtTermini.RowHeadersWidth = 51;
-            this.dgvtTermini.RowTemplate.Height = 24;
-            this.dgvtTermini.Size = new System.Drawing.Size(579, 330);
-            this.dgvtTermini.TabIndex = 158;
-            // 
-            // dgvOdobreneRezervacije
-            // 
-            this.dgvOdobreneRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOdobreneRezervacije.Location = new System.Drawing.Point(310, 545);
-            this.dgvOdobreneRezervacije.Name = "dgvOdobreneRezervacije";
-            this.dgvOdobreneRezervacije.RowHeadersWidth = 51;
-            this.dgvOdobreneRezervacije.RowTemplate.Height = 24;
-            this.dgvOdobreneRezervacije.Size = new System.Drawing.Size(579, 330);
-            this.dgvOdobreneRezervacije.TabIndex = 159;
-            // 
-            // terminiBindingSource
-            // 
-            this.terminiBindingSource.DataSource = typeof(FindAndLearn.Termini);
-            // 
             // instruktoriDataGridViewTextBoxColumn
             // 
             this.instruktoriDataGridViewTextBoxColumn.DataPropertyName = "Instruktori";
@@ -330,6 +299,24 @@ namespace FindAndLearn.MojeRezervacije
             this.instrukcijeBindingSource.DataSource = typeof(FindAndLearn.Instrukcije);
             this.instrukcijeBindingSource.CurrentChanged += new System.EventHandler(this.instrukcijeBindingSource_CurrentChanged);
             // 
+            // dgvtTermini
+            // 
+            this.dgvtTermini.AutoGenerateColumns = false;
+            this.dgvtTermini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvtTermini.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nazivterminaDataGridViewTextBoxColumn,
+            this.vrijemeterminaDataGridViewTextBoxColumn,
+            this.trajanjeDataGridViewTextBoxColumn,
+            this.mjestoodrzavanjaDataGridViewTextBoxColumn,
+            this.kapacitetterminaDataGridViewTextBoxColumn});
+            this.dgvtTermini.DataSource = this.terminiBindingSource;
+            this.dgvtTermini.Location = new System.Drawing.Point(978, 155);
+            this.dgvtTermini.Name = "dgvtTermini";
+            this.dgvtTermini.RowHeadersWidth = 51;
+            this.dgvtTermini.RowTemplate.Height = 24;
+            this.dgvtTermini.Size = new System.Drawing.Size(579, 330);
+            this.dgvtTermini.TabIndex = 158;
+            // 
             // nazivterminaDataGridViewTextBoxColumn
             // 
             this.nazivterminaDataGridViewTextBoxColumn.DataPropertyName = "naziv_termina";
@@ -370,6 +357,20 @@ namespace FindAndLearn.MojeRezervacije
             this.kapacitetterminaDataGridViewTextBoxColumn.Name = "kapacitetterminaDataGridViewTextBoxColumn";
             this.kapacitetterminaDataGridViewTextBoxColumn.Width = 125;
             // 
+            // terminiBindingSource
+            // 
+            this.terminiBindingSource.DataSource = typeof(FindAndLearn.Termini);
+            // 
+            // dgvOdobreneRezervacije
+            // 
+            this.dgvOdobreneRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOdobreneRezervacije.Location = new System.Drawing.Point(310, 545);
+            this.dgvOdobreneRezervacije.Name = "dgvOdobreneRezervacije";
+            this.dgvOdobreneRezervacije.RowHeadersWidth = 51;
+            this.dgvOdobreneRezervacije.RowTemplate.Height = 24;
+            this.dgvOdobreneRezervacije.Size = new System.Drawing.Size(579, 330);
+            this.dgvOdobreneRezervacije.TabIndex = 159;
+            // 
             // frmZatraziRezervaciju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -394,10 +395,10 @@ namespace FindAndLearn.MojeRezervacije
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstrukcije)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvtTermini)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOdobreneRezervacije)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.instrukcijeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvtTermini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOdobreneRezervacije)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

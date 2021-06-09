@@ -1,4 +1,5 @@
-﻿using KorisniciLib;
+﻿using FindAndLearn.Klase;
+using KorisniciLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,6 +50,35 @@ namespace FindAndLearn.MojeRezervacije
             frmPrijava form = new frmPrijava();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void btnZatraziRezervaciju_Click(object sender, EventArgs e)
+        {
+            if(terminiBindingSource.Current != null)
+            {
+                int IdTermina = (terminiBindingSource.Current as Termini).ID_termina;
+                bool prolaz = RepozitorijTermina.ProvjeraKapaciteta(IdTermina);
+                int idTermina = (terminiBindingSource.Current as Termini).ID_termina;
+                Termin termin = RepozitorijTermina.DohvatiTermin(idTermina);
+                if (prolaz==true)
+                {
+                    Rezervacija novaRezervacija = RepozitorijRezervacija.KreirajRezervaciju();
+                    novaRezervacija.Student = PostojeciStudent;
+                    novaRezervacija.Termin = termin;
+                    novaRezervacija.DatumRezervacije = DateTime.Now;
+                    novaRezervacija.RokRezervacije = (terminiBindingSource.Current as Termini).vrijeme_termina;
+                    novaRezervacija.Potvrdjena = false;
+                    RepozitorijRezervacija.ZatraziRezervaciju(novaRezervacija);
+                }
+                else
+                {
+                    MessageBox.Show("Odabrani termin više nema slobodnih mjesta!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Niste odabrali termin!");
+            }
         }
     }
 }

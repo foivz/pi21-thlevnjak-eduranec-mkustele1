@@ -123,6 +123,12 @@
     <Compile Include="MojeObavijesti\frmProcitajObavijesti.Designer.cs">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
     </Compile>
+    <Compile Include="MojeRezervacije\frmOdobriRezervaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojeRezervacije\frmOdobriRezervaciju.Designer.cs">
+      <DependentUpon>frmOdobriRezervaciju.cs</DependentUpon>
+    </Compile>
     <Compile Include="MojeRezervacije\frmZatraziRezervaciju.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,9 +215,11 @@
     <Compile Include="Studenti.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="StudentiExt.cs" />
     <Compile Include="Termini.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TerminiExt.cs" />
     <Compile Include="Tip_instrukcija.code.cs" />
     <Compile Include="Tip_instrukcija.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
@@ -233,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MojeObavijesti\frmProcitajObavijesti.resx">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MojeRezervacije\frmOdobriRezervaciju.resx">
+      <DependentUpon>frmOdobriRezervaciju.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MojeRezervacije\frmZatraziRezervaciju.resx">
       <DependentUpon>frmZatraziRezervaciju.cs</DependentUpon>
@@ -284,6 +295,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Instrukcije.datasource" />
     <None Include="Properties\DataSources\Kolegiji.datasource" />
+    <None Include="Properties\DataSources\Rezervacije.datasource" />
     <None Include="Properties\DataSources\Termini.datasource" />
     <None Include="Properties\DataSources\Tip_instrukcija.datasource" />
     <None Include="Properties\Settings.settings">

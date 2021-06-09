@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace FindAndLearn
 {
-    public partial class Instruktori
+    public partial class Termini
     {
         public override string ToString()
         {
-            return this.ime +" "+ this.prezime; 
+            return this.naziv_termina;
         }
     }
 }

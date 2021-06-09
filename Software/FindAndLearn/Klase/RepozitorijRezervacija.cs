@@ -45,7 +45,20 @@ namespace FindAndLearn.Klase
 
         public static void ZatraziRezervaciju(Rezervacija rezervacija) //ustvari dodaje rezervaciju u bazu kako bi ona bila dostupna instruktoru na uvid i odobrenje
         {
+            using(var entities=new Entities())
+            {
+                Rezervacije novaRezervacijaBaza = new Rezervacije
+                {
+                    student_ID = rezervacija.Student.ID_studenta,
+                    termin_ID = rezervacija.Termin.IdTermina,
+                    rok_rezervacije = rezervacija.RokRezervacije,
+                    datum_rezervacije = rezervacija.DatumRezervacije,
+                    potvrdjena = rezervacija.Potvrdjena
 
+                };
+                entities.Rezervacije.Add(novaRezervacijaBaza);
+                entities.SaveChanges();
+            }
         }
         
 
