@@ -34,6 +34,8 @@ namespace FindAndLearn.MojiTermini
             this.lblVrijemeTermina = new System.Windows.Forms.Label();
             this.lblNazivTermina = new System.Windows.Forms.Label();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
+            this.btnOdjava = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
@@ -41,8 +43,6 @@ namespace FindAndLearn.MojiTermini
             this.gbProfil = new System.Windows.Forms.GroupBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.btnOdjava = new System.Windows.Forms.Button();
             this.lblTrajanjeTermina = new System.Windows.Forms.Label();
             this.lblMjestoOdrzavanja = new System.Windows.Forms.Label();
             this.lblKapacitetTermina = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace FindAndLearn.MojiTermini
             this.lblMin = new System.Windows.Forms.Label();
             this.txtMjesto = new System.Windows.Forms.TextBox();
             this.txtKapacitet = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTermini = new System.Windows.Forms.DataGridView();
             this.btnObrisiTermin = new System.Windows.Forms.Button();
             this.lblStud = new System.Windows.Forms.Label();
             this.iDterminaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +67,7 @@ namespace FindAndLearn.MojiTermini
             this.gbIzbornik.SuspendLayout();
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.instrukcijeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +122,33 @@ namespace FindAndLearn.MojiTermini
             this.gbInstruktor.Size = new System.Drawing.Size(1613, 60);
             this.gbInstruktor.TabIndex = 126;
             this.gbInstruktor.TabStop = false;
+            // 
+            // btnOdjava
+            // 
+            this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdjava.Location = new System.Drawing.Point(1032, 16);
+            this.btnOdjava.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOdjava.Name = "btnOdjava";
+            this.btnOdjava.Size = new System.Drawing.Size(120, 31);
+            this.btnOdjava.TabIndex = 29;
+            this.btnOdjava.Text = "ODJAVA";
+            this.btnOdjava.UseVisualStyleBackColor = false;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnHelp.Location = new System.Drawing.Point(1188, 16);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(120, 31);
+            this.btnHelp.TabIndex = 22;
+            this.btnHelp.Text = "POMOĆ";
+            this.btnHelp.UseVisualStyleBackColor = false;
             // 
             // lblInstruktor
             // 
@@ -212,33 +239,6 @@ namespace FindAndLearn.MojiTermini
             this.label2.TabIndex = 68;
             this.label2.Text = "PROFIL";
             // 
-            // btnHelp
-            // 
-            this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnHelp.Location = new System.Drawing.Point(1188, 16);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(120, 31);
-            this.btnHelp.TabIndex = 22;
-            this.btnHelp.Text = "POMOĆ";
-            this.btnHelp.UseVisualStyleBackColor = false;
-            // 
-            // btnOdjava
-            // 
-            this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdjava.Location = new System.Drawing.Point(1032, 16);
-            this.btnOdjava.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOdjava.Name = "btnOdjava";
-            this.btnOdjava.Size = new System.Drawing.Size(120, 31);
-            this.btnOdjava.TabIndex = 29;
-            this.btnOdjava.Text = "ODJAVA";
-            this.btnOdjava.UseVisualStyleBackColor = false;
-            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
-            // 
             // lblTrajanjeTermina
             // 
             this.lblTrajanjeTermina.AutoSize = true;
@@ -317,24 +317,25 @@ namespace FindAndLearn.MojiTermini
             this.txtKapacitet.Size = new System.Drawing.Size(100, 22);
             this.txtKapacitet.TabIndex = 147;
             // 
-            // dataGridView1
+            // dgvTermini
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvTermini.AutoGenerateColumns = false;
+            this.dgvTermini.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvTermini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTermini.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDterminaDataGridViewTextBoxColumn,
             this.nazivterminaDataGridViewTextBoxColumn,
             this.vrijemeterminaDataGridViewTextBoxColumn,
             this.trajanjeDataGridViewTextBoxColumn,
             this.mjestoodrzavanjaDataGridViewTextBoxColumn,
             this.kapacitetterminaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.terminiBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(863, 104);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(680, 325);
-            this.dataGridView1.TabIndex = 148;
+            this.dgvTermini.DataSource = this.terminiBindingSource;
+            this.dgvTermini.Location = new System.Drawing.Point(828, 104);
+            this.dgvTermini.Name = "dgvTermini";
+            this.dgvTermini.RowHeadersWidth = 51;
+            this.dgvTermini.RowTemplate.Height = 24;
+            this.dgvTermini.Size = new System.Drawing.Size(715, 325);
+            this.dgvTermini.TabIndex = 148;
             // 
             // btnObrisiTermin
             // 
@@ -362,50 +363,50 @@ namespace FindAndLearn.MojiTermini
             // iDterminaDataGridViewTextBoxColumn
             // 
             this.iDterminaDataGridViewTextBoxColumn.DataPropertyName = "ID_termina";
-            this.iDterminaDataGridViewTextBoxColumn.HeaderText = "ID_termina";
+            this.iDterminaDataGridViewTextBoxColumn.HeaderText = "ID termina";
             this.iDterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDterminaDataGridViewTextBoxColumn.Name = "iDterminaDataGridViewTextBoxColumn";
-            this.iDterminaDataGridViewTextBoxColumn.Width = 125;
+            this.iDterminaDataGridViewTextBoxColumn.Width = 93;
             // 
             // nazivterminaDataGridViewTextBoxColumn
             // 
             this.nazivterminaDataGridViewTextBoxColumn.DataPropertyName = "naziv_termina";
-            this.nazivterminaDataGridViewTextBoxColumn.HeaderText = "naziv_termina";
+            this.nazivterminaDataGridViewTextBoxColumn.HeaderText = "Naziv";
             this.nazivterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nazivterminaDataGridViewTextBoxColumn.Name = "nazivterminaDataGridViewTextBoxColumn";
-            this.nazivterminaDataGridViewTextBoxColumn.Width = 125;
+            this.nazivterminaDataGridViewTextBoxColumn.Width = 72;
             // 
             // vrijemeterminaDataGridViewTextBoxColumn
             // 
             this.vrijemeterminaDataGridViewTextBoxColumn.DataPropertyName = "vrijeme_termina";
-            this.vrijemeterminaDataGridViewTextBoxColumn.HeaderText = "vrijeme_termina";
+            this.vrijemeterminaDataGridViewTextBoxColumn.HeaderText = "Vrijeme";
             this.vrijemeterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.vrijemeterminaDataGridViewTextBoxColumn.Name = "vrijemeterminaDataGridViewTextBoxColumn";
-            this.vrijemeterminaDataGridViewTextBoxColumn.Width = 125;
+            this.vrijemeterminaDataGridViewTextBoxColumn.Width = 84;
             // 
             // trajanjeDataGridViewTextBoxColumn
             // 
             this.trajanjeDataGridViewTextBoxColumn.DataPropertyName = "trajanje";
-            this.trajanjeDataGridViewTextBoxColumn.HeaderText = "trajanje";
+            this.trajanjeDataGridViewTextBoxColumn.HeaderText = "Trajanje";
             this.trajanjeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.trajanjeDataGridViewTextBoxColumn.Name = "trajanjeDataGridViewTextBoxColumn";
-            this.trajanjeDataGridViewTextBoxColumn.Width = 125;
+            this.trajanjeDataGridViewTextBoxColumn.Width = 89;
             // 
             // mjestoodrzavanjaDataGridViewTextBoxColumn
             // 
             this.mjestoodrzavanjaDataGridViewTextBoxColumn.DataPropertyName = "mjesto_odrzavanja";
-            this.mjestoodrzavanjaDataGridViewTextBoxColumn.HeaderText = "mjesto_odrzavanja";
+            this.mjestoodrzavanjaDataGridViewTextBoxColumn.HeaderText = "Mjesto održavanja";
             this.mjestoodrzavanjaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.mjestoodrzavanjaDataGridViewTextBoxColumn.Name = "mjestoodrzavanjaDataGridViewTextBoxColumn";
-            this.mjestoodrzavanjaDataGridViewTextBoxColumn.Width = 125;
+            this.mjestoodrzavanjaDataGridViewTextBoxColumn.Width = 139;
             // 
             // kapacitetterminaDataGridViewTextBoxColumn
             // 
             this.kapacitetterminaDataGridViewTextBoxColumn.DataPropertyName = "kapacitet_termina";
-            this.kapacitetterminaDataGridViewTextBoxColumn.HeaderText = "kapacitet_termina";
+            this.kapacitetterminaDataGridViewTextBoxColumn.HeaderText = "Kapacitet";
             this.kapacitetterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.kapacitetterminaDataGridViewTextBoxColumn.Name = "kapacitetterminaDataGridViewTextBoxColumn";
-            this.kapacitetterminaDataGridViewTextBoxColumn.Width = 125;
+            this.kapacitetterminaDataGridViewTextBoxColumn.Width = 96;
             // 
             // terminiBindingSource
             // 
@@ -422,7 +423,7 @@ namespace FindAndLearn.MojiTermini
             this.ClientSize = new System.Drawing.Size(1555, 628);
             this.Controls.Add(this.lblStud);
             this.Controls.Add(this.btnObrisiTermin);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTermini);
             this.Controls.Add(this.txtKapacitet);
             this.Controls.Add(this.txtMjesto);
             this.Controls.Add(this.lblMin);
@@ -447,7 +448,7 @@ namespace FindAndLearn.MojiTermini
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.instrukcijeBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -480,7 +481,7 @@ namespace FindAndLearn.MojiTermini
         private System.Windows.Forms.Label lblMin;
         private System.Windows.Forms.TextBox txtMjesto;
         private System.Windows.Forms.TextBox txtKapacitet;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTermini;
         private System.Windows.Forms.BindingSource terminiBindingSource;
         private System.Windows.Forms.Button btnObrisiTermin;
         private System.Windows.Forms.Label lblStud;
