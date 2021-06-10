@@ -91,6 +91,36 @@ namespace FindAndLearn.Klase
 
         }
 
+        public static void OdobriRezervaciju(Rezervacije rezervacija)
+        {
+            using(var entities = new Entities())
+            {
+                Rezervacije rezervacijaIzBaze = (from rez in entities.Rezervacije
+                                                where rez.ID_rezervacija == rezervacija.ID_rezervacija
+                                                select rez).Single();
+                rezervacijaIzBaze.potvrdjena = true;
+                entities.SaveChanges();
+            }
+        }
+        /// <summary>
+        /// Ova metoda provjerava da li je student prethodno već zatražio rezervaciju za dani termin.
+        /// </summary>
+        /// <param name="student"></param>
+        /// <returns>Vraća true ako je student već zatražio rezervaciju i false ako nije.</returns>
+        public static bool ProvjeraPrethodnihRezervacija(Student student, int idTermina)
+        {
+            bool postoji = false;
+            List<Rezervacija> popisRezervacija = PopuniPopisRezervacija();
+            foreach (var item in popisRezervacija)
+            {
+                if(item.Student.ID_studenta==student.ID_studenta && item.Termin.IdTermina==idTermina)
+                {
+                    postoji = true;
+                }
+
+            }
+            return postoji;
+        }
         
 
         

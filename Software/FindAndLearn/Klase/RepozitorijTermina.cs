@@ -115,15 +115,15 @@ namespace FindAndLearn.Klase
             }
         }
 
-        public static void DopuniKapacitet(Termini odabraniTermin)
+        public static void DopuniKapacitet(int idTermina)
         {
-            if (odabraniTermin.kapacitet_termina > 0)
+            using(var entities=new Entities())
             {
+                var odabraniTermin = (from ter in entities.Termini
+                                     where ter.ID_termina == idTermina
+                                     select ter).Single();
                 odabraniTermin.kapacitet_termina = odabraniTermin.kapacitet_termina - 1;
-            }
-            else if (odabraniTermin.kapacitet_termina == 0)
-            {
-                MessageBox.Show("Kapacitet ovog termina je popunjen");
+                entities.SaveChanges();
             }
         }
 
