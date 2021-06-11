@@ -76,7 +76,6 @@
     <Compile Include="Iznimke\UnosTerminaException.cs" />
     <Compile Include="Klase\Autentifikator.cs" />
     <Compile Include="Klase\Instrukcija.cs" />
-    <Compile Include="Klase\Kolegij.cs" />
     <Compile Include="Klase\Obavijest.cs" />
     <Compile Include="Klase\RepozitorijInstrukcija.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
@@ -86,7 +85,7 @@
     <Compile Include="Klase\Rezervacija.cs" />
     <Compile Include="Klase\Termin.cs" />
     <Compile Include="Klase\TipInstrukcije.cs" />
-    <Compile Include="Kolegiji.code.cs" />
+    <Compile Include="KolegijExt.cs" />
     <Compile Include="MojeInstrukcije\frmDodajInstrukciju.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +335,10 @@
     <ProjectReference Include="..\KorisniciLib\KorisniciLib.csproj">
       <Project>{33df5a5d-dace-42c4-86f0-62161392d2f7}</Project>
       <Name>KorisniciLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VrsteKolegijaLib\VrsteKolegijaLib.csproj">
+      <Project>{3ccea948-0e00-4f26-92ef-33bfb9c76a0f}</Project>
+      <Name>VrsteKolegijaLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

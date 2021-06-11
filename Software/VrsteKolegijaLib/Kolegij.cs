@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FindAndLearn.Klase
+namespace VrsteKolegijaLib
 {
     public class Kolegij
     {

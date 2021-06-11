@@ -51,7 +51,7 @@ namespace FindAndLearn.MojeRezervacije
         {
             Rezervacije odabranaRezervacija = rezervacijeBindingSource.Current as Rezervacije;
 
-            RepozitorijTermina.DopuniKapacitet(odabranaRezervacija.termin_ID);
+            RepozitorijTermina.DopuniKapacitet(odabranaRezervacija);
             RepozitorijRezervacija.OdobriRezervaciju(rezervacijeBindingSource.Current as Rezervacije);
             Osvjezi();
         }

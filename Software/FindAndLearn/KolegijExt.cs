@@ -10,7 +10,7 @@ namespace FindAndLearn
     {
         public override string ToString()
         {
-            return naziv_kolegija;
+            return this.naziv_kolegija;
         }
     }
 }

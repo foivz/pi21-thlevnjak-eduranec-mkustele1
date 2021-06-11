@@ -115,15 +115,18 @@ namespace FindAndLearn.Klase
             }
         }
 
-        public static void DopuniKapacitet(int idTermina)
+        public static void DopuniKapacitet(Rezervacije rezervacija)
         {
-            using(var entities=new Entities())
+            if (rezervacija.potvrdjena == false)
             {
-                var odabraniTermin = (from ter in entities.Termini
-                                     where ter.ID_termina == idTermina
-                                     select ter).Single();
-                odabraniTermin.kapacitet_termina = odabraniTermin.kapacitet_termina - 1;
-                entities.SaveChanges();
+                using (var entities = new Entities())
+                {
+                    var odabraniTermin = (from ter in entities.Termini
+                                          where ter.ID_termina == rezervacija.termin_ID
+                                          select ter).Single();
+                    odabraniTermin.kapacitet_termina = odabraniTermin.kapacitet_termina - 1;
+                    entities.SaveChanges();
+                }
             }
         }
 

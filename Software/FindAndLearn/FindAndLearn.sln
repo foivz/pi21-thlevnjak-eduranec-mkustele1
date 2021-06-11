@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindAndLearn", "FindAndLear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KorisniciLib", "..\KorisniciLib\KorisniciLib.csproj", "{33DF5A5D-DACE-42C4-86F0-62161392D2F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VrsteKolegijaLib", "..\VrsteKolegijaLib\VrsteKolegijaLib.csproj", "{3CCEA948-0E00-4F26-92EF-33BFB9C76A0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{33DF5A5D-DACE-42C4-86F0-62161392D2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33DF5A5D-DACE-42C4-86F0-62161392D2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33DF5A5D-DACE-42C4-86F0-62161392D2F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CCEA948-0E00-4F26-92EF-33BFB9C76A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CCEA948-0E00-4F26-92EF-33BFB9C76A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CCEA948-0E00-4F26-92EF-33BFB9C76A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CCEA948-0E00-4F26-92EF-33BFB9C76A0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

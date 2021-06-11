@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VrsteKolegijaLib;
 
 namespace FindAndLearn.Klase
 {
@@ -82,7 +83,7 @@ namespace FindAndLearn.Klase
         }
         public static void DodajInstrukciju(Instrukcija instrukcija)
         {
-            if (instrukcija.OpisInstrukcije != "" && instrukcija.CijenaInstrukcije != 0)
+            if (instrukcija.OpisInstrukcije != "" && instrukcija.CijenaInstrukcije <= 0)
             {
                 using (var entities = new Entities())
                 {
