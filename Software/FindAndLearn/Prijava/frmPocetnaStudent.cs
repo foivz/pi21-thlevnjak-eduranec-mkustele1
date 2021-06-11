@@ -1,5 +1,6 @@
 ﻿using FindAndLearn.Klase;
 using FindAndLearn.MojeObavijesti;
+using FindAndLearn.MojeRecenzije;
 using FindAndLearn.MojeRezervacije;
 using FindAndLearn.Profil;
 using KorisniciLib;
@@ -54,6 +55,12 @@ namespace FindAndLearn.Prijava
         {
             frmZatraziRezervaciju frmRezervacija = new frmZatraziRezervaciju(postojeciStudent);
             frmRezervacija.ShowDialog();
+        }
+
+        private void btnRecenzije_Click(object sender, EventArgs e)
+        {
+            frmDodajRecenziju frmRecenz = new frmDodajRecenziju(postojeciStudent);
+            frmRecenz.ShowDialog();
         }
     }
 }

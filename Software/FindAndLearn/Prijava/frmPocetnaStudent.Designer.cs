@@ -60,9 +60,9 @@ namespace FindAndLearn.Prijava
             this.gbProfil.Controls.Add(this.pbLogo);
             this.gbProfil.Controls.Add(this.label2);
             this.gbProfil.Location = new System.Drawing.Point(-1, -12);
-            this.gbProfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbProfil.Margin = new System.Windows.Forms.Padding(4);
             this.gbProfil.Name = "gbProfil";
-            this.gbProfil.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbProfil.Padding = new System.Windows.Forms.Padding(4);
             this.gbProfil.Size = new System.Drawing.Size(281, 92);
             this.gbProfil.TabIndex = 78;
             this.gbProfil.TabStop = false;
@@ -71,7 +71,7 @@ namespace FindAndLearn.Prijava
             // 
             this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
             this.pbLogo.Location = new System.Drawing.Point(-1, 14);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(105, 73);
             this.pbLogo.TabIndex = 70;
@@ -100,9 +100,9 @@ namespace FindAndLearn.Prijava
             this.gbIzbornik.Controls.Add(this.btnRezervacijaTermina);
             this.gbIzbornik.Controls.Add(this.btnRecenzije);
             this.gbIzbornik.Location = new System.Drawing.Point(-8, 41);
-            this.gbIzbornik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbIzbornik.Margin = new System.Windows.Forms.Padding(4);
             this.gbIzbornik.Name = "gbIzbornik";
-            this.gbIzbornik.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbIzbornik.Padding = new System.Windows.Forms.Padding(4);
             this.gbIzbornik.Size = new System.Drawing.Size(289, 809);
             this.gbIzbornik.TabIndex = 76;
             this.gbIzbornik.TabStop = false;
@@ -114,7 +114,7 @@ namespace FindAndLearn.Prijava
             this.btnPoruke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPoruke.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPoruke.Location = new System.Drawing.Point(24, 306);
-            this.btnPoruke.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPoruke.Margin = new System.Windows.Forms.Padding(4);
             this.btnPoruke.Name = "btnPoruke";
             this.btnPoruke.Size = new System.Drawing.Size(245, 38);
             this.btnPoruke.TabIndex = 30;
@@ -127,7 +127,7 @@ namespace FindAndLearn.Prijava
             this.btnTrazilica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTrazilica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnTrazilica.Location = new System.Drawing.Point(23, 107);
-            this.btnTrazilica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTrazilica.Margin = new System.Windows.Forms.Padding(4);
             this.btnTrazilica.Name = "btnTrazilica";
             this.btnTrazilica.Size = new System.Drawing.Size(245, 38);
             this.btnTrazilica.TabIndex = 29;
@@ -140,7 +140,7 @@ namespace FindAndLearn.Prijava
             this.btnObavijesti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnObavijesti.Location = new System.Drawing.Point(23, 255);
-            this.btnObavijesti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnObavijesti.Margin = new System.Windows.Forms.Padding(4);
             this.btnObavijesti.Name = "btnObavijesti";
             this.btnObavijesti.Size = new System.Drawing.Size(245, 38);
             this.btnObavijesti.TabIndex = 28;
@@ -155,7 +155,7 @@ namespace FindAndLearn.Prijava
             this.btnProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnProfil.Location = new System.Drawing.Point(23, 59);
-            this.btnProfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProfil.Margin = new System.Windows.Forms.Padding(4);
             this.btnProfil.Name = "btnProfil";
             this.btnProfil.Size = new System.Drawing.Size(245, 38);
             this.btnProfil.TabIndex = 25;
@@ -169,7 +169,7 @@ namespace FindAndLearn.Prijava
             this.btnRezervacijaTermina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRezervacijaTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRezervacijaTermina.Location = new System.Drawing.Point(21, 155);
-            this.btnRezervacijaTermina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRezervacijaTermina.Margin = new System.Windows.Forms.Padding(4);
             this.btnRezervacijaTermina.Name = "btnRezervacijaTermina";
             this.btnRezervacijaTermina.Size = new System.Drawing.Size(245, 38);
             this.btnRezervacijaTermina.TabIndex = 24;
@@ -184,12 +184,13 @@ namespace FindAndLearn.Prijava
             this.btnRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRecenzije.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRecenzije.Location = new System.Drawing.Point(23, 203);
-            this.btnRecenzije.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecenzije.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecenzije.Name = "btnRecenzije";
             this.btnRecenzije.Size = new System.Drawing.Size(245, 38);
             this.btnRecenzije.TabIndex = 20;
             this.btnRecenzije.Text = "RECENZIJE";
             this.btnRecenzije.UseVisualStyleBackColor = false;
+            this.btnRecenzije.Click += new System.EventHandler(this.btnRecenzije_Click);
             // 
             // lblInstruktor
             // 
@@ -211,9 +212,9 @@ namespace FindAndLearn.Prijava
             this.gbInstruktor.Controls.Add(this.btnHelp);
             this.gbInstruktor.Controls.Add(this.lblInstruktor);
             this.gbInstruktor.Location = new System.Drawing.Point(232, -11);
-            this.gbInstruktor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbInstruktor.Margin = new System.Windows.Forms.Padding(4);
             this.gbInstruktor.Name = "gbInstruktor";
-            this.gbInstruktor.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbInstruktor.Padding = new System.Windows.Forms.Padding(4);
             this.gbInstruktor.Size = new System.Drawing.Size(1209, 60);
             this.gbInstruktor.TabIndex = 77;
             this.gbInstruktor.TabStop = false;
@@ -224,7 +225,7 @@ namespace FindAndLearn.Prijava
             this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnOdjava.Location = new System.Drawing.Point(776, 18);
-            this.btnOdjava.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOdjava.Margin = new System.Windows.Forms.Padding(4);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(120, 31);
             this.btnOdjava.TabIndex = 23;
@@ -238,7 +239,7 @@ namespace FindAndLearn.Prijava
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnHelp.Location = new System.Drawing.Point(904, 18);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(120, 31);
             this.btnHelp.TabIndex = 22;
@@ -273,7 +274,7 @@ namespace FindAndLearn.Prijava
             // 
             this.pbLogoNaslovna.BackgroundImage = global::FindAndLearn.Properties.Resources.FindAndLearn;
             this.pbLogoNaslovna.Location = new System.Drawing.Point(507, 258);
-            this.pbLogoNaslovna.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogoNaslovna.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogoNaslovna.Name = "pbLogoNaslovna";
             this.pbLogoNaslovna.Size = new System.Drawing.Size(543, 329);
             this.pbLogoNaslovna.TabIndex = 84;
@@ -291,7 +292,7 @@ namespace FindAndLearn.Prijava
             this.Controls.Add(this.gbInstruktor);
             this.Controls.Add(this.lblDobrodoslica);
             this.Controls.Add(this.lblFindAndLearn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPocetnaStudent";
             this.Text = "Početna student";
             this.Load += new System.EventHandler(this.frmPocetnaStudent_Load);

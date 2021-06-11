@@ -77,9 +77,11 @@
     <Compile Include="Klase\Autentifikator.cs" />
     <Compile Include="Klase\Instrukcija.cs" />
     <Compile Include="Klase\Obavijest.cs" />
+    <Compile Include="Klase\Recenzija.cs" />
     <Compile Include="Klase\RepozitorijInstrukcija.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
     <Compile Include="Klase\RepozitorijObavijesti.cs" />
+    <Compile Include="Klase\RepozitorijRecenzija.cs" />
     <Compile Include="Klase\RepozitorijRezervacija.cs" />
     <Compile Include="Klase\RepozitorijTermina.cs" />
     <Compile Include="Klase\Rezervacija.cs" />
@@ -121,6 +123,12 @@
     </Compile>
     <Compile Include="MojeObavijesti\frmProcitajObavijesti.Designer.cs">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MojeRecenzije\frmDodajRecenziju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojeRecenzije\frmDodajRecenziju.Designer.cs">
+      <DependentUpon>frmDodajRecenziju.cs</DependentUpon>
     </Compile>
     <Compile Include="MojeRezervacije\frmOdobriRezervaciju.cs">
       <SubType>Form</SubType>
@@ -241,6 +249,9 @@
     <EmbeddedResource Include="MojeObavijesti\frmProcitajObavijesti.resx">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MojeRecenzije\frmDodajRecenziju.resx">
+      <DependentUpon>frmDodajRecenziju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MojeRezervacije\frmOdobriRezervaciju.resx">
       <DependentUpon>frmOdobriRezervaciju.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +305,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Instrukcije.datasource" />
     <None Include="Properties\DataSources\Kolegiji.datasource" />
+    <None Include="Properties\DataSources\Recenzije.datasource" />
     <None Include="Properties\DataSources\Rezervacije.datasource" />
     <None Include="Properties\DataSources\Termini.datasource" />
     <None Include="Properties\DataSources\Tip_instrukcija.datasource" />

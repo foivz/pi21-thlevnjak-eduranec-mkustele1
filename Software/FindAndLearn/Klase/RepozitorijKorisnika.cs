@@ -69,6 +69,8 @@ namespace FindAndLearn.Klase
             }
         }
 
+        
+
         // Slika u bazi pohranjena je kao tip byte[], u klasi Instruktor i Student slika je tipa Image
         // Metoda PretvoriSlikuIzBaze pretvara tip byte[] u Image u svrhu kasnijeg mogućeg prikaza slike korisnika u PictureBox-u
 
