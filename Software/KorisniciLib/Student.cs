@@ -20,5 +20,10 @@ namespace KorisniciLib
         {
             ID_studenta = id;
         }
+
+        public override string ToString()
+        {
+            return Ime + " " + Prezime + " <" + KorisnickoIme + "> ";
+        }
     }
 }

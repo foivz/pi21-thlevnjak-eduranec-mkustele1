@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace FindAndLearn
 {
-    public partial class Instruktori
+    public partial class Poruke
     {
+        public string ImePrezime { get; set; }
+
         public override string ToString()
         {
-            return this.ime + " " + this.prezime + " <" + korisnicko_ime + "> ";
+            return ImePrezime;
         }
     }
 }

@@ -180,6 +180,51 @@ namespace FindAndLearn.Klase
             }
         }
 
-        
+        public static Korisnik DodajKorisnika(Uloga uloga, string ime, string prezime, string korisnickoIme, string lozinka, string email, string mobitel, string mjesto, string ulica, string opis, string titula = null)
+        {
+            using (var context = new Entities())
+            {
+                if (uloga == Uloga.Instruktor)
+                {
+                    Instruktori instruktor = new Instruktori()
+                    {
+                        titula = titula,
+                        ime = ime,
+                        prezime = prezime,
+                        korisnicko_ime = korisnickoIme,
+                        lozinka = lozinka,
+                        email = email,
+                        mobitel = mobitel,
+                        mjesto = mjesto,
+                        ulica = ulica,
+                        opis = opis,
+                    };
+                    context.Instruktori.Add(instruktor);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    Studenti student = new Studenti()
+                    {
+                        ime = ime,
+                        prezime = prezime,
+                        korisnicko_ime = korisnickoIme,
+                        lozinka = lozinka,
+                        email = email,
+                        mobitel = mobitel,
+                        mjesto = mjesto,
+                        ulica = ulica,
+                        opis = opis,
+                    };
+                    context.Studenti.Add(student);
+                    context.SaveChanges();
+                }
+            }
+
+            List<Korisnik> listaKorisnika = RepozitorijKorisnika.PopuniListu();
+            Korisnik noviKorisnik = listaKorisnika.Find(x => (x.KorisnickoIme == korisnickoIme));
+
+            return noviKorisnik;
+        }
     }
 }

@@ -77,10 +77,12 @@
     <Compile Include="Klase\Autentifikator.cs" />
     <Compile Include="Klase\Instrukcija.cs" />
     <Compile Include="Klase\Obavijest.cs" />
+    <Compile Include="PorukeExt.cs" />
     <Compile Include="Klase\Recenzija.cs" />
     <Compile Include="Klase\RepozitorijInstrukcija.cs" />
     <Compile Include="Klase\RepozitorijKorisnika.cs" />
     <Compile Include="Klase\RepozitorijObavijesti.cs" />
+    <Compile Include="Klase\RepozitorijPoruka.cs" />
     <Compile Include="Klase\RepozitorijRecenzija.cs" />
     <Compile Include="Klase\RepozitorijRezervacija.cs" />
     <Compile Include="Klase\RepozitorijTermina.cs" />
@@ -123,6 +125,18 @@
     </Compile>
     <Compile Include="MojeObavijesti\frmProcitajObavijesti.Designer.cs">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MojePoruke\frmPorukeInstruktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojePoruke\frmPorukeInstruktor.Designer.cs">
+      <DependentUpon>frmPorukeInstruktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MojePoruke\frmPorukeStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojePoruke\frmPorukeStudent.Designer.cs">
+      <DependentUpon>frmPorukeStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="MojeRecenzije\frmDodajRecenziju.cs">
       <SubType>Form</SubType>
@@ -216,6 +230,13 @@
     <Compile Include="Recenzije.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="RecenzijeExt.cs" />
+    <Compile Include="Registracija\frmRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registracija\frmRegistracija.Designer.cs">
+      <DependentUpon>frmRegistracija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rezervacije.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
     </Compile>
@@ -230,6 +251,18 @@
     <Compile Include="Tip_instrukcija.code.cs" />
     <Compile Include="Tip_instrukcija.cs">
       <DependentUpon>FindAndLearnModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tražilica\frmDetaljiInstruktora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tražilica\frmDetaljiInstruktora.Designer.cs">
+      <DependentUpon>frmDetaljiInstruktora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tražilica\frmTrazilica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tražilica\frmTrazilica.Designer.cs">
+      <DependentUpon>frmTrazilica.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MojeInstrukcije\frmDodajInstrukciju.resx">
       <DependentUpon>frmDodajInstrukciju.cs</DependentUpon>
@@ -248,6 +281,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MojeObavijesti\frmProcitajObavijesti.resx">
       <DependentUpon>frmProcitajObavijesti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MojePoruke\frmPorukeInstruktor.resx">
+      <DependentUpon>frmPorukeInstruktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MojePoruke\frmPorukeStudent.resx">
+      <DependentUpon>frmPorukeStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MojeRecenzije\frmDodajRecenziju.resx">
       <DependentUpon>frmDodajRecenziju.cs</DependentUpon>
@@ -295,6 +334,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registracija\frmRegistracija.resx">
+      <DependentUpon>frmRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tražilica\frmDetaljiInstruktora.resx">
+      <DependentUpon>frmDetaljiInstruktora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tražilica\frmTrazilica.resx">
+      <DependentUpon>frmTrazilica.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="FindAndLearnModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FindAndLearnModel.Designer.cs</LastGenOutput>

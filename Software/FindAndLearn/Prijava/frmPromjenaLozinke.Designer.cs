@@ -48,7 +48,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnNatrag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNatrag.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnNatrag.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnNatrag.Location = new System.Drawing.Point(54, 439);
             this.btnNatrag.Name = "btnNatrag";
@@ -60,52 +60,52 @@ namespace FindAndLearn.Prijava
             // 
             // txtPonovljenaLozinka
             // 
-            this.txtPonovljenaLozinka.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtPonovljenaLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtPonovljenaLozinka.Location = new System.Drawing.Point(55, 359);
             this.txtPonovljenaLozinka.Name = "txtPonovljenaLozinka";
             this.txtPonovljenaLozinka.PasswordChar = '*';
-            this.txtPonovljenaLozinka.Size = new System.Drawing.Size(281, 25);
+            this.txtPonovljenaLozinka.Size = new System.Drawing.Size(281, 22);
             this.txtPonovljenaLozinka.TabIndex = 85;
             // 
             // lblPonoviLozinku
             // 
             this.lblPonoviLozinku.AutoSize = true;
-            this.lblPonoviLozinku.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblPonoviLozinku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblPonoviLozinku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.lblPonoviLozinku.Location = new System.Drawing.Point(53, 338);
             this.lblPonoviLozinku.Name = "lblPonoviLozinku";
-            this.lblPonoviLozinku.Size = new System.Drawing.Size(114, 18);
+            this.lblPonoviLozinku.Size = new System.Drawing.Size(118, 16);
             this.lblPonoviLozinku.TabIndex = 84;
             this.lblPonoviLozinku.Text = "*Ponovi lozinku:";
             // 
             // txtNovaLozinka
             // 
-            this.txtNovaLozinka.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtNovaLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtNovaLozinka.Location = new System.Drawing.Point(56, 297);
             this.txtNovaLozinka.Name = "txtNovaLozinka";
             this.txtNovaLozinka.PasswordChar = '*';
-            this.txtNovaLozinka.Size = new System.Drawing.Size(281, 25);
+            this.txtNovaLozinka.Size = new System.Drawing.Size(281, 22);
             this.txtNovaLozinka.TabIndex = 83;
             // 
             // lblNovaLozinka
             // 
             this.lblNovaLozinka.AutoSize = true;
-            this.lblNovaLozinka.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblNovaLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblNovaLozinka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.lblNovaLozinka.Location = new System.Drawing.Point(56, 274);
             this.lblNovaLozinka.Name = "lblNovaLozinka";
-            this.lblNovaLozinka.Size = new System.Drawing.Size(103, 18);
+            this.lblNovaLozinka.Size = new System.Drawing.Size(108, 16);
             this.lblNovaLozinka.TabIndex = 82;
             this.lblNovaLozinka.Text = "*Nova lozinka:";
             // 
             // cbPokaziLozinke
             // 
             this.cbPokaziLozinke.AutoSize = true;
-            this.cbPokaziLozinke.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cbPokaziLozinke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cbPokaziLozinke.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.cbPokaziLozinke.Location = new System.Drawing.Point(59, 398);
             this.cbPokaziLozinke.Name = "cbPokaziLozinke";
-            this.cbPokaziLozinke.Size = new System.Drawing.Size(111, 22);
+            this.cbPokaziLozinke.Size = new System.Drawing.Size(113, 20);
             this.cbPokaziLozinke.TabIndex = 81;
             this.cbPokaziLozinke.Text = "Pokaži lozinke";
             this.cbPokaziLozinke.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@ namespace FindAndLearn.Prijava
             // 
             this.btnSpremi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSpremi.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSpremi.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSpremi.Location = new System.Drawing.Point(202, 439);
             this.btnSpremi.Name = "btnSpremi";
@@ -127,40 +127,40 @@ namespace FindAndLearn.Prijava
             // 
             // txtTrenutnaLozinka
             // 
-            this.txtTrenutnaLozinka.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtTrenutnaLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtTrenutnaLozinka.Location = new System.Drawing.Point(56, 220);
             this.txtTrenutnaLozinka.Name = "txtTrenutnaLozinka";
             this.txtTrenutnaLozinka.PasswordChar = '*';
-            this.txtTrenutnaLozinka.Size = new System.Drawing.Size(281, 25);
+            this.txtTrenutnaLozinka.Size = new System.Drawing.Size(281, 22);
             this.txtTrenutnaLozinka.TabIndex = 79;
             // 
             // txtKorisnickoIme
             // 
-            this.txtKorisnickoIme.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtKorisnickoIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtKorisnickoIme.Location = new System.Drawing.Point(56, 164);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
-            this.txtKorisnickoIme.Size = new System.Drawing.Size(280, 25);
+            this.txtKorisnickoIme.Size = new System.Drawing.Size(280, 22);
             this.txtKorisnickoIme.TabIndex = 78;
             // 
             // lblTrenutnaLozinka
             // 
             this.lblTrenutnaLozinka.AutoSize = true;
-            this.lblTrenutnaLozinka.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTrenutnaLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblTrenutnaLozinka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.lblTrenutnaLozinka.Location = new System.Drawing.Point(56, 197);
             this.lblTrenutnaLozinka.Name = "lblTrenutnaLozinka";
-            this.lblTrenutnaLozinka.Size = new System.Drawing.Size(132, 18);
+            this.lblTrenutnaLozinka.Size = new System.Drawing.Size(132, 16);
             this.lblTrenutnaLozinka.TabIndex = 77;
             this.lblTrenutnaLozinka.Text = "*Trenutna lozinka:";
             // 
             // lblKorisnickoIme
             // 
             this.lblKorisnickoIme.AutoSize = true;
-            this.lblKorisnickoIme.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKorisnickoIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblKorisnickoIme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.lblKorisnickoIme.Location = new System.Drawing.Point(55, 142);
             this.lblKorisnickoIme.Name = "lblKorisnickoIme";
-            this.lblKorisnickoIme.Size = new System.Drawing.Size(116, 18);
+            this.lblKorisnickoIme.Size = new System.Drawing.Size(119, 16);
             this.lblKorisnickoIme.TabIndex = 76;
             this.lblKorisnickoIme.Text = "*Korisničko ime:";
             // 
@@ -191,7 +191,10 @@ namespace FindAndLearn.Prijava
             this.Controls.Add(this.txtKorisnickoIme);
             this.Controls.Add(this.lblTrenutnaLozinka);
             this.Controls.Add(this.lblKorisnickoIme);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmPromjenaLozinke";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Promjena lozinke";
             this.Load += new System.EventHandler(this.frmPromjenaLozinke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

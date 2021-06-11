@@ -1,5 +1,6 @@
 ﻿using FindAndLearn.MojeInstrukcije;
 using FindAndLearn.MojeObavijesti;
+using FindAndLearn.MojePoruke;
 using FindAndLearn.MojeRezervacije;
 using FindAndLearn.Profil;
 using KorisniciLib;
@@ -62,6 +63,12 @@ namespace FindAndLearn.Prijava
         {
             frmOdobriRezervaciju formOdobri = new frmOdobriRezervaciju(postojeciInstruktor);
             formOdobri.ShowDialog();
+        }
+
+        private void btnPoruke_Click(object sender, EventArgs e)
+        {
+            frmPorukeInstruktor frmPoruke = new frmPorukeInstruktor(postojeciInstruktor);
+            frmPoruke.ShowDialog();
         }
     }
 }

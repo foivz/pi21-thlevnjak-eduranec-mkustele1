@@ -89,7 +89,6 @@ namespace FindAndLearn.Profil
                 Tip_instrukcija selektiranTip = comboTipInstrukcija.SelectedItem as Tip_instrukcija;
                 Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(k => k.korisnicko_ime == postojeciInstruktor.KorisnickoIme);
 
-
                 // 2. Dohvaćanje liste instrukcija odabranog tipa iz popisa instrukcija samog dohvaćenog instruktora
 
                 var upit = from ins in instruktorBaza.Instrukcije

@@ -101,5 +101,60 @@ namespace FindAndLearn.Klase
             return ispravanUnos;
         }
 
+        public static Korisnik Registracija(Uloga uloga, string ime, string prezime, string korisnickoIme, string lozinka, string ponovljenaLozinka, string email, string mobitel, string mjesto, string ulica, string opis, string titula = null)
+        {
+            Korisnik korisnikRegistracija = null;
+
+            ProvjeriPrazanUnosRegistracije(ime, prezime, korisnickoIme, lozinka, ponovljenaLozinka, email);
+
+            bool postojiKorisnik = RepozitorijKorisnika.PostojiKorisnik(korisnickoIme);
+
+            // 1. slučaj: Već postoji korisničko ime u bazi podataka
+            if (postojiKorisnik == true)
+            {
+                throw new UnosException($"Neuspješna registracija! Već postoji korisnik s korisničkim imenom {korisnickoIme}!");
+            }
+
+            // 2. slučaj: Ne postoji korisničko ime u bazi podataka
+            else if (postojiKorisnik == false && ProvjeriLozinkeRegistracije(lozinka, ponovljenaLozinka) == true && ProvjeriEmailAdresu(email) == true)
+            {
+                // 2.1. Dodaje se korisnik (ispravni parametri i izvršena validacija obrasca)
+                korisnikRegistracija = RepozitorijKorisnika.DodajKorisnika(uloga, ime, prezime, korisnickoIme, lozinka, email, mobitel, mjesto, ulica, opis, titula);
+            }
+
+            return korisnikRegistracija;
+        }
+
+        public static void ProvjeriPrazanUnosRegistracije(string ime, string prezime, string korisnickoIme, string lozinka, string ponovljenaLozinka, string email)
+        {
+            if (ime == "" || prezime == "" || korisnickoIme == "" || lozinka == "" || ponovljenaLozinka == "" || email == "")
+            {
+                throw new UnosException("Neuspješna registracija! Niste popunili tražena polja! (Označena zvjezdicom *)");
+            }
+        }
+
+        public static bool ProvjeriLozinkeRegistracije(string lozinka, string ponovljenaLozinka)
+        {
+            if (lozinka != ponovljenaLozinka)
+            {
+                throw new UnosException("Neuspješna registracija! Lozinka i ponovljena lozinka se ne poklapaju!");
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public static bool ProvjeriEmailAdresu(string email)
+        {
+            if (email.Contains('@'))
+            {
+                return true;
+            }
+            else
+            {
+                throw new UnosException("Neuspješna registracija! Neispravan format email adrese!");
+            }
+        }
     }
 }

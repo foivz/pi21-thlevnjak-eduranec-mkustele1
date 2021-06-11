@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using KorisniciLib;
 using FindAndLearn.Klase;
 using FindAndLearn.Iznimke;
+using FindAndLearn.Registracija;
 
 namespace FindAndLearn
 {
@@ -81,6 +82,12 @@ namespace FindAndLearn
                     Close();
                 }
             }
+        }
+
+        private void btnRegistracija_Click(object sender, EventArgs e)
+        {
+            frmRegistracija formRegistracija = new frmRegistracija();
+            formRegistracija.ShowDialog();
         }
     }
 }

@@ -11,13 +11,12 @@ namespace VrsteKolegijaLib
         public int Id { get; set; }
         public string NazivKolegija { get; set; }
         public int GodinaKolegija { get; set; }
+        public decimal ProsjecnaOcjena { get; set; }
 
         public Kolegij()
         {
 
-
         }
-
 
         public Kolegij(int id, string nazivKolegija, int godinaKolegija)
         {

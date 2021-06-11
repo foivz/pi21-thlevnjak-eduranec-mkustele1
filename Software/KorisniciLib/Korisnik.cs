@@ -29,7 +29,6 @@ namespace KorisniciLib
         {
 
         }
-
         public Korisnik(string ime, string prezime, string korisnickoIme, string lozinka, string email, Uloga uloga)
         {
             Ime = ime;
