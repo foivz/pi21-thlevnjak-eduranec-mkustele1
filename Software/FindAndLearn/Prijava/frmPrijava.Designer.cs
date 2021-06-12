@@ -62,9 +62,9 @@ namespace FindAndLearn
             this.cbPokaziLozinku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.cbPokaziLozinku.Location = new System.Drawing.Point(58, 281);
             this.cbPokaziLozinku.Name = "cbPokaziLozinku";
-            this.cbPokaziLozinku.Size = new System.Drawing.Size(112, 20);
+            this.cbPokaziLozinku.Size = new System.Drawing.Size(111, 20);
             this.cbPokaziLozinku.TabIndex = 73;
-            this.cbPokaziLozinku.Text = "Pokaži lozinku";
+            this.cbPokaziLozinku.Text = "Prikaži lozinku";
             this.cbPokaziLozinku.UseVisualStyleBackColor = true;
             this.cbPokaziLozinku.CheckedChanged += new System.EventHandler(this.cbPokaziLozinku_CheckedChanged);
             // 

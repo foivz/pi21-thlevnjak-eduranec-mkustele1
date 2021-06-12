@@ -17,37 +17,19 @@ namespace FindAndLearn.Profil
     public partial class frmStudentProfil : Form
     {
         Student postojeciStudent = null;
-        List<Instrukcije> instrukcijeStudenta;
-        List<Rezervacije> rezervacijeStudenta;
 
         public frmStudentProfil(Student student)
         {
             InitializeComponent();
             postojeciStudent = student;
-            instrukcijeStudenta = UcitajInstrukcije();
             UcitajTipoveInstrukcija();
             comboTipInstrukcije.SelectedIndexChanged += ComboTipInstrukcije_SelectedIndexChanged;
-            comboKolegiji.SelectedIndexChanged += ComboKolegiji_SelectedIndexChanged;
             OsvjeziProfil();
         }
 
-        private void ComboTipInstrukcije_SelectedIndexChanged(object sender, EventArgs e)
+        private void frmStudentProfil_Load(object sender, EventArgs e)
         {
-            TipInstrukcije selektiraniTip = comboTipInstrukcije.SelectedItem as TipInstrukcije;
-            List<Kolegij> listaKolegija = RepozitorijInstrukcija.PopuniPopisKolegija();
-            List<Kolegij> kolegijiZaTip = new List<Kolegij>();
 
-            foreach (var instrukcije in instrukcijeStudenta)
-            {
-                if(instrukcije.tip_instrukcije_id == selektiraniTip.Id)
-                {
-                    Kolegij kolegij = listaKolegija.Find(x => x.Id == instrukcije.kolegij_id);
-                    kolegijiZaTip.Add(kolegij);
-                }
-            }
-
-            comboKolegiji.DataSource = null;
-            comboKolegiji.DataSource = kolegijiZaTip.ToList();
         }
 
         private void OsvjeziProfil()
@@ -64,147 +46,113 @@ namespace FindAndLearn.Profil
             }
         }
 
-        private void frmStudentProfil_Load(object sender, EventArgs e)
+        private void ComboTipInstrukcije_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        // Ovisno o odabranom kolegiju prikazuju se kontakt podaci o instruktoru radi lakšeg kontaktiranja instruktora i podaci o terminu
-
-        private void ComboKolegiji_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Kolegij kolegij = comboKolegiji.SelectedItem as Kolegij;
-
-            foreach (var instrukcije in instrukcijeStudenta)
-            {
-                if (kolegij != null)
-                {
-                    PrikaziInstruktoraZaKolegij(instrukcije, kolegij);
-                    PokaziTerminInstrukcija(instrukcije);
-                }
-             }
+            UcitajKolegijeZaTip();
         }
 
 
+        // Rezervirani termin se odnosi na samo 1 instrukciju tako se dohvaćanjem termina studenta dolazi do studentovih instrukcija
 
-      private void PrikaziInstruktoraZaKolegij(Instrukcije instrukcije, Kolegij kolegij)
-      {
-           Instruktori instruktorBaza = null;
+        public List<Rezervacija> DohvatiRezervacijeStudenta()
+        {
+            List<Rezervacija> listaRezervacija = RepozitorijRezervacija.PopuniPopisRezervacija();
+            List<Rezervacija> rezervacijeStudenta = new List<Rezervacija>();
 
-           using (var context = new Entities())
-           {
-                var upitInstruktor =   from ins in context.Instruktori
-                                       where ins.ID_instruktora == instrukcije.instruktor_id && instrukcije.kolegij_id == kolegij.Id
-                                       select ins;
-
-                instruktorBaza = upitInstruktor.Single();
-            }
-
-            if (instruktorBaza != null)
+            foreach (var item in listaRezervacija)
             {
-                // Dohvaćanje entitetne klase Instuktor kako bi se mogla prikazati slika tipa Image i ostali podaci o instruktoru
-
-                Instruktor instruktor = RepozitorijKorisnika.DohvatiKorisnika(instruktorBaza.korisnicko_ime, instruktorBaza.lozinka) as Instruktor;
-
-                pbSlikaInstruktora.Image = instruktor.Slika;
-                lblImeInstruktora.Text = instruktor.Ime + " " + instruktor.Prezime;
-                lblEmailInstruktor.Text = instruktor.Email;
-                lblMobitelInstruktora.Text = instruktor.Mobitel;
-             }
-       }
-
-        // Prikaz podataka o terminu instrukcija vezanih uz odabrani kolegij i pretvorba prikaza datuma po danu i mjesecu
-
-        public void PokaziTerminInstrukcija (Instrukcije instrukcije)
-       {
-            Termini termin = null;
-
-            foreach (var rezervacije in rezervacijeStudenta)
-            {
-                using (var context = new Entities())
+                if (item.Student.KorisnickoIme == postojeciStudent.KorisnickoIme)
                 {
-                    var upitTermin = from t in context.Termini
-                                     where t.instrukcija_id == instrukcije.ID_instrukcije && t.ID_termina == rezervacije.termin_ID
-                                     select t;
-
-                    termin = upitTermin.Single();
+                    rezervacijeStudenta.Add(item);
                 }
             }
 
-            string[] datum = termin.vrijeme_termina.ToString().Split('.');
-
-            lblDan.Text = datum[0];
-            lblMjesec.Text = datum[1];
-            lblNazivTermina.Text = termin.naziv_termina;
-            lblMjestoOdrzavanja.Text = termin.mjesto_odrzavanja;
-        }
-
-
-        private List<Instrukcije> UcitajInstrukcije()
-        {
-            comboTipInstrukcije.DataSource = null;
-            rezervacijeStudenta = DohvatiRezervacijeStudenta();
-
-            instrukcijeStudenta = new List<Instrukcije>();
-
-            foreach (var item in rezervacijeStudenta)
-            {
-                instrukcijeStudenta.Add(DohvatiInstrukcijuStudenta(item));
-            }
-
-            return instrukcijeStudenta;
+            return rezervacijeStudenta;
         }
 
         public void UcitajTipoveInstrukcija()
         {
-            foreach (var instrukcije in instrukcijeStudenta)
-            {
-                 List<TipInstrukcije> listaTipova = RepozitorijInstrukcija.PopuniPopisTipovaInstrukcija();
-                 TipInstrukcije tipInstrukcije = listaTipova.Find(x => x.Id == instrukcije.tip_instrukcije_id);
+            List<Rezervacija> listaRezervacija = RepozitorijRezervacija.PopuniPopisRezervacija();
+            List<TipInstrukcije> listaTipova = new List<TipInstrukcije>();
 
-                 comboTipInstrukcije.Items.Add(tipInstrukcije);
+            foreach (var item in listaRezervacija)
+            {
+                bool postojiTip = listaTipova.Exists(x => x.Id == item.Termin.Instrukcija.TipInstrukcije.Id);
+
+                if (item.Student.KorisnickoIme == postojeciStudent.KorisnickoIme && postojiTip == false)
+                {
+                    listaTipova.Add(item.Termin.Instrukcija.TipInstrukcije);
+                }
+            }
+
+            comboTipInstrukcije.DataSource = null;
+            comboTipInstrukcije.DataSource = listaTipova.ToList();
+        }
+
+        public void UcitajKolegijeZaTip()
+        {
+            comboKolegiji.DataSource = null;
+            List<Rezervacija> rezervacijeStudenta = DohvatiRezervacijeStudenta();
+            TipInstrukcije selektiraniTip = comboTipInstrukcije.SelectedItem as TipInstrukcije;
+            List<Kolegij> listaKolegija = new List<Kolegij>();
+
+            foreach (var item in rezervacijeStudenta)
+            {
+                if (item.Termin.Instrukcija.TipInstrukcije.Id == selektiraniTip.Id)
+                {
+                    listaKolegija.Add(item.Termin.Instrukcija.Kolegij);
+                }
+            }
+
+            comboKolegiji.DataSource = listaKolegija;
+        }
+
+        // Dohvaćanje entitetne klase Instuktor kako bi se mogla prikazati slika tipa Image i ostali podaci o instruktoru
+
+        private void PrikaziInstruktoraZaKolegij(Instruktor instruktor)
+        {
+            if (instruktor != null)
+            {
+                pbSlikaInstruktora.Image = instruktor.Slika;
+                lblImeInstruktora.Text = instruktor.Ime + " " + instruktor.Prezime;
+                lblEmailInstruktor.Text = instruktor.Email;
+                lblMobitelInstruktora.Text = instruktor.Mobitel;
             }
         }
 
-        public List<Rezervacije> DohvatiRezervacijeStudenta()
+        // Prikaz podataka o terminu instrukcija vezanih uz odabrani kolegij i pretvorba prikaza datuma po danu i mjesecu
+
+        public void PrikaziTerminInstrukcija(Termin termin)
         {
-            using (var context = new Entities())
-            {
-                Studenti studentBaza = context.Studenti.FirstOrDefault(k => k.korisnicko_ime == postojeciStudent.KorisnickoIme);
+            string[] datum = termin.VrijemeTermina.ToString().Split('.');
 
-                var upitRezervacije = from r in context.Rezervacije
-                                      where r.student_ID == studentBaza.ID_studenta && r.potvrdjena == true
-                                      select r;
-
-                return upitRezervacije.ToList();
-            }
+            lblDan.Text = datum[0];
+            lblMjesec.Text = datum[1];
+            lblNazivTermina.Text = termin.NazivTermina;
+            lblMjestoOdrzavanja.Text = termin.MjestoOdrzavanja;
         }
 
-       // Rezervirani termin se odnosi na samo 1 instrukciju tako se dohvaćanjem termina studenta dolazi do studentovih instrukcija
 
-        public Instrukcije DohvatiInstrukcijuStudenta(Rezervacije rezervacija)
+        // Ovisno o odabranom kolegiju prikazuju se kontakt podaci o instruktoru radi lakšeg kontaktiranja instruktora i podaci o terminu
+
+        private void btnPrikaziInstrukcije_Click(object sender, EventArgs e)
         {
-            using (var context = new Entities())
+            List<Rezervacija> rezervacijeStudenta = DohvatiRezervacijeStudenta();
+            Kolegij selektiraniKolegij = comboKolegiji.SelectedItem as Kolegij;
+            TipInstrukcije selektiraniTip = comboTipInstrukcije.SelectedItem as TipInstrukcije;
+
+
+            if (selektiraniTip != null && selektiraniKolegij != null)
             {
-                var upitInstrukcije = from t in context.Termini
-                                      where t.ID_termina == rezervacija.termin_ID
-                                      select t.Instrukcije;
-
-                return upitInstrukcije.Single();
+                foreach (var item in rezervacijeStudenta)
+                {
+                    if (item.Termin.Instrukcija.TipInstrukcije.Id == selektiraniTip.Id && item.Termin.Instrukcija.Kolegij.Id == selektiraniKolegij.Id)
+                    {
+                        PrikaziTerminInstrukcija(item.Termin);
+                        PrikaziInstruktoraZaKolegij(item.Termin.Instrukcija.Instruktor);
+                    }
+                }
             }
-        }
-
-        public List<Kolegij> DohvatiKolegijStudenta (TipInstrukcije tip)
-        {
-           List<Kolegij> listaKolegija = RepozitorijInstrukcija.PopuniPopisKolegija();
-
-           foreach (var instrukcije in instrukcijeStudenta)
-           {
-                Kolegij kolegij = listaKolegija.Find(x => x.Id == instrukcije.kolegij_id && instrukcije.tip_instrukcije_id == tip.Id);
-                listaKolegija.Add(kolegij);
-           }
-
-           return listaKolegija;
         }
 
         private void btnIzmijeniPodatke_Click(object sender, EventArgs e)
@@ -221,9 +169,9 @@ namespace FindAndLearn.Profil
             Close();
         }
 
-        private void btnRezervacijaTermina_Click(object sender, EventArgs e)
+        private void btnZatvori_Click(object sender, EventArgs e)
         {
-           
+            Close();
         }
     }
 }

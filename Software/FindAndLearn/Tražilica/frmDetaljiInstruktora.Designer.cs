@@ -35,7 +35,6 @@ namespace FindAndLearn.Tražilica
             this.lblDetalji = new System.Windows.Forms.Label();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
             this.btnZatvori = new System.Windows.Forms.Button();
-            this.btnProfil = new System.Windows.Forms.Button();
             this.gbProfil = new System.Windows.Forms.GroupBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -105,7 +104,6 @@ namespace FindAndLearn.Tražilica
             this.gbIzbornik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbIzbornik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbIzbornik.Controls.Add(this.btnZatvori);
-            this.gbIzbornik.Controls.Add(this.btnProfil);
             this.gbIzbornik.Location = new System.Drawing.Point(-6, 33);
             this.gbIzbornik.Name = "gbIzbornik";
             this.gbIzbornik.Size = new System.Drawing.Size(217, 657);
@@ -125,19 +123,6 @@ namespace FindAndLearn.Tražilica
             this.btnZatvori.Text = "ZATVORI";
             this.btnZatvori.UseVisualStyleBackColor = false;
             this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
-            // 
-            // btnProfil
-            // 
-            this.btnProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProfil.Location = new System.Drawing.Point(17, 48);
-            this.btnProfil.Name = "btnProfil";
-            this.btnProfil.Size = new System.Drawing.Size(184, 31);
-            this.btnProfil.TabIndex = 25;
-            this.btnProfil.Text = "TRAŽILICA";
-            this.btnProfil.UseVisualStyleBackColor = false;
             // 
             // gbProfil
             // 
@@ -272,7 +257,6 @@ namespace FindAndLearn.Tražilica
         private System.Windows.Forms.Label lblDetalji;
         private System.Windows.Forms.GroupBox gbIzbornik;
         private System.Windows.Forms.Button btnZatvori;
-        private System.Windows.Forms.Button btnProfil;
         private System.Windows.Forms.GroupBox gbProfil;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label label2;

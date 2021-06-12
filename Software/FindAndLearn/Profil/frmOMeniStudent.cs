@@ -33,6 +33,19 @@ namespace FindAndLearn.Profil
             txtUlica.Text = postojeciStudent.Ulica;
             txtOpis.Text = postojeciStudent.Opis;
             pbSlikaStudenta.Image = postojeciStudent.Slika;
+            cbZadanaSlika.CheckedChanged += CbZadanaSlika_CheckedChanged;
+        }
+
+        private void CbZadanaSlika_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbZadanaSlika.Checked == true)
+            {
+                pbSlikaStudenta.Image = FindAndLearn.Properties.Resources.student;
+            }
+            else
+            {
+                pbSlikaStudenta.Image = null;
+            }
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -59,7 +72,7 @@ namespace FindAndLearn.Profil
             {
                 postojiKorisnik = false;
 
-                ispravanUnos = Autentifikator.ProvjeriObavezanUnos(txtIme.Text, txtPrezime.Text, txtKorisnickoIme.Text, txtEmail.Text);
+                ispravanUnos = Autentifikator.ProvjeriObavezanUnosProfil(txtIme.Text, txtPrezime.Text, txtKorisnickoIme.Text, txtEmail.Text);
 
                 if (ispravanUnos == true && postojeciStudent.KorisnickoIme != txtKorisnickoIme.Text)
                 {
@@ -89,6 +102,12 @@ namespace FindAndLearn.Profil
                 RepozitorijKorisnika.AzurirajStudenta(postojeciStudent, staroKorisnickoIme);
             }
 
+        }
+
+        private void btnUkloniSliku_Click(object sender, EventArgs e)
+        {
+            pbSlikaStudenta.Image = null;
+            cbZadanaSlika.Checked = false;
         }
     }
 }

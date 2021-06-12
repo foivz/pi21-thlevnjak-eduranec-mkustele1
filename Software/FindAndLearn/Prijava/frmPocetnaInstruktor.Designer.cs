@@ -38,7 +38,6 @@ namespace FindAndLearn.Prijava
             this.btnPoruke = new System.Windows.Forms.Button();
             this.btnProfil = new System.Windows.Forms.Button();
             this.btnInstrukcije = new System.Windows.Forms.Button();
-            this.btnRecenzije = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
@@ -94,7 +93,6 @@ namespace FindAndLearn.Prijava
             this.gbIzbornik.Controls.Add(this.btnPoruke);
             this.gbIzbornik.Controls.Add(this.btnProfil);
             this.gbIzbornik.Controls.Add(this.btnInstrukcije);
-            this.gbIzbornik.Controls.Add(this.btnRecenzije);
             this.gbIzbornik.Location = new System.Drawing.Point(-7, 34);
             this.gbIzbornik.Name = "gbIzbornik";
             this.gbIzbornik.Size = new System.Drawing.Size(217, 657);
@@ -133,7 +131,7 @@ namespace FindAndLearn.Prijava
             this.btnPoruke.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPoruke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPoruke.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPoruke.Location = new System.Drawing.Point(20, 237);
+            this.btnPoruke.Location = new System.Drawing.Point(20, 200);
             this.btnPoruke.Name = "btnPoruke";
             this.btnPoruke.Size = new System.Drawing.Size(184, 31);
             this.btnPoruke.TabIndex = 26;
@@ -167,19 +165,6 @@ namespace FindAndLearn.Prijava
             this.btnInstrukcije.Text = "INSTRUKCIJE";
             this.btnInstrukcije.UseVisualStyleBackColor = false;
             this.btnInstrukcije.Click += new System.EventHandler(this.btnInstrukcije_Click);
-            // 
-            // btnRecenzije
-            // 
-            this.btnRecenzije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnRecenzije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRecenzije.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRecenzije.Location = new System.Drawing.Point(20, 200);
-            this.btnRecenzije.Name = "btnRecenzije";
-            this.btnRecenzije.Size = new System.Drawing.Size(184, 31);
-            this.btnRecenzije.TabIndex = 20;
-            this.btnRecenzije.Text = "RECENZIJE";
-            this.btnRecenzije.UseVisualStyleBackColor = false;
             // 
             // btnOdjava
             // 
@@ -300,7 +285,6 @@ namespace FindAndLearn.Prijava
         private System.Windows.Forms.Button btnPoruke;
         private System.Windows.Forms.Button btnProfil;
         private System.Windows.Forms.Button btnInstrukcije;
-        private System.Windows.Forms.Button btnRecenzije;
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Label lblInstruktor;

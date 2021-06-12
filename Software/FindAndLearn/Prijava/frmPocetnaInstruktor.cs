@@ -43,7 +43,6 @@ namespace FindAndLearn.Prijava
         {
             frmInstruktorProfil form = new frmInstruktorProfil(postojeciInstruktor);
             form.ShowDialog();
-            Close();
         }
 
         private void btnInstrukcije_Click(object sender, EventArgs e)
@@ -56,7 +55,6 @@ namespace FindAndLearn.Prijava
         {
             frmObavijestiInstruktor form = new frmObavijestiInstruktor(postojeciInstruktor);
             form.ShowDialog();
-            Close();
         }
 
         private void btnRezervacije_Click(object sender, EventArgs e)

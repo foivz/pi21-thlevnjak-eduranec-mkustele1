@@ -19,7 +19,7 @@ namespace FindAndLearn.Klase
         {
             Korisnik korisnikPrijava = null;
 
-            ProvjeriPrazanUnos(korisnickoIme, lozinka);
+            ProvjeriPrazanUnosPrijave(korisnickoIme, lozinka);
 
 
             bool postojiKorisnik = RepozitorijKorisnika.PostojiKorisnik(korisnickoIme);
@@ -50,7 +50,7 @@ namespace FindAndLearn.Klase
             return korisnikPrijava;
         }
 
-        public static void ProvjeriPrazanUnos(string korisnickoIme, string lozinka)
+        public static void ProvjeriPrazanUnosPrijave(string korisnickoIme, string lozinka)
         {
             if (korisnickoIme == "" || lozinka == "")
             {
@@ -89,7 +89,7 @@ namespace FindAndLearn.Klase
             return postojiKorisnik;
         }
 
-        public static bool ProvjeriObavezanUnos(string ime, string prezime, string korisnickoIme, string email)
+        public static bool ProvjeriObavezanUnosProfil(string ime, string prezime, string korisnickoIme, string email)
         {
             bool ispravanUnos = true;
 
@@ -97,6 +97,8 @@ namespace FindAndLearn.Klase
             {
                 throw new UnosException("Nisu uneseni svi obavezni podaci označeni s *");
             }
+
+            ProvjeriEmailAdresu(email);
 
             return ispravanUnos;
         }
@@ -153,7 +155,7 @@ namespace FindAndLearn.Klase
             }
             else
             {
-                throw new UnosException("Neuspješna registracija! Neispravan format email adrese!");
+                throw new UnosException("Neispravan format email adrese!");
             }
         }
     }

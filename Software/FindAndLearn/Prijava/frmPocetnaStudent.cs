@@ -43,14 +43,12 @@ namespace FindAndLearn.Prijava
         {
             frmStudentProfil form = new frmStudentProfil(postojeciStudent);
             form.ShowDialog();
-            Close();
         }
 
         private void btnObavijesti_Click(object sender, EventArgs e)
         {
             frmObavijestiStudent form = new frmObavijestiStudent(postojeciStudent);
             form.ShowDialog();
-            Close();
         }
 
         private void btnRezervacijaTermina_Click(object sender, EventArgs e)

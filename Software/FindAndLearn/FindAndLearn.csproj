@@ -381,6 +381,8 @@
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
       <LastGenOutput>FindAndLearnModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Instruktor.png" />
+    <None Include="Resources\student.jpg" />
     <None Include="Resources\Lokacija.png" />
     <None Include="Resources\Telefon.png" />
     <None Include="Resources\Email.png" />

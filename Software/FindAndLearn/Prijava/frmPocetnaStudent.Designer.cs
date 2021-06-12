@@ -30,6 +30,7 @@ namespace FindAndLearn.Prijava
         private void InitializeComponent()
         {
             this.gbProfil = new System.Windows.Forms.GroupBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
             this.btnPoruke = new System.Windows.Forms.Button();
@@ -45,12 +46,11 @@ namespace FindAndLearn.Prijava
             this.lblDobrodoslica = new System.Windows.Forms.Label();
             this.lblFindAndLearn = new System.Windows.Forms.Label();
             this.pbLogoNaslovna = new System.Windows.Forms.PictureBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gbProfil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbIzbornik.SuspendLayout();
             this.gbInstruktor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoNaslovna)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // gbProfil
@@ -64,6 +64,15 @@ namespace FindAndLearn.Prijava
             this.gbProfil.Size = new System.Drawing.Size(211, 75);
             this.gbProfil.TabIndex = 78;
             this.gbProfil.TabStop = false;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
+            this.pbLogo.Location = new System.Drawing.Point(-1, 11);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(79, 59);
+            this.pbLogo.TabIndex = 70;
+            this.pbLogo.TabStop = false;
             // 
             // label2
             // 
@@ -111,7 +120,7 @@ namespace FindAndLearn.Prijava
             this.btnTrazilica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnTrazilica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTrazilica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnTrazilica.Location = new System.Drawing.Point(17, 87);
+            this.btnTrazilica.Location = new System.Drawing.Point(17, 88);
             this.btnTrazilica.Name = "btnTrazilica";
             this.btnTrazilica.Size = new System.Drawing.Size(184, 31);
             this.btnTrazilica.TabIndex = 29;
@@ -124,7 +133,7 @@ namespace FindAndLearn.Prijava
             this.btnObavijesti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnObavijesti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnObavijesti.Location = new System.Drawing.Point(17, 207);
+            this.btnObavijesti.Location = new System.Drawing.Point(17, 209);
             this.btnObavijesti.Name = "btnObavijesti";
             this.btnObavijesti.Size = new System.Drawing.Size(184, 31);
             this.btnObavijesti.TabIndex = 28;
@@ -151,11 +160,11 @@ namespace FindAndLearn.Prijava
             this.btnRezervacijaTermina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnRezervacijaTermina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRezervacijaTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRezervacijaTermina.Location = new System.Drawing.Point(16, 126);
+            this.btnRezervacijaTermina.Location = new System.Drawing.Point(16, 127);
             this.btnRezervacijaTermina.Name = "btnRezervacijaTermina";
-            this.btnRezervacijaTermina.Size = new System.Drawing.Size(184, 31);
+            this.btnRezervacijaTermina.Size = new System.Drawing.Size(185, 31);
             this.btnRezervacijaTermina.TabIndex = 24;
-            this.btnRezervacijaTermina.Text = "ZATRAŽI REZERVACIJU ";
+            this.btnRezervacijaTermina.Text = "REZERVACIJE ";
             this.btnRezervacijaTermina.UseVisualStyleBackColor = false;
             this.btnRezervacijaTermina.Click += new System.EventHandler(this.btnRezervacijaTermina_Click);
             // 
@@ -165,7 +174,7 @@ namespace FindAndLearn.Prijava
             this.btnRecenzije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRecenzije.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRecenzije.Location = new System.Drawing.Point(17, 165);
+            this.btnRecenzije.Location = new System.Drawing.Point(17, 168);
             this.btnRecenzije.Name = "btnRecenzije";
             this.btnRecenzije.Size = new System.Drawing.Size(184, 31);
             this.btnRecenzije.TabIndex = 20;
@@ -253,15 +262,6 @@ namespace FindAndLearn.Prijava
             this.pbLogoNaslovna.TabIndex = 84;
             this.pbLogoNaslovna.TabStop = false;
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(-1, 11);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(79, 59);
-            this.pbLogo.TabIndex = 70;
-            this.pbLogo.TabStop = false;
-            // 
             // frmPocetnaStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,11 +282,11 @@ namespace FindAndLearn.Prijava
             this.Load += new System.EventHandler(this.frmPocetnaStudent_Load);
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.gbIzbornik.ResumeLayout(false);
             this.gbInstruktor.ResumeLayout(false);
             this.gbInstruktor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoNaslovna)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
