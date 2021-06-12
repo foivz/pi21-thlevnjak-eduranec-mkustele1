@@ -26,33 +26,6 @@ namespace FindAndLearn.Profil
             UcitajPodatkeZaPregled();
         }
 
-        private void UcitajPodatkeZaPregled()
-        {
-            using (var context = new Entities())
-            {
-                comboTipInstrukcija.DataSource = context.Tip_instrukcija.ToList();
-                Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(k => k.korisnicko_ime == postojeciInstruktor.KorisnickoIme);
-
-
-                // Instrukciju definira 1 kolegij i 1 tip instrukcije pa se brojanjem jedinstvenih zapisa dobiva ukupan broj tipova i kolegija
-
-                PrikaziRecenziju();
-
-                var brojTipova = (from ins in instruktorBaza.Instrukcije
-                                  select ins.tip_instrukcije_id).Distinct().Count();
-
-                var brojKolegija = (from ins in instruktorBaza.Instrukcije
-                                    select ins.kolegij_id).Distinct().Count();
-
-                var brojInstrukcija = (from ins in instruktorBaza.Instrukcije
-                                       select ins).Count();
-
-                lblBrojTipova.Text = brojTipova.ToString();
-                lblBrojKolegija.Text = brojKolegija.ToString();
-                lblBrojInstrukcija.Text = brojInstrukcija.ToString();
-            }
-        }
-
         private void OsvjeziProfil()
         {
             if (postojeciInstruktor != null)
@@ -73,6 +46,38 @@ namespace FindAndLearn.Profil
 
         }
 
+        public void UcitajPodatkeZaPregled()
+        {
+            using (var context = new Entities())
+            {
+                comboTipInstrukcija.DataSource = context.Tip_instrukcija.ToList();
+
+                var upitSveInstrukcije = from t in context.Termini
+                                         where t.vrijeme_termina >= DateTime.Now
+                                         && t.Instrukcije.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
+                                         select t.Instrukcije;
+
+                List<Instrukcije> popisInstrukcija = upitSveInstrukcije.ToList();
+
+                // Instrukciju definira 1 kolegij i 1 tip instrukcije pa se brojanjem jedinstvenih zapisa dobiva ukupan broj tipova i kolegija
+
+                var brojTipova = (from ins in popisInstrukcija
+                                  select ins.tip_instrukcije_id).Distinct().Count();
+
+                var brojKolegija = (from ins in popisInstrukcija
+                                    select ins.kolegij_id).Distinct().Count();
+
+                var brojInstrukcija = popisInstrukcija.Count();
+
+                lblBrojTipova.Text = brojTipova.ToString();
+                lblBrojKolegija.Text = brojKolegija.ToString();
+                lblBrojInstrukcija.Text = brojInstrukcija.ToString();
+            }
+
+            PrikaziRecenziju();
+        }
+
+
         private void btnIzmijeniPodatke_Click(object sender, EventArgs e)
         {
             frmOMeniInstruktor form = new frmOMeniInstruktor(postojeciInstruktor);
@@ -87,20 +92,20 @@ namespace FindAndLearn.Profil
 
             using (var context = new Entities())
             {
-                // 1. Dohvaćanje tipa instrukcija i podataka o instruktoru iz baze
+                // 1. Dohvaćanje liste TRENUTNIH instrukcija odabranog tipa preko termina dohvaćenog instruktora koji sadrži informacije o instruktorima
 
                 Tip_instrukcija selektiranTip = comboTipInstrukcija.SelectedItem as Tip_instrukcija;
-                Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(k => k.korisnicko_ime == postojeciInstruktor.KorisnickoIme);
 
-                // 2. Dohvaćanje liste instrukcija odabranog tipa iz popisa instrukcija samog dohvaćenog instruktora
+                var upitInstrukcijeZaTip = from t in context.Termini
+                                           where t.vrijeme_termina >= DateTime.Now
+                                           && t.Instrukcije.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
+                                           && t.Instrukcije.Tip_instrukcija.ID_tip_instrukcije == selektiranTip.ID_tip_instrukcije
+                                           select t.Instrukcije;
 
-                var upit = from ins in instruktorBaza.Instrukcije
-                           where ins.tip_instrukcije_id == selektiranTip.ID_tip_instrukcije
-                           select ins;
+                List<Instrukcije> selektiraneInstrukcije = upitInstrukcijeZaTip.ToList();
 
-                List<Instrukcije> selektiraneInstrukcije = upit.ToList();
 
-                // 3. Ukoliko postoji instrukcija za odabrani tip instrukcije iteracijom svih instrukcija prikazuje se grafikon s nazivima kolegija po cijenama (kn/h)
+                // 2. Ukoliko postoji instrukcija za odabrani tip instrukcije iteracijom svih instrukcija prikazuje se grafikon s nazivima kolegija po cijenama (kn/h)
 
                 if (selektiraneInstrukcije.Count == 0)
                 {
@@ -133,10 +138,10 @@ namespace FindAndLearn.Profil
             {
                 grafikonInstrukcija.Series["Cijena (kn/h)"].Points.Clear();
 
-                Instruktori instruktorBaza = context.Instruktori.FirstOrDefault(k => k.korisnicko_ime == postojeciInstruktor.KorisnickoIme);
-
-                var upitSveInstrukcije = from ins in instruktorBaza.Instrukcije
-                                         select ins;
+                var upitSveInstrukcije = from t in context.Termini
+                                         where t.vrijeme_termina >= DateTime.Now
+                                         && t.Instrukcije.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
+                                         select t.Instrukcije;
 
                 List<Instrukcije> popisInstrukcija = upitSveInstrukcije.ToList();
 

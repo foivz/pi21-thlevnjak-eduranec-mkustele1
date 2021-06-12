@@ -42,33 +42,37 @@ namespace FindAndLearn.MojeObavijesti
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(22, 31);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(22, 30);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 15);
+            this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 126;
             this.label7.Text = "Termin:";
             // 
             // btnIzmijeni
             // 
-            this.btnIzmijeni.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnIzmijeni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnIzmijeni.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIzmijeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnIzmijeni.Location = new System.Drawing.Point(481, 279);
             this.btnIzmijeni.Name = "btnIzmijeni";
             this.btnIzmijeni.Size = new System.Drawing.Size(75, 23);
             this.btnIzmijeni.TabIndex = 125;
             this.btnIzmijeni.Text = "Izmijeni";
-            this.btnIzmijeni.UseVisualStyleBackColor = true;
+            this.btnIzmijeni.UseVisualStyleBackColor = false;
             this.btnIzmijeni.Click += new System.EventHandler(this.btnIzmijeni_Click);
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnOdustani.Location = new System.Drawing.Point(77, 279);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(75, 23);
             this.btnOdustani.TabIndex = 124;
             this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.UseVisualStyleBackColor = false;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // txtPoruka
@@ -89,20 +93,20 @@ namespace FindAndLearn.MojeObavijesti
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(21, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 15);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 121;
             this.label2.Text = "Poruka:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(22, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 120;
             this.label1.Text = "Naslov:";
             // 
@@ -118,8 +122,8 @@ namespace FindAndLearn.MojeObavijesti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(622, 350);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(602, 335);
             this.Controls.Add(this.txtTermin);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnIzmijeni);

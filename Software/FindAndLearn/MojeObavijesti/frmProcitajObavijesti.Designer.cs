@@ -39,18 +39,20 @@ namespace FindAndLearn.MojeObavijesti
             // 
             // btnNatrag
             // 
+            this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnNatrag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNatrag.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnNatrag.Location = new System.Drawing.Point(315, 200);
             this.btnNatrag.Name = "btnNatrag";
             this.btnNatrag.Size = new System.Drawing.Size(75, 23);
             this.btnNatrag.TabIndex = 35;
             this.btnNatrag.Text = "NATRAG";
-            this.btnNatrag.UseVisualStyleBackColor = true;
+            this.btnNatrag.UseVisualStyleBackColor = false;
             this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
             // 
             // txtPoruka
             // 
-            this.txtPoruka.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.txtPoruka.BackColor = System.Drawing.SystemColors.Control;
             this.txtPoruka.Enabled = false;
             this.txtPoruka.Location = new System.Drawing.Point(18, 68);
             this.txtPoruka.Multiline = true;
@@ -61,20 +63,20 @@ namespace FindAndLearn.MojeObavijesti
             // lblInstruktor
             // 
             this.lblInstruktor.AutoSize = true;
-            this.lblInstruktor.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblInstruktor.Location = new System.Drawing.Point(17, 39);
             this.lblInstruktor.Name = "lblInstruktor";
-            this.lblInstruktor.Size = new System.Drawing.Size(87, 17);
+            this.lblInstruktor.Size = new System.Drawing.Size(82, 15);
             this.lblInstruktor.TabIndex = 33;
             this.lblInstruktor.Text = "Matija Horvat ";
             // 
             // lblNaslov
             // 
             this.lblNaslov.AutoSize = true;
-            this.lblNaslov.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblNaslov.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblNaslov.Location = new System.Drawing.Point(15, 19);
             this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(182, 17);
+            this.lblNaslov.Size = new System.Drawing.Size(192, 15);
             this.lblNaslov.TabIndex = 32;
             this.lblNaslov.Text = "Odgoda instrukcija 1. svibnja";
             // 
@@ -102,7 +104,7 @@ namespace FindAndLearn.MojeObavijesti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(424, 251);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNatrag);

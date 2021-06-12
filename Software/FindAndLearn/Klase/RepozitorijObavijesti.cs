@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KorisniciLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace FindAndLearn.Klase
     public static class RepozitorijObavijesti
     {
 
-        public static List<Obavijest> PopuniListuObavijesti(Termin termin)
+        public static List<Obavijest> PopuniListuTrenutnihObavijesti(Termin termin)
         {
             List<Obavijesti> obavijestiBaza = null;
             List<Obavijest> listaObavijesti = new List<Obavijest>();
@@ -17,14 +18,43 @@ namespace FindAndLearn.Klase
             using (var context = new Entities())
             {
                 var upitObavijesti = from o in context.Obavijesti
-                           where o.termin_id == termin.IdTermina
-                           select o;
+                                     where o.Termini.vrijeme_termina >= DateTime.Now && o.termin_id == termin.IdTermina
+                                     select o;
 
                 obavijestiBaza = upitObavijesti.ToList();
 
                 foreach (var item in obavijestiBaza)
                 {
                     listaObavijesti.Add(new Obavijest(item.ID_obavijesti, termin, item.naziv_obavijesti, item.opis_obavijesti, item.datum_obavijesti));
+                }
+            }
+
+            return listaObavijesti;
+        }
+
+        public static List<Obavijest> PopuniListuProslihObavijesti(Instruktor instruktor)
+        {
+            List<Obavijesti> obavijestiBaza = null;
+            List<Obavijest> listaObavijesti = new List<Obavijest>();
+
+            using (var context = new Entities())
+            {
+                var upitObavijesti = from o in context.Obavijesti
+                                     where o.Termini.vrijeme_termina < DateTime.Now && instruktor.KorisnickoIme == o.Termini.Instrukcije.Instruktori.korisnicko_ime
+                                     select o;
+
+                obavijestiBaza = upitObavijesti.ToList();
+
+                List<Termin> listaTermina = RepozitorijTermina.PopuniListuTermina();
+
+                foreach (var item in obavijestiBaza)
+                {
+                    Termin termin = listaTermina.Find(x => x.IdTermina == item.termin_id);
+
+                    if(termin != null)
+                    {
+                       listaObavijesti.Add(new Obavijest(item.ID_obavijesti, termin, item.naziv_obavijesti, item.opis_obavijesti, item.datum_obavijesti));
+                    }
                 }
             }
 

@@ -51,10 +51,10 @@ namespace FindAndLearn.Profil
             this.lblMobitel = new System.Windows.Forms.Label();
             this.txtMobitel = new System.Windows.Forms.TextBox();
             this.btnDodajSliku = new System.Windows.Forms.Button();
-            this.pbSlikaStudenta = new System.Windows.Forms.PictureBox();
             this.openPictureDialog = new System.Windows.Forms.OpenFileDialog();
             this.cbZadanaSlika = new System.Windows.Forms.CheckBox();
             this.btnUkloniSliku = new System.Windows.Forms.Button();
+            this.pbSlikaStudenta = new System.Windows.Forms.PictureBox();
             this.gbKratkiOpis.SuspendLayout();
             this.gbOsnovno.SuspendLayout();
             this.gbAdresa.SuspendLayout();
@@ -83,24 +83,28 @@ namespace FindAndLearn.Profil
             // 
             // btnOdustani
             // 
+            this.btnOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnOdustani.Location = new System.Drawing.Point(36, 556);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(105, 32);
             this.btnOdustani.TabIndex = 46;
             this.btnOdustani.Text = "ODUSTANI";
-            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.UseVisualStyleBackColor = false;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnSpremi
             // 
+            this.btnSpremi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSpremi.Location = new System.Drawing.Point(506, 556);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(99, 32);
             this.btnSpremi.TabIndex = 45;
             this.btnSpremi.Text = "SPREMI";
-            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.UseVisualStyleBackColor = false;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // gbOsnovno
@@ -276,23 +280,16 @@ namespace FindAndLearn.Profil
             // 
             // btnDodajSliku
             // 
+            this.btnDodajSliku.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnDodajSliku.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDodajSliku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnDodajSliku.Location = new System.Drawing.Point(35, 213);
             this.btnDodajSliku.Name = "btnDodajSliku";
             this.btnDodajSliku.Size = new System.Drawing.Size(70, 29);
             this.btnDodajSliku.TabIndex = 90;
             this.btnDodajSliku.Text = "DODAJ";
-            this.btnDodajSliku.UseVisualStyleBackColor = true;
+            this.btnDodajSliku.UseVisualStyleBackColor = false;
             this.btnDodajSliku.Click += new System.EventHandler(this.btnDodajSliku_Click);
-            // 
-            // pbSlikaStudenta
-            // 
-            this.pbSlikaStudenta.Location = new System.Drawing.Point(35, 35);
-            this.pbSlikaStudenta.Name = "pbSlikaStudenta";
-            this.pbSlikaStudenta.Size = new System.Drawing.Size(156, 148);
-            this.pbSlikaStudenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbSlikaStudenta.TabIndex = 89;
-            this.pbSlikaStudenta.TabStop = false;
             // 
             // openPictureDialog
             // 
@@ -310,20 +307,31 @@ namespace FindAndLearn.Profil
             // 
             // btnUkloniSliku
             // 
+            this.btnUkloniSliku.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnUkloniSliku.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUkloniSliku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnUkloniSliku.Location = new System.Drawing.Point(128, 213);
             this.btnUkloniSliku.Name = "btnUkloniSliku";
             this.btnUkloniSliku.Size = new System.Drawing.Size(63, 29);
             this.btnUkloniSliku.TabIndex = 92;
             this.btnUkloniSliku.Text = "UKLONI";
-            this.btnUkloniSliku.UseVisualStyleBackColor = true;
+            this.btnUkloniSliku.UseVisualStyleBackColor = false;
             this.btnUkloniSliku.Click += new System.EventHandler(this.btnUkloniSliku_Click);
+            // 
+            // pbSlikaStudenta
+            // 
+            this.pbSlikaStudenta.Location = new System.Drawing.Point(35, 35);
+            this.pbSlikaStudenta.Name = "pbSlikaStudenta";
+            this.pbSlikaStudenta.Size = new System.Drawing.Size(156, 148);
+            this.pbSlikaStudenta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSlikaStudenta.TabIndex = 89;
+            this.pbSlikaStudenta.TabStop = false;
             // 
             // frmOMeniStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(661, 623);
             this.Controls.Add(this.btnUkloniSliku);
             this.Controls.Add(this.cbZadanaSlika);

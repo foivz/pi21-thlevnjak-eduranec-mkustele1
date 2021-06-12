@@ -1,4 +1,5 @@
-﻿using FindAndLearn.Klase;
+﻿using FindAndLearn.Controls;
+using FindAndLearn.Klase;
 using KorisniciLib;
 using System;
 using System.Collections.Generic;
@@ -30,11 +31,20 @@ namespace FindAndLearn.MojeObavijesti
         private void ComboPopisTermina_SelectedIndexChanged(object sender, EventArgs e)
         {
             OsvjeziObavijesti();
+            PrikaziSudionike();
         }
 
         private void frmObavijestiStudent_Load(object sender, EventArgs e)
         {
 
+        }
+        public void PodesiSirinuPopisaObavijesti()
+        {
+            dgvPopisObavijesti.Columns["Id"].Visible = false;
+            dgvPopisObavijesti.Columns["OpisObavijesti"].Visible = false;
+            dgvPopisObavijesti.Columns[1].Width = 138;
+            dgvPopisObavijesti.Columns[2].Width = 250;
+            dgvPopisObavijesti.Columns[4].Width = 150;
         }
 
         public void OsvjeziObavijesti()
@@ -44,14 +54,12 @@ namespace FindAndLearn.MojeObavijesti
             if (termin != null)
             {
                 dgvPopisObavijesti.DataSource = null;
-                dgvPopisObavijesti.DataSource = RepozitorijObavijesti.PopuniListuObavijesti(termin);
-                dgvPopisObavijesti.Columns["Id"].Visible = false;
-                dgvPopisObavijesti.Columns["OpisObavijesti"].Visible = false;
-                dgvPopisObavijesti.Columns[1].Width = 138;
-                dgvPopisObavijesti.Columns[2].Width = 250;
-                dgvPopisObavijesti.Columns[4].Width = 150;
+                dgvPopisObavijesti.DataSource = RepozitorijObavijesti.PopuniListuTrenutnihObavijesti(termin);
+                PodesiSirinuPopisaObavijesti();
             }
         }
+
+        // Dohvaćaju se samo oni termini koji su aktualni odnosno koji još uvijek nisu prošli
 
         public List<Termin> PopuniTermineStudenta()
         {
@@ -61,15 +69,18 @@ namespace FindAndLearn.MojeObavijesti
             using (var context = new Entities())
             {
                 var upit = from r in context.Rezervacije
-                           where r.student_ID == postojeciStudent.ID_studenta
+                           where r.student_ID == postojeciStudent.ID_studenta && r.potvrdjena==true
                            select r.Termini;
 
                 List<Termini> terminiBaza = upit.ToList();
 
                 foreach (var item in terminiBaza)
                 {
-                    Termin termin = listaTermina.Find(x => x.IdTermina == item.ID_termina);
-                    terminiStudenta.Add(termin);
+                    if(item.vrijeme_termina >= DateTime.Now)
+                    {
+                        Termin termin = listaTermina.Find(x => x.IdTermina == item.ID_termina);
+                        terminiStudenta.Add(termin);
+                    }
                 }
             }
 
@@ -96,14 +107,14 @@ namespace FindAndLearn.MojeObavijesti
             return odabranaObavijest;
         }
 
-        public List<Obavijest> DohvatiSveObavijesti()
+        public List<Obavijest> DohvatiSveTrenutneObavijesti()
         {
             Termin termin = DohvatiTermin();
             List<Obavijest> dohvaceneObavijesti = new List<Obavijest>();
 
             if (termin != null)
             {
-                dohvaceneObavijesti = RepozitorijObavijesti.PopuniListuObavijesti(termin);
+                dohvaceneObavijesti = RepozitorijObavijesti.PopuniListuTrenutnihObavijesti(termin);
             }
 
             return dohvaceneObavijesti;
@@ -112,7 +123,7 @@ namespace FindAndLearn.MojeObavijesti
         public List<Obavijest> FiltrirajObavijestiPoDatumu(DateTime odDatuma, DateTime doDatuma)
         {
             List<Obavijest> filtriraneObavijesti = new List<Obavijest>();
-            List<Obavijest> dohvaceneObavijesti = DohvatiSveObavijesti();
+            List<Obavijest> dohvaceneObavijesti = DohvatiSveTrenutneObavijesti();
 
             if (dohvaceneObavijesti != null)
             {
@@ -131,7 +142,7 @@ namespace FindAndLearn.MojeObavijesti
         public List<Obavijest> PretraziObavijestiPoNaslovu(string naslov)
         {
             List<Obavijest> pronadjeneObavijesti = new List<Obavijest>();
-            List<Obavijest> dohvaceneObavijesti = DohvatiSveObavijesti();
+            List<Obavijest> dohvaceneObavijesti = DohvatiSveTrenutneObavijesti();
 
             if (dohvaceneObavijesti != null)
             {
@@ -152,6 +163,41 @@ namespace FindAndLearn.MojeObavijesti
             return pronadjeneObavijesti;
         }
 
+        public void PrikaziSudionike()
+        {
+            List<Studenti> studentiBaza = null;
+            Termin termin = DohvatiTermin();
+            flpSudionici.Controls.Clear();
+
+            int brojStudenata = 0;
+
+            if (termin != null)
+            {
+                using (var context = new Entities())
+                {
+                    var upitRezervacije = from r in context.Rezervacije
+                                          where r.termin_ID == termin.IdTermina
+                                          select r.Studenti;
+
+                    studentiBaza = upitRezervacije.ToList();
+                }
+
+                foreach (var item in studentiBaza)
+                {
+                    Student student = new Student();
+                    StudentUC studentUC = new StudentUC();
+                    List<Korisnik> listaKorisnika = RepozitorijKorisnika.PopuniListu();
+                    student = listaKorisnika.Find(x => x.KorisnickoIme == item.korisnicko_ime) as Student;
+
+                    studentUC.LoadStudent(student);
+                    this.flpSudionici.Controls.Add(studentUC);
+                    brojStudenata++;
+                }
+
+                gbPopisStudenata.Text = "";
+                gbPopisStudenata.Text = "Studenti (" + brojStudenata.ToString() + ") ";
+            }
+        }
 
         private void btnProcitaj_Click(object sender, EventArgs e)
         {
@@ -170,11 +216,7 @@ namespace FindAndLearn.MojeObavijesti
         {
             dgvPopisObavijesti.DataSource = null;
             dgvPopisObavijesti.DataSource = PretraziObavijestiPoNaslovu(txtNaslov.Text);
-            dgvPopisObavijesti.Columns["Id"].Visible = false;
-            dgvPopisObavijesti.Columns["OpisObavijesti"].Visible = false;
-            dgvPopisObavijesti.Columns[1].Width = 138;
-            dgvPopisObavijesti.Columns[2].Width = 250;
-            dgvPopisObavijesti.Columns[4].Width = 150;
+            PodesiSirinuPopisaObavijesti();
         }
 
         private void btnPrikaziSveObavijesti_Click(object sender, EventArgs e)
@@ -192,11 +234,7 @@ namespace FindAndLearn.MojeObavijesti
             {
                 dgvPopisObavijesti.DataSource = null;
                 dgvPopisObavijesti.DataSource = FiltrirajObavijestiPoDatumu(odDatuma, doDatuma);
-                dgvPopisObavijesti.Columns["Id"].Visible = false;
-                dgvPopisObavijesti.Columns["OpisObavijesti"].Visible = false;
-                dgvPopisObavijesti.Columns[1].Width = 138;
-                dgvPopisObavijesti.Columns[2].Width = 250;
-                dgvPopisObavijesti.Columns[4].Width = 150;
+                PodesiSirinuPopisaObavijesti();
             }
             else
             {
@@ -209,6 +247,22 @@ namespace FindAndLearn.MojeObavijesti
             frmPrijava form = new frmPrijava();
             form.ShowDialog();
             Close();
+        }
+
+        private void btnZatvori_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnDetaljiTermina_Click(object sender, EventArgs e)
+        {
+            Termin termin = DohvatiTermin();
+
+            if (termin != null)
+            {
+                frmDetaljiTermina form = new frmDetaljiTermina(termin);
+                form.ShowDialog();
+            }
         }
     }
 }

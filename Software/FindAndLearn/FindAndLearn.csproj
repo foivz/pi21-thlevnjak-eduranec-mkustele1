@@ -56,6 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\frmStudentPodaci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmStudentPodaci.Designer.cs">
+      <DependentUpon>frmStudentPodaci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StudentUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StudentUC.Designer.cs">
+      <DependentUpon>StudentUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindAndLearnModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,6 +89,18 @@
     <Compile Include="Klase\Autentifikator.cs" />
     <Compile Include="Klase\Instrukcija.cs" />
     <Compile Include="Klase\Obavijest.cs" />
+    <Compile Include="MojeObavijesti\frmArhivaObavijesti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojeObavijesti\frmArhivaObavijesti.Designer.cs">
+      <DependentUpon>frmArhivaObavijesti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MojeObavijesti\frmDetaljiTermina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MojeObavijesti\frmDetaljiTermina.Designer.cs">
+      <DependentUpon>frmDetaljiTermina.cs</DependentUpon>
+    </Compile>
     <Compile Include="PorukeExt.cs" />
     <Compile Include="Klase\Recenzija.cs" />
     <Compile Include="Klase\RepozitorijInstrukcija.cs" />
@@ -264,11 +288,23 @@
     <Compile Include="Tražilica\frmTrazilica.Designer.cs">
       <DependentUpon>frmTrazilica.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controls\frmStudentPodaci.resx">
+      <DependentUpon>frmStudentPodaci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StudentUC.resx">
+      <DependentUpon>StudentUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MojeInstrukcije\frmDodajInstrukciju.resx">
       <DependentUpon>frmDodajInstrukciju.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MojeObavijesti\frmArhivaObavijesti.resx">
+      <DependentUpon>frmArhivaObavijesti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MojeObavijesti\frmAzurirajObavijesti.resx">
       <DependentUpon>frmAzurirajObavijesti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MojeObavijesti\frmDetaljiTermina.resx">
+      <DependentUpon>frmDetaljiTermina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MojeObavijesti\frmKreirajObavijesti.resx">
       <DependentUpon>frmKreirajObavijesti.cs</DependentUpon>
