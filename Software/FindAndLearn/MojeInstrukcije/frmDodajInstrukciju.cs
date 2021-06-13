@@ -43,7 +43,7 @@ namespace FindAndLearn.MojeInstrukcije
         {
             Entities entities = new Entities();
             entities.Instrukcije.Load();
-            instrukcijeBindingSource.DataSource = entities.Instrukcije.Local;
+            instrukcijeBindingSource.DataSource = entities.Instrukcije.Local.Where(x=>x.instruktor_id==TrenutniInstruktor.ID_instruktora);
             lblTrenutniInstruktor.Text = TrenutniInstruktor.ToString();
         }
         private void btnOdjava_Click(object sender, EventArgs e)

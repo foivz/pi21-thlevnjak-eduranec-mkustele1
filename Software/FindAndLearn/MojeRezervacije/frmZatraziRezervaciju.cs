@@ -39,7 +39,7 @@ namespace FindAndLearn.MojeRezervacije
             Entities entities = new Entities();
             entities.Instrukcije.Load();
             entities.Rezervacije.Load();
-            instrukcijeBindingSource.DataSource = entities.Instrukcije.Local;
+            instrukcijeBindingSource.DataSource = entities.Instrukcije.Local.Where(i=>i.Termini.Count() > 0);
             rezervacijeBindingSource.DataSource = entities.Rezervacije.Local.Where(x => x.student_ID == PostojeciStudent.ID_studenta);
             lblTrenutniStudent.Text = PostojeciStudent.ToString();
         }
@@ -60,7 +60,7 @@ namespace FindAndLearn.MojeRezervacije
 
         private void btnZatraziRezervaciju_Click(object sender, EventArgs e)
         {
-            if(terminiBindingSource.Current != null)
+            if(terminiBindingSource.Current != null )
             {
                 int idTermina = (terminiBindingSource.Current as Termini).ID_termina;
                 bool prolaz = RepozitorijTermina.ProvjeraKapaciteta(idTermina);
