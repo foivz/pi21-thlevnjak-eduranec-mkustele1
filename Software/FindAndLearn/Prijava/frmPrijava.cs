@@ -25,6 +25,16 @@ namespace FindAndLearn
         private void frmPrijava_Load(object sender, EventArgs e)
         {
 
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmPrijava_KeyDown);
+        }
+
+        private void frmPrijava_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "AppHelp.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
 
         private void llblPromjenaLozinke_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -73,13 +83,11 @@ namespace FindAndLearn
                 {
                     frmPocetnaStudent form = new frmPocetnaStudent(korisnikPrijava as Student);
                     form.ShowDialog();
-                    Close();
                 }
                 else if (korisnikPrijava.Uloga == Uloga.Instruktor)
                 {
                     frmPocetnaInstruktor form = new frmPocetnaInstruktor(korisnikPrijava as Instruktor);
                     form.ShowDialog();
-                    Close();
                 }
             }
         }

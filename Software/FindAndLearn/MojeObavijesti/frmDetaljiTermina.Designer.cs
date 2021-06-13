@@ -46,8 +46,8 @@ namespace FindAndLearn.MojeObavijesti
             this.txtOpisInstrukcije = new System.Windows.Forms.TextBox();
             this.txtKolegij = new System.Windows.Forms.TextBox();
             this.txtTipInstrukcije = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCijena = new System.Windows.Forms.Label();
+            this.lblKolegij = new System.Windows.Forms.Label();
             this.lblOpisInstrukcije = new System.Windows.Forms.Label();
             this.lblTipInstrukcije = new System.Windows.Forms.Label();
             this.lblNazivTermina = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@ namespace FindAndLearn.MojeObavijesti
             // 
             this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnNatrag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNatrag.Location = new System.Drawing.Point(223, 407);
+            this.btnNatrag.Location = new System.Drawing.Point(222, 442);
             this.btnNatrag.Name = "btnNatrag";
             this.btnNatrag.Size = new System.Drawing.Size(75, 23);
             this.btnNatrag.TabIndex = 181;
@@ -184,13 +184,13 @@ namespace FindAndLearn.MojeObavijesti
             this.gbInstrukcija.Controls.Add(this.txtOpisInstrukcije);
             this.gbInstrukcija.Controls.Add(this.txtKolegij);
             this.gbInstrukcija.Controls.Add(this.txtTipInstrukcije);
-            this.gbInstrukcija.Controls.Add(this.label3);
-            this.gbInstrukcija.Controls.Add(this.label2);
+            this.gbInstrukcija.Controls.Add(this.lblCijena);
+            this.gbInstrukcija.Controls.Add(this.lblKolegij);
             this.gbInstrukcija.Controls.Add(this.lblOpisInstrukcije);
             this.gbInstrukcija.Controls.Add(this.lblTipInstrukcije);
             this.gbInstrukcija.Location = new System.Drawing.Point(25, 215);
             this.gbInstrukcija.Name = "gbInstrukcija";
-            this.gbInstrukcija.Size = new System.Drawing.Size(273, 185);
+            this.gbInstrukcija.Size = new System.Drawing.Size(273, 220);
             this.gbInstrukcija.TabIndex = 179;
             this.gbInstrukcija.TabStop = false;
             this.gbInstrukcija.Text = "Instrukcija";
@@ -209,7 +209,7 @@ namespace FindAndLearn.MojeObavijesti
             this.txtOpisInstrukcije.Margin = new System.Windows.Forms.Padding(2);
             this.txtOpisInstrukcije.Multiline = true;
             this.txtOpisInstrukcije.Name = "txtOpisInstrukcije";
-            this.txtOpisInstrukcije.Size = new System.Drawing.Size(147, 48);
+            this.txtOpisInstrukcije.Size = new System.Drawing.Size(147, 79);
             this.txtOpisInstrukcije.TabIndex = 174;
             // 
             // txtKolegij
@@ -228,25 +228,25 @@ namespace FindAndLearn.MojeObavijesti
             this.txtTipInstrukcije.Size = new System.Drawing.Size(69, 20);
             this.txtTipInstrukcije.TabIndex = 172;
             // 
-            // label3
+            // lblCijena
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(9, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
-            this.label3.TabIndex = 172;
-            this.label3.Text = "Cijena instrukcije:";
+            this.lblCijena.AutoSize = true;
+            this.lblCijena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblCijena.Location = new System.Drawing.Point(9, 91);
+            this.lblCijena.Name = "lblCijena";
+            this.lblCijena.Size = new System.Drawing.Size(89, 13);
+            this.lblCijena.TabIndex = 172;
+            this.lblCijena.Text = "Cijena instrukcije:";
             // 
-            // label2
+            // lblKolegij
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(9, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 171;
-            this.label2.Text = "Kolegij:";
+            this.lblKolegij.AutoSize = true;
+            this.lblKolegij.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblKolegij.Location = new System.Drawing.Point(9, 58);
+            this.lblKolegij.Name = "lblKolegij";
+            this.lblKolegij.Size = new System.Drawing.Size(41, 13);
+            this.lblKolegij.TabIndex = 171;
+            this.lblKolegij.Text = "Kolegij:";
             // 
             // lblOpisInstrukcije
             // 
@@ -282,13 +282,13 @@ namespace FindAndLearn.MojeObavijesti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 464);
+            this.ClientSize = new System.Drawing.Size(342, 492);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.gbDetaljiTermina);
             this.Controls.Add(this.gbInstrukcija);
             this.Controls.Add(this.lblNazivTermina);
             this.Name = "frmDetaljiTermina";
-            this.Text = "Detalj termina";
+            this.Text = "Detalji termina";
             this.Load += new System.EventHandler(this.frmDetaljiTermina_Load);
             this.gbDetaljiTermina.ResumeLayout(false);
             this.gbDetaljiTermina.PerformLayout();
@@ -318,8 +318,8 @@ namespace FindAndLearn.MojeObavijesti
         private System.Windows.Forms.TextBox txtOpisInstrukcije;
         private System.Windows.Forms.TextBox txtKolegij;
         private System.Windows.Forms.TextBox txtTipInstrukcije;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCijena;
+        private System.Windows.Forms.Label lblKolegij;
         private System.Windows.Forms.Label lblOpisInstrukcije;
         private System.Windows.Forms.Label lblTipInstrukcije;
         private System.Windows.Forms.Label lblNazivTermina;

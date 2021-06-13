@@ -29,6 +29,16 @@ namespace FindAndLearn.MojeObavijesti
         private void frmAzurirajObavijesti_Load(object sender, EventArgs e)
         {
 
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmAzurirajObavijesti_KeyDown);
+        }
+
+        private void frmAzurirajObavijesti_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "AppHelp.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)

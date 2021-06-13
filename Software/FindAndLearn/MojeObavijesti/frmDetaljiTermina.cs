@@ -30,6 +30,16 @@ namespace FindAndLearn.MojeObavijesti
         {
             UcitajTermin();
             UcitajInstrukciju();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmDetaljiTermina_KeyDown);
+        }
+
+        private void frmDetaljiTermina_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+              //  Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
 
         public void PrikaziBrojStudenata()
@@ -56,7 +66,7 @@ namespace FindAndLearn.MojeObavijesti
         {
             lblNazivTermina.Text = termin.NazivTermina;
             txtVrijemeTermina.Text = termin.VrijemeTermina.ToString();
-            txtTrajanjeTermina.Text = termin.Trajanje.ToString();
+            txtTrajanjeTermina.Text = termin.Trajanje.ToString() + " minuta";
             txtMjestoTermina.Text = termin.MjestoOdrzavanja.ToString();
             lblKapacitetTermina.Text = termin.KapacitetTermina.ToString();
             PrikaziBrojStudenata();

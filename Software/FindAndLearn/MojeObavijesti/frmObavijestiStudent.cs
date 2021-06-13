@@ -37,6 +37,16 @@ namespace FindAndLearn.MojeObavijesti
         private void frmObavijestiStudent_Load(object sender, EventArgs e)
         {
 
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmObavijestiStudent_KeyDown);
+        }
+
+        private void frmObavijestiStudent_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+               // Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
         public void PodesiSirinuPopisaObavijesti()
         {
@@ -242,13 +252,6 @@ namespace FindAndLearn.MojeObavijesti
             }
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
-        {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
-            Close();
-        }
-
         private void btnZatvori_Click(object sender, EventArgs e)
         {
             Close();
@@ -263,6 +266,11 @@ namespace FindAndLearn.MojeObavijesti
                 frmDetaljiTermina form = new frmDetaljiTermina(termin);
                 form.ShowDialog();
             }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

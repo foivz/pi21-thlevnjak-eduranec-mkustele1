@@ -27,6 +27,16 @@ namespace FindAndLearn.MojeObavijesti
             lblNaslov.Text = obavijest.NazivObavijesti.ToString();
             txtPoruka.Text = obavijest.OpisObavijesti.ToString();
             lblInstruktor.Text = obavijest.Termin.Instrukcija.Instruktor.Ime.ToString() + " " + obavijest.Termin.Instrukcija.Instruktor.Prezime.ToString();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmProcitajObavijesti_KeyDown);
+        }
+
+        private void frmProcitajObavijesti_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
 
         private void btnNatrag_Click(object sender, EventArgs e)

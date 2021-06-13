@@ -36,6 +36,16 @@ namespace FindAndLearn.Profil
             txtTitula.Text = postojeciInstruktor.Titula;
             pbSlikaInstruktora.Image = postojeciInstruktor.Slika;
             cbZadanaSlika.CheckedChanged += CbZadanaSlika_CheckedChanged;
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmOMeniInstruktor_KeyDown);
+        }
+
+        private void frmOMeniInstruktor_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+               // Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Profil/index.html");
+            }
         }
 
         private void CbZadanaSlika_CheckedChanged(object sender, EventArgs e)
@@ -76,7 +86,7 @@ namespace FindAndLearn.Profil
             {
                 postojiKorisnik = false;
 
-                ispravanUnos = Autentifikator.ProvjeriObavezanUnosProfil(txtIme.Text, txtPrezime.Text, txtKorisnickoIme.Text, txtEmail.Text);
+                ispravanUnos = Autentifikator.ProvjeriUnosProfil(txtIme.Text, txtPrezime.Text, txtKorisnickoIme.Text, txtEmail.Text, txtMobitel.Text);
 
                 if (ispravanUnos == true && postojeciInstruktor.KorisnickoIme != txtKorisnickoIme.Text)
                 {

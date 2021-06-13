@@ -26,6 +26,16 @@ namespace FindAndLearn.MojeObavijesti
             dgvPopisObavijesti.DataSource = null;
             dgvPopisObavijesti.DataSource = prosleObavijesti;
             PodesiSirinuPopisaObavijesti();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmArhivaObavijesti_KeyDown);
+        }
+
+        private void frmArhivaObavijesti_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
 
         public void PodesiSirinuPopisaObavijesti()
@@ -35,47 +45,6 @@ namespace FindAndLearn.MojeObavijesti
             dgvPopisObavijesti.Columns[1].Width = 138;
             dgvPopisObavijesti.Columns[2].Width = 250;
             dgvPopisObavijesti.Columns[4].Width = 150;
-        }
-
-        public List<Obavijest> PretraziObavijestiPoNaslovu(string naslov)
-        {
-            List<Obavijest> pronadjeneObavijesti = new List<Obavijest>();
-
-            if (prosleObavijesti != null)
-            {
-                string pretraga = naslov;
-                string[] pretvorbaPretrage = pretraga.Split(' ');
-
-                foreach (var rijec in pretvorbaPretrage)
-                {
-                    foreach (var obavijest in prosleObavijesti)
-                    {
-                        if (obavijest.NazivObavijesti.ToLower().Contains(rijec.ToLower()))
-                        {
-                            pronadjeneObavijesti.Add(obavijest);
-                        }
-                    }
-                }
-            }
-            return pronadjeneObavijesti;
-        }
-
-        public List<Obavijest> FiltrirajObavijestiPoDatumu(DateTime odDatuma, DateTime doDatuma)
-        {
-            List<Obavijest> filtriraneObavijesti = new List<Obavijest>();
-
-            if (prosleObavijesti != null)
-            {
-                foreach (var item in prosleObavijesti)
-                {
-                    if (item.DatumObavijesti.Date >= odDatuma.Date && item.DatumObavijesti.Date <= doDatuma.Date)
-                    {
-                        filtriraneObavijesti.Add(item);
-                    }
-                }
-            }
-
-            return filtriraneObavijesti;
         }
 
         private void btnNatrag_Click(object sender, EventArgs e)

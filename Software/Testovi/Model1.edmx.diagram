@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4a982a3a3f13431f9b5d4464e17bb19a" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Instrukcije" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Instruktori" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Kolegiji" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Obavijesti" Width="1.5" PointX="7.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Poruke" Width="1.5" PointX="6" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Recenzije" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Rezervacije" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Studenti" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Termini" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Tip_instrukcija" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Instrukcijas_Instruktors" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Instrukcijas_Kolegijs" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Instrukcijas_Tip_instrukcijes" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Termins_Instrukcijas" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Porukas_Instruktors" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Recenzijas_Instruktors" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Obavijests_Termins" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Porukas_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Recenzijas_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Rezervacijas_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Rezervacijas_Termins" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

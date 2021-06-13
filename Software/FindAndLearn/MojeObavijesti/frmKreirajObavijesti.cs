@@ -34,6 +34,16 @@ namespace FindAndLearn.MojeObavijesti
         private void frmKreirajObavijesti_Load(object sender, EventArgs e)
         {
 
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmKreirajObavijesti_KeyDown);
+        }
+
+        private void frmKreirajObavijesti_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
 
         private void btnKreiraj_Click(object sender, EventArgs e)

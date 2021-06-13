@@ -89,13 +89,25 @@ namespace FindAndLearn.Klase
             return postojiKorisnik;
         }
 
-        public static bool ProvjeriObavezanUnosProfil(string ime, string prezime, string korisnickoIme, string email)
+        public static bool ProvjeriUnosProfil(string ime, string prezime, string korisnickoIme, string email, string mobitel)
         {
             bool ispravanUnos = true;
 
             if (korisnickoIme == "" || prezime == "" || ime == "" || email == "")
             {
                 throw new UnosException("Nisu uneseni svi obavezni podaci označeni s *");
+            }
+
+            //Mobitel može biti u unosu: 0917917899 (minimalno 10 znakova bez razmaka) ili sa spojnicama 091/791-8199 može imati maksimalno 12 znakova
+            //Moguće je da se mobitel niti ne unese
+
+            else if (mobitel.Length < 10 && mobitel.Length >=1)
+            {
+                throw new UnosException("Broj mobitela ima premalo znakova (minimalno 10 znakova)! Primjer: unos +385 91 791 7899, NIJE ispravan pokušajte s formatom 091 791 7899");
+            }
+            else if(mobitel.Length > 12)
+            {
+                throw new UnosException("Broj mobitela ima previše znakova (dozvoljeno 12 znakova)! Primjer: unos +385 91 791 7899, NIJE ispravan pokušajte s formatom 091 791 7899");
             }
 
             ProvjeriEmailAdresu(email);

@@ -88,22 +88,40 @@ namespace FindAndLearn.MojeObavijesti
         private void frmObavijestiInstruktor_Load(object sender, EventArgs e)
         {
 
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmObavijestiInstruktor_KeyDown);
+        }
+
+        private void frmObavijestiInstruktor_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+              //  Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
 
         public List<Termin> PopuniTermineInstruktora()
         {
             terminiInstruktora = new List<Termin>();
+            List<Termini> terminiBaza = null;
 
-            foreach (var instrukcija in listaInstrukcija)
+            using (var context = new Entities())
             {
-                if (instrukcija.Instruktor.ID_instruktora == postojeciInstruktor.ID_instruktora)
-                {
-                    Termin termin = listaTermina.Find(x => x.Instrukcija.Id == instrukcija.Id && x.VrijemeTermina >= DateTime.Now);
+                var upit = from t in context.Termini
+                           where t.Instrukcije.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
+                           && t.vrijeme_termina >= DateTime.Now
+                           select t;
 
-                    if(termin != null)
-                    {
-                        terminiInstruktora.Add(termin);
-                    }
+                terminiBaza = upit.ToList();
+            }
+
+            foreach (var item in terminiBaza)
+            {
+                Termin termin = listaTermina.Find(x => x.IdTermina == item.ID_termina);
+
+                if (termin != null)
+                {
+                    terminiInstruktora.Add(termin);
                 }
             }
 
@@ -285,13 +303,6 @@ namespace FindAndLearn.MojeObavijesti
             }
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
-        {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
-            Close();
-        }
-
         // Kako bi student imamo uvid u obavijesti čiji su termini prošli omogućena je arhiva obavijesti
 
         private void btnArhiva_Click(object sender, EventArgs e)
@@ -315,6 +326,11 @@ namespace FindAndLearn.MojeObavijesti
                 frmDetaljiTermina form = new frmDetaljiTermina(termin);
                 form.ShowDialog();
             }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

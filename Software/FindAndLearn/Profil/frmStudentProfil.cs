@@ -29,6 +29,17 @@ namespace FindAndLearn.Profil
             UcitajTipoveInstrukcija();
             comboTipInstrukcije.SelectedIndexChanged += ComboTipInstrukcije_SelectedIndexChanged;
             OsvjeziProfil();
+
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmStudentProfil_KeyDown);
+        }
+
+        private void frmStudentProfil_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+              //  Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+            }
         }
 
         private void OsvjeziProfil()
@@ -159,16 +170,14 @@ namespace FindAndLearn.Profil
             OsvjeziProfil();
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
-        {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
-            Close();
-        }
-
         private void btnZatvori_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

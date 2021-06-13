@@ -44,6 +44,16 @@ namespace FindAndLearn.Profil
         private void frmInstruktorProfil_Load(object sender, EventArgs e)
         {
 
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmInstruktorProfil_KeyDown);
+        }
+
+        private void frmInstruktorProfil_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Profil/index.html");
+            }
         }
 
         public void UcitajPodatkeZaPregled()
@@ -52,10 +62,9 @@ namespace FindAndLearn.Profil
             {
                 comboTipInstrukcija.DataSource = context.Tip_instrukcija.ToList();
 
-                var upitSveInstrukcije = from t in context.Termini
-                                         where t.vrijeme_termina >= DateTime.Now
-                                         && t.Instrukcije.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
-                                         select t.Instrukcije;
+                var upitSveInstrukcije = from ins in context.Instrukcije
+                                      where ins.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
+                                      select ins;
 
                 List<Instrukcije> popisInstrukcija = upitSveInstrukcije.ToList();
 
@@ -92,15 +101,14 @@ namespace FindAndLearn.Profil
 
             using (var context = new Entities())
             {
-                // 1. Dohvaćanje liste TRENUTNIH instrukcija odabranog tipa preko termina dohvaćenog instruktora koji sadrži informacije o instruktorima
+                // 1. Dohvaćanje liste instrukcija odabranog tipa preko termina dohvaćenog instruktora koji sadrži informacije o instruktorima
 
                 Tip_instrukcija selektiranTip = comboTipInstrukcija.SelectedItem as Tip_instrukcija;
 
-                var upitInstrukcijeZaTip = from t in context.Termini
-                                           where t.vrijeme_termina >= DateTime.Now
-                                           && t.Instrukcije.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
-                                           && t.Instrukcije.Tip_instrukcija.ID_tip_instrukcije == selektiranTip.ID_tip_instrukcije
-                                           select t.Instrukcije;
+                var upitInstrukcijeZaTip = from ins in context.Instrukcije
+                                           where ins.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
+                                           where ins.tip_instrukcije_id == selektiranTip.ID_tip_instrukcije
+                                           select ins;
 
                 List<Instrukcije> selektiraneInstrukcije = upitInstrukcijeZaTip.ToList();
 
@@ -115,19 +123,13 @@ namespace FindAndLearn.Profil
                 {
                     foreach (Instrukcije item in selektiraneInstrukcije)
                     {
-                        Kolegiji kolegij = context.Kolegiji.FirstOrDefault(k => k.ID_kolegija == item.kolegij_id);
+                        // Indeksiranje svakog objekta na grafu kako bi se prelaskom miša vidio opis selektirane instrukcije
 
-                        grafikonInstrukcija.Series["Cijena (kn/h)"].Points.AddXY(kolegij.naziv_kolegija, item.cijena_instrukcije);
+                        int index = grafikonInstrukcija.Series["Cijena (kn/h)"].Points.AddXY(item.Kolegiji.naziv_kolegija, item.cijena_instrukcije);
+                        grafikonInstrukcija.Series["Cijena (kn/h)"].Points[index].ToolTip = item.opis_instrukcije;
                     }
                 }
             }
-        }
-
-        private void btnOdjava_Click(object sender, EventArgs e)
-        {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
-            Close();
         }
 
         private void btnPrikaziSveInstrukcije_Click(object sender, EventArgs e)
@@ -138,10 +140,9 @@ namespace FindAndLearn.Profil
             {
                 grafikonInstrukcija.Series["Cijena (kn/h)"].Points.Clear();
 
-                var upitSveInstrukcije = from t in context.Termini
-                                         where t.vrijeme_termina >= DateTime.Now
-                                         && t.Instrukcije.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
-                                         select t.Instrukcije;
+                var upitSveInstrukcije = from ins in context.Instrukcije
+                                         where ins.Instruktori.ID_instruktora == postojeciInstruktor.ID_instruktora
+                                         select ins;
 
                 List<Instrukcije> popisInstrukcija = upitSveInstrukcije.ToList();
 
@@ -154,9 +155,10 @@ namespace FindAndLearn.Profil
                 {
                     foreach (Instrukcije item in popisInstrukcija)
                     {
-                        Kolegiji kolegij = context.Kolegiji.FirstOrDefault(k => k.ID_kolegija == item.kolegij_id);
+                        // Indeksiranje svakog objekta na grafu kako bi se prelaskom miša vidio opis selektirane instrukcije
 
-                        grafikonInstrukcija.Series["Cijena (kn/h)"].Points.AddXY(item.Tip_instrukcija.naziv_tipa.Substring(0, 3).ToUpper() + " - " + item.Kolegiji.naziv_kolegija, item.cijena_instrukcije);
+                        int index = grafikonInstrukcija.Series["Cijena (kn/h)"].Points.AddXY(item.Tip_instrukcija.naziv_tipa.Substring(0, 3).ToUpper() + " - " + item.Kolegiji.naziv_kolegija, item.cijena_instrukcije);
+                        grafikonInstrukcija.Series["Cijena (kn/h)"].Points[index].ToolTip = item.opis_instrukcije;
                     }
                 }
             }
@@ -212,6 +214,11 @@ namespace FindAndLearn.Profil
                 frmDetaljiInstruktora frmDetalji = new frmDetaljiInstruktora(prosjecnaOcjena, instruktorBaza);
                 frmDetalji.ShowDialog();
             }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

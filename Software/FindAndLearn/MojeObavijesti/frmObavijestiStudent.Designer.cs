@@ -31,10 +31,12 @@ namespace FindAndLearn.MojeObavijesti
         {
             this.label2 = new System.Windows.Forms.Label();
             this.gbProfil = new System.Windows.Forms.GroupBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
             this.btnHelp = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
+            this.btnZatvori = new System.Windows.Forms.Button();
             this.btnGrupe = new System.Windows.Forms.Button();
             this.gbDatumObavijesti = new System.Windows.Forms.GroupBox();
             this.dtpDo = new System.Windows.Forms.DateTimePicker();
@@ -50,18 +52,16 @@ namespace FindAndLearn.MojeObavijesti
             this.btnProcitaj = new System.Windows.Forms.Button();
             this.dgvPopisObavijesti = new System.Windows.Forms.DataGridView();
             this.btnPrikaziSveObavijesti = new System.Windows.Forms.Button();
-            this.btnZatvori = new System.Windows.Forms.Button();
             this.gbPopisStudenata = new System.Windows.Forms.GroupBox();
             this.flpSudionici = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDetaljiTermina = new System.Windows.Forms.Button();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gbProfil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbInstruktor.SuspendLayout();
             this.gbIzbornik.SuspendLayout();
             this.gbDatumObavijesti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisObavijesti)).BeginInit();
             this.gbPopisStudenata.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -87,6 +87,15 @@ namespace FindAndLearn.MojeObavijesti
             this.gbProfil.TabIndex = 87;
             this.gbProfil.TabStop = false;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
+            this.pbLogo.Location = new System.Drawing.Point(-1, 11);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(79, 59);
+            this.pbLogo.TabIndex = 70;
+            this.pbLogo.TabStop = false;
+            // 
             // gbInstruktor
             // 
             this.gbInstruktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
@@ -110,6 +119,7 @@ namespace FindAndLearn.MojeObavijesti
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // lblInstruktor
             // 
@@ -133,6 +143,19 @@ namespace FindAndLearn.MojeObavijesti
             this.gbIzbornik.Size = new System.Drawing.Size(217, 657);
             this.gbIzbornik.TabIndex = 85;
             this.gbIzbornik.TabStop = false;
+            // 
+            // btnZatvori
+            // 
+            this.btnZatvori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnZatvori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnZatvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZatvori.Location = new System.Drawing.Point(19, 450);
+            this.btnZatvori.Name = "btnZatvori";
+            this.btnZatvori.Size = new System.Drawing.Size(184, 31);
+            this.btnZatvori.TabIndex = 29;
+            this.btnZatvori.Text = "Zatvori";
+            this.btnZatvori.UseVisualStyleBackColor = false;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
             // btnGrupe
             // 
@@ -291,19 +314,6 @@ namespace FindAndLearn.MojeObavijesti
             this.btnPrikaziSveObavijesti.UseVisualStyleBackColor = false;
             this.btnPrikaziSveObavijesti.Click += new System.EventHandler(this.btnPrikaziSveObavijesti_Click);
             // 
-            // btnZatvori
-            // 
-            this.btnZatvori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnZatvori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnZatvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZatvori.Location = new System.Drawing.Point(19, 450);
-            this.btnZatvori.Name = "btnZatvori";
-            this.btnZatvori.Size = new System.Drawing.Size(184, 31);
-            this.btnZatvori.TabIndex = 29;
-            this.btnZatvori.Text = "Zatvori";
-            this.btnZatvori.UseVisualStyleBackColor = false;
-            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
-            // 
             // gbPopisStudenata
             // 
             this.gbPopisStudenata.Controls.Add(this.flpSudionici);
@@ -334,15 +344,6 @@ namespace FindAndLearn.MojeObavijesti
             this.btnDetaljiTermina.UseVisualStyleBackColor = false;
             this.btnDetaljiTermina.Click += new System.EventHandler(this.btnDetaljiTermina_Click);
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(-1, 11);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(79, 59);
-            this.pbLogo.TabIndex = 70;
-            this.pbLogo.TabStop = false;
-            // 
             // frmObavijestiStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,6 +369,7 @@ namespace FindAndLearn.MojeObavijesti
             this.Load += new System.EventHandler(this.frmObavijestiStudent_Load);
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.gbInstruktor.ResumeLayout(false);
             this.gbInstruktor.PerformLayout();
             this.gbIzbornik.ResumeLayout(false);
@@ -375,7 +377,6 @@ namespace FindAndLearn.MojeObavijesti
             this.gbDatumObavijesti.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisObavijesti)).EndInit();
             this.gbPopisStudenata.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

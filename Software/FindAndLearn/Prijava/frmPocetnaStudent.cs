@@ -30,12 +30,21 @@ namespace FindAndLearn.Prijava
         private void frmPocetnaStudent_Load(object sender, EventArgs e)
         {
 
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmPocetnaStudent_KeyDown);
+
+        }
+
+        private void frmPocetnaStudent_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/index.html");
+            }
         }
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
             Close();
         }
 
@@ -73,6 +82,11 @@ namespace FindAndLearn.Prijava
         {
             frmTrazilica frmTrazilica = new frmTrazilica();
             frmTrazilica.ShowDialog();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/index.html");
         }
     }
 }

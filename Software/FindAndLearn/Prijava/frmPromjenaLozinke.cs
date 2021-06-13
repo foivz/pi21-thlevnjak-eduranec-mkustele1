@@ -22,7 +22,16 @@ namespace FindAndLearn.Prijava
 
         private void frmPromjenaLozinke_Load(object sender, EventArgs e)
         {
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmPromjenaLozinke_KeyDown);
+        }
 
+        private void frmPromjenaLozinke_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Prijava/Promjena_lozinke/index.html");
+            }
         }
 
         private void cbPokaziLozinke_CheckedChanged(object sender, EventArgs e)

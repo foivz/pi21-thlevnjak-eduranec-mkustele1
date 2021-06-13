@@ -38,6 +38,9 @@ namespace FindAndLearn.Profil
             this.gbKratkiOpis = new System.Windows.Forms.GroupBox();
             this.txtOpis = new System.Windows.Forms.TextBox();
             this.gbKontakt = new System.Windows.Forms.GroupBox();
+            this.pbMjesto = new System.Windows.Forms.PictureBox();
+            this.pbTelefon = new System.Windows.Forms.PictureBox();
+            this.pbEmail = new System.Windows.Forms.PictureBox();
             this.lblUlica = new System.Windows.Forms.Label();
             this.lblMjesto = new System.Windows.Forms.Label();
             this.lblMobitel = new System.Windows.Forms.Label();
@@ -68,19 +71,19 @@ namespace FindAndLearn.Profil
             this.lblPregled = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbProfil = new System.Windows.Forms.GroupBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.btnProfil = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
             this.btnHelp = new System.Windows.Forms.Button();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pbSlikaInstruktora = new System.Windows.Forms.PictureBox();
-            this.pbMjesto = new System.Windows.Forms.PictureBox();
-            this.pbTelefon = new System.Windows.Forms.PictureBox();
-            this.pbEmail = new System.Windows.Forms.PictureBox();
             this.gbKratkiOpis.SuspendLayout();
             this.gbKontakt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMjesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTelefon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
             this.gbInstrukcije.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -89,13 +92,10 @@ namespace FindAndLearn.Profil
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbProfil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbIzbornik.SuspendLayout();
             this.gbInstruktor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMjesto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTelefon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIzmijeniPodatke
@@ -168,6 +168,33 @@ namespace FindAndLearn.Profil
             this.gbKontakt.TabIndex = 84;
             this.gbKontakt.TabStop = false;
             this.gbKontakt.Text = "Kontakt";
+            // 
+            // pbMjesto
+            // 
+            this.pbMjesto.BackgroundImage = global::FindAndLearn.Properties.Resources.Lokacija;
+            this.pbMjesto.Location = new System.Drawing.Point(16, 95);
+            this.pbMjesto.Name = "pbMjesto";
+            this.pbMjesto.Size = new System.Drawing.Size(24, 22);
+            this.pbMjesto.TabIndex = 18;
+            this.pbMjesto.TabStop = false;
+            // 
+            // pbTelefon
+            // 
+            this.pbTelefon.BackgroundImage = global::FindAndLearn.Properties.Resources.Telefon;
+            this.pbTelefon.Location = new System.Drawing.Point(16, 61);
+            this.pbTelefon.Name = "pbTelefon";
+            this.pbTelefon.Size = new System.Drawing.Size(24, 23);
+            this.pbTelefon.TabIndex = 17;
+            this.pbTelefon.TabStop = false;
+            // 
+            // pbEmail
+            // 
+            this.pbEmail.BackgroundImage = global::FindAndLearn.Properties.Resources.Email;
+            this.pbEmail.Location = new System.Drawing.Point(16, 28);
+            this.pbEmail.Name = "pbEmail";
+            this.pbEmail.Size = new System.Drawing.Size(24, 26);
+            this.pbEmail.TabIndex = 16;
+            this.pbEmail.TabStop = false;
             // 
             // lblUlica
             // 
@@ -242,7 +269,7 @@ namespace FindAndLearn.Profil
             this.gbInstrukcije.Size = new System.Drawing.Size(525, 516);
             this.gbInstrukcije.TabIndex = 93;
             this.gbInstrukcije.TabStop = false;
-            this.gbInstrukcije.Text = "Instrukcije (U TIJEKU)";
+            this.gbInstrukcije.Text = "Instrukcije";
             // 
             // groupBox5
             // 
@@ -303,13 +330,15 @@ namespace FindAndLearn.Profil
             // 
             // btnPrikaziSveInstrukcije
             // 
+            this.btnPrikaziSveInstrukcije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnPrikaziSveInstrukcije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPrikaziSveInstrukcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPrikaziSveInstrukcije.Location = new System.Drawing.Point(390, 37);
             this.btnPrikaziSveInstrukcije.Name = "btnPrikaziSveInstrukcije";
             this.btnPrikaziSveInstrukcije.Size = new System.Drawing.Size(113, 23);
             this.btnPrikaziSveInstrukcije.TabIndex = 110;
             this.btnPrikaziSveInstrukcije.Text = "PRIKAŽI SVE ";
-            this.btnPrikaziSveInstrukcije.UseVisualStyleBackColor = true;
+            this.btnPrikaziSveInstrukcije.UseVisualStyleBackColor = false;
             this.btnPrikaziSveInstrukcije.Click += new System.EventHandler(this.btnPrikaziSveInstrukcije_Click);
             // 
             // lblPorukaGrafikona
@@ -384,13 +413,15 @@ namespace FindAndLearn.Profil
             // 
             // btnUcitajGrafikon
             // 
+            this.btnUcitajGrafikon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnUcitajGrafikon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUcitajGrafikon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnUcitajGrafikon.Location = new System.Drawing.Point(265, 37);
             this.btnUcitajGrafikon.Name = "btnUcitajGrafikon";
             this.btnUcitajGrafikon.Size = new System.Drawing.Size(115, 23);
             this.btnUcitajGrafikon.TabIndex = 95;
             this.btnUcitajGrafikon.Text = "UČITAJ GRAFIKON";
-            this.btnUcitajGrafikon.UseVisualStyleBackColor = true;
+            this.btnUcitajGrafikon.UseVisualStyleBackColor = false;
             this.btnUcitajGrafikon.Click += new System.EventHandler(this.btnUcitajGrafikon_Click);
             // 
             // groupBox2
@@ -505,6 +536,15 @@ namespace FindAndLearn.Profil
             this.gbProfil.TabIndex = 97;
             this.gbProfil.TabStop = false;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
+            this.pbLogo.Location = new System.Drawing.Point(0, 12);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(76, 59);
+            this.pbLogo.TabIndex = 69;
+            this.pbLogo.TabStop = false;
+            // 
             // gbIzbornik
             // 
             this.gbIzbornik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
@@ -580,15 +620,7 @@ namespace FindAndLearn.Profil
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(0, 12);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(76, 59);
-            this.pbLogo.TabIndex = 69;
-            this.pbLogo.TabStop = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // pbSlikaInstruktora
             // 
@@ -598,33 +630,6 @@ namespace FindAndLearn.Profil
             this.pbSlikaInstruktora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSlikaInstruktora.TabIndex = 90;
             this.pbSlikaInstruktora.TabStop = false;
-            // 
-            // pbMjesto
-            // 
-            this.pbMjesto.BackgroundImage = global::FindAndLearn.Properties.Resources.Lokacija;
-            this.pbMjesto.Location = new System.Drawing.Point(16, 95);
-            this.pbMjesto.Name = "pbMjesto";
-            this.pbMjesto.Size = new System.Drawing.Size(24, 22);
-            this.pbMjesto.TabIndex = 18;
-            this.pbMjesto.TabStop = false;
-            // 
-            // pbTelefon
-            // 
-            this.pbTelefon.BackgroundImage = global::FindAndLearn.Properties.Resources.Telefon;
-            this.pbTelefon.Location = new System.Drawing.Point(16, 61);
-            this.pbTelefon.Name = "pbTelefon";
-            this.pbTelefon.Size = new System.Drawing.Size(24, 23);
-            this.pbTelefon.TabIndex = 17;
-            this.pbTelefon.TabStop = false;
-            // 
-            // pbEmail
-            // 
-            this.pbEmail.BackgroundImage = global::FindAndLearn.Properties.Resources.Email;
-            this.pbEmail.Location = new System.Drawing.Point(16, 28);
-            this.pbEmail.Name = "pbEmail";
-            this.pbEmail.Size = new System.Drawing.Size(24, 26);
-            this.pbEmail.TabIndex = 16;
-            this.pbEmail.TabStop = false;
             // 
             // frmInstruktorProfil
             // 
@@ -650,6 +655,9 @@ namespace FindAndLearn.Profil
             this.gbKratkiOpis.PerformLayout();
             this.gbKontakt.ResumeLayout(false);
             this.gbKontakt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMjesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTelefon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).EndInit();
             this.gbInstrukcije.ResumeLayout(false);
             this.gbInstrukcije.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -665,14 +673,11 @@ namespace FindAndLearn.Profil
             this.groupBox1.PerformLayout();
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.gbIzbornik.ResumeLayout(false);
             this.gbInstruktor.ResumeLayout(false);
             this.gbInstruktor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaInstruktora)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMjesto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTelefon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
