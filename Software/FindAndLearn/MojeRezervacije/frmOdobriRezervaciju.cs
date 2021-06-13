@@ -15,7 +15,7 @@ namespace FindAndLearn.MojeRezervacije
 {
     public partial class frmOdobriRezervaciju : Form
     {
-        Entities entities = new Entities();
+        
         public frmOdobriRezervaciju()
         {
             InitializeComponent();
@@ -36,6 +36,7 @@ namespace FindAndLearn.MojeRezervacije
 
         private void Osvjezi()
         {
+            Entities entities = new Entities();
             entities.Rezervacije.Load();
             entities.Instrukcije.Load();
             entities.Termini.Load();
@@ -63,12 +64,13 @@ namespace FindAndLearn.MojeRezervacije
             {
                 RepozitorijTermina.DopuniKapacitet(odabranaRezervacija);
                 RepozitorijRezervacija.OdobriRezervaciju(rezervacijeBindingSource.Current as Rezervacije);
-                Osvjezi();
+                
             }
             else
             {
                 MessageBox.Show("Niste odabrali niti jednu rezervaciju!");
             }
+            Osvjezi();
         }
 
         private void btnOdjava_Click(object sender, EventArgs e)

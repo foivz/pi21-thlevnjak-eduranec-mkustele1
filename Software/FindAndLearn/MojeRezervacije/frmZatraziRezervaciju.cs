@@ -94,6 +94,8 @@ namespace FindAndLearn.MojeRezervacije
             {
                 MessageBox.Show("Niste odabrali termin!");
             }
+
+            Osvjezi();
         }
 
         private void instrukcijeBindingSource_CurrentChanged(object sender, EventArgs e)
