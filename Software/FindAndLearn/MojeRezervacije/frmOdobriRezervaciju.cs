@@ -52,16 +52,23 @@ namespace FindAndLearn.MojeRezervacije
                                     where (i.instruktor_id == PostojeciInstruktor.ID_instruktora && t.instrukcija_id == i.ID_instrukcije && t.ID_termina == r.termin_ID && r.potvrdjena == true)
                                     select r;
             dgvOdobreneRezervacije.DataSource = rezZaInstruktora2.ToList();
-
+            lblTrenutniInstruktor.Text = PostojeciInstruktor.ToString();
         }
 
         private void btnOdobriRezervaciju_Click(object sender, EventArgs e)
         {
             Rezervacije odabranaRezervacija = rezervacijeBindingSource.Current as Rezervacije;
 
-            RepozitorijTermina.DopuniKapacitet(odabranaRezervacija);
-            RepozitorijRezervacija.OdobriRezervaciju(rezervacijeBindingSource.Current as Rezervacije);
-            Osvjezi();
+            if (odabranaRezervacija != null)
+            {
+                RepozitorijTermina.DopuniKapacitet(odabranaRezervacija);
+                RepozitorijRezervacija.OdobriRezervaciju(rezervacijeBindingSource.Current as Rezervacije);
+                Osvjezi();
+            }
+            else
+            {
+                MessageBox.Show("Niste odabrali niti jednu rezervaciju!");
+            }
         }
 
         private void btnOdjava_Click(object sender, EventArgs e)

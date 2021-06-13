@@ -59,9 +59,9 @@ namespace FindAndLearn.Klase
 
         public static bool ProvjeraIspravnostiUnosaTermina(Termin termin)
         {
-            if (termin.VrijemeTermina < DateTime.Now || termin.KapacitetTermina < 0)
+            if (termin.VrijemeTermina < DateTime.Now || termin.KapacitetTermina <= 0 || termin.Trajanje <= 0 || termin.NazivTermina =="" || termin.MjestoOdrzavanja=="")
             {
-                return false;
+                throw new UnosTerminaException("Za dodavanje termina sva polja trebaju biti korektno popunjena!");
             }
             else return true;
 

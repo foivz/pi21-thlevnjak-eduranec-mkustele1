@@ -39,17 +39,20 @@ namespace FindAndLearn.MojiTermini
             int kapacitet;
             bool trCheck = int.TryParse(txtTrajanje.Text, out trajanje);
             bool kaCheck = int.TryParse(txtKapacitet.Text, out kapacitet);
-            bool korektno= RepozitorijTermina.ProvjeraIspravnostiUnosaTermina(noviTermin);
-            if (korektno == false || trCheck==false || kaCheck==false)
+            noviTermin.Trajanje = trajanje;
+            noviTermin.KapacitetTermina = kapacitet;
+            try
             {
-                throw new UnosTerminaException("Za dodavanje termina sva polja trebaju biti korektno popunjena!");
-            }
-            else
-            {
-                noviTermin.Trajanje = trajanje;
-                noviTermin.KapacitetTermina = kapacitet;
+                bool korektno = RepozitorijTermina.ProvjeraIspravnostiUnosaTermina(noviTermin);
+                
                 RepozitorijTermina.DodajTerminUBazu(noviTermin);
+        
             }
+            catch (UnosTerminaException ex)
+            {
+                MessageBox.Show(ex.Poruka);
+            }
+           
             Osvjezi();
             ClearInput();
         }
@@ -66,6 +69,7 @@ namespace FindAndLearn.MojiTermini
                           where ter.instrukcija_id == OdabranaInstrukcija.Id
                           select ter;
             terminiBindingSource.DataSource = termini;
+            
         }
 
         private void btnObrisiTermin_Click(object sender, EventArgs e)
@@ -94,6 +98,7 @@ namespace FindAndLearn.MojiTermini
             txtMjesto.Clear();
             txtTrajanje.Clear();
             txtTrajanje.Clear();
+            txtKapacitet.Clear();
         }
 
         private void btnZatvori_Click(object sender, EventArgs e)

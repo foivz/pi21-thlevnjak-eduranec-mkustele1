@@ -44,6 +44,7 @@ namespace FindAndLearn.MojeInstrukcije
             Entities entities = new Entities();
             entities.Instrukcije.Load();
             instrukcijeBindingSource.DataSource = entities.Instrukcije.Local;
+            lblTrenutniInstruktor.Text = TrenutniInstruktor.ToString();
         }
         private void btnOdjava_Click(object sender, EventArgs e)
         {

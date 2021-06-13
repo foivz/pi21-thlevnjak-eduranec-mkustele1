@@ -30,12 +30,18 @@ namespace FindAndLearn.MojeRezervacije
 
         private void frmZatraziRezervaciju_Load(object sender, EventArgs e)
         {
+            Osvjezi();
+
+        }
+
+        private void Osvjezi()
+        {
             Entities entities = new Entities();
             entities.Instrukcije.Load();
             entities.Rezervacije.Load();
             instrukcijeBindingSource.DataSource = entities.Instrukcije.Local;
             rezervacijeBindingSource.DataSource = entities.Rezervacije.Local.Where(x => x.student_ID == PostojeciStudent.ID_studenta);
-
+            lblTrenutniStudent.Text = PostojeciStudent.ToString();
         }
 
        
@@ -92,7 +98,7 @@ namespace FindAndLearn.MojeRezervacije
 
         private void instrukcijeBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-            terminiBindingSource.DataSource = (instrukcijeBindingSource.Current as Instrukcije).Termini;
+            terminiBindingSource.DataSource = (instrukcijeBindingSource.Current as Instrukcije).Termini.Where(x=>x.vrijeme_termina > DateTime.Now);
         }
     }
 }

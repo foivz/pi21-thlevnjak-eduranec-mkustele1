@@ -102,7 +102,7 @@ namespace FindAndLearn.Klase
 
             else
             {
-                MessageBox.Show("Molimo vas da popunite sva polja za dodavanje instrukcije!");
+                MessageBox.Show("Molimo vas da korektno popunite sva polja za dodavanje instrukcije!");
             }
         }
 

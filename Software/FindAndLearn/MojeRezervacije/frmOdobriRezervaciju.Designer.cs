@@ -30,20 +30,24 @@ namespace FindAndLearn.MojeRezervacije
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
             this.btnOdobriRezervaciju = new System.Windows.Forms.Button();
             this.dgvRezervacije = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblRezervacijeIns = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gbProfil = new System.Windows.Forms.GroupBox();
             this.lblRezervacijeZaOdobrenje = new System.Windows.Forms.Label();
-            this.btnRezervacije = new System.Windows.Forms.Button();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
             this.lblOdobreneRezervacije = new System.Windows.Forms.Label();
             this.dgvOdobreneRezervacije = new System.Windows.Forms.DataGridView();
+            this.lblTrenutniInstruktor = new System.Windows.Forms.Label();
             this.studentiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.terminiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rokrezervacijeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,12 +73,12 @@ namespace FindAndLearn.MojeRezervacije
             this.lblInstruktor.AutoSize = true;
             this.lblInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblInstruktor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblInstruktor.Location = new System.Drawing.Point(77, 21);
+            this.lblInstruktor.Location = new System.Drawing.Point(65, 26);
             this.lblInstruktor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstruktor.Name = "lblInstruktor";
             this.lblInstruktor.Size = new System.Drawing.Size(95, 20);
             this.lblInstruktor.TabIndex = 3;
-            this.lblInstruktor.Text = "Instruktor ";
+            this.lblInstruktor.Text = "Instruktor:";
             // 
             // btnHelp
             // 
@@ -93,6 +97,7 @@ namespace FindAndLearn.MojeRezervacije
             // 
             this.gbInstruktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbInstruktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gbInstruktor.Controls.Add(this.lblTrenutniInstruktor);
             this.gbInstruktor.Controls.Add(this.btnHelp);
             this.gbInstruktor.Controls.Add(this.lblInstruktor);
             this.gbInstruktor.Location = new System.Drawing.Point(225, -13);
@@ -119,10 +124,20 @@ namespace FindAndLearn.MojeRezervacije
             // 
             // dgvRezervacije
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.dgvRezervacije.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRezervacije.AutoGenerateColumns = false;
             this.dgvRezervacije.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvRezervacije.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvRezervacije.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvRezervacije.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRezervacije.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRezervacije.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRezervacije.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.studentiDataGridViewTextBoxColumn,
@@ -135,29 +150,28 @@ namespace FindAndLearn.MojeRezervacije
             this.dgvRezervacije.Name = "dgvRezervacije";
             this.dgvRezervacije.RowHeadersWidth = 51;
             this.dgvRezervacije.RowTemplate.Height = 24;
-            this.dgvRezervacije.Size = new System.Drawing.Size(689, 233);
+            this.dgvRezervacije.Size = new System.Drawing.Size(677, 233);
             this.dgvRezervacije.TabIndex = 168;
             // 
-            // label2
+            // lblRezervacijeIns
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.label2.Location = new System.Drawing.Point(103, 34);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 25);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "PROFIL";
+            this.lblRezervacijeIns.AutoSize = true;
+            this.lblRezervacijeIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblRezervacijeIns.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.lblRezervacijeIns.Location = new System.Drawing.Point(113, 53);
+            this.lblRezervacijeIns.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRezervacijeIns.Name = "lblRezervacijeIns";
+            this.lblRezervacijeIns.Size = new System.Drawing.Size(148, 25);
+            this.lblRezervacijeIns.TabIndex = 68;
+            this.lblRezervacijeIns.Text = "REZERVACIJE";
             // 
             // pbLogo
             // 
             this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(0, 15);
+            this.pbLogo.Location = new System.Drawing.Point(8, 28);
             this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(101, 73);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbLogo.Size = new System.Drawing.Size(101, 68);
             this.pbLogo.TabIndex = 69;
             this.pbLogo.TabStop = false;
             // 
@@ -166,12 +180,12 @@ namespace FindAndLearn.MojeRezervacije
             this.gbProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbProfil.Controls.Add(this.pbLogo);
-            this.gbProfil.Controls.Add(this.label2);
+            this.gbProfil.Controls.Add(this.lblRezervacijeIns);
             this.gbProfil.Location = new System.Drawing.Point(-9, -15);
             this.gbProfil.Margin = new System.Windows.Forms.Padding(4);
             this.gbProfil.Name = "gbProfil";
             this.gbProfil.Padding = new System.Windows.Forms.Padding(4);
-            this.gbProfil.Size = new System.Drawing.Size(281, 92);
+            this.gbProfil.Size = new System.Drawing.Size(281, 123);
             this.gbProfil.TabIndex = 164;
             this.gbProfil.TabStop = false;
             // 
@@ -185,19 +199,6 @@ namespace FindAndLearn.MojeRezervacije
             this.lblRezervacijeZaOdobrenje.Size = new System.Drawing.Size(228, 20);
             this.lblRezervacijeZaOdobrenje.TabIndex = 165;
             this.lblRezervacijeZaOdobrenje.Text = "Rezervacije za odobrenje:";
-            // 
-            // btnRezervacije
-            // 
-            this.btnRezervacije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnRezervacije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRezervacije.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRezervacije.Location = new System.Drawing.Point(24, 50);
-            this.btnRezervacije.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRezervacije.Name = "btnRezervacije";
-            this.btnRezervacije.Size = new System.Drawing.Size(245, 38);
-            this.btnRezervacije.TabIndex = 24;
-            this.btnRezervacije.Text = "REZERVACIJE";
-            this.btnRezervacije.UseVisualStyleBackColor = false;
             // 
             // btnZatvori
             // 
@@ -218,7 +219,6 @@ namespace FindAndLearn.MojeRezervacije
             this.gbIzbornik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbIzbornik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbIzbornik.Controls.Add(this.btnZatvori);
-            this.gbIzbornik.Controls.Add(this.btnRezervacije);
             this.gbIzbornik.Location = new System.Drawing.Point(-17, 38);
             this.gbIzbornik.Margin = new System.Windows.Forms.Padding(4);
             this.gbIzbornik.Name = "gbIzbornik";
@@ -240,10 +240,20 @@ namespace FindAndLearn.MojeRezervacije
             // 
             // dgvOdobreneRezervacije
             // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.dgvOdobreneRezervacije.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOdobreneRezervacije.AutoGenerateColumns = false;
             this.dgvOdobreneRezervacije.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvOdobreneRezervacije.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvOdobreneRezervacije.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvOdobreneRezervacije.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOdobreneRezervacije.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOdobreneRezervacije.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOdobreneRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOdobreneRezervacije.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.studentiDataGridViewTextBoxColumn1,
@@ -256,8 +266,20 @@ namespace FindAndLearn.MojeRezervacije
             this.dgvOdobreneRezervacije.Name = "dgvOdobreneRezervacije";
             this.dgvOdobreneRezervacije.RowHeadersWidth = 51;
             this.dgvOdobreneRezervacije.RowTemplate.Height = 24;
-            this.dgvOdobreneRezervacije.Size = new System.Drawing.Size(689, 287);
+            this.dgvOdobreneRezervacije.Size = new System.Drawing.Size(677, 287);
             this.dgvOdobreneRezervacije.TabIndex = 170;
+            // 
+            // lblTrenutniInstruktor
+            // 
+            this.lblTrenutniInstruktor.AutoSize = true;
+            this.lblTrenutniInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTrenutniInstruktor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.lblTrenutniInstruktor.Location = new System.Drawing.Point(183, 26);
+            this.lblTrenutniInstruktor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTrenutniInstruktor.Name = "lblTrenutniInstruktor";
+            this.lblTrenutniInstruktor.Size = new System.Drawing.Size(95, 20);
+            this.lblTrenutniInstruktor.TabIndex = 23;
+            this.lblTrenutniInstruktor.Text = "Instruktor:";
             // 
             // studentiDataGridViewTextBoxColumn1
             // 
@@ -383,11 +405,10 @@ namespace FindAndLearn.MojeRezervacije
         private System.Windows.Forms.Button btnOdobriRezervaciju;
         private System.Windows.Forms.DataGridView dgvRezervacije;
         private System.Windows.Forms.BindingSource rezervacijeBindingSource;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblRezervacijeIns;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.GroupBox gbProfil;
         private System.Windows.Forms.Label lblRezervacijeZaOdobrenje;
-        private System.Windows.Forms.Button btnRezervacije;
         private System.Windows.Forms.Button btnZatvori;
         private System.Windows.Forms.GroupBox gbIzbornik;
         private System.Windows.Forms.Label lblOdobreneRezervacije;
@@ -402,5 +423,6 @@ namespace FindAndLearn.MojeRezervacije
         private System.Windows.Forms.DataGridViewTextBoxColumn rokrezervacijeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumrezervacijeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn potvrdjenaDataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Label lblTrenutniInstruktor;
     }
 }
