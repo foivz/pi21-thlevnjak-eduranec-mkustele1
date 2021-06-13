@@ -42,9 +42,17 @@ namespace FindAndLearn.MojeRezervacije
             var rezZaInstruktora = from i in entities.Instrukcije.Local
                                               from t in entities.Termini.Local
                                               from r in entities.Rezervacije.Local
-                                              where (i.instruktor_id == PostojeciInstruktor.ID_instruktora && t.instrukcija_id == i.ID_instrukcije && t.ID_termina == r.termin_ID )
+                                              where (i.instruktor_id == PostojeciInstruktor.ID_instruktora && t.instrukcija_id == i.ID_instrukcije && t.ID_termina == r.termin_ID && r.potvrdjena==false)
                                               select r;
             rezervacijeBindingSource.DataSource = rezZaInstruktora;
+
+            var rezZaInstruktora2 = from i in entities.Instrukcije.Local
+                                    from t in entities.Termini.Local
+                                    from r in entities.Rezervacije.Local
+                                    where (i.instruktor_id == PostojeciInstruktor.ID_instruktora && t.instrukcija_id == i.ID_instrukcije && t.ID_termina == r.termin_ID && r.potvrdjena == true)
+                                    select r;
+            dgvOdobreneRezervacije.DataSource = rezZaInstruktora2.ToList();
+
         }
 
         private void btnOdobriRezervaciju_Click(object sender, EventArgs e)

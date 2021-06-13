@@ -83,7 +83,7 @@ namespace FindAndLearn.Klase
         }
         public static void DodajInstrukciju(Instrukcija instrukcija)
         {
-            if (instrukcija.OpisInstrukcije != "" && instrukcija.CijenaInstrukcije <= 0)
+            if (instrukcija.OpisInstrukcije != "" && instrukcija.CijenaInstrukcije > 0)
             {
                 using (var entities = new Entities())
                 {

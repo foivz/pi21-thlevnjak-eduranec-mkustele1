@@ -38,7 +38,7 @@ namespace FindAndLearn.MojiTermini
             int trajanje;
             int kapacitet;
             bool trCheck = int.TryParse(txtTrajanje.Text, out trajanje);
-            bool kaCheck = int.TryParse(txtTrajanje.Text, out kapacitet);
+            bool kaCheck = int.TryParse(txtKapacitet.Text, out kapacitet);
             bool korektno= RepozitorijTermina.ProvjeraIspravnostiUnosaTermina(noviTermin);
             if (korektno == false || trCheck==false || kaCheck==false)
             {
