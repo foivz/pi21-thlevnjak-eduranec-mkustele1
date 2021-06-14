@@ -63,5 +63,10 @@ namespace FindAndLearn.MojePoruke
 
             MessageBox.Show(selektiranaPoruka.sadrzaj, selektiranaPoruka.naslov_poruke, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnZatvori_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

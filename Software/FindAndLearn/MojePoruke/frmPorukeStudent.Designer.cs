@@ -31,11 +31,6 @@ namespace FindAndLearn.MojePoruke
         {
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
             this.btnPoruke = new System.Windows.Forms.Button();
-            this.btnTrazilica = new System.Windows.Forms.Button();
-            this.btnObavijesti = new System.Windows.Forms.Button();
-            this.btnProfil = new System.Windows.Forms.Button();
-            this.btnRezervacijaTermina = new System.Windows.Forms.Button();
-            this.btnRecenzije = new System.Windows.Forms.Button();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
@@ -53,6 +48,7 @@ namespace FindAndLearn.MojePoruke
             this.lblSvePoruke = new System.Windows.Forms.Label();
             this.dgvPopisPoruka = new System.Windows.Forms.DataGridView();
             this.btnDetaljiPoruke = new System.Windows.Forms.Button();
+            this.btnZatvori = new System.Windows.Forms.Button();
             this.gbIzbornik.SuspendLayout();
             this.gbInstruktor.SuspendLayout();
             this.gbProfil.SuspendLayout();
@@ -64,12 +60,8 @@ namespace FindAndLearn.MojePoruke
             // 
             this.gbIzbornik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbIzbornik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gbIzbornik.Controls.Add(this.btnZatvori);
             this.gbIzbornik.Controls.Add(this.btnPoruke);
-            this.gbIzbornik.Controls.Add(this.btnTrazilica);
-            this.gbIzbornik.Controls.Add(this.btnObavijesti);
-            this.gbIzbornik.Controls.Add(this.btnProfil);
-            this.gbIzbornik.Controls.Add(this.btnRezervacijaTermina);
-            this.gbIzbornik.Controls.Add(this.btnRecenzije);
             this.gbIzbornik.Location = new System.Drawing.Point(-6, 33);
             this.gbIzbornik.Name = "gbIzbornik";
             this.gbIzbornik.Size = new System.Drawing.Size(217, 657);
@@ -82,74 +74,12 @@ namespace FindAndLearn.MojePoruke
             this.btnPoruke.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPoruke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPoruke.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPoruke.Location = new System.Drawing.Point(18, 249);
+            this.btnPoruke.Location = new System.Drawing.Point(17, 48);
             this.btnPoruke.Name = "btnPoruke";
             this.btnPoruke.Size = new System.Drawing.Size(184, 31);
             this.btnPoruke.TabIndex = 30;
             this.btnPoruke.Text = "PORUKE";
             this.btnPoruke.UseVisualStyleBackColor = false;
-            // 
-            // btnTrazilica
-            // 
-            this.btnTrazilica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnTrazilica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTrazilica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnTrazilica.Location = new System.Drawing.Point(17, 87);
-            this.btnTrazilica.Name = "btnTrazilica";
-            this.btnTrazilica.Size = new System.Drawing.Size(184, 31);
-            this.btnTrazilica.TabIndex = 29;
-            this.btnTrazilica.Text = "TRAŽILICA";
-            this.btnTrazilica.UseVisualStyleBackColor = false;
-            // 
-            // btnObavijesti
-            // 
-            this.btnObavijesti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnObavijesti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnObavijesti.Location = new System.Drawing.Point(17, 207);
-            this.btnObavijesti.Name = "btnObavijesti";
-            this.btnObavijesti.Size = new System.Drawing.Size(184, 31);
-            this.btnObavijesti.TabIndex = 28;
-            this.btnObavijesti.Text = "OBAVIJESTI";
-            this.btnObavijesti.UseVisualStyleBackColor = false;
-            // 
-            // btnProfil
-            // 
-            this.btnProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProfil.Location = new System.Drawing.Point(17, 48);
-            this.btnProfil.Name = "btnProfil";
-            this.btnProfil.Size = new System.Drawing.Size(184, 31);
-            this.btnProfil.TabIndex = 25;
-            this.btnProfil.Text = "PROFIL";
-            this.btnProfil.UseVisualStyleBackColor = false;
-            // 
-            // btnRezervacijaTermina
-            // 
-            this.btnRezervacijaTermina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnRezervacijaTermina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRezervacijaTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRezervacijaTermina.Location = new System.Drawing.Point(16, 126);
-            this.btnRezervacijaTermina.Name = "btnRezervacijaTermina";
-            this.btnRezervacijaTermina.Size = new System.Drawing.Size(184, 31);
-            this.btnRezervacijaTermina.TabIndex = 24;
-            this.btnRezervacijaTermina.Text = "ZATRAŽI REZERVACIJU ";
-            this.btnRezervacijaTermina.UseVisualStyleBackColor = false;
-            // 
-            // btnRecenzije
-            // 
-            this.btnRecenzije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnRecenzije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRecenzije.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRecenzije.Location = new System.Drawing.Point(17, 165);
-            this.btnRecenzije.Name = "btnRecenzije";
-            this.btnRecenzije.Size = new System.Drawing.Size(184, 31);
-            this.btnRecenzije.TabIndex = 20;
-            this.btnRecenzije.Text = "RECENZIJE";
-            this.btnRecenzije.UseVisualStyleBackColor = false;
             // 
             // gbInstruktor
             // 
@@ -330,6 +260,20 @@ namespace FindAndLearn.MojePoruke
             this.btnDetaljiPoruke.UseVisualStyleBackColor = false;
             this.btnDetaljiPoruke.Click += new System.EventHandler(this.btnDetaljiPoruke_Click);
             // 
+            // btnZatvori
+            // 
+            this.btnZatvori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnZatvori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnZatvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZatvori.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnZatvori.Location = new System.Drawing.Point(17, 536);
+            this.btnZatvori.Name = "btnZatvori";
+            this.btnZatvori.Size = new System.Drawing.Size(184, 31);
+            this.btnZatvori.TabIndex = 30;
+            this.btnZatvori.Text = "Zatvori";
+            this.btnZatvori.UseVisualStyleBackColor = false;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
+            // 
             // frmPorukeStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,11 +313,6 @@ namespace FindAndLearn.MojePoruke
         #endregion
         private System.Windows.Forms.GroupBox gbIzbornik;
         private System.Windows.Forms.Button btnPoruke;
-        private System.Windows.Forms.Button btnTrazilica;
-        private System.Windows.Forms.Button btnObavijesti;
-        private System.Windows.Forms.Button btnProfil;
-        private System.Windows.Forms.Button btnRezervacijaTermina;
-        private System.Windows.Forms.Button btnRecenzije;
         private System.Windows.Forms.GroupBox gbInstruktor;
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnHelp;
@@ -391,5 +330,6 @@ namespace FindAndLearn.MojePoruke
         private System.Windows.Forms.Label lblSvePoruke;
         private System.Windows.Forms.DataGridView dgvPopisPoruka;
         private System.Windows.Forms.Button btnDetaljiPoruke;
+        private System.Windows.Forms.Button btnZatvori;
     }
 }

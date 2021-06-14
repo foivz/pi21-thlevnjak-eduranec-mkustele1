@@ -69,7 +69,7 @@ namespace FindAndLearn.Prijava
             this.gbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbProfil.Controls.Add(this.pbLogo);
             this.gbProfil.Controls.Add(this.label2);
-            this.gbProfil.Location = new System.Drawing.Point(-1, -9);
+            this.gbProfil.Location = new System.Drawing.Point(-1, -10);
             this.gbProfil.Name = "gbProfil";
             this.gbProfil.Size = new System.Drawing.Size(211, 75);
             this.gbProfil.TabIndex = 80;
@@ -93,7 +93,7 @@ namespace FindAndLearn.Prijava
             this.gbIzbornik.Controls.Add(this.btnPoruke);
             this.gbIzbornik.Controls.Add(this.btnProfil);
             this.gbIzbornik.Controls.Add(this.btnInstrukcije);
-            this.gbIzbornik.Location = new System.Drawing.Point(-7, 34);
+            this.gbIzbornik.Location = new System.Drawing.Point(-6, 33);
             this.gbIzbornik.Name = "gbIzbornik";
             this.gbIzbornik.Size = new System.Drawing.Size(217, 657);
             this.gbIzbornik.TabIndex = 78;
@@ -104,7 +104,7 @@ namespace FindAndLearn.Prijava
             this.btnRezervacije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnRezervacije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRezervacije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRezervacije.Location = new System.Drawing.Point(20, 162);
+            this.btnRezervacije.Location = new System.Drawing.Point(20, 170);
             this.btnRezervacije.Name = "btnRezervacije";
             this.btnRezervacije.Size = new System.Drawing.Size(184, 31);
             this.btnRezervacije.TabIndex = 29;
@@ -117,7 +117,7 @@ namespace FindAndLearn.Prijava
             this.btnObavijesti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnObavijesti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnObavijesti.Location = new System.Drawing.Point(20, 125);
+            this.btnObavijesti.Location = new System.Drawing.Point(20, 130);
             this.btnObavijesti.Name = "btnObavijesti";
             this.btnObavijesti.Size = new System.Drawing.Size(184, 31);
             this.btnObavijesti.TabIndex = 28;
@@ -131,7 +131,7 @@ namespace FindAndLearn.Prijava
             this.btnPoruke.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPoruke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPoruke.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPoruke.Location = new System.Drawing.Point(20, 200);
+            this.btnPoruke.Location = new System.Drawing.Point(20, 210);
             this.btnPoruke.Name = "btnPoruke";
             this.btnPoruke.Size = new System.Drawing.Size(184, 31);
             this.btnPoruke.TabIndex = 26;
@@ -145,7 +145,7 @@ namespace FindAndLearn.Prijava
             this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProfil.Location = new System.Drawing.Point(20, 48);
+            this.btnProfil.Location = new System.Drawing.Point(20, 50);
             this.btnProfil.Name = "btnProfil";
             this.btnProfil.Size = new System.Drawing.Size(184, 31);
             this.btnProfil.TabIndex = 25;
@@ -158,7 +158,7 @@ namespace FindAndLearn.Prijava
             this.btnInstrukcije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnInstrukcije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInstrukcije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnInstrukcije.Location = new System.Drawing.Point(20, 87);
+            this.btnInstrukcije.Location = new System.Drawing.Point(20, 90);
             this.btnInstrukcije.Name = "btnInstrukcije";
             this.btnInstrukcije.Size = new System.Drawing.Size(184, 31);
             this.btnInstrukcije.TabIndex = 24;
@@ -171,7 +171,7 @@ namespace FindAndLearn.Prijava
             this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdjava.Location = new System.Drawing.Point(581, 15);
+            this.btnOdjava.Location = new System.Drawing.Point(580, 15);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(90, 25);
             this.btnOdjava.TabIndex = 29;
@@ -232,7 +232,7 @@ namespace FindAndLearn.Prijava
             this.gbInstruktor.Controls.Add(this.btnOdjava);
             this.gbInstruktor.Controls.Add(this.btnHelp);
             this.gbInstruktor.Controls.Add(this.lblInstruktor);
-            this.gbInstruktor.Location = new System.Drawing.Point(174, -8);
+            this.gbInstruktor.Location = new System.Drawing.Point(174, -9);
             this.gbInstruktor.Name = "gbInstruktor";
             this.gbInstruktor.Size = new System.Drawing.Size(907, 49);
             this.gbInstruktor.TabIndex = 79;
@@ -252,7 +252,7 @@ namespace FindAndLearn.Prijava
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(969, 613);
+            this.ClientSize = new System.Drawing.Size(962, 612);
             this.Controls.Add(this.pbLogoNaslovna);
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbIzbornik);
