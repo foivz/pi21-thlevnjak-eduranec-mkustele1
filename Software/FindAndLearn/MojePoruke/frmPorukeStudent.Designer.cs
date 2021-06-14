@@ -30,9 +30,9 @@ namespace FindAndLearn.MojePoruke
         private void InitializeComponent()
         {
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
+            this.btnZatvori = new System.Windows.Forms.Button();
             this.btnPoruke = new System.Windows.Forms.Button();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
-            this.btnOdjava = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.lblInstruktor = new System.Windows.Forms.Label();
             this.gbProfil = new System.Windows.Forms.GroupBox();
@@ -48,7 +48,6 @@ namespace FindAndLearn.MojePoruke
             this.lblSvePoruke = new System.Windows.Forms.Label();
             this.dgvPopisPoruka = new System.Windows.Forms.DataGridView();
             this.btnDetaljiPoruke = new System.Windows.Forms.Button();
-            this.btnZatvori = new System.Windows.Forms.Button();
             this.gbIzbornik.SuspendLayout();
             this.gbInstruktor.SuspendLayout();
             this.gbProfil.SuspendLayout();
@@ -68,6 +67,20 @@ namespace FindAndLearn.MojePoruke
             this.gbIzbornik.TabIndex = 80;
             this.gbIzbornik.TabStop = false;
             // 
+            // btnZatvori
+            // 
+            this.btnZatvori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnZatvori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnZatvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnZatvori.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnZatvori.Location = new System.Drawing.Point(17, 536);
+            this.btnZatvori.Name = "btnZatvori";
+            this.btnZatvori.Size = new System.Drawing.Size(184, 31);
+            this.btnZatvori.TabIndex = 30;
+            this.btnZatvori.Text = "Zatvori";
+            this.btnZatvori.UseVisualStyleBackColor = false;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
+            // 
             // btnPoruke
             // 
             this.btnPoruke.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
@@ -85,7 +98,6 @@ namespace FindAndLearn.MojePoruke
             // 
             this.gbInstruktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbInstruktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gbInstruktor.Controls.Add(this.btnOdjava);
             this.gbInstruktor.Controls.Add(this.btnHelp);
             this.gbInstruktor.Controls.Add(this.lblInstruktor);
             this.gbInstruktor.Location = new System.Drawing.Point(174, -9);
@@ -93,18 +105,6 @@ namespace FindAndLearn.MojePoruke
             this.gbInstruktor.Size = new System.Drawing.Size(907, 49);
             this.gbInstruktor.TabIndex = 81;
             this.gbInstruktor.TabStop = false;
-            // 
-            // btnOdjava
-            // 
-            this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdjava.Location = new System.Drawing.Point(582, 15);
-            this.btnOdjava.Name = "btnOdjava";
-            this.btnOdjava.Size = new System.Drawing.Size(90, 25);
-            this.btnOdjava.TabIndex = 23;
-            this.btnOdjava.Text = "ODJAVA";
-            this.btnOdjava.UseVisualStyleBackColor = false;
             // 
             // btnHelp
             // 
@@ -260,20 +260,6 @@ namespace FindAndLearn.MojePoruke
             this.btnDetaljiPoruke.UseVisualStyleBackColor = false;
             this.btnDetaljiPoruke.Click += new System.EventHandler(this.btnDetaljiPoruke_Click);
             // 
-            // btnZatvori
-            // 
-            this.btnZatvori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnZatvori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnZatvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZatvori.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnZatvori.Location = new System.Drawing.Point(17, 536);
-            this.btnZatvori.Name = "btnZatvori";
-            this.btnZatvori.Size = new System.Drawing.Size(184, 31);
-            this.btnZatvori.TabIndex = 30;
-            this.btnZatvori.Text = "Zatvori";
-            this.btnZatvori.UseVisualStyleBackColor = false;
-            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
-            // 
             // frmPorukeStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,7 +300,6 @@ namespace FindAndLearn.MojePoruke
         private System.Windows.Forms.GroupBox gbIzbornik;
         private System.Windows.Forms.Button btnPoruke;
         private System.Windows.Forms.GroupBox gbInstruktor;
-        private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Label lblInstruktor;
         private System.Windows.Forms.GroupBox gbProfil;
