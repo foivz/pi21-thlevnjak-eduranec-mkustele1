@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Instrukcija_TerminTests.cs" />
     <Compile Include="Instrukcije.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
