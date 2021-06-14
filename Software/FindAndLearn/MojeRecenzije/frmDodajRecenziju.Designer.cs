@@ -30,12 +30,12 @@ namespace FindAndLearn.MojeRecenzije
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.gbProfil = new System.Windows.Forms.GroupBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblRecenzije = new System.Windows.Forms.Label();
             this.btnDodajRecenziju = new System.Windows.Forms.Button();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
             this.btnHelp = new System.Windows.Forms.Button();
@@ -49,14 +49,14 @@ namespace FindAndLearn.MojeRecenzije
             this.lblOcjena = new System.Windows.Forms.Label();
             this.lblInstruktor2 = new System.Windows.Forms.Label();
             this.dgvMojeRecenzije = new System.Windows.Forms.DataGridView();
+            this.btnObrisiRecenziju = new System.Windows.Forms.Button();
+            this.lblMojeRecenzije = new System.Windows.Forms.Label();
+            this.lblTrenutniStudent = new System.Windows.Forms.Label();
             this.instruktoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ocjenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.komentarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recenzijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnObrisiRecenziju = new System.Windows.Forms.Button();
-            this.lblMojeRecenzije = new System.Windows.Forms.Label();
             this.rezervacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblTrenutniStudent = new System.Windows.Forms.Label();
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbInstruktor.SuspendLayout();
@@ -86,7 +86,7 @@ namespace FindAndLearn.MojeRecenzije
             this.gbProfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbProfil.Controls.Add(this.pbLogo);
-            this.gbProfil.Controls.Add(this.label2);
+            this.gbProfil.Controls.Add(this.lblRecenzije);
             this.gbProfil.Location = new System.Drawing.Point(-3, -2);
             this.gbProfil.Margin = new System.Windows.Forms.Padding(4);
             this.gbProfil.Name = "gbProfil";
@@ -105,17 +105,17 @@ namespace FindAndLearn.MojeRecenzije
             this.pbLogo.TabIndex = 69;
             this.pbLogo.TabStop = false;
             // 
-            // label2
+            // lblRecenzije
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.label2.Location = new System.Drawing.Point(103, 34);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 25);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "RECENZIJE";
+            this.lblRecenzije.AutoSize = true;
+            this.lblRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblRecenzije.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.lblRecenzije.Location = new System.Drawing.Point(103, 34);
+            this.lblRecenzije.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRecenzije.Name = "lblRecenzije";
+            this.lblRecenzije.Size = new System.Drawing.Size(121, 25);
+            this.lblRecenzije.TabIndex = 68;
+            this.lblRecenzije.Text = "RECENZIJE";
             // 
             // btnDodajRecenziju
             // 
@@ -265,8 +265,8 @@ namespace FindAndLearn.MojeRecenzije
             // 
             // dgvMojeRecenzije
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.dgvMojeRecenzije.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.dgvMojeRecenzije.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMojeRecenzije.AutoGenerateColumns = false;
             this.dgvMojeRecenzije.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvMojeRecenzije.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -277,20 +277,56 @@ namespace FindAndLearn.MojeRecenzije
             this.ocjenaDataGridViewTextBoxColumn,
             this.komentarDataGridViewTextBoxColumn});
             this.dgvMojeRecenzije.DataSource = this.recenzijeBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMojeRecenzije.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMojeRecenzije.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvMojeRecenzije.Location = new System.Drawing.Point(896, 139);
             this.dgvMojeRecenzije.Name = "dgvMojeRecenzije";
             this.dgvMojeRecenzije.RowHeadersWidth = 51;
             this.dgvMojeRecenzije.RowTemplate.Height = 24;
             this.dgvMojeRecenzije.Size = new System.Drawing.Size(535, 344);
             this.dgvMojeRecenzije.TabIndex = 174;
+            // 
+            // btnObrisiRecenziju
+            // 
+            this.btnObrisiRecenziju.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.btnObrisiRecenziju.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnObrisiRecenziju.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnObrisiRecenziju.Location = new System.Drawing.Point(1078, 512);
+            this.btnObrisiRecenziju.Margin = new System.Windows.Forms.Padding(4);
+            this.btnObrisiRecenziju.Name = "btnObrisiRecenziju";
+            this.btnObrisiRecenziju.Size = new System.Drawing.Size(203, 36);
+            this.btnObrisiRecenziju.TabIndex = 170;
+            this.btnObrisiRecenziju.Text = "Obriši recenziju";
+            this.btnObrisiRecenziju.UseVisualStyleBackColor = false;
+            this.btnObrisiRecenziju.Click += new System.EventHandler(this.btnObrisiRecenziju_Click);
+            // 
+            // lblMojeRecenzije
+            // 
+            this.lblMojeRecenzije.AutoSize = true;
+            this.lblMojeRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMojeRecenzije.Location = new System.Drawing.Point(892, 110);
+            this.lblMojeRecenzije.Name = "lblMojeRecenzije";
+            this.lblMojeRecenzije.Size = new System.Drawing.Size(138, 20);
+            this.lblMojeRecenzije.TabIndex = 170;
+            this.lblMojeRecenzije.Text = "Moje recenzije:";
+            // 
+            // lblTrenutniStudent
+            // 
+            this.lblTrenutniStudent.AutoSize = true;
+            this.lblTrenutniStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTrenutniStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.lblTrenutniStudent.Location = new System.Drawing.Point(184, 21);
+            this.lblTrenutniStudent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTrenutniStudent.Name = "lblTrenutniStudent";
+            this.lblTrenutniStudent.Size = new System.Drawing.Size(79, 20);
+            this.lblTrenutniStudent.TabIndex = 23;
+            this.lblTrenutniStudent.Text = "Student:";
             // 
             // instruktoriDataGridViewTextBoxColumn
             // 
@@ -320,45 +356,9 @@ namespace FindAndLearn.MojeRecenzije
             // 
             this.recenzijeBindingSource.DataSource = typeof(FindAndLearn.Recenzije);
             // 
-            // btnObrisiRecenziju
-            // 
-            this.btnObrisiRecenziju.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.btnObrisiRecenziju.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnObrisiRecenziju.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnObrisiRecenziju.Location = new System.Drawing.Point(1078, 512);
-            this.btnObrisiRecenziju.Margin = new System.Windows.Forms.Padding(4);
-            this.btnObrisiRecenziju.Name = "btnObrisiRecenziju";
-            this.btnObrisiRecenziju.Size = new System.Drawing.Size(203, 36);
-            this.btnObrisiRecenziju.TabIndex = 170;
-            this.btnObrisiRecenziju.Text = "Obriši recenziju";
-            this.btnObrisiRecenziju.UseVisualStyleBackColor = false;
-            this.btnObrisiRecenziju.Click += new System.EventHandler(this.btnObrisiRecenziju_Click);
-            // 
-            // lblMojeRecenzije
-            // 
-            this.lblMojeRecenzije.AutoSize = true;
-            this.lblMojeRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMojeRecenzije.Location = new System.Drawing.Point(892, 110);
-            this.lblMojeRecenzije.Name = "lblMojeRecenzije";
-            this.lblMojeRecenzije.Size = new System.Drawing.Size(138, 20);
-            this.lblMojeRecenzije.TabIndex = 170;
-            this.lblMojeRecenzije.Text = "Moje recenzije:";
-            // 
             // rezervacijeBindingSource
             // 
             this.rezervacijeBindingSource.DataSource = typeof(FindAndLearn.Rezervacije);
-            // 
-            // lblTrenutniStudent
-            // 
-            this.lblTrenutniStudent.AutoSize = true;
-            this.lblTrenutniStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTrenutniStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblTrenutniStudent.Location = new System.Drawing.Point(184, 21);
-            this.lblTrenutniStudent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTrenutniStudent.Name = "lblTrenutniStudent";
-            this.lblTrenutniStudent.Size = new System.Drawing.Size(79, 20);
-            this.lblTrenutniStudent.TabIndex = 23;
-            this.lblTrenutniStudent.Text = "Student:";
             // 
             // frmDodajRecenziju
             // 
@@ -372,8 +372,9 @@ namespace FindAndLearn.MojeRecenzije
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbInstruktor);
             this.Controls.Add(this.gbIzbornik);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmDodajRecenziju";
-            this.Text = "frmDodajRecenziju";
+            this.Text = "Recenzije";
             this.Load += new System.EventHandler(this.frmDodajRecenziju_Load);
             this.gbProfil.ResumeLayout(false);
             this.gbProfil.PerformLayout();
@@ -396,7 +397,7 @@ namespace FindAndLearn.MojeRecenzije
         private System.Windows.Forms.Button btnZatvori;
         private System.Windows.Forms.GroupBox gbProfil;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblRecenzije;
         private System.Windows.Forms.BindingSource rezervacijeBindingSource;
         private System.Windows.Forms.Button btnDodajRecenziju;
         private System.Windows.Forms.GroupBox gbInstruktor;
