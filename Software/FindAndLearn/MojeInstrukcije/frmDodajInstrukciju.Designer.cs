@@ -44,6 +44,7 @@ namespace FindAndLearn.MojeInstrukcije
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
+            this.lblTrenutniInstruktor = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
             this.lblTipInstrukcija = new System.Windows.Forms.Label();
             this.lblVrstaKolegija = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@ namespace FindAndLearn.MojeInstrukcije
             this.btnObrisiInstrukciju = new System.Windows.Forms.Button();
             this.lblKn = new System.Windows.Forms.Label();
             this.gbDodajInstrukciju = new System.Windows.Forms.GroupBox();
-            this.lblTrenutniInstruktor = new System.Windows.Forms.Label();
             this.tipinstrukcijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolegijiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisinstrukcijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,6 +164,18 @@ namespace FindAndLearn.MojeInstrukcije
             this.gbInstruktor.Size = new System.Drawing.Size(1613, 60);
             this.gbInstruktor.TabIndex = 107;
             this.gbInstruktor.TabStop = false;
+            // 
+            // lblTrenutniInstruktor
+            // 
+            this.lblTrenutniInstruktor.AutoSize = true;
+            this.lblTrenutniInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTrenutniInstruktor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.lblTrenutniInstruktor.Location = new System.Drawing.Point(186, 21);
+            this.lblTrenutniInstruktor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTrenutniInstruktor.Name = "lblTrenutniInstruktor";
+            this.lblTrenutniInstruktor.Size = new System.Drawing.Size(101, 20);
+            this.lblTrenutniInstruktor.TabIndex = 23;
+            this.lblTrenutniInstruktor.Text = "Instruktor: ";
             // 
             // btnHelp
             // 
@@ -381,18 +393,6 @@ namespace FindAndLearn.MojeInstrukcije
             this.gbDodajInstrukciju.TabStop = false;
             this.gbDodajInstrukciju.Text = "Dodaj instrukciju";
             // 
-            // lblTrenutniInstruktor
-            // 
-            this.lblTrenutniInstruktor.AutoSize = true;
-            this.lblTrenutniInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTrenutniInstruktor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblTrenutniInstruktor.Location = new System.Drawing.Point(186, 21);
-            this.lblTrenutniInstruktor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTrenutniInstruktor.Name = "lblTrenutniInstruktor";
-            this.lblTrenutniInstruktor.Size = new System.Drawing.Size(101, 20);
-            this.lblTrenutniInstruktor.TabIndex = 23;
-            this.lblTrenutniInstruktor.Text = "Instruktor: ";
-            // 
             // tipinstrukcijaDataGridViewTextBoxColumn
             // 
             this.tipinstrukcijaDataGridViewTextBoxColumn.DataPropertyName = "Tip_instrukcija";
@@ -451,9 +451,10 @@ namespace FindAndLearn.MojeInstrukcije
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbIzbornik);
             this.Controls.Add(this.gbInstruktor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDodajInstrukciju";
-            this.Text = "frmDodajInstrukciju";
+            this.Text = "Instrukcije";
             this.Load += new System.EventHandler(this.frmDodajInstrukciju_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.gbProfil.ResumeLayout(false);

@@ -49,6 +49,7 @@ namespace FindAndLearn.MojeRezervacije
             this.lblStudent = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
             this.gbInstruktor = new System.Windows.Forms.GroupBox();
+            this.lblTrenutniStudent = new System.Windows.Forms.Label();
             this.btnZatraziRezervaciju = new System.Windows.Forms.Button();
             this.btnZatvori = new System.Windows.Forms.Button();
             this.gbIzbornik = new System.Windows.Forms.GroupBox();
@@ -79,7 +80,6 @@ namespace FindAndLearn.MojeRezervacije
             this.mjestoodrzavanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kapacitetterminaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.terminiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblTrenutniStudent = new System.Windows.Forms.Label();
             this.gbInstruktor.SuspendLayout();
             this.gbIzbornik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -132,6 +132,18 @@ namespace FindAndLearn.MojeRezervacije
             this.gbInstruktor.Size = new System.Drawing.Size(1845, 60);
             this.gbInstruktor.TabIndex = 154;
             this.gbInstruktor.TabStop = false;
+            // 
+            // lblTrenutniStudent
+            // 
+            this.lblTrenutniStudent.AutoSize = true;
+            this.lblTrenutniStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTrenutniStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
+            this.lblTrenutniStudent.Location = new System.Drawing.Point(164, 21);
+            this.lblTrenutniStudent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTrenutniStudent.Name = "lblTrenutniStudent";
+            this.lblTrenutniStudent.Size = new System.Drawing.Size(79, 20);
+            this.lblTrenutniStudent.TabIndex = 23;
+            this.lblTrenutniStudent.Text = "Student:";
             // 
             // btnZatraziRezervaciju
             // 
@@ -498,18 +510,6 @@ namespace FindAndLearn.MojeRezervacije
             // 
             this.terminiBindingSource.DataSource = typeof(FindAndLearn.Termini);
             // 
-            // lblTrenutniStudent
-            // 
-            this.lblTrenutniStudent.AutoSize = true;
-            this.lblTrenutniStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTrenutniStudent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblTrenutniStudent.Location = new System.Drawing.Point(164, 21);
-            this.lblTrenutniStudent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTrenutniStudent.Name = "lblTrenutniStudent";
-            this.lblTrenutniStudent.Size = new System.Drawing.Size(79, 20);
-            this.lblTrenutniStudent.TabIndex = 23;
-            this.lblTrenutniStudent.Text = "Student:";
-            // 
             // frmZatraziRezervaciju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -521,9 +521,10 @@ namespace FindAndLearn.MojeRezervacije
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbIzbornik);
             this.Controls.Add(this.gbInstruktor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmZatraziRezervaciju";
-            this.Text = "frmZatraziRezervaciju";
+            this.Text = "Zatraži rezervaciju";
             this.Load += new System.EventHandler(this.frmZatraziRezervaciju_Load);
             this.gbInstruktor.ResumeLayout(false);
             this.gbInstruktor.PerformLayout();
