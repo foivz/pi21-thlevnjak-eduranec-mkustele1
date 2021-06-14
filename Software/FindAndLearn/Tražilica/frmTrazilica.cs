@@ -51,7 +51,7 @@ namespace FindAndLearn.Tražilica
                                     email = x.Email,
                                     mobitel = x.Mobitel,
                                     slika = x.Slika
-                                }).Distinct().ToList();
+                                }).ToList();
 
                     var upit2 = from u in upit
                                 where u.ime.ToLower().Contains(imePrezime.ToLower())
