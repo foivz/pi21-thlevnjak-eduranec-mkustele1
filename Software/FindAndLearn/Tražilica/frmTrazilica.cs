@@ -24,58 +24,103 @@ namespace FindAndLearn.Tražilica
             lblNaslovDatagrida.Visible = false;
         }
 
-        public void PronadjiInstruktore(string imePrezime = null, string korisnickoIme = null)
+        public void PronadjiInstruktore(string imePrezime = null, string nazivKolegija = null)
         {
-            if (imePrezime != null)
+            if (imePrezime != null && nazivKolegija == null)
             {
                 using (var context = new Entities())
                 {
                     List<Instruktori> popisInstruktora = new List<Instruktori>();
 
-                    var upit = from i in context.Instruktori
-                                where i.ime.Contains(imePrezime) || i.prezime.Contains(imePrezime)
-                                select i;
+                    var upit = (from i in context.Instruktori
+                                select new
+                                {
+                                    ImePrezime = i.ime + " " + i.prezime,
+                                    KorisnickoIme = i.korisnicko_ime,
+                                    Titula = i.titula,
+                                    Email = i.email,
+                                    Mobitel = i.mobitel,
+                                    Slika = i.slika
+                                }).ToList().Select(x => new Instruktori
+                                {
+                                    ime = x.ImePrezime,
+                                    korisnicko_ime = x.KorisnickoIme,
+                                    titula = x.Titula,
+                                    email = x.Email,
+                                    mobitel = x.Mobitel,
+                                    slika = x.Slika
+                                }).ToList();
 
-                    popisInstruktora = upit.ToList();
+                    var upit2 = from u in upit
+                                where u.ime.ToLower().Contains(imePrezime.ToLower())
+                                select u;
+
+                    popisInstruktora = upit2.ToList();
 
                     dtgSviInstruktoriNaKolegiju.DataSource = popisInstruktora;
+                    dtgSviInstruktoriNaKolegiju.Columns["ID_instruktora"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["Instrukcije"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["Poruke"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["Recenzije"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["prezime"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["lozinka"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["ulica"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["mjesto"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["opis"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["ime"].HeaderText = "Ime i prezime";
+                    dtgSviInstruktoriNaKolegiju.Columns["korisnicko_ime"].HeaderText = "Korisničko ime";
+                    dtgSviInstruktoriNaKolegiju.Columns["email"].HeaderText = "Email";
+                    dtgSviInstruktoriNaKolegiju.Columns["mobitel"].HeaderText = "Mobitel";
+                    dtgSviInstruktoriNaKolegiju.Columns["titula"].HeaderText = "Titula";
+                    dtgSviInstruktoriNaKolegiju.Columns["slika"].HeaderText = "Slika";
                 }
             }
-            if (korisnickoIme != null)
+            if (imePrezime == null && nazivKolegija != null)
             {
-                using (var context = new Entities())
-                {
-                    List<Instruktori> popisInstruktora = new List<Instruktori>();
-
-                    var upit = from i in context.Instruktori
-                               where i.korisnicko_ime.Contains(korisnickoIme)
-                               select i;
-
-                    popisInstruktora = upit.ToList();
-
-                    dtgSviInstruktoriNaKolegiju.DataSource = popisInstruktora;
-                }
-            }
-        }
-
-        public void PronadjiRecenzijeZaKolegij(Kolegiji kolegij, string nazivKolegija)
-        {
-            if (kolegij != null)
-            {
+                Kolegiji kolegij = new Kolegiji();
                 using (var context = new Entities())
                 {
                     List<Instruktori> listaInstruktora = new List<Instruktori>();
 
-                    var upit = from instruktori in context.Instruktori
-                               join instrukcije in context.Instrukcije on instruktori.ID_instruktora equals instrukcije.instruktor_id
-                               join kolegiji in context.Kolegiji on instrukcije.kolegij_id equals kolegij.ID_kolegija
-                               where kolegiji.naziv_kolegija.Contains(nazivKolegija)
-                               select instruktori;
+                    var upit = (from i in context.Instruktori
+                                join ins in context.Instrukcije on i.ID_instruktora equals ins.instruktor_id
+                                join kol in context.Kolegiji on ins.kolegij_id equals kol.ID_kolegija
+                                where kol.naziv_kolegija.ToLower().Contains(nazivKolegija.ToLower())
+                                select new { 
+                                    ImePrezime = i.ime + " " + i.prezime,
+                                    KorisnickoIme = i.korisnicko_ime,
+                                    Titula = i.titula,
+                                    Email = i.email,
+                                    Mobitel = i.mobitel,
+                                    Slika = i.slika
+                                }).ToList().Select(x=> new Instruktori
+                                {
+                                    ime = x.ImePrezime,
+                                    korisnicko_ime = x.KorisnickoIme,
+                                    titula = x.Titula,
+                                    email = x.Email,
+                                    mobitel = x.Mobitel,
+                                    slika = x.Slika
+                                }).ToList();
 
                     listaInstruktora = upit.ToList();
 
                     dtgSviInstruktoriNaKolegiju.DataSource = listaInstruktora;
                     dtgSviInstruktoriNaKolegiju.Columns["ID_instruktora"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["Instrukcije"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["Poruke"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["Recenzije"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["prezime"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["lozinka"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["ulica"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["mjesto"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["opis"].Visible = false;
+                    dtgSviInstruktoriNaKolegiju.Columns["ime"].HeaderText = "Ime i prezime";
+                    dtgSviInstruktoriNaKolegiju.Columns["korisnicko_ime"].HeaderText = "Korisničko ime";
+                    dtgSviInstruktoriNaKolegiju.Columns["email"].HeaderText = "Email";
+                    dtgSviInstruktoriNaKolegiju.Columns["mobitel"].HeaderText = "Mobitel";
+                    dtgSviInstruktoriNaKolegiju.Columns["titula"].HeaderText = "Titula";
+                    dtgSviInstruktoriNaKolegiju.Columns["slika"].HeaderText = "Slika";
                 }
             }
         }
@@ -83,7 +128,7 @@ namespace FindAndLearn.Tražilica
         private void txtInstruktor_KeyUp(object sender, KeyEventArgs e)
         {
             lblNaslovDatagrida.Visible = true;
-            lblNaslovDatagrida.Text = "Instruktori";
+            lblNaslovDatagrida.Text = "Popis instruktora po imenu";
             string imePrezime = txtInstruktor.Text;
             try
             {
@@ -106,9 +151,8 @@ namespace FindAndLearn.Tražilica
         private void txtKolegij_KeyUp(object sender, KeyEventArgs e)
         {
             lblNaslovDatagrida.Visible = true;
-            lblNaslovDatagrida.Text = "Kolegiji";
+            lblNaslovDatagrida.Text = "Popis instruktora po kolegijima";
             string nazivKolegija = txtKolegij.Text;
-            Kolegiji kolegij = new Kolegiji();
             try
             {
                 if (nazivKolegija == "")
@@ -118,7 +162,7 @@ namespace FindAndLearn.Tražilica
                 }
                 else
                 {
-                    PronadjiRecenzijeZaKolegij(kolegij, nazivKolegija);
+                    PronadjiInstruktore(null, nazivKolegija);
                 }
             }
             catch
@@ -145,6 +189,11 @@ namespace FindAndLearn.Tražilica
                     MessageBox.Show($"Instruktor {instruktor.ime} {instruktor.prezime} nije recenziran!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnZatvori_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

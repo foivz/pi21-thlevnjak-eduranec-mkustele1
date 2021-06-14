@@ -365,7 +365,10 @@ namespace FindAndLearn.Profil
             this.Controls.Add(this.gbOsnovno);
             this.Controls.Add(this.gbAdresa);
             this.Controls.Add(this.gbKontakt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmOMeniInstruktor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "O Meni ";
             this.Load += new System.EventHandler(this.frmOMeniInstruktor_Load);
             this.gbKratkiOpis.ResumeLayout(false);

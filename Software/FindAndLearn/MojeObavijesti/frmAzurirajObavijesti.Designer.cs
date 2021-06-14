@@ -132,7 +132,10 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.txtNaslov);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmAzurirajObavijesti";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ažuriraj obavijesti";
             this.Load += new System.EventHandler(this.frmAzurirajObavijesti_Load);
             this.ResumeLayout(false);

@@ -220,10 +220,10 @@ namespace FindAndLearn.Profil
             // lblUlica
             // 
             this.lblUlica.AutoSize = true;
-            this.lblUlica.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblUlica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblUlica.Location = new System.Drawing.Point(14, 82);
             this.lblUlica.Name = "lblUlica";
-            this.lblUlica.Size = new System.Drawing.Size(39, 17);
+            this.lblUlica.Size = new System.Drawing.Size(38, 15);
             this.lblUlica.TabIndex = 25;
             this.lblUlica.Text = "Ulica:";
             // 
@@ -263,10 +263,10 @@ namespace FindAndLearn.Profil
             // lblMobitel
             // 
             this.lblMobitel.AutoSize = true;
-            this.lblMobitel.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblMobitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblMobitel.Location = new System.Drawing.Point(17, 86);
             this.lblMobitel.Name = "lblMobitel";
-            this.lblMobitel.Size = new System.Drawing.Size(53, 17);
+            this.lblMobitel.Size = new System.Drawing.Size(51, 15);
             this.lblMobitel.TabIndex = 17;
             this.lblMobitel.Text = "Mobitel:";
             // 
@@ -343,7 +343,10 @@ namespace FindAndLearn.Profil
             this.Controls.Add(this.gbOsnovno);
             this.Controls.Add(this.gbAdresa);
             this.Controls.Add(this.gbKontakt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmOMeniStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "O meni";
             this.Load += new System.EventHandler(this.frmOMeniStudent_Load);
             this.gbKratkiOpis.ResumeLayout(false);

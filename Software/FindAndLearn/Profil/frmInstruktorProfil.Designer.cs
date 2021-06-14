@@ -515,11 +515,11 @@ namespace FindAndLearn.Profil
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.label2.Location = new System.Drawing.Point(77, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 22);
+            this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 68;
             this.label2.Text = "PROFIL";
             // 
@@ -529,7 +529,7 @@ namespace FindAndLearn.Profil
             this.gbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbProfil.Controls.Add(this.pbLogo);
             this.gbProfil.Controls.Add(this.label2);
-            this.gbProfil.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gbProfil.Location = new System.Drawing.Point(-2, -8);
             this.gbProfil.Name = "gbProfil";
             this.gbProfil.Size = new System.Drawing.Size(211, 75);
@@ -551,7 +551,7 @@ namespace FindAndLearn.Profil
             this.gbIzbornik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbIzbornik.Controls.Add(this.btnZatvori);
             this.gbIzbornik.Controls.Add(this.btnProfil);
-            this.gbIzbornik.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbIzbornik.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gbIzbornik.Location = new System.Drawing.Point(-8, 35);
             this.gbIzbornik.Name = "gbIzbornik";
             this.gbIzbornik.Size = new System.Drawing.Size(217, 657);
@@ -602,7 +602,7 @@ namespace FindAndLearn.Profil
             this.gbInstruktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbInstruktor.Controls.Add(this.btnHelp);
             this.gbInstruktor.Controls.Add(this.lblInstruktor);
-            this.gbInstruktor.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gbInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gbInstruktor.Location = new System.Drawing.Point(173, -7);
             this.gbInstruktor.Name = "gbInstruktor";
             this.gbInstruktor.Size = new System.Drawing.Size(1210, 49);
@@ -648,7 +648,10 @@ namespace FindAndLearn.Profil
             this.Controls.Add(this.lblImePrezime);
             this.Controls.Add(this.gbKratkiOpis);
             this.Controls.Add(this.gbKontakt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmInstruktorProfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Profil";
             this.Load += new System.EventHandler(this.frmInstruktorProfil_Load);
             this.gbKratkiOpis.ResumeLayout(false);

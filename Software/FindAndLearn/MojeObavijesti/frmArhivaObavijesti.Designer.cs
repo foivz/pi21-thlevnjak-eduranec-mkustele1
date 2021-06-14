@@ -199,7 +199,10 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.btnProcitaj);
             this.Controls.Add(this.dgvPopisObavijesti);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmArhivaObavijesti";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Arhiva obavijesti";
             this.Load += new System.EventHandler(this.frmArhivaObavijesti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPopisObavijesti)).EndInit();

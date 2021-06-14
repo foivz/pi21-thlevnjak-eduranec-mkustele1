@@ -70,11 +70,11 @@ namespace FindAndLearn.MojeObavijesti
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.label2.Location = new System.Drawing.Point(77, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 22);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 68;
             this.label2.Text = "OBAVIJESTI";
             // 
@@ -102,11 +102,11 @@ namespace FindAndLearn.MojeObavijesti
             // lblInstruktor
             // 
             this.lblInstruktor.AutoSize = true;
-            this.lblInstruktor.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblInstruktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblInstruktor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.lblInstruktor.Location = new System.Drawing.Point(58, 17);
             this.lblInstruktor.Name = "lblInstruktor";
-            this.lblInstruktor.Size = new System.Drawing.Size(79, 18);
+            this.lblInstruktor.Size = new System.Drawing.Size(75, 16);
             this.lblInstruktor.TabIndex = 3;
             this.lblInstruktor.Text = "Instruktor ";
             // 
@@ -409,7 +409,10 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbInstruktor);
             this.Controls.Add(this.gbIzbornik);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmObavijestiInstruktor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Obavijesti";
             this.Load += new System.EventHandler(this.frmObavijestiInstruktor_Load);
             this.gbProfil.ResumeLayout(false);

@@ -69,7 +69,7 @@ namespace FindAndLearn.Tražilica
             this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdjava.Location = new System.Drawing.Point(582, 15);
+            this.btnOdjava.Location = new System.Drawing.Point(375, 15);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(90, 25);
             this.btnOdjava.TabIndex = 23;
@@ -81,7 +81,7 @@ namespace FindAndLearn.Tražilica
             this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnHelp.Location = new System.Drawing.Point(678, 15);
+            this.btnHelp.Location = new System.Drawing.Point(471, 15);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(90, 25);
             this.btnHelp.TabIndex = 22;
@@ -116,11 +116,11 @@ namespace FindAndLearn.Tražilica
             this.btnZatvori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnZatvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnZatvori.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnZatvori.Location = new System.Drawing.Point(16, 536);
+            this.btnZatvori.Location = new System.Drawing.Point(18, 392);
             this.btnZatvori.Name = "btnZatvori";
             this.btnZatvori.Size = new System.Drawing.Size(184, 31);
             this.btnZatvori.TabIndex = 30;
-            this.btnZatvori.Text = "ZATVORI";
+            this.btnZatvori.Text = "Zatvori";
             this.btnZatvori.UseVisualStyleBackColor = false;
             this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
@@ -184,7 +184,7 @@ namespace FindAndLearn.Tražilica
             this.dtgPopisKomentara.Location = new System.Drawing.Point(235, 158);
             this.dtgPopisKomentara.Name = "dtgPopisKomentara";
             this.dtgPopisKomentara.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dtgPopisKomentara.Size = new System.Drawing.Size(707, 442);
+            this.dtgPopisKomentara.Size = new System.Drawing.Size(500, 298);
             this.dtgPopisKomentara.TabIndex = 83;
             // 
             // lblKomentari
@@ -221,7 +221,7 @@ namespace FindAndLearn.Tražilica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 612);
+            this.ClientSize = new System.Drawing.Size(749, 468);
             this.Controls.Add(this.dtgPopisKomentara);
             this.Controls.Add(this.lblOcjena);
             this.Controls.Add(this.lblKomentari);

@@ -41,7 +41,7 @@ namespace FindAndLearn.MojeObavijesti
             // 
             this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnNatrag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNatrag.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnNatrag.Location = new System.Drawing.Point(315, 200);
             this.btnNatrag.Name = "btnNatrag";
             this.btnNatrag.Size = new System.Drawing.Size(75, 23);
@@ -83,20 +83,20 @@ namespace FindAndLearn.MojeObavijesti
             // lblDatum
             // 
             this.lblDatum.AutoSize = true;
-            this.lblDatum.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblDatum.Location = new System.Drawing.Point(134, 40);
             this.lblDatum.Name = "lblDatum";
-            this.lblDatum.Size = new System.Drawing.Size(75, 17);
+            this.lblDatum.Size = new System.Drawing.Size(74, 15);
             this.lblDatum.TabIndex = 31;
             this.lblDatum.Text = "26.4. 2021.  ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(110, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 17);
+            this.label1.Size = new System.Drawing.Size(13, 15);
             this.label1.TabIndex = 36;
             this.label1.Text = "| ";
             // 
@@ -113,7 +113,10 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.lblNaslov);
             this.Controls.Add(this.lblDatum);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmProcitajObavijesti";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pročitaj obavijesti";
             this.Load += new System.EventHandler(this.frmProcitajObavijesti_Load);
             this.ResumeLayout(false);

@@ -614,7 +614,10 @@ namespace FindAndLearn.Profil
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbIzbornik);
             this.Controls.Add(this.gbStudent);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmStudentProfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Profil";
             this.Load += new System.EventHandler(this.frmStudentProfil_Load);
             this.gbProfil.ResumeLayout(false);

@@ -105,12 +105,5 @@ namespace FindAndLearn.MojiTermini
         {
             Close();
         }
-
-        private void btnOdjava_Click(object sender, EventArgs e)
-        {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
-            this.Close();
-        }
     }
 }

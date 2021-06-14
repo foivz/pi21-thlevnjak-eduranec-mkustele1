@@ -46,12 +46,6 @@ namespace FindAndLearn.MojeInstrukcije
             instrukcijeBindingSource.DataSource = entities.Instrukcije.Local.Where(x=>x.instruktor_id==TrenutniInstruktor.ID_instruktora);
             lblTrenutniInstruktor.Text = TrenutniInstruktor.ToString();
         }
-        private void btnOdjava_Click(object sender, EventArgs e)
-        {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
-            this.Close();
-        }
 
         private void btnDodajInstrukciju_Click(object sender, EventArgs e)
         {

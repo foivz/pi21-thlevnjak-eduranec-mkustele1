@@ -287,7 +287,10 @@ namespace FindAndLearn.MojeObavijesti
             this.Controls.Add(this.gbDetaljiTermina);
             this.Controls.Add(this.gbInstrukcija);
             this.Controls.Add(this.lblNazivTermina);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmDetaljiTermina";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detalji termina";
             this.Load += new System.EventHandler(this.frmDetaljiTermina_Load);
             this.gbDetaljiTermina.ResumeLayout(false);

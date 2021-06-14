@@ -73,13 +73,6 @@ namespace FindAndLearn.MojeRezervacije
             Osvjezi();
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
-        {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
-            this.Close();
-        }
-
         private void btnZatvori_Click(object sender, EventArgs e)
         {
             this.Close();

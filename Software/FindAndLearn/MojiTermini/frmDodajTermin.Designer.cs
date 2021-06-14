@@ -53,23 +53,23 @@ namespace FindAndLearn.MojiTermini
             this.txtMjesto = new System.Windows.Forms.TextBox();
             this.txtKapacitet = new System.Windows.Forms.TextBox();
             this.dgvTermini = new System.Windows.Forms.DataGridView();
-            this.btnObrisiTermin = new System.Windows.Forms.Button();
-            this.lblStud = new System.Windows.Forms.Label();
-            this.gbDodajTermin = new System.Windows.Forms.GroupBox();
             this.nazivterminaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vrijemeterminaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trajanjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mjestoodrzavanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kapacitetterminaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.terminiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnObrisiTermin = new System.Windows.Forms.Button();
+            this.lblStud = new System.Windows.Forms.Label();
+            this.gbDodajTermin = new System.Windows.Forms.GroupBox();
             this.instrukcijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gbInstruktor.SuspendLayout();
             this.gbIzbornik.SuspendLayout();
             this.gbProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).BeginInit();
-            this.gbDodajTermin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).BeginInit();
+            this.gbDodajTermin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.instrukcijeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,10 +78,9 @@ namespace FindAndLearn.MojiTermini
             this.btnDodajTermin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnDodajTermin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDodajTermin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodajTermin.Location = new System.Drawing.Point(162, 393);
-            this.btnDodajTermin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDodajTermin.Location = new System.Drawing.Point(122, 319);
             this.btnDodajTermin.Name = "btnDodajTermin";
-            this.btnDodajTermin.Size = new System.Drawing.Size(203, 31);
+            this.btnDodajTermin.Size = new System.Drawing.Size(152, 25);
             this.btnDodajTermin.TabIndex = 123;
             this.btnDodajTermin.Text = "Dodaj termin";
             this.btnDodajTermin.UseVisualStyleBackColor = false;
@@ -91,10 +90,9 @@ namespace FindAndLearn.MojiTermini
             // 
             this.lblVrijemeTermina.AutoSize = true;
             this.lblVrijemeTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblVrijemeTermina.Location = new System.Drawing.Point(16, 87);
-            this.lblVrijemeTermina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVrijemeTermina.Location = new System.Drawing.Point(12, 71);
             this.lblVrijemeTermina.Name = "lblVrijemeTermina";
-            this.lblVrijemeTermina.Size = new System.Drawing.Size(148, 20);
+            this.lblVrijemeTermina.Size = new System.Drawing.Size(126, 17);
             this.lblVrijemeTermina.TabIndex = 128;
             this.lblVrijemeTermina.Text = "Vrijeme termina:";
             // 
@@ -102,10 +100,9 @@ namespace FindAndLearn.MojiTermini
             // 
             this.lblNazivTermina.AutoSize = true;
             this.lblNazivTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblNazivTermina.Location = new System.Drawing.Point(16, 40);
-            this.lblNazivTermina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNazivTermina.Location = new System.Drawing.Point(12, 32);
             this.lblNazivTermina.Name = "lblNazivTermina";
-            this.lblNazivTermina.Size = new System.Drawing.Size(131, 20);
+            this.lblNazivTermina.Size = new System.Drawing.Size(112, 17);
             this.lblNazivTermina.TabIndex = 124;
             this.lblNazivTermina.Text = "Naziv termina:";
             // 
@@ -114,11 +111,9 @@ namespace FindAndLearn.MojiTermini
             this.gbInstruktor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbInstruktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbInstruktor.Controls.Add(this.btnHelp);
-            this.gbInstruktor.Location = new System.Drawing.Point(234, 3);
-            this.gbInstruktor.Margin = new System.Windows.Forms.Padding(4);
+            this.gbInstruktor.Location = new System.Drawing.Point(176, 2);
             this.gbInstruktor.Name = "gbInstruktor";
-            this.gbInstruktor.Padding = new System.Windows.Forms.Padding(4);
-            this.gbInstruktor.Size = new System.Drawing.Size(1613, 60);
+            this.gbInstruktor.Size = new System.Drawing.Size(1210, 49);
             this.gbInstruktor.TabIndex = 126;
             this.gbInstruktor.TabStop = false;
             // 
@@ -127,10 +122,9 @@ namespace FindAndLearn.MojiTermini
             this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnHelp.Location = new System.Drawing.Point(1188, 16);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHelp.Location = new System.Drawing.Point(891, 13);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(120, 31);
+            this.btnHelp.Size = new System.Drawing.Size(90, 25);
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
@@ -140,10 +134,9 @@ namespace FindAndLearn.MojiTermini
             this.btnZatvori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnZatvori.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnZatvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZatvori.Location = new System.Drawing.Point(21, 395);
-            this.btnZatvori.Margin = new System.Windows.Forms.Padding(4);
+            this.btnZatvori.Location = new System.Drawing.Point(16, 321);
             this.btnZatvori.Name = "btnZatvori";
-            this.btnZatvori.Size = new System.Drawing.Size(245, 38);
+            this.btnZatvori.Size = new System.Drawing.Size(184, 31);
             this.btnZatvori.TabIndex = 25;
             this.btnZatvori.Text = "Zatvori";
             this.btnZatvori.UseVisualStyleBackColor = false;
@@ -154,11 +147,9 @@ namespace FindAndLearn.MojiTermini
             this.gbIzbornik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
             this.gbIzbornik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbIzbornik.Controls.Add(this.btnZatvori);
-            this.gbIzbornik.Location = new System.Drawing.Point(-8, 99);
-            this.gbIzbornik.Margin = new System.Windows.Forms.Padding(4);
+            this.gbIzbornik.Location = new System.Drawing.Point(-6, 80);
             this.gbIzbornik.Name = "gbIzbornik";
-            this.gbIzbornik.Padding = new System.Windows.Forms.Padding(4);
-            this.gbIzbornik.Size = new System.Drawing.Size(289, 764);
+            this.gbIzbornik.Size = new System.Drawing.Size(217, 621);
             this.gbIzbornik.TabIndex = 125;
             this.gbIzbornik.TabStop = false;
             // 
@@ -168,21 +159,18 @@ namespace FindAndLearn.MojiTermini
             this.gbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbProfil.Controls.Add(this.pbLogo);
             this.gbProfil.Controls.Add(this.lblTermin);
-            this.gbProfil.Location = new System.Drawing.Point(0, 3);
-            this.gbProfil.Margin = new System.Windows.Forms.Padding(4);
+            this.gbProfil.Location = new System.Drawing.Point(0, 2);
             this.gbProfil.Name = "gbProfil";
-            this.gbProfil.Padding = new System.Windows.Forms.Padding(4);
-            this.gbProfil.Size = new System.Drawing.Size(281, 105);
+            this.gbProfil.Size = new System.Drawing.Size(211, 85);
             this.gbProfil.TabIndex = 127;
             this.gbProfil.TabStop = false;
             // 
             // pbLogo
             // 
             this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(0, 15);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo.Location = new System.Drawing.Point(0, 12);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(101, 73);
+            this.pbLogo.Size = new System.Drawing.Size(76, 59);
             this.pbLogo.TabIndex = 69;
             this.pbLogo.TabStop = false;
             // 
@@ -191,10 +179,9 @@ namespace FindAndLearn.MojiTermini
             this.lblTermin.AutoSize = true;
             this.lblTermin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblTermin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblTermin.Location = new System.Drawing.Point(134, 35);
-            this.lblTermin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTermin.Location = new System.Drawing.Point(100, 28);
             this.lblTermin.Name = "lblTermin";
-            this.lblTermin.Size = new System.Drawing.Size(92, 25);
+            this.lblTermin.Size = new System.Drawing.Size(75, 20);
             this.lblTermin.TabIndex = 68;
             this.lblTermin.Text = "TERMINI";
             // 
@@ -202,10 +189,9 @@ namespace FindAndLearn.MojiTermini
             // 
             this.lblTrajanjeTermina.AutoSize = true;
             this.lblTrajanjeTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblTrajanjeTermina.Location = new System.Drawing.Point(16, 138);
-            this.lblTrajanjeTermina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTrajanjeTermina.Location = new System.Drawing.Point(12, 112);
             this.lblTrajanjeTermina.Name = "lblTrajanjeTermina";
-            this.lblTrajanjeTermina.Size = new System.Drawing.Size(152, 20);
+            this.lblTrajanjeTermina.Size = new System.Drawing.Size(132, 17);
             this.lblTrajanjeTermina.TabIndex = 129;
             this.lblTrajanjeTermina.Text = "Trajanje termina:";
             // 
@@ -213,10 +199,9 @@ namespace FindAndLearn.MojiTermini
             // 
             this.lblMjestoOdrzavanja.AutoSize = true;
             this.lblMjestoOdrzavanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblMjestoOdrzavanja.Location = new System.Drawing.Point(16, 189);
-            this.lblMjestoOdrzavanja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMjestoOdrzavanja.Location = new System.Drawing.Point(12, 154);
             this.lblMjestoOdrzavanja.Name = "lblMjestoOdrzavanja";
-            this.lblMjestoOdrzavanja.Size = new System.Drawing.Size(168, 20);
+            this.lblMjestoOdrzavanja.Size = new System.Drawing.Size(145, 17);
             this.lblMjestoOdrzavanja.TabIndex = 140;
             this.lblMjestoOdrzavanja.Text = "Mjesto održavanja:";
             // 
@@ -224,56 +209,61 @@ namespace FindAndLearn.MojiTermini
             // 
             this.lblKapacitetTermina.AutoSize = true;
             this.lblKapacitetTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblKapacitetTermina.Location = new System.Drawing.Point(16, 244);
-            this.lblKapacitetTermina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblKapacitetTermina.Location = new System.Drawing.Point(12, 198);
             this.lblKapacitetTermina.Name = "lblKapacitetTermina";
-            this.lblKapacitetTermina.Size = new System.Drawing.Size(163, 20);
+            this.lblKapacitetTermina.Size = new System.Drawing.Size(140, 17);
             this.lblKapacitetTermina.TabIndex = 141;
             this.lblKapacitetTermina.Text = "Kapacitet termina:";
             // 
             // txtNaziv
             // 
-            this.txtNaziv.Location = new System.Drawing.Point(218, 40);
+            this.txtNaziv.Location = new System.Drawing.Point(164, 32);
+            this.txtNaziv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(253, 22);
+            this.txtNaziv.Size = new System.Drawing.Size(191, 20);
             this.txtNaziv.TabIndex = 142;
             // 
             // dtpVrijeme
             // 
             this.dtpVrijeme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpVrijeme.Location = new System.Drawing.Point(218, 85);
+            this.dtpVrijeme.Location = new System.Drawing.Point(164, 69);
+            this.dtpVrijeme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpVrijeme.Name = "dtpVrijeme";
-            this.dtpVrijeme.Size = new System.Drawing.Size(253, 22);
+            this.dtpVrijeme.Size = new System.Drawing.Size(191, 20);
             this.dtpVrijeme.TabIndex = 143;
             // 
             // txtTrajanje
             // 
-            this.txtTrajanje.Location = new System.Drawing.Point(218, 138);
+            this.txtTrajanje.Location = new System.Drawing.Point(164, 112);
+            this.txtTrajanje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTrajanje.Name = "txtTrajanje";
-            this.txtTrajanje.Size = new System.Drawing.Size(253, 22);
+            this.txtTrajanje.Size = new System.Drawing.Size(191, 20);
             this.txtTrajanje.TabIndex = 144;
             // 
             // lblMin
             // 
             this.lblMin.AutoSize = true;
-            this.lblMin.Location = new System.Drawing.Point(477, 141);
+            this.lblMin.Location = new System.Drawing.Point(358, 115);
+            this.lblMin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(50, 17);
+            this.lblMin.Size = new System.Drawing.Size(38, 13);
             this.lblMin.TabIndex = 145;
             this.lblMin.Text = "minuta";
             // 
             // txtMjesto
             // 
-            this.txtMjesto.Location = new System.Drawing.Point(218, 189);
+            this.txtMjesto.Location = new System.Drawing.Point(164, 154);
+            this.txtMjesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMjesto.Name = "txtMjesto";
-            this.txtMjesto.Size = new System.Drawing.Size(253, 22);
+            this.txtMjesto.Size = new System.Drawing.Size(191, 20);
             this.txtMjesto.TabIndex = 146;
             // 
             // txtKapacitet
             // 
-            this.txtKapacitet.Location = new System.Drawing.Point(218, 242);
+            this.txtKapacitet.Location = new System.Drawing.Point(164, 197);
+            this.txtKapacitet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtKapacitet.Name = "txtKapacitet";
-            this.txtKapacitet.Size = new System.Drawing.Size(100, 22);
+            this.txtKapacitet.Size = new System.Drawing.Size(76, 20);
             this.txtKapacitet.TabIndex = 147;
             // 
             // dgvTermini
@@ -311,22 +301,66 @@ namespace FindAndLearn.MojiTermini
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTermini.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvTermini.Location = new System.Drawing.Point(872, 99);
+            this.dgvTermini.Location = new System.Drawing.Point(654, 80);
+            this.dgvTermini.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvTermini.Name = "dgvTermini";
             this.dgvTermini.RowHeadersWidth = 51;
             this.dgvTermini.RowTemplate.Height = 24;
-            this.dgvTermini.Size = new System.Drawing.Size(642, 325);
+            this.dgvTermini.Size = new System.Drawing.Size(482, 264);
             this.dgvTermini.TabIndex = 148;
+            // 
+            // nazivterminaDataGridViewTextBoxColumn
+            // 
+            this.nazivterminaDataGridViewTextBoxColumn.DataPropertyName = "naziv_termina";
+            this.nazivterminaDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nazivterminaDataGridViewTextBoxColumn.Name = "nazivterminaDataGridViewTextBoxColumn";
+            this.nazivterminaDataGridViewTextBoxColumn.Width = 59;
+            // 
+            // vrijemeterminaDataGridViewTextBoxColumn
+            // 
+            this.vrijemeterminaDataGridViewTextBoxColumn.DataPropertyName = "vrijeme_termina";
+            this.vrijemeterminaDataGridViewTextBoxColumn.HeaderText = "Vrijeme";
+            this.vrijemeterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vrijemeterminaDataGridViewTextBoxColumn.Name = "vrijemeterminaDataGridViewTextBoxColumn";
+            this.vrijemeterminaDataGridViewTextBoxColumn.Width = 66;
+            // 
+            // trajanjeDataGridViewTextBoxColumn
+            // 
+            this.trajanjeDataGridViewTextBoxColumn.DataPropertyName = "trajanje";
+            this.trajanjeDataGridViewTextBoxColumn.HeaderText = "Trajanje";
+            this.trajanjeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.trajanjeDataGridViewTextBoxColumn.Name = "trajanjeDataGridViewTextBoxColumn";
+            this.trajanjeDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // mjestoodrzavanjaDataGridViewTextBoxColumn
+            // 
+            this.mjestoodrzavanjaDataGridViewTextBoxColumn.DataPropertyName = "mjesto_odrzavanja";
+            this.mjestoodrzavanjaDataGridViewTextBoxColumn.HeaderText = "Mjesto održavanja";
+            this.mjestoodrzavanjaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mjestoodrzavanjaDataGridViewTextBoxColumn.Name = "mjestoodrzavanjaDataGridViewTextBoxColumn";
+            this.mjestoodrzavanjaDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // kapacitetterminaDataGridViewTextBoxColumn
+            // 
+            this.kapacitetterminaDataGridViewTextBoxColumn.DataPropertyName = "kapacitet_termina";
+            this.kapacitetterminaDataGridViewTextBoxColumn.HeaderText = "Kapacitet";
+            this.kapacitetterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kapacitetterminaDataGridViewTextBoxColumn.Name = "kapacitetterminaDataGridViewTextBoxColumn";
+            this.kapacitetterminaDataGridViewTextBoxColumn.Width = 77;
+            // 
+            // terminiBindingSource
+            // 
+            this.terminiBindingSource.DataSource = typeof(FindAndLearn.Termini);
             // 
             // btnObrisiTermin
             // 
             this.btnObrisiTermin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnObrisiTermin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnObrisiTermin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnObrisiTermin.Location = new System.Drawing.Point(1126, 472);
-            this.btnObrisiTermin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnObrisiTermin.Location = new System.Drawing.Point(844, 384);
             this.btnObrisiTermin.Name = "btnObrisiTermin";
-            this.btnObrisiTermin.Size = new System.Drawing.Size(203, 31);
+            this.btnObrisiTermin.Size = new System.Drawing.Size(152, 25);
             this.btnObrisiTermin.TabIndex = 149;
             this.btnObrisiTermin.Text = "Obriši termin";
             this.btnObrisiTermin.UseVisualStyleBackColor = false;
@@ -335,9 +369,10 @@ namespace FindAndLearn.MojiTermini
             // lblStud
             // 
             this.lblStud.AutoSize = true;
-            this.lblStud.Location = new System.Drawing.Point(359, 247);
+            this.lblStud.Location = new System.Drawing.Point(269, 201);
+            this.lblStud.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStud.Name = "lblStud";
-            this.lblStud.Size = new System.Drawing.Size(71, 17);
+            this.lblStud.Size = new System.Drawing.Size(54, 13);
             this.lblStud.TabIndex = 150;
             this.lblStud.Text = "studenata";
             // 
@@ -356,56 +391,14 @@ namespace FindAndLearn.MojiTermini
             this.gbDodajTermin.Controls.Add(this.dtpVrijeme);
             this.gbDodajTermin.Controls.Add(this.lblMin);
             this.gbDodajTermin.Controls.Add(this.txtTrajanje);
-            this.gbDodajTermin.Location = new System.Drawing.Point(288, 79);
+            this.gbDodajTermin.Location = new System.Drawing.Point(216, 64);
+            this.gbDodajTermin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbDodajTermin.Name = "gbDodajTermin";
-            this.gbDodajTermin.Size = new System.Drawing.Size(534, 441);
+            this.gbDodajTermin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDodajTermin.Size = new System.Drawing.Size(400, 358);
             this.gbDodajTermin.TabIndex = 151;
             this.gbDodajTermin.TabStop = false;
             this.gbDodajTermin.Text = "Dodaj termin";
-            // 
-            // nazivterminaDataGridViewTextBoxColumn
-            // 
-            this.nazivterminaDataGridViewTextBoxColumn.DataPropertyName = "naziv_termina";
-            this.nazivterminaDataGridViewTextBoxColumn.HeaderText = "Naziv";
-            this.nazivterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nazivterminaDataGridViewTextBoxColumn.Name = "nazivterminaDataGridViewTextBoxColumn";
-            this.nazivterminaDataGridViewTextBoxColumn.Width = 72;
-            // 
-            // vrijemeterminaDataGridViewTextBoxColumn
-            // 
-            this.vrijemeterminaDataGridViewTextBoxColumn.DataPropertyName = "vrijeme_termina";
-            this.vrijemeterminaDataGridViewTextBoxColumn.HeaderText = "Vrijeme";
-            this.vrijemeterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.vrijemeterminaDataGridViewTextBoxColumn.Name = "vrijemeterminaDataGridViewTextBoxColumn";
-            this.vrijemeterminaDataGridViewTextBoxColumn.Width = 84;
-            // 
-            // trajanjeDataGridViewTextBoxColumn
-            // 
-            this.trajanjeDataGridViewTextBoxColumn.DataPropertyName = "trajanje";
-            this.trajanjeDataGridViewTextBoxColumn.HeaderText = "Trajanje";
-            this.trajanjeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.trajanjeDataGridViewTextBoxColumn.Name = "trajanjeDataGridViewTextBoxColumn";
-            this.trajanjeDataGridViewTextBoxColumn.Width = 89;
-            // 
-            // mjestoodrzavanjaDataGridViewTextBoxColumn
-            // 
-            this.mjestoodrzavanjaDataGridViewTextBoxColumn.DataPropertyName = "mjesto_odrzavanja";
-            this.mjestoodrzavanjaDataGridViewTextBoxColumn.HeaderText = "Mjesto održavanja";
-            this.mjestoodrzavanjaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mjestoodrzavanjaDataGridViewTextBoxColumn.Name = "mjestoodrzavanjaDataGridViewTextBoxColumn";
-            this.mjestoodrzavanjaDataGridViewTextBoxColumn.Width = 139;
-            // 
-            // kapacitetterminaDataGridViewTextBoxColumn
-            // 
-            this.kapacitetterminaDataGridViewTextBoxColumn.DataPropertyName = "kapacitet_termina";
-            this.kapacitetterminaDataGridViewTextBoxColumn.HeaderText = "Kapacitet";
-            this.kapacitetterminaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.kapacitetterminaDataGridViewTextBoxColumn.Name = "kapacitetterminaDataGridViewTextBoxColumn";
-            this.kapacitetterminaDataGridViewTextBoxColumn.Width = 96;
-            // 
-            // terminiBindingSource
-            // 
-            this.terminiBindingSource.DataSource = typeof(FindAndLearn.Termini);
             // 
             // instrukcijeBindingSource
             // 
@@ -413,9 +406,9 @@ namespace FindAndLearn.MojiTermini
             // 
             // frmDodajTermin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1555, 567);
+            this.ClientSize = new System.Drawing.Size(1166, 461);
             this.Controls.Add(this.gbDodajTermin);
             this.Controls.Add(this.gbProfil);
             this.Controls.Add(this.gbIzbornik);
@@ -423,7 +416,10 @@ namespace FindAndLearn.MojiTermini
             this.Controls.Add(this.dgvTermini);
             this.Controls.Add(this.gbInstruktor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "frmDodajTermin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Termini";
             this.Load += new System.EventHandler(this.frmDodajTermin_Load);
             this.gbInstruktor.ResumeLayout(false);
@@ -432,9 +428,9 @@ namespace FindAndLearn.MojiTermini
             this.gbProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTermini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).EndInit();
             this.gbDodajTermin.ResumeLayout(false);
             this.gbDodajTermin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.terminiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.instrukcijeBindingSource)).EndInit();
             this.ResumeLayout(false);
 

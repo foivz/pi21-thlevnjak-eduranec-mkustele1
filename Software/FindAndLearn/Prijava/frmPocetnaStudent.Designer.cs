@@ -68,7 +68,7 @@ namespace FindAndLearn.Prijava
             // pbLogo
             // 
             this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.Logo;
-            this.pbLogo.Location = new System.Drawing.Point(-1, 11);
+            this.pbLogo.Location = new System.Drawing.Point(0, 12);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(79, 59);
             this.pbLogo.TabIndex = 70;
@@ -107,7 +107,7 @@ namespace FindAndLearn.Prijava
             this.btnPoruke.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPoruke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPoruke.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPoruke.Location = new System.Drawing.Point(18, 249);
+            this.btnPoruke.Location = new System.Drawing.Point(20, 250);
             this.btnPoruke.Name = "btnPoruke";
             this.btnPoruke.Size = new System.Drawing.Size(184, 31);
             this.btnPoruke.TabIndex = 30;
@@ -120,7 +120,7 @@ namespace FindAndLearn.Prijava
             this.btnTrazilica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnTrazilica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTrazilica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnTrazilica.Location = new System.Drawing.Point(17, 88);
+            this.btnTrazilica.Location = new System.Drawing.Point(20, 90);
             this.btnTrazilica.Name = "btnTrazilica";
             this.btnTrazilica.Size = new System.Drawing.Size(184, 31);
             this.btnTrazilica.TabIndex = 29;
@@ -133,7 +133,7 @@ namespace FindAndLearn.Prijava
             this.btnObavijesti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnObavijesti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnObavijesti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnObavijesti.Location = new System.Drawing.Point(17, 209);
+            this.btnObavijesti.Location = new System.Drawing.Point(20, 210);
             this.btnObavijesti.Name = "btnObavijesti";
             this.btnObavijesti.Size = new System.Drawing.Size(184, 31);
             this.btnObavijesti.TabIndex = 28;
@@ -147,7 +147,7 @@ namespace FindAndLearn.Prijava
             this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProfil.Location = new System.Drawing.Point(17, 48);
+            this.btnProfil.Location = new System.Drawing.Point(20, 50);
             this.btnProfil.Name = "btnProfil";
             this.btnProfil.Size = new System.Drawing.Size(184, 31);
             this.btnProfil.TabIndex = 25;
@@ -160,7 +160,7 @@ namespace FindAndLearn.Prijava
             this.btnRezervacijaTermina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnRezervacijaTermina.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRezervacijaTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnRezervacijaTermina.Location = new System.Drawing.Point(16, 127);
+            this.btnRezervacijaTermina.Location = new System.Drawing.Point(20, 130);
             this.btnRezervacijaTermina.Name = "btnRezervacijaTermina";
             this.btnRezervacijaTermina.Size = new System.Drawing.Size(185, 31);
             this.btnRezervacijaTermina.TabIndex = 24;
@@ -174,7 +174,7 @@ namespace FindAndLearn.Prijava
             this.btnRecenzije.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRecenzije.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRecenzije.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRecenzije.Location = new System.Drawing.Point(17, 168);
+            this.btnRecenzije.Location = new System.Drawing.Point(20, 170);
             this.btnRecenzije.Name = "btnRecenzije";
             this.btnRecenzije.Size = new System.Drawing.Size(184, 31);
             this.btnRecenzije.TabIndex = 20;
@@ -211,7 +211,7 @@ namespace FindAndLearn.Prijava
             this.btnOdjava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
             this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnOdjava.Location = new System.Drawing.Point(582, 15);
+            this.btnOdjava.Location = new System.Drawing.Point(580, 15);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(90, 25);
             this.btnOdjava.TabIndex = 23;
@@ -237,7 +237,7 @@ namespace FindAndLearn.Prijava
             this.lblDobrodoslica.AutoSize = true;
             this.lblDobrodoslica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblDobrodoslica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.lblDobrodoslica.Location = new System.Drawing.Point(416, 499);
+            this.lblDobrodoslica.Location = new System.Drawing.Point(408, 481);
             this.lblDobrodoslica.Name = "lblDobrodoslica";
             this.lblDobrodoslica.Size = new System.Drawing.Size(372, 25);
             this.lblDobrodoslica.TabIndex = 79;
@@ -248,7 +248,7 @@ namespace FindAndLearn.Prijava
             this.lblFindAndLearn.AutoSize = true;
             this.lblFindAndLearn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblFindAndLearn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.lblFindAndLearn.Location = new System.Drawing.Point(489, 147);
+            this.lblFindAndLearn.Location = new System.Drawing.Point(472, 134);
             this.lblFindAndLearn.Name = "lblFindAndLearn";
             this.lblFindAndLearn.Size = new System.Drawing.Size(201, 33);
             this.lblFindAndLearn.TabIndex = 75;
@@ -257,7 +257,7 @@ namespace FindAndLearn.Prijava
             // pbLogoNaslovna
             // 
             this.pbLogoNaslovna.BackgroundImage = global::FindAndLearn.Properties.Resources.FindAndLearn;
-            this.pbLogoNaslovna.Location = new System.Drawing.Point(380, 210);
+            this.pbLogoNaslovna.Location = new System.Drawing.Point(363, 196);
             this.pbLogoNaslovna.Name = "pbLogoNaslovna";
             this.pbLogoNaslovna.Size = new System.Drawing.Size(407, 267);
             this.pbLogoNaslovna.TabIndex = 84;

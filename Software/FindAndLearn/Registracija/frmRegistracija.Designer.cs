@@ -394,6 +394,7 @@ namespace FindAndLearn.Registracija
             this.Controls.Add(this.lblIme);
             this.Controls.Add(this.lblUloga);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmRegistracija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registracija";
