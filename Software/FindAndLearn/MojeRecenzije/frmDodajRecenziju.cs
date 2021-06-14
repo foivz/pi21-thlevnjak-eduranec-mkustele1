@@ -46,6 +46,7 @@ namespace FindAndLearn.MojeRecenzije
             entities.Recenzije.Load();
             recenzijeBindingSource.DataSource = entities.Recenzije.Local.Where(x => x.student_id == PostojeciStudent.ID_studenta);
             rtbKomentar.Clear();
+            lblTrenutniStudent.Text = PostojeciStudent.ToString();
             
 
         }
