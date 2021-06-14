@@ -22,6 +22,16 @@ namespace FindAndLearn.Tražilica
         private void frmTrazilica_Load(object sender, EventArgs e)
         {
             lblNaslovDatagrida.Visible = false;
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmTrazilica_KeyDown);
+        }
+
+        private void frmTrazilica_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Trazilica/index.html");
+            }
         }
 
         public void PronadjiInstruktore(string imePrezime = null, string nazivKolegija = null)
@@ -202,6 +212,11 @@ namespace FindAndLearn.Tražilica
         private void btnZatvori_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Trazilica/index.html");
         }
     }
 }

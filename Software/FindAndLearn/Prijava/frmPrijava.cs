@@ -33,7 +33,7 @@ namespace FindAndLearn
         {
             if (e.KeyCode.ToString() == "F1")
             {
-                Help.ShowHelp(this, "AppHelp.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Prijava/index.html");
             }
         }
 
@@ -41,7 +41,6 @@ namespace FindAndLearn
         {
             frmPromjenaLozinke form = new frmPromjenaLozinke();
             form.ShowDialog();
-            Close();
         }
 
         private void cbPokaziLozinku_CheckedChanged(object sender, EventArgs e)

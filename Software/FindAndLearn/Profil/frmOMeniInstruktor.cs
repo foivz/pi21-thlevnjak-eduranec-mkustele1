@@ -44,7 +44,7 @@ namespace FindAndLearn.Profil
         {
             if (e.KeyCode.ToString() == "F1")
             {
-               // Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Profil/index.html");
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Profil/Izmijeni_podatke/index.html");
             }
         }
 

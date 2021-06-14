@@ -177,6 +177,7 @@ namespace FindAndLearn.MojeInstrukcije
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // lblTipInstrukcija
             // 
@@ -222,7 +223,7 @@ namespace FindAndLearn.MojeInstrukcije
             // 
             this.comboTipInstrukcija.FormattingEnabled = true;
             this.comboTipInstrukcija.Location = new System.Drawing.Point(129, 31);
-            this.comboTipInstrukcija.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboTipInstrukcija.Margin = new System.Windows.Forms.Padding(2);
             this.comboTipInstrukcija.Name = "comboTipInstrukcija";
             this.comboTipInstrukcija.Size = new System.Drawing.Size(167, 23);
             this.comboTipInstrukcija.TabIndex = 112;
@@ -231,7 +232,7 @@ namespace FindAndLearn.MojeInstrukcije
             // 
             this.comboVrstaKolegija.FormattingEnabled = true;
             this.comboVrstaKolegija.Location = new System.Drawing.Point(129, 65);
-            this.comboVrstaKolegija.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboVrstaKolegija.Margin = new System.Windows.Forms.Padding(2);
             this.comboVrstaKolegija.Name = "comboVrstaKolegija";
             this.comboVrstaKolegija.Size = new System.Drawing.Size(167, 23);
             this.comboVrstaKolegija.TabIndex = 113;
@@ -239,7 +240,7 @@ namespace FindAndLearn.MojeInstrukcije
             // txtOpisInstrukcije
             // 
             this.txtOpisInstrukcije.Location = new System.Drawing.Point(11, 150);
-            this.txtOpisInstrukcije.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOpisInstrukcije.Margin = new System.Windows.Forms.Padding(2);
             this.txtOpisInstrukcije.Name = "txtOpisInstrukcije";
             this.txtOpisInstrukcije.Size = new System.Drawing.Size(428, 219);
             this.txtOpisInstrukcije.TabIndex = 115;
@@ -293,7 +294,7 @@ namespace FindAndLearn.MojeInstrukcije
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMojeInstrukcije.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvMojeInstrukcije.Location = new System.Drawing.Point(744, 89);
-            this.dgvMojeInstrukcije.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMojeInstrukcije.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMojeInstrukcije.Name = "dgvMojeInstrukcije";
             this.dgvMojeInstrukcije.RowHeadersWidth = 51;
             this.dgvMojeInstrukcije.RowTemplate.Height = 24;
@@ -370,7 +371,7 @@ namespace FindAndLearn.MojeInstrukcije
             // textCijenaInstrukcije
             // 
             this.textCijenaInstrukcije.Location = new System.Drawing.Point(149, 394);
-            this.textCijenaInstrukcije.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textCijenaInstrukcije.Margin = new System.Windows.Forms.Padding(2);
             this.textCijenaInstrukcije.Name = "textCijenaInstrukcije";
             this.textCijenaInstrukcije.Size = new System.Drawing.Size(67, 21);
             this.textCijenaInstrukcije.TabIndex = 120;
@@ -412,9 +413,9 @@ namespace FindAndLearn.MojeInstrukcije
             this.gbDodajInstrukciju.Controls.Add(this.btnDodajInstrukciju);
             this.gbDodajInstrukciju.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDodajInstrukciju.Location = new System.Drawing.Point(234, 62);
-            this.gbDodajInstrukciju.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDodajInstrukciju.Margin = new System.Windows.Forms.Padding(2);
             this.gbDodajInstrukciju.Name = "gbDodajInstrukciju";
-            this.gbDodajInstrukciju.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDodajInstrukciju.Padding = new System.Windows.Forms.Padding(2);
             this.gbDodajInstrukciju.Size = new System.Drawing.Size(466, 422);
             this.gbDodajInstrukciju.TabIndex = 123;
             this.gbDodajInstrukciju.TabStop = false;
@@ -435,7 +436,7 @@ namespace FindAndLearn.MojeInstrukcije
             this.Controls.Add(this.gbIzbornik);
             this.Controls.Add(this.gbInstruktor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmDodajInstrukciju";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

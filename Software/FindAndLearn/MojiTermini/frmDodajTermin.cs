@@ -60,7 +60,18 @@ namespace FindAndLearn.MojiTermini
         private void frmDodajTermin_Load(object sender, EventArgs e)
         {
             Osvjezi();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmDodajTermin_KeyDown);
         }
+
+        private void frmDodajTermin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Instrukcije/Dodaj_termin/index.html");
+            }
+        }
+
         private void Osvjezi()
         {
             Entities entities = new Entities();
@@ -104,6 +115,11 @@ namespace FindAndLearn.MojiTermini
         private void btnZatvori_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Instrukcije/Dodaj_termin/index.html");
         }
     }
 }

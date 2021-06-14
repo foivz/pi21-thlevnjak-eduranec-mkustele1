@@ -31,7 +31,16 @@ namespace FindAndLearn.MojeRezervacije
         private void frmZatraziRezervaciju_Load(object sender, EventArgs e)
         {
             Osvjezi();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmZatraziRezervaciju_KeyDown);
+        }
 
+        private void frmZatraziRezervaciju_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Rezervacije/index.html");
+            }
         }
 
         private void Osvjezi()
@@ -94,6 +103,11 @@ namespace FindAndLearn.MojeRezervacije
         private void instrukcijeBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             terminiBindingSource.DataSource = (instrukcijeBindingSource.Current as Instrukcije).Termini.Where(x=>x.vrijeme_termina > DateTime.Now);
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Rezervacije/index.html");
         }
     }
 }

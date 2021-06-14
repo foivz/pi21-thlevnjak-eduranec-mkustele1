@@ -38,7 +38,7 @@ namespace FindAndLearn.Profil
         {
             if (e.KeyCode.ToString() == "F1")
             {
-              //  Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
             }
         }
 
@@ -177,7 +177,7 @@ namespace FindAndLearn.Profil
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
         }
     }
 }

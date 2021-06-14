@@ -32,6 +32,16 @@ namespace FindAndLearn.MojeRezervacije
         private void frmOdobriRezervaciju_Load(object sender, EventArgs e)
         {
             Osvjezi();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmOdobriRezervaciju_KeyDown);
+        }
+
+        private void frmOdobriRezervaciju_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Rezervacije/index.html");
+            }
         }
 
         private void Osvjezi()
@@ -76,6 +86,11 @@ namespace FindAndLearn.MojeRezervacije
         private void btnZatvori_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Rezervacije/index.html");
         }
     }
 }

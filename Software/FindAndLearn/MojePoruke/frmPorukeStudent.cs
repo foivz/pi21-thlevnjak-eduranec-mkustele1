@@ -36,6 +36,16 @@ namespace FindAndLearn.MojePoruke
             dgvPopisPoruka.Columns["ImePrezime"].HeaderText = "Ime i prezime";
             dgvPopisPoruka.Columns["naslov_poruke"].HeaderText = "Naslov poruke";
             dgvPopisPoruka.Columns["datum"].HeaderText = "Datum";
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmPorukeStudent_KeyDown);
+        }
+
+        private void frmPorukeStudent_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Poruke/index.html");
+            }
         }
 
         private void btnPošalji_Click(object sender, EventArgs e)
@@ -70,6 +80,11 @@ namespace FindAndLearn.MojePoruke
         private void btnZatvori_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Poruke/index.html");
         }
     }
 }

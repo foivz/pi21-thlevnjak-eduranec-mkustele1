@@ -90,6 +90,7 @@ namespace FindAndLearn.MojeRezervacije
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // gbInstruktor
             // 
@@ -153,7 +154,7 @@ namespace FindAndLearn.MojeRezervacije
             this.potvrdjenaDataGridViewCheckBoxColumn});
             this.dgvRezervacije.DataSource = this.rezervacijeBindingSource;
             this.dgvRezervacije.Location = new System.Drawing.Point(267, 103);
-            this.dgvRezervacije.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRezervacije.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRezervacije.Name = "dgvRezervacije";
             this.dgvRezervacije.RowHeadersWidth = 51;
             this.dgvRezervacije.RowTemplate.Height = 24;
@@ -306,7 +307,7 @@ namespace FindAndLearn.MojeRezervacije
             this.potvrdjenaDataGridViewCheckBoxColumn1});
             this.dgvOdobreneRezervacije.DataSource = this.rezervacijeBindingSource;
             this.dgvOdobreneRezervacije.Location = new System.Drawing.Point(267, 382);
-            this.dgvOdobreneRezervacije.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvOdobreneRezervacije.Margin = new System.Windows.Forms.Padding(2);
             this.dgvOdobreneRezervacije.Name = "dgvOdobreneRezervacije";
             this.dgvOdobreneRezervacije.RowHeadersWidth = 51;
             this.dgvOdobreneRezervacije.RowTemplate.Height = 24;
@@ -368,7 +369,7 @@ namespace FindAndLearn.MojeRezervacije
             this.Controls.Add(this.btnOdobriRezervaciju);
             this.Controls.Add(this.gbInstruktor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmOdobriRezervaciju";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -117,6 +117,7 @@ namespace FindAndLearn.MojePoruke
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // lblInstruktor
             // 

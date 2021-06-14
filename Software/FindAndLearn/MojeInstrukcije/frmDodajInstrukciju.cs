@@ -37,6 +37,16 @@ namespace FindAndLearn.MojeInstrukcije
                 comboVrstaKolegija.DataSource = RepozitorijInstrukcija.PopuniPopisKolegija();
             }
             OsvjeziMojeInstrukcije();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmDodajInstrukciju_KeyDown);
+        }
+
+        private void frmDodajInstrukciju_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Instrukcije/index.html");
+            }
         }
 
         private void OsvjeziMojeInstrukcije()
@@ -107,6 +117,11 @@ namespace FindAndLearn.MojeInstrukcije
             frmDodajTermin formTermin = new frmDodajTermin(odabranaInstrukcija);
             
             formTermin.ShowDialog();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Instrukcije/index.html");
         }
     }
 }

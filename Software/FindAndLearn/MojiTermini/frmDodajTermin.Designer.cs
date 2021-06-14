@@ -128,6 +128,7 @@ namespace FindAndLearn.MojiTermini
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // btnZatvori
             // 
@@ -218,7 +219,7 @@ namespace FindAndLearn.MojiTermini
             // txtNaziv
             // 
             this.txtNaziv.Location = new System.Drawing.Point(164, 32);
-            this.txtNaziv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNaziv.Margin = new System.Windows.Forms.Padding(2);
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.Size = new System.Drawing.Size(191, 20);
             this.txtNaziv.TabIndex = 142;
@@ -227,7 +228,7 @@ namespace FindAndLearn.MojiTermini
             // 
             this.dtpVrijeme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpVrijeme.Location = new System.Drawing.Point(164, 69);
-            this.dtpVrijeme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpVrijeme.Margin = new System.Windows.Forms.Padding(2);
             this.dtpVrijeme.Name = "dtpVrijeme";
             this.dtpVrijeme.Size = new System.Drawing.Size(191, 20);
             this.dtpVrijeme.TabIndex = 143;
@@ -235,7 +236,7 @@ namespace FindAndLearn.MojiTermini
             // txtTrajanje
             // 
             this.txtTrajanje.Location = new System.Drawing.Point(164, 112);
-            this.txtTrajanje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTrajanje.Margin = new System.Windows.Forms.Padding(2);
             this.txtTrajanje.Name = "txtTrajanje";
             this.txtTrajanje.Size = new System.Drawing.Size(191, 20);
             this.txtTrajanje.TabIndex = 144;
@@ -253,7 +254,7 @@ namespace FindAndLearn.MojiTermini
             // txtMjesto
             // 
             this.txtMjesto.Location = new System.Drawing.Point(164, 154);
-            this.txtMjesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMjesto.Margin = new System.Windows.Forms.Padding(2);
             this.txtMjesto.Name = "txtMjesto";
             this.txtMjesto.Size = new System.Drawing.Size(191, 20);
             this.txtMjesto.TabIndex = 146;
@@ -261,7 +262,7 @@ namespace FindAndLearn.MojiTermini
             // txtKapacitet
             // 
             this.txtKapacitet.Location = new System.Drawing.Point(164, 197);
-            this.txtKapacitet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKapacitet.Margin = new System.Windows.Forms.Padding(2);
             this.txtKapacitet.Name = "txtKapacitet";
             this.txtKapacitet.Size = new System.Drawing.Size(76, 20);
             this.txtKapacitet.TabIndex = 147;
@@ -302,7 +303,7 @@ namespace FindAndLearn.MojiTermini
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTermini.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTermini.Location = new System.Drawing.Point(654, 80);
-            this.dgvTermini.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTermini.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTermini.Name = "dgvTermini";
             this.dgvTermini.RowHeadersWidth = 51;
             this.dgvTermini.RowTemplate.Height = 24;
@@ -392,9 +393,9 @@ namespace FindAndLearn.MojiTermini
             this.gbDodajTermin.Controls.Add(this.lblMin);
             this.gbDodajTermin.Controls.Add(this.txtTrajanje);
             this.gbDodajTermin.Location = new System.Drawing.Point(216, 64);
-            this.gbDodajTermin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDodajTermin.Margin = new System.Windows.Forms.Padding(2);
             this.gbDodajTermin.Name = "gbDodajTermin";
-            this.gbDodajTermin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDodajTermin.Padding = new System.Windows.Forms.Padding(2);
             this.gbDodajTermin.Size = new System.Drawing.Size(400, 358);
             this.gbDodajTermin.TabIndex = 151;
             this.gbDodajTermin.TabStop = false;
@@ -416,7 +417,7 @@ namespace FindAndLearn.MojiTermini
             this.Controls.Add(this.dgvTermini);
             this.Controls.Add(this.gbInstruktor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmDodajTermin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

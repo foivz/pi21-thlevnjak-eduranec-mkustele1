@@ -38,7 +38,7 @@ namespace FindAndLearn.MojeObavijesti
         {
             if (e.KeyCode.ToString() == "F1")
             {
-              //  Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Profil/index.html");
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Obavijesti/Detalji_termina/index.html");
             }
         }
 

@@ -30,7 +30,7 @@ namespace FindAndLearn.Prijava
         {
             if (e.KeyCode.ToString() == "F1")
             {
-                //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Prijava/Promjena_lozinke/index.html");
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Prijava/Promjena_lozinke/index.html");
             }
         }
 
@@ -53,9 +53,7 @@ namespace FindAndLearn.Prijava
 
         private void btnNatrag_Click(object sender, EventArgs e)
         {
-            frmPrijava form = new frmPrijava();
-            form.ShowDialog();
-            Hide();
+            Close();
         }
 
         private void btnSpremi_Click(object sender, EventArgs e)

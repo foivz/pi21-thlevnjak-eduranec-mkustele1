@@ -26,6 +26,16 @@ namespace FindAndLearn.Registracija
             comboUloga.DataSource = Enum.GetValues(typeof(Uloga)).Cast<Uloga>().ToList();
             cbKoristiGeneriranoKorisnickoIme.Checked = true;
             txtKorisnickoIme.Enabled = false;
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmRegistracija_KeyDown);
+        }
+
+        private void frmRegistracija_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Registracija/index.html");
+            }
         }
 
         private void btnRegistracija_Click(object sender, EventArgs e)

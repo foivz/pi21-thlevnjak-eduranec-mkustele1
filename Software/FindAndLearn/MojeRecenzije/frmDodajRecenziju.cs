@@ -30,9 +30,18 @@ namespace FindAndLearn.MojeRecenzije
         public Student PostojeciStudent { get; }
 
         private void frmDodajRecenziju_Load(object sender, EventArgs e)
-        {
-            
+        { 
             Osvjezi();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmDodajRecenziju_KeyDown);
+        }
+
+        private void frmDodajRecenziju_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Recenzije/index.html");
+            }
         }
 
         private void Osvjezi()
@@ -94,6 +103,11 @@ namespace FindAndLearn.MojeRecenzije
                 }
             }
             Osvjezi();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Recenzije/index.html");
         }
     }
 }

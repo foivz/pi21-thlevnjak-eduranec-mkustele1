@@ -386,6 +386,9 @@
     <None Include="FindAndLearnModel.edmx.diagram">
       <DependentUpon>FindAndLearnModel.edmx</DependentUpon>
     </None>
+    <None Include="Help.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Instrukcije.datasource" />
     <None Include="Properties\DataSources\Kolegiji.datasource" />

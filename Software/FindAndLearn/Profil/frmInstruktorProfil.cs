@@ -52,7 +52,7 @@ namespace FindAndLearn.Profil
         {
             if (e.KeyCode.ToString() == "F1")
             {
-                //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Profil/index.html");
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Profil/index.html");
             }
         }
 
@@ -218,7 +218,7 @@ namespace FindAndLearn.Profil
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/Profil/index.html");
         }
     }
 }

@@ -65,6 +65,21 @@ namespace FindAndLearn.Tražilica
                 dtgPopisKomentara.Columns["komentar"].HeaderText = "Komentar";
                 dtgPopisKomentara.Columns["ocjena"].HeaderText = "Ocjena";
             }
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmDetaljiInstruktora_KeyDown);
+        }
+
+        private void frmDetaljiInstruktora_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Trazilica/index.html");
+            }
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Student/Trazilica/index.html");
         }
     }
 }

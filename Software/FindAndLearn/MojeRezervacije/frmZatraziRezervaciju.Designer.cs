@@ -115,6 +115,7 @@ namespace FindAndLearn.MojeRezervacije
             this.btnHelp.TabIndex = 22;
             this.btnHelp.Text = "POMOĆ";
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // gbInstruktor
             // 
@@ -254,7 +255,7 @@ namespace FindAndLearn.MojeRezervacije
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInstrukcije.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvInstrukcije.Location = new System.Drawing.Point(20, 50);
-            this.dgvInstrukcije.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvInstrukcije.Margin = new System.Windows.Forms.Padding(2);
             this.dgvInstrukcije.Name = "dgvInstrukcije";
             this.dgvInstrukcije.RowHeadersWidth = 51;
             this.dgvInstrukcije.RowTemplate.Height = 24;
@@ -341,7 +342,7 @@ namespace FindAndLearn.MojeRezervacije
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvtTermini.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvtTermini.Location = new System.Drawing.Point(20, 348);
-            this.dgvtTermini.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvtTermini.Margin = new System.Windows.Forms.Padding(2);
             this.dgvtTermini.Name = "dgvtTermini";
             this.dgvtTermini.RowHeadersWidth = 51;
             this.dgvtTermini.RowTemplate.Height = 24;
@@ -424,7 +425,7 @@ namespace FindAndLearn.MojeRezervacije
             dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMojeRezervacije.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgvMojeRezervacije.Location = new System.Drawing.Point(846, 106);
-            this.dgvMojeRezervacije.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMojeRezervacije.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMojeRezervacije.Name = "dgvMojeRezervacije";
             this.dgvMojeRezervacije.RowHeadersWidth = 51;
             this.dgvMojeRezervacije.RowTemplate.Height = 24;
@@ -487,9 +488,9 @@ namespace FindAndLearn.MojeRezervacije
             this.gbOdabirTermina.Controls.Add(this.btnZatraziRezervaciju);
             this.gbOdabirTermina.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOdabirTermina.Location = new System.Drawing.Point(212, 65);
-            this.gbOdabirTermina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbOdabirTermina.Margin = new System.Windows.Forms.Padding(2);
             this.gbOdabirTermina.Name = "gbOdabirTermina";
-            this.gbOdabirTermina.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbOdabirTermina.Padding = new System.Windows.Forms.Padding(2);
             this.gbOdabirTermina.Size = new System.Drawing.Size(599, 596);
             this.gbOdabirTermina.TabIndex = 161;
             this.gbOdabirTermina.TabStop = false;
@@ -507,7 +508,7 @@ namespace FindAndLearn.MojeRezervacije
             this.Controls.Add(this.gbIzbornik);
             this.Controls.Add(this.gbInstruktor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmZatraziRezervaciju";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

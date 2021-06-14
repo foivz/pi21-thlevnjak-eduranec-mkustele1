@@ -39,8 +39,7 @@ namespace FindAndLearn.Prijava
         {
             if (e.KeyCode.ToString() == "F1")
             {
-                MessageBox.Show("F1");
-               // Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instuktor/index.html");
+                Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/index.html");
             }
         }
 
@@ -81,7 +80,7 @@ namespace FindAndLearn.Prijava
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            //Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/index.html");
+            Help.ShowHelp(this, "Help.chm", HelpNavigator.Topic, "Instruktor/index.html");
         }
     }
 }
