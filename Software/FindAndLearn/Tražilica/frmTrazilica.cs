@@ -185,14 +185,17 @@ namespace FindAndLearn.Tražilica
                 try
                 {
                     prosjecnaOcjena = kolegiji.IzracunProsjecneOcjene(instruktor);
-                    var prosjek = Math.Round(prosjecnaOcjena, 2);
-                    frmDetaljiInstruktora frmDetalji = new frmDetaljiInstruktora(prosjek, instruktor);
+                    frmDetaljiInstruktora frmDetalji = new frmDetaljiInstruktora(prosjecnaOcjena, instruktor);
                     frmDetalji.ShowDialog();
                 }
                 catch
                 {
                     MessageBox.Show($"Instruktor {instruktor.ime} {instruktor.prezime} nije recenziran!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            else
+            {
+                MessageBox.Show($"Niste upisali ništa u tražilice!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

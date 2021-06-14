@@ -31,7 +31,7 @@ namespace FindAndLearn
                 
                 ProsjecnaOcjena = suma / ocjene.Length;                
             }
-            return ProsjecnaOcjena;
+            return Math.Round(ProsjecnaOcjena, 2);
         }
 
         public override string ToString()
