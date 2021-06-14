@@ -195,6 +195,7 @@ namespace FindAndLearn.Tražilica
             // 
             // dtgSviInstruktoriNaKolegiju
             // 
+            this.dtgSviInstruktoriNaKolegiju.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgSviInstruktoriNaKolegiju.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSviInstruktoriNaKolegiju.Location = new System.Drawing.Point(235, 159);
             this.dtgSviInstruktoriNaKolegiju.Name = "dtgSviInstruktoriNaKolegiju";
