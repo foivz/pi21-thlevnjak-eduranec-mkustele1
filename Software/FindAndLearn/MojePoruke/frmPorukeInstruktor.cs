@@ -48,6 +48,9 @@ namespace FindAndLearn.MojePoruke
             if (naslov != "" && sadrzaj != "")
             {
                 RepozitorijPoruka.PosaljiPorukuStudentu(student, instruktor, naslov, sadrzaj, datum);
+                MessageBox.Show($"Uspješno poslana poruka studentu {student.KorisnickoIme}!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNaslovPoruke.Text = "";
+                txtSadržajPoruke.Text = "";
             }
             else
             {
