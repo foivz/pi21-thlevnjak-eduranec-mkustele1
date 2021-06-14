@@ -130,6 +130,7 @@ namespace FindAndLearn.Registracija
             if ((Uloga)comboUloga.SelectedItem == Uloga.Instruktor)
             {
                 txtTitula.Enabled = true;
+                txtTitula.Text = "";
             }
             else
             {

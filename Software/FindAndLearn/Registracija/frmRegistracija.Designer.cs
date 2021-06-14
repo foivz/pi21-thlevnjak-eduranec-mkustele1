@@ -66,7 +66,7 @@ namespace FindAndLearn.Registracija
             this.cbPokaziLozinku.AutoSize = true;
             this.cbPokaziLozinku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cbPokaziLozinku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.cbPokaziLozinku.Location = new System.Drawing.Point(431, 420);
+            this.cbPokaziLozinku.Location = new System.Drawing.Point(648, 232);
             this.cbPokaziLozinku.Name = "cbPokaziLozinku";
             this.cbPokaziLozinku.Size = new System.Drawing.Size(112, 20);
             this.cbPokaziLozinku.TabIndex = 13;
@@ -80,9 +80,9 @@ namespace FindAndLearn.Registracija
             this.btnRegistracija.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistracija.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRegistracija.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRegistracija.Location = new System.Drawing.Point(144, 851);
+            this.btnRegistracija.Location = new System.Drawing.Point(280, 530);
             this.btnRegistracija.Name = "btnRegistracija";
-            this.btnRegistracija.Size = new System.Drawing.Size(281, 35);
+            this.btnRegistracija.Size = new System.Drawing.Size(280, 35);
             this.btnRegistracija.TabIndex = 14;
             this.btnRegistracija.Text = "REGISTRIRAJ SE";
             this.btnRegistracija.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@ namespace FindAndLearn.Registracija
             // txtIme
             // 
             this.txtIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtIme.Location = new System.Drawing.Point(144, 268);
+            this.txtIme.Location = new System.Drawing.Point(40, 280);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(281, 22);
             this.txtIme.TabIndex = 2;
@@ -101,7 +101,7 @@ namespace FindAndLearn.Registracija
             this.lblIme.AutoSize = true;
             this.lblIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblIme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblIme.Location = new System.Drawing.Point(144, 248);
+            this.lblIme.Location = new System.Drawing.Point(40, 260);
             this.lblIme.Name = "lblIme";
             this.lblIme.Size = new System.Drawing.Size(43, 16);
             this.lblIme.TabIndex = 77;
@@ -112,7 +112,7 @@ namespace FindAndLearn.Registracija
             this.lblUloga.AutoSize = true;
             this.lblUloga.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblUloga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblUloga.Location = new System.Drawing.Point(143, 148);
+            this.lblUloga.Location = new System.Drawing.Point(40, 160);
             this.lblUloga.Name = "lblUloga";
             this.lblUloga.Size = new System.Drawing.Size(60, 16);
             this.lblUloga.TabIndex = 0;
@@ -121,7 +121,7 @@ namespace FindAndLearn.Registracija
             // pbLogo
             // 
             this.pbLogo.BackgroundImage = global::FindAndLearn.Properties.Resources.PrijavaLogo;
-            this.pbLogo.Location = new System.Drawing.Point(213, 29);
+            this.pbLogo.Location = new System.Drawing.Point(340, 30);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(155, 109);
             this.pbLogo.TabIndex = 84;
@@ -131,7 +131,7 @@ namespace FindAndLearn.Registracija
             // 
             this.comboUloga.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboUloga.FormattingEnabled = true;
-            this.comboUloga.Location = new System.Drawing.Point(144, 168);
+            this.comboUloga.Location = new System.Drawing.Point(40, 180);
             this.comboUloga.Name = "comboUloga";
             this.comboUloga.Size = new System.Drawing.Size(281, 24);
             this.comboUloga.TabIndex = 1;
@@ -142,7 +142,7 @@ namespace FindAndLearn.Registracija
             this.lblPrezime.AutoSize = true;
             this.lblPrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblPrezime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblPrezime.Location = new System.Drawing.Point(144, 298);
+            this.lblPrezime.Location = new System.Drawing.Point(40, 310);
             this.lblPrezime.Name = "lblPrezime";
             this.lblPrezime.Size = new System.Drawing.Size(74, 16);
             this.lblPrezime.TabIndex = 77;
@@ -151,7 +151,7 @@ namespace FindAndLearn.Registracija
             // txtPrezime
             // 
             this.txtPrezime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPrezime.Location = new System.Drawing.Point(144, 318);
+            this.txtPrezime.Location = new System.Drawing.Point(40, 330);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(281, 22);
             this.txtPrezime.TabIndex = 3;
@@ -162,7 +162,7 @@ namespace FindAndLearn.Registracija
             this.lblKorisnickoIme.AutoSize = true;
             this.lblKorisnickoIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblKorisnickoIme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblKorisnickoIme.Location = new System.Drawing.Point(144, 348);
+            this.lblKorisnickoIme.Location = new System.Drawing.Point(361, 160);
             this.lblKorisnickoIme.Name = "lblKorisnickoIme";
             this.lblKorisnickoIme.Size = new System.Drawing.Size(119, 16);
             this.lblKorisnickoIme.TabIndex = 77;
@@ -171,7 +171,7 @@ namespace FindAndLearn.Registracija
             // txtKorisnickoIme
             // 
             this.txtKorisnickoIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(144, 368);
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(361, 180);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(281, 22);
             this.txtKorisnickoIme.TabIndex = 4;
@@ -181,7 +181,7 @@ namespace FindAndLearn.Registracija
             this.lblLozinka.AutoSize = true;
             this.lblLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblLozinka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblLozinka.Location = new System.Drawing.Point(144, 398);
+            this.lblLozinka.Location = new System.Drawing.Point(361, 210);
             this.lblLozinka.Name = "lblLozinka";
             this.lblLozinka.Size = new System.Drawing.Size(71, 16);
             this.lblLozinka.TabIndex = 77;
@@ -190,7 +190,7 @@ namespace FindAndLearn.Registracija
             // txtLozinka
             // 
             this.txtLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtLozinka.Location = new System.Drawing.Point(144, 418);
+            this.txtLozinka.Location = new System.Drawing.Point(361, 230);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(281, 22);
@@ -203,7 +203,7 @@ namespace FindAndLearn.Registracija
             this.cbKoristiGeneriranoKorisnickoIme.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbKoristiGeneriranoKorisnickoIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cbKoristiGeneriranoKorisnickoIme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.cbKoristiGeneriranoKorisnickoIme.Location = new System.Drawing.Point(431, 368);
+            this.cbKoristiGeneriranoKorisnickoIme.Location = new System.Drawing.Point(648, 180);
             this.cbKoristiGeneriranoKorisnickoIme.Name = "cbKoristiGeneriranoKorisnickoIme";
             this.cbKoristiGeneriranoKorisnickoIme.Size = new System.Drawing.Size(131, 20);
             this.cbKoristiGeneriranoKorisnickoIme.TabIndex = 5;
@@ -216,7 +216,7 @@ namespace FindAndLearn.Registracija
             this.lblPonovljenaLozinka.AutoSize = true;
             this.lblPonovljenaLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblPonovljenaLozinka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblPonovljenaLozinka.Location = new System.Drawing.Point(144, 448);
+            this.lblPonovljenaLozinka.Location = new System.Drawing.Point(361, 260);
             this.lblPonovljenaLozinka.Name = "lblPonovljenaLozinka";
             this.lblPonovljenaLozinka.Size = new System.Drawing.Size(149, 16);
             this.lblPonovljenaLozinka.TabIndex = 77;
@@ -225,7 +225,7 @@ namespace FindAndLearn.Registracija
             // txtPonovljenaLozinka
             // 
             this.txtPonovljenaLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPonovljenaLozinka.Location = new System.Drawing.Point(144, 468);
+            this.txtPonovljenaLozinka.Location = new System.Drawing.Point(361, 280);
             this.txtPonovljenaLozinka.Name = "txtPonovljenaLozinka";
             this.txtPonovljenaLozinka.PasswordChar = '*';
             this.txtPonovljenaLozinka.Size = new System.Drawing.Size(281, 22);
@@ -236,7 +236,7 @@ namespace FindAndLearn.Registracija
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblEmail.Location = new System.Drawing.Point(144, 498);
+            this.lblEmail.Location = new System.Drawing.Point(361, 310);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(57, 16);
             this.lblEmail.TabIndex = 77;
@@ -245,9 +245,9 @@ namespace FindAndLearn.Registracija
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtEmail.Location = new System.Drawing.Point(144, 518);
+            this.txtEmail.Location = new System.Drawing.Point(361, 330);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(281, 22);
+            this.txtEmail.Size = new System.Drawing.Size(418, 22);
             this.txtEmail.TabIndex = 8;
             // 
             // lblMobitel
@@ -255,7 +255,7 @@ namespace FindAndLearn.Registracija
             this.lblMobitel.AutoSize = true;
             this.lblMobitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblMobitel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblMobitel.Location = new System.Drawing.Point(144, 548);
+            this.lblMobitel.Location = new System.Drawing.Point(40, 360);
             this.lblMobitel.Name = "lblMobitel";
             this.lblMobitel.Size = new System.Drawing.Size(104, 16);
             this.lblMobitel.TabIndex = 77;
@@ -264,7 +264,7 @@ namespace FindAndLearn.Registracija
             // txtMobitel
             // 
             this.txtMobitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtMobitel.Location = new System.Drawing.Point(144, 568);
+            this.txtMobitel.Location = new System.Drawing.Point(40, 380);
             this.txtMobitel.Name = "txtMobitel";
             this.txtMobitel.Size = new System.Drawing.Size(281, 22);
             this.txtMobitel.TabIndex = 9;
@@ -274,7 +274,7 @@ namespace FindAndLearn.Registracija
             this.lblMjesto.AutoSize = true;
             this.lblMjesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblMjesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblMjesto.Location = new System.Drawing.Point(144, 598);
+            this.lblMjesto.Location = new System.Drawing.Point(40, 410);
             this.lblMjesto.Name = "lblMjesto";
             this.lblMjesto.Size = new System.Drawing.Size(58, 16);
             this.lblMjesto.TabIndex = 77;
@@ -283,7 +283,7 @@ namespace FindAndLearn.Registracija
             // txtMjesto
             // 
             this.txtMjesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtMjesto.Location = new System.Drawing.Point(144, 618);
+            this.txtMjesto.Location = new System.Drawing.Point(40, 430);
             this.txtMjesto.Name = "txtMjesto";
             this.txtMjesto.Size = new System.Drawing.Size(281, 22);
             this.txtMjesto.TabIndex = 10;
@@ -293,7 +293,7 @@ namespace FindAndLearn.Registracija
             this.lblUlica.AutoSize = true;
             this.lblUlica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblUlica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblUlica.Location = new System.Drawing.Point(144, 648);
+            this.lblUlica.Location = new System.Drawing.Point(40, 460);
             this.lblUlica.Name = "lblUlica";
             this.lblUlica.Size = new System.Drawing.Size(48, 16);
             this.lblUlica.TabIndex = 77;
@@ -302,7 +302,7 @@ namespace FindAndLearn.Registracija
             // txtUlica
             // 
             this.txtUlica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtUlica.Location = new System.Drawing.Point(144, 668);
+            this.txtUlica.Location = new System.Drawing.Point(40, 480);
             this.txtUlica.Name = "txtUlica";
             this.txtUlica.Size = new System.Drawing.Size(281, 22);
             this.txtUlica.TabIndex = 11;
@@ -312,7 +312,7 @@ namespace FindAndLearn.Registracija
             this.lblOpis.AutoSize = true;
             this.lblOpis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblOpis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblOpis.Location = new System.Drawing.Point(144, 698);
+            this.lblOpis.Location = new System.Drawing.Point(361, 360);
             this.lblOpis.Name = "lblOpis";
             this.lblOpis.Size = new System.Drawing.Size(44, 16);
             this.lblOpis.TabIndex = 77;
@@ -320,10 +320,10 @@ namespace FindAndLearn.Registracija
             // 
             // txtOpis
             // 
-            this.txtOpis.Location = new System.Drawing.Point(144, 717);
+            this.txtOpis.Location = new System.Drawing.Point(361, 380);
             this.txtOpis.Multiline = true;
             this.txtOpis.Name = "txtOpis";
-            this.txtOpis.Size = new System.Drawing.Size(281, 108);
+            this.txtOpis.Size = new System.Drawing.Size(418, 122);
             this.txtOpis.TabIndex = 12;
             // 
             // cbPokaziPonovljenuLozinku
@@ -331,7 +331,7 @@ namespace FindAndLearn.Registracija
             this.cbPokaziPonovljenuLozinku.AutoSize = true;
             this.cbPokaziPonovljenuLozinku.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cbPokaziPonovljenuLozinku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.cbPokaziPonovljenuLozinku.Location = new System.Drawing.Point(432, 470);
+            this.cbPokaziPonovljenuLozinku.Location = new System.Drawing.Point(648, 280);
             this.cbPokaziPonovljenuLozinku.Name = "cbPokaziPonovljenuLozinku";
             this.cbPokaziPonovljenuLozinku.Size = new System.Drawing.Size(137, 20);
             this.cbPokaziPonovljenuLozinku.TabIndex = 13;
@@ -344,7 +344,7 @@ namespace FindAndLearn.Registracija
             this.lblTitula.AutoSize = true;
             this.lblTitula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblTitula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(210)))), ((int)(((byte)(135)))));
-            this.lblTitula.Location = new System.Drawing.Point(144, 198);
+            this.lblTitula.Location = new System.Drawing.Point(40, 210);
             this.lblTitula.Name = "lblTitula";
             this.lblTitula.Size = new System.Drawing.Size(51, 16);
             this.lblTitula.TabIndex = 77;
@@ -353,7 +353,7 @@ namespace FindAndLearn.Registracija
             // txtTitula
             // 
             this.txtTitula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtTitula.Location = new System.Drawing.Point(144, 218);
+            this.txtTitula.Location = new System.Drawing.Point(40, 230);
             this.txtTitula.Name = "txtTitula";
             this.txtTitula.Size = new System.Drawing.Size(281, 22);
             this.txtTitula.TabIndex = 2;
@@ -363,7 +363,7 @@ namespace FindAndLearn.Registracija
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(14)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(584, 911);
+            this.ClientSize = new System.Drawing.Size(824, 601);
             this.Controls.Add(this.txtOpis);
             this.Controls.Add(this.comboUloga);
             this.Controls.Add(this.pbLogo);
