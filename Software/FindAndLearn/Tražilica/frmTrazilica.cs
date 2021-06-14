@@ -35,6 +35,7 @@ namespace FindAndLearn.Tražilica
                     var upit = (from i in context.Instruktori
                                 select new
                                 {
+                                    ID = i.ID_instruktora,
                                     ImePrezime = i.ime + " " + i.prezime,
                                     KorisnickoIme = i.korisnicko_ime,
                                     Titula = i.titula,
@@ -43,6 +44,7 @@ namespace FindAndLearn.Tražilica
                                     Slika = i.slika
                                 }).ToList().Select(x => new Instruktori
                                 {
+                                    ID_instruktora = x.ID,
                                     ime = x.ImePrezime,
                                     korisnicko_ime = x.KorisnickoIme,
                                     titula = x.Titula,
@@ -86,7 +88,8 @@ namespace FindAndLearn.Tražilica
                                 join ins in context.Instrukcije on i.ID_instruktora equals ins.instruktor_id
                                 join kol in context.Kolegiji on ins.kolegij_id equals kol.ID_kolegija
                                 where kol.naziv_kolegija.ToLower().Contains(nazivKolegija.ToLower())
-                                select new { 
+                                select new {
+                                    ID = i.ID_instruktora,
                                     ImePrezime = i.ime + " " + i.prezime,
                                     KorisnickoIme = i.korisnicko_ime,
                                     Titula = i.titula,
@@ -95,6 +98,7 @@ namespace FindAndLearn.Tražilica
                                     Slika = i.slika
                                 }).ToList().Select(x=> new Instruktori
                                 {
+                                    ID_instruktora = x.ID,
                                     ime = x.ImePrezime,
                                     korisnicko_ime = x.KorisnickoIme,
                                     titula = x.Titula,
@@ -181,7 +185,8 @@ namespace FindAndLearn.Tražilica
                 try
                 {
                     prosjecnaOcjena = kolegiji.IzracunProsjecneOcjene(instruktor);
-                    frmDetaljiInstruktora frmDetalji = new frmDetaljiInstruktora(prosjecnaOcjena, instruktor);
+                    var prosjek = Math.Round(prosjecnaOcjena, 2);
+                    frmDetaljiInstruktora frmDetalji = new frmDetaljiInstruktora(prosjek, instruktor);
                     frmDetalji.ShowDialog();
                 }
                 catch
